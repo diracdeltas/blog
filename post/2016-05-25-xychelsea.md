@@ -109,3 +109,7 @@ categories:
 <p class="p1">
   Update (5/26/16): Obligatory reminder that you can support Chelsea by donating to her <a href="https://freedom.press/chelsea">defense fund</a>, <a href="https://www.chelseamanning.org/learn-more/write-to-chelsea-manning">writing her a letter</a> (she reads every single one she receives), and following her accounts on <a href="https://twitter.com/xychelsea">Twitter</a> and <a href="https://medium.com/@xychelsea">Medium</a>. In addition, <a href="https://www.chelseamanning.org/resources/organizing-kit">this page</a> has a nice toolkit for organizers to support her cause.
 </p>
+
+<p class="p1">
+  Update (6/02/16): <a href="https://github.com/diracdeltas/blog/blob/master/post/2016-05-26-xychelsea-part-2.md">Part 2</a> of this story is up for those who want to keep reading.
+</p>
