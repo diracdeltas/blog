@@ -1,3 +1,11 @@
-url: https://zyan.scripts.mit.edu/blog
-name: discrete blogarithm
-description: the personal blog of yan (@bcrypt)
+---
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
+indexes:
+  category: "categories"
+baseurl: "https://diracdeltas.github.io/blog"
+title: "discrete blogarithm"
+canonifyurls: true
+theme: "Lanyon"
+...
