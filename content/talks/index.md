@@ -1,7 +1,6 @@
 ---
 title: IRL or GTFO
 author: yan
-layout: page
 date: 2015-08-10
 
 ---

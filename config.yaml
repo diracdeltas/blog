@@ -6,6 +6,5 @@ indexes:
 publishdir: "public"
 baseurl: "https://diracdeltas.github.io/blog"
 title: "discrete blogarithm"
-canonifyurls: true
 theme: "Lanyon"
 ...

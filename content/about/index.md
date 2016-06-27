@@ -1,7 +1,6 @@
 ---
 title: a/s/l??
 author: yan
-layout: page
 date: 2013-05-24
 
 ---
