@@ -116,6 +116,10 @@ ul, ol, dl {
   margin-bottom: 1rem;
 }
 
+#main > ul {
+  padding-left: 0;
+}
+
 
 
 dt {
