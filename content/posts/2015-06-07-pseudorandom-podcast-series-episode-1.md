@@ -16,7 +16,7 @@ When I arrived, it turned out that one of Peter&#8217;s housemates was having fr
 
 Except for one hiccup where Audacity decided to stop recording abruptly, the interview went smoothly and didn&#8217;t need much editing. Next time I&#8217;ll plan to put myself closer to the mic, do a longer intro, and maybe cut the length down to 15 minutes.
 
-
+<a href="https://soundcloud.com/bcrypt/pseudorandom-podcast-episode-1" target="_blank">Here is the result</a>.
 
 Overall, I had a fun time recording this podcast and am unduly excited about future episodes. Turns out a podcast takes ~10% of the time to write a blog post with the same content. 🙂
 
