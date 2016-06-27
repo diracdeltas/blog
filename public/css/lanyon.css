@@ -442,6 +442,10 @@ a.pagination-item:hover {
   color: #868da0;
 }
 
+a:hover {
+  color: #000000;
+}
+
 /* Orange */
 .theme-base-09 .sidebar,
 .theme-base-09 .sidebar-toggle:active,
