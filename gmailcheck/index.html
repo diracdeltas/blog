@@ -1,0 +1,147 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="https://diracdeltas.github.io/blog">
+    <title> gmailcheck </title>
+    <link rel="canonical" href="https://diracdeltas.github.io/blog/gmailcheck/">
+    
+
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+
+</head>
+
+
+<body class="theme-base-08">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+    </p>
+  </div>
+</div>
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">gmailcheck</h1>
+        <section id="main">
+          <h5 id="date"> Fri May 24, 2013 </h5>
+          <p>I&#8217;m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.</p>
+
+<p>Thus far in my computer-using life, I&#8217;ve never owned a monitor. I don&#8217;t have a smartphone, so everything I do is on a pint-sized Thinkpad X220: writing, coding, ebook reading, garden-variety Internet browsing, photo/audio editing, bike trip navigation, sleeping, etc.</p>
+
+<p>But recently, I was in the lovely town of Cambridge, MA on a warm spring day, staring out the window of a tired blue house at trees heavy with the impending procreation of innumerable songbirds, feathers washed in ecstatic glow of pollen. Mysterious stirrings of latent desire dripped from the stretched-out sky. Something changed inside me. Suddenly I felt like editing config files.</p>
+
+<p>So I shut the window and did that for a while, maybe a couple hours or until I started showing symptoms of Vitamin D deficiency, don&#8217;t really remember.</p>
+
+<p>At the end of this abortive config-puberty, I <a href="https://github.com/diracdeltas/dotfiles">threw everything on Github</a> because typing &#8216;git push&#8217; releases a lot of dopamine in my body and apparently I like that.</p>
+
+<p>The observant git tree-traveler will notice that there&#8217;s a Python script called gmailcheck in that repo. This is something I&#8217;m glad I wrote, because it solves a real problem without being overly complicated.</p>
+
+<p>The problem is this: I spend most of my productive work time in the terminal, which is usually the master window in my tiling window setup. I usually also have a browser window open for Google searches. Using gmail, as it turns out, is hella dumb in a window of this size. Furthermore, checking gmail in the browser usually leads to an unending parade of distractions as I start to add events to my calendar, respond to some emails that can wait, click on links that friends have sent, open up <a href="https://www.noisebridge.net/">Noisebridge</a>-discuss threads with titles like &#8220;Who put mercury in the laser cutter? Also, kindergarteners visit TUESDAY,&#8221; etc.</p>
+
+<p>On the other hand, not checking email at all is not an option, since my phone is usually useless, and anyone who needs to tell me something important is advised to do so over email.</p>
+
+<p>Essentially, I needed something that would show me whether I had important emails in the terminal. Maybe like Mutt but with the removal of all features that could possibly lead to distractions.</p>
+
+<p>Seems like a pretty simple Python script, and it was. <a href="https://github.com/diracdeltas/dotfiles/blob/master/bin/gmailcheck">Gmailcheck v1.0</a> will show you basic information about unread emails from the last hour, or whatever time you want to hard-code in for now. I added some extra bells and whistles, like hipster colors and highlighting of emails that gmail auto-labels &#8220;Important.&#8221; If you want to actually respond to an email or do other fancy stuff, you can click on the link and just go to gmail&#8217;s web interface.</p>
+
+<p><a href="http://www.flickr.com/photos/71094651@N06/8744854460/" title="gmailcheck by diracdeltas, on Flickr"><img src="https://farm8.staticflickr.com/7294/8744854460_31b2c29b19.jpg" width="500" height="301" alt="gmailcheck" /></a></p>
+
+<p>Upon reaching this milestone, the next logical thought that occurred to me was, &#8220;How do you properly evoke the spirit of emails on the Noisebridge mailing lists?&#8221;</p>
+
+<p>The answer is that you print them being said by a huge ASCII-art rendering of <a href="https://twitter.com/flamsmark">Tom</a>, Noisebridge secretary and (before this happened) a friend of mine.</p>
+
+<p><a href="http://www.flickr.com/photos/71094651@N06/8746315257/" title="gmailcheck trolling by diracdeltas, on Flickr"><img src="https://farm8.staticflickr.com/7305/8746315257_4602acb8bf.jpg" width="500" height="498" alt="gmailcheck trolling" /></a></p>
+
+<p><a href="http://www.flickr.com/photos/71094651@N06/8746315225/" title="cowsay -f tom by diracdeltas, on Flickr"><img src="https://farm9.staticflickr.com/8552/8746315225_338f20b7be.jpg" width="500" height="492" alt="cowsay -f tom" /></a></p>
+
+<p>I guess I still don&#8217;t care about usability.</p>
+
+        </section>
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  <hr />
+  
+    <span class="left">
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/two-maps-of-sf-crime-data/">Two maps of SF crime data</a>
+    </span>
+  
+
+  
+    <span class="right">
+    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/about/"> &nbsp; a/s/l??</a> &raquo;
+    </span>
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+      <li><a href="https://diracdeltas.github.io/blog/categories/code">code</a> </li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,161 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="https://diracdeltas.github.io/blog">
+    <title> Summertime, and the HTTP traffic sniffing is easy </title>
+    <link rel="canonical" href="https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/">
+    
+
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+
+</head>
+
+
+<body class="theme-base-08">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+    </p>
+  </div>
+</div>
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">Summertime, and the HTTP traffic sniffing is easy</h1>
+        <section id="main">
+          <h5 id="date"> Fri Jul 5, 2013 </h5>
+          <p>So it happens that every time you access a URL that starts with &#8220;http://&#8221;, anyone on your local network can see what you&#8217;re doing with almost no effort worth writing about. This includes the page itself as well as any information that you&#8217;re transferring, like credit card numbers and passwords (which are hopefully encrypted). It&#8217;s worth reiterating that this isn&#8217;t difficult at all, even if your network is WPA2-protected, as most supposedly-secure WiFi networks are nowadays.</p>
+
+<p>This sounds like quite a displeasing predicament for those of us who find ourselves using shared wireless networks every day (aka, all of us), but I get the impression that most Internet-users don&#8217;t understand exactly how simple it is to casually sniff HTTP traffic. So, in hopes of convincing you that it *is* in fact simpler than using any OS X package manager successfully, here is the absolute fastest, easiest way I found to reliably eavesdrop on HTTP traffic on most local networks. It should take less than 5 minutes to set up on your Linux thing (maybe also your Mac thing, but I haven&#8217;t tried) and is straightforward to understand.</p>
+
+<p>(This is intended for education purposes, and also for encouraging more people to use HTTPS instead of HTTP whenever possible, maybe even via the <a href="https://www.eff.org/https-everywhere/">browser extension</a> that I&#8217;m contributing to this summer. More on that in a bit.)</p>
+
+<ol>
+<li><p>Run the following to install some packages that we need. dsniff is a collection of various traffic analysis tools, of which we&#8217;ll only use arpspoof; see <a href="http://www.monkey.org/~dugsong/dsniff/">here</a>. tshark is a nice terminal-based packet analyzer; tcpdump also works.</p>
+
+<ul>
+<li>apt-get install dsniff</li>
+<li>apt-get install tshark</li>
+</ul></li>
+
+<li><p>Turn your machine into ip-forwarding mode as root by flipping a 0 to a 1, or else people on your network won&#8217;t be able to see their websites. Don&#8217;t do this step if you actually want to launch a denial of service attack, I suppose. Also you might want to remember to turn it back to 0 after you&#8217;re done.</p>
+
+<ul>
+<li>echo &#8220;1&#8221; &gt; /proc/sys/net/ipv4/ip_forward</li>
+</ul></li>
+
+<li><p>Run the following commands as root on a WiFi network. To find your IP address, you can run ifconfig and look for the wlan0__ inet addr. To find your router&#8217;s IP address, you can do something like run <em>traceroute google.com</em> and pull out the IP address from the first hop, which is likely to be 192.168.x.x.</p>
+
+<ul>
+<li>arpspoof -i [your IP address] [the router IP address]</li>
+<li>tshark -p port 80 -i wlan0 -T fields -e http.request.method -e http.request.full_uri -e http.user_agent</li>
+</ul></li>
+</ol>
+
+<p>And voila, the second command spews out a stream of HTTP addresses that people on your network are accessing, along with the request method and the type of client software used. This is just the start; you can read the manpage for tshark to figure out how to pull more detailed info from the packets and then start writing scripts to modify them before forwarding them along. Ex: appending <em>-e text</em> will show HTML data as text from the webpages.</p>
+
+<p>What we&#8217;ve done so far is:</p>
+
+<ol>
+<li>Perform a attack called <a href="https://en.wikipedia.org/wiki/ARP_spoofing">ARP spoofing</a> on the router. Essentially, we trick everyone on the network into thinking that your computer is the router so that all the traffic intended for the router goes to your computer instead. This is straightforward since ARP doesn&#8217;t include authentication mechanisms.</li>
+<li>Use tshark to extract interesting information from the packets that we&#8217;ve intercepted.</li>
+<li>Forward these packets along to their intended destination so nobody detects our spying.</li>
+</ol>
+
+<p>While sniffing packets as they floated by on a warm summer night in the attic of a Berkeley farmhouse in the process of testing this out, I could see which HTTP websites my housemates were accessing, what apps they were using on their phones, and what desktop clients they were running without them ever noticing. With a small amount of additional effort and a large amount of additional malice, I could have manipulated their traffic to interchange the titles of Wikipedia articles or whatever else I wanted, the possibilities bounded only by my imagination / knowledge of regular expressions.</p>
+
+<p>[Note that although WPA2 encrypts data that goes between the router and devices on the network, this clearly doesn&#8217;t prevent eavesdropping via arpspoof by other devices that have access to the network. <a href="http://security.stackexchange.com/questions/2372/is-wpa2-wifi-protected-against-arp-poisoning-and-sniffing">Stack Exchange</a> explains that by operating at a <a href="https://en.wikipedia.org/wiki/OSI_model">layer</a> above that at which WPA encryption occurs, an arpspoof attack causes the data to instead be encrypted for the attacker&#8217;s device instead of the router.]</p>
+
+<p>Sadface time. On the other hand, none of the above works if you&#8217;re using <a href="https://en.wikipedia.org/wiki/HTTP_Secure">HTTPS</a>, where the S stands for &#8220;secure,&#8221; because in that case traffic is encrypted between you and the server you&#8217;re trying to reach. On the other other hand, outgoing HTTPS requests from your device can still be subtly converted to insecure HTTP via an attack called <a href="http://www.thoughtcrime.org/software/sslstrip/">SSLstrip</a> that makes use of arpspoof if you try to reach an HTTPS site by redirecting from HTTP. On the other other other hand, you can download the EFF&#8217;s <a href="https://www.eff.org/https-everywhere/">HTTPS Everywhere extension</a> for Chrome/Firefox, which rewrites HTTP URLs to HTTPS before you try to connect to the HTTP site. On the (other)*4 hand, there&#8217;s some problems with SSL in practice because of intermediate certificate validation carelessness and so forth. I&#8217;m now out of hands.</p>
+
+        </section>
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  <hr />
+  
+    <span class="left">
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/">Some thoughts on Facebook implementing forward secrecy</a>
+    </span>
+  
+
+  
+    <span class="right">
+    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/quest-ce-que-le-fuck/"> &nbsp; Qu’est-ce que le Fuck?</a> &raquo;
+    </span>
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+      <li><a href="https://diracdeltas.github.io/blog/categories/code">code</a> </li>
+    
+      <li><a href="https://diracdeltas.github.io/blog/categories/encrypt-the-web">encrypt the web</a> </li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
