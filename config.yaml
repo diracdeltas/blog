@@ -1,9 +1,9 @@
 ---
 contentdir: "content"
 layoutdir: "layouts"
-publishdir: "public"
 indexes:
   category: "categories"
+publishdir: "public"
 baseurl: "https://diracdeltas.github.io/blog"
 title: "discrete blogarithm"
 canonifyurls: true
