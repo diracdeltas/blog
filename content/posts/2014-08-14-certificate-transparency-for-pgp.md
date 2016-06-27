@@ -1,7 +1,6 @@
 ---
 title: certificate transparency for PGP?
 author: yan
-layout: post
 date: 2014-08-14
 url: /certificate-transparency-for-pgp/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: On artificially-bounded futures
 author: yan
-layout: post
 date: 2013-10-01
 url: /on-artificially-bounded-futures/
 categories:

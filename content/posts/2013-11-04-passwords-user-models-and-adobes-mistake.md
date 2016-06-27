@@ -1,7 +1,6 @@
 ---
 title: Passwords, user models, and Adobe’s mistake
 author: yan
-layout: post
 date: 2013-11-04
 url: /passwords-user-models-and-adobes-mistake/
 categories:

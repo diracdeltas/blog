@@ -1,7 +1,6 @@
 ---
 title: a boring xss dissection
 author: yan
-layout: post
 date: 2014-06-12
 url: /a-boring-xss-dissection/
 categories:

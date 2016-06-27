@@ -1,7 +1,6 @@
 ---
 title: Goodbye, Cambridge!
 author: yan
-layout: post
 date: 2013-05-30
 url: /goodbye-cambridge/
 categories:

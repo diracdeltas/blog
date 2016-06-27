@@ -1,7 +1,6 @@
 ---
 title: 'Software Transparency: Part 1'
 author: yan
-layout: post
 date: 2014-07-11
 url: /software-transparency/
 categories:

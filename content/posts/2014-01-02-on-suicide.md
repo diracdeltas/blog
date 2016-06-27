@@ -1,7 +1,6 @@
 ---
 title: On Suicide
 author: yan
-layout: post
 date: 2014-01-02
 url: /on-suicide/
 categories:

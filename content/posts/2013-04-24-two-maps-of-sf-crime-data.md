@@ -1,7 +1,6 @@
 ---
 title: Two maps of SF crime data
 author: yan
-layout: post
 date: 2013-04-24
 url: /two-maps-of-sf-crime-data/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: The most subtle joke I’ve made all year
 author: yan
-layout: post
 date: 2013-12-31
 url: /the-most-subtle-joke-ive-made-all-year/
 categories:

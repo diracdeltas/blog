@@ -1,7 +1,6 @@
 ---
 title: Debunking Google’s HSTS claims
 author: yan
-layout: post
 date: 2013-11-22
 url: /debunking-googles-hsts-claims/
 categories:

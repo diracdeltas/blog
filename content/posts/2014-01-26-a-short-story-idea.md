@@ -1,7 +1,6 @@
 ---
 title: a short story idea
 author: yan
-layout: post
 date: 2014-01-26
 url: /a-short-story-idea/
 categories:

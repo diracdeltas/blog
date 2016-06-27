@@ -1,7 +1,6 @@
 ---
 title: Qu’est-ce que le Fuck?
 author: yan
-layout: post
 date: 2013-07-20
 url: /quest-ce-que-le-fuck/
 categories:

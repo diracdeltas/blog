@@ -1,7 +1,6 @@
 ---
 title: Thoughts on Cypherpunks 2.0
 author: yan
-layout: post
 date: 2013-10-13
 url: /thoughts-on-cypherpunks-2-0/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Some thoughts on Facebook implementing forward secrecy
 author: yan
-layout: post
 date: 2013-07-04
 url: /some-thoughts-on-facebook-implementing-forward-secrecy/
 categories:

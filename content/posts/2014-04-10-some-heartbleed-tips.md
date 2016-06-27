@@ -1,7 +1,6 @@
 ---
 title: How to make a less-leaky Heartbleed bandage
 author: yan
-layout: post
 date: 2014-04-10
 url: /some-heartbleed-tips/
 categories:

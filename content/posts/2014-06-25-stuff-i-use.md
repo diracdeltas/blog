@@ -1,7 +1,6 @@
 ---
 title: stuff i use
 author: yan
-layout: post
 date: 2014-06-25
 url: /stuff-i-use/
 categories:

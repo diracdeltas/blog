@@ -1,7 +1,6 @@
 ---
 title: gmailcheck
 author: yan
-layout: post
 date: 2013-05-24
 url: /gmailcheck/
 categories:

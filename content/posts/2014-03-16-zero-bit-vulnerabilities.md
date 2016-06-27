@@ -1,7 +1,6 @@
 ---
 title: Zero-bit vulnerabilities?
 author: yan
-layout: post
 date: 2014-03-16
 url: /zero-bit-vulnerabilities/
 categories:

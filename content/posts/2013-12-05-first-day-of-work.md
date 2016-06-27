@@ -1,7 +1,6 @@
 ---
 title: First day of work
 author: yan
-layout: post
 date: 2013-12-05
 url: /first-day-of-work/
 categories:

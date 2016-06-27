@@ -1,7 +1,6 @@
 ---
 title: don’t forget to secure cookies ppl
 author: yan
-layout: post
 date: 2014-05-23
 url: /wordpress-fail/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: tls everything
 author: yan
-layout: post
 date: 2014-12-10
 url: /tls-everything/
 categories:

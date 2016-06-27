@@ -1,7 +1,6 @@
 ---
 title: life update
 author: yan
-layout: post
 date: 2015-04-27
 url: /life-update/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Summertime, and the HTTP traffic sniffing is easy
 author: yan
-layout: post
 date: 2013-07-05
 url: /summertime-and-the-http-traffic-sniffing-is-easy/
 categories:

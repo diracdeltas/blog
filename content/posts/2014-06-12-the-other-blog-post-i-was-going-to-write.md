@@ -1,7 +1,6 @@
 ---
 title: the other blog post i was going to write
 author: yan
-layout: post
 date: 2014-06-12
 url: /the-other-blog-post-i-was-going-to-write/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: life exercises
 author: yan
-layout: post
 date: 2014-06-16
 url: /life-exercises/
 categories:

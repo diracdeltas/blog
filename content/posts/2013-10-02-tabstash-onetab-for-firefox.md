@@ -1,7 +1,6 @@
 ---
 title: 'Tabstash: OneTab for Firefox'
 author: yan
-layout: post
 date: 2013-10-02
 url: /tabstash-onetab-for-firefox/
 categories:

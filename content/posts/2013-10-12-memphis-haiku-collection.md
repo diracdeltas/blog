@@ -1,7 +1,6 @@
 ---
 title: Memphis Haiku Collection
 author: yan
-layout: post
 date: 2013-10-12
 url: /memphis-haiku-collection/
 categories:

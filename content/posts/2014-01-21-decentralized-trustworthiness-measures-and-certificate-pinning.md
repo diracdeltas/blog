@@ -1,7 +1,6 @@
 ---
 title: decentralized trustworthiness measures and certificate pinning
 author: yan
-layout: post
 date: 2014-01-21
 url: /decentralized-trustworthiness-measures-and-certificate-pinning/
 categories:

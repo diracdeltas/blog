@@ -1,7 +1,6 @@
 ---
 title: rate-limiting anonymous accounts
 author: yan
-layout: post
 date: 2015-03-05
 url: /rate-limiting-anonymous-accounts/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Some favorite git commands
 author: yan
-layout: post
 date: 2013-09-02
 url: /some-favorite-git-commands/
 categories:

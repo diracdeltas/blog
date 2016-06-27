@@ -1,7 +1,6 @@
 ---
 title: why I left grad school
 author: yan
-layout: post
 date: 2013-01-20
 url: /why-i-left-grad-school/
 categories:

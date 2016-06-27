@@ -1,7 +1,6 @@
 ---
 title: Some thoughts on the NSA and elliptic curve cryptography
 author: yan
-layout: post
 date: 2013-09-13
 url: /some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/
 categories:

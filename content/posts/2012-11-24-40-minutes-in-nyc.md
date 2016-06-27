@@ -1,7 +1,6 @@
 ---
 title: 40 minutes in NYC
 author: yan
-layout: post
 date: 2012-11-24
 url: /40-minutes-in-nyc/
 categories:

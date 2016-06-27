@@ -1,7 +1,6 @@
 ---
 title: One year later
 author: yan
-layout: post
 date: 2013-11-28
 url: /one-year-later/
 categories:

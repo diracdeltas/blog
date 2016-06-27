@@ -1,7 +1,6 @@
 ---
 title: HTTPS Everywhere 3.3 is out!
 author: yan
-layout: post
 date: 2013-07-27
 url: /https-everywhere-3-3-is-out/
 categories:
