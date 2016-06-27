@@ -4,7 +4,7 @@ author: yan
 date: 2015-08-10
 
 ---
-Scheduled talks:
+## Scheduled talks:
 
   * <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>, July 18-22, New York City (resident)
   * <a href="http://jsconfbp.com/" target="_blank">JSConf Budapest</a>, May 12-13, Budapest
@@ -31,7 +31,7 @@ Scheduled talks:
   * [DEF CON 22][18], Aug. 2014, Las Vegas (panelist)
   * [HOPE X][19], July 2014, New York City (co-presented with Parker Higgins in my first talk and co-presented with Bill Budington and Garrett Robinson in my second)
 
-Slides/video that might be cool, who knows:
+## Slides/video that might be cool, who knows:
 
   * _Weird New Tricks for Browser Fingerprinting_, ToorCon 2015 [[Slides][20], [Video][21]]
   * _JS and Security Get Married_, NCC Group Open Forum [[Slides][22]]
@@ -40,7 +40,7 @@ Slides/video that might be cool, who knows:
   * _Securing Email_, Yahoo Trust Unconference 2015 [[Slides][27], [Video][28]]
   * _SecureDrop: A WikiLeaks in Every Newsroom_, HOPE 2014 [[Slides][29], [Video][30]]
 
-Press coverage, awards, and other resume fillers:
+## Press coverage, awards, and other resume fillers:
 
   * [The Ad-Blocking Hacker Making Your Browser More Paranoid][31]
   * <a href="https://motherboard.vice.com/read/gmail-android-app-bug-lets-you-send-emails-pretending-to-be-someone-else" target="_blank">Gmail Android Bug Lets You Send Emails Pretending To Be Someone Else</a>

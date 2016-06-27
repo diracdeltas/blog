@@ -622,7 +622,9 @@ function getTimeLeft(expiry) {
       <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/talks/</guid>
-      <description>&lt;p&gt;Scheduled talks:&lt;/p&gt;
+      <description>
+
+&lt;h2 id=&#34;scheduled-talks&#34;&gt;Scheduled talks:&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.recurse.com/&#34; target=&#34;_blank&#34;&gt;Recurse Center&lt;/a&gt;, July 18-22, New York City (resident)&lt;/li&gt;
@@ -651,7 +653,7 @@ function getTimeLeft(expiry) {
 &lt;li&gt;&lt;a href=&#34;http://x.hope.net/&#34;&gt;HOPE X&lt;/a&gt;, July 2014, New York City (co-presented with Parker Higgins in my first talk and co-presented with Bill Budington and Garrett Robinson in my second)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Slides/video that might be cool, who knows:&lt;/p&gt;
+&lt;h2 id=&#34;slides-video-that-might-be-cool-who-knows&#34;&gt;Slides/video that might be cool, who knows:&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;Weird New Tricks for Browser Fingerprinting&lt;/em&gt;, ToorCon 2015 [&lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=kk2GkZv6Wjs&#34;&gt;Video&lt;/a&gt;]&lt;/li&gt;
@@ -662,7 +664,7 @@ function getTimeLeft(expiry) {
 &lt;li&gt;&lt;em&gt;SecureDrop: A WikiLeaks in Every Newsroom&lt;/em&gt;, HOPE 2014 [&lt;a href=&#34;https://freedom.press/securedrop-files/HOPEX.pdf&#34;&gt;Slides&lt;/a&gt;, &lt;a href=&#34;https://www.youtube.com/watch?v=vkd4cLPRG7Q&#34;&gt;Video&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Press coverage, awards, and other resume fillers:&lt;/p&gt;
+&lt;h2 id=&#34;press-coverage-awards-and-other-resume-fillers&#34;&gt;Press coverage, awards, and other resume fillers:&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.wired.com/2016/05/meet-ad-blocking-hacker-making-browser-paranoid/&#34;&gt;The Ad-Blocking Hacker Making Your Browser More Paranoid&lt;/a&gt;&lt;/li&gt;
