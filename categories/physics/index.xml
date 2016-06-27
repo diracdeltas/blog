@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Physics on discrete blogarithm</title>
+    <link>https://diracdeltas.github.io/blog/categories/physics/</link>
+    <description>Recent content in Physics on discrete blogarithm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 31 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://diracdeltas.github.io/blog/categories/physics/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>solving boolean satisfiability on human circuits</title>
+      <link>https://diracdeltas.github.io/blog/2sat/</link>
+      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/2sat/</guid>
+      <description>&lt;p&gt;I remember quite clearly sitting in Scott Aaronson&amp;#8217;s computability and complexity theory &lt;a href=&#34;http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/&#34;&gt;course&lt;/a&gt; at MIT in 2011. I was a 19 year-old physics major back then, so Scott&amp;#8217;s class was mostly new and fascinating.&lt;/p&gt;
+
+&lt;p&gt;One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length. For instance, you could prove that certain decision problems couldn&amp;#8217;t be solved by a deterministic Turing machine in polynomial time. I raised my hand.&lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;Yes?&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;&amp;#8220;But time is reference-frame dependent! What if you ran the deterministic Turing machine on earth while you yourself were on a rocket going at relativistic speeds?&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;Scott&amp;#8217;s eyes lit up. &amp;#8220;Aha!&amp;#8221; he said, without pause. &amp;#8220;Suppose you traveled faster as the input length increased, so from your perspective, a problem in EXP is decidable in polynomial time. However you would be using more and more energy to propel your spaceship. So there is necessarily a tradeoff in the resources needed to solve the problem.&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;In retrospect, this was pretty characteristic of why I liked the class so much. Scott didn&amp;#8217;t give the easy and useless answer, which would have been that *by our definition* all running times are measured in a fixed inertial reference frame. Instead he reminds us that we, as humans, ultimately care about the totality of resources needed to solve a problem. Time complexity analysis is just one step toward grasping at how hard, how expensive, how painful something really is; mired as we may be in mathematical formalism, the reality of our dying planet and unpaid bills stays within sight when Scott lectures.&lt;/p&gt;
+
+&lt;p&gt;All this came to mind when I read Scott&amp;#8217;s now-infamous &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=2091#comment-326664&#34;&gt;blog comment&lt;/a&gt; about growing up as a shy, self-proclaimed and self-hating male nerd; followed by the much-cited &lt;a href=&#34;http://www.newstatesman.com/laurie-penny/on-nerd-entitlement-rebel-alliance-empire&#34;&gt;response&lt;/a&gt; from journalist Laurie Penny about growing up as a shy, self-proclaimed and self-hating female nerd; followed by Scott&amp;#8217;s latest &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=2119&#34;&gt;blog post&lt;/a&gt; clarifying what he believes about feminism and the plight of shy nerdy people anguished by sexual frustration. What suprised me about the latter was that Scott went so far as to write:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;How to help all the young male nerds I meet who suffer from this problem, in a way that passes feminist muster, and that triggers the world’s sympathy rather than outrage, is a problem that interests me as much as P vs. NP, and right now that seems about equally hard.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;(&amp;#8220;As much as P vs NP&amp;#8221;?! Remember that Scott once bet his house on the invalidity of a paper claiming to prove P != NP, cf. &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=456&#34;&gt;http://www.scottaaronson.com/blog/?p=456&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Sometimes I think that the obvious step towards solving the problem Scott mentions is for the frustrated person to politely and non-expectantly inform the other person of his/her desires. In an ideal world, they would then discuss them until reaching an amicable resolution, at which point they can return to platonically multiplying tensors or whatever.&lt;/p&gt;
+
+&lt;p&gt;But I suppose part of the definition of shy is the fear of exposing yourself to untrusted parties, for which they can reject you, humiliate you, and otherwise destroy that which you value or at least begrudgingly tolerate. Sadly, the shyness of analytical minds seems justified, because pretty much nobody has worked out how to communicate rejection without passing unfair judgement or otherwise patterning poisonous behavior. There is an art to divulging hidden feelings, an art to giving rejection, an art to handling sadness graciously, and an art to growing friendships from tenuous beginnings. None of these are taught to adolescent humans. Instead, we learn to hide ourselves and shame others.&lt;/p&gt;
+
+&lt;p&gt;I feel unprepared to write anything resembling a guide on how to do this, having recoiled from human contact for most of my life thanks to shyness, but I think it&amp;#8217;s well worth some human brain cycles. Here&amp;#8217;s hoping to live in a culture of rejection-positivity.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>why I left grad school</title>
+      <link>https://diracdeltas.github.io/blog/why-i-left-grad-school/</link>
+      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/why-i-left-grad-school/</guid>
+      <description>&lt;p&gt;&lt;em&gt;[originally posted to &lt;a href=&#34;https://yan.jottit.com&#34;&gt;https://yan.jottit.com/&lt;/a&gt; on 1/20/13]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Grad school was alright. I liked the people, I liked my research, and I liked the security of knowing exactly what I was going to be doing for the next 5-6 years.&lt;/p&gt;
+
+&lt;p&gt;Grad school in experimental physics was the easy choice for me. I had a hella fly academic track record, liked doing research, and reportedly got one of the two highest scores in experimental physics my year. I got into all the grad schools I applied to and lots of fellowship offers as well.&lt;/p&gt;
+
+&lt;p&gt;But what bothered me was that it was a convenient choice but not a fully deliberate one. It paid the bills, gave me health insurance, and allowed me to live near San Francisco while having a decent amount of free time. However, I was pretty sure I had zero interest in going into academia as a profession. So grad school was mostly a way to stall while figuring out what exactly I wanted to do with my life.&lt;/p&gt;
+
+&lt;p&gt;Then I got tired of stalling and not doing anything that felt productive in the meantime.&lt;/p&gt;
+
+&lt;p&gt;It got to the point where I finally decided to walk away from the NSF fellowship, the sunny apartment in suburban paradise, the guaranteed 6-year stipend, the free enrollment in Stanford classes, the health care, the gym access, and the prestige of getting a Physics PhD from Stanford in favor of being homeless, unemployed, and perpetually uncertain of tomorrow.&lt;/p&gt;
+
+&lt;p&gt;The last month or so has been full of stress, disappointment, and self-doubt, the pains of a transition to life without externally-imposed structure. There&amp;#8217;s also been unexpected validation. It feels really, really good, almost glorious, to read a paper or teach yourself a new skill knowing that you aren&amp;#8217;t doing it for any reason other than because it really deeply matters to you. I realized that too much time in my life thus far has been spent on tasks that I did in order to pass tests, get jobs, and prove myself to others.&lt;/p&gt;
+
+&lt;p&gt;As soon as I decided to leave Stanford, I had about 393849394 projects that I wanted to work on day and night. I wanted to brush up on a couple programming languages and learn several new ones, build a start-up, read up on anarchist theory, fix all the problems in the way scientists do science, take an online class in computer networks, facilitate open access to journals, help develop cryptographically secure tools for activists, promote social justice, start a warehouse living space, contribute to open source code repos, read papers on neural networks, blog about data science, and make tasty vegan food for friends. But I never could focus entirely on doing any of these things becaused I was too scared of not having a job for too long.&lt;/p&gt;
+
+&lt;p&gt;These days I alternate between feeling excited about doing these projects and feeling distracted/worried that I&amp;#8217;ll never make a living at the same time.&lt;/p&gt;
+
+&lt;p&gt;This issue is unresolved as of this writing. Intellectually, I&amp;#8217;ve convinced myself not to worry about getting a job for now (I can live reasonably for almost a year on savings, anyway) and focus instead on projects that&amp;#8217;ll have a positive impact on the world. It bothers me that this isn&amp;#8217;t a sustainable way of living, though, and I&amp;#8217;d rather fix that sooner than later.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Encrypt The Web on discrete blogarithm</title>
+    <link>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</link>
+    <description>Recent content in Encrypt The Web on discrete blogarithm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Aug 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://diracdeltas.github.io/blog/categories/encrypt-the-web/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>23 hours of DEF CON 23</title>
+      <link>https://diracdeltas.github.io/blog/defcon2015/</link>
+      <pubDate>Mon, 10 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/defcon2015/</guid>
+      <description>&lt;p&gt;James Kasten, Peter Eckersley and I gave a talk at DEF CON this year about the &lt;a href=&#34;https://letsencrypt.org&#34;&gt;Let&amp;#8217;s Encrypt&lt;/a&gt; project. There is no recording yet, but you can get off the edge of your seat now, because here are the &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/defcon2015.pdf&#34;&gt;slides&lt;/a&gt; [pdf] that the world has been waiting for with bated breath.&lt;/p&gt;
+
+&lt;p&gt;Given that we practiced for a total of 30 minutes and worked on slides until we were whisked onstage, the talk went pretttttty smoothly. In particular, James&amp;#8217; live demo of a certificate issuance and rollback on a parody enterprise website ~stole the show. My one-take documentary about innocent people who can&amp;#8217;t figure out how to get an SSL certificate was also met with great acclaim, especially for the phenomenal cinematography (&amp;#8220;A cross between The Blair Witch Project, Spinal Tap, and a Windows 95 home setup instruction video.&amp;#8221;):&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, we were in one of the smaller DEF CON rooms, so the majority of people who waited in line for the talk didn&amp;#8217;t get to see it, and the ones who did get to see it became very close to each other (emotionally as well as physically, I hope).&lt;/p&gt;
+
+&lt;div id=&#34;attachment_613&#34; style=&#34;width: 415px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1.jpg&#34;&gt;&lt;img class=&#34;wp-image-613&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1.jpg&#34; alt=&#34;defcon1&#34; width=&#34;405&#34; height=&#34;405&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1.jpg 1080w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon1-624x624.jpg 624w&#34; sizes=&#34;(max-width: 405px) 100vw, 405px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    the people who didn&amp;#8217;t want to encrypt were forcibly removed from the room
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;45 minutes later, we were glad to be done and finally free to enjoy the rest of the conference!&lt;/p&gt;
+
+&lt;div id=&#34;attachment_615&#34; style=&#34;width: 416px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon2.jpg&#34;&gt;&lt;img class=&#34;wp-image-615&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon2.jpg&#34; alt=&#34;defcon2&#34; width=&#34;406&#34; height=&#34;406&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon2.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon2-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon2-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon2-624x624.jpg 624w&#34; sizes=&#34;(max-width: 406px) 100vw, 406px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    peter, me, and james looking pretty psyched
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&amp;hellip; which we did by scrambling over to Dan Kaminsky&amp;#8217;s &lt;a href=&#34;http://dankaminsky.com/2015/08/09/defcon-23-lets-end-clickjacking/&#34;&gt;talk on clickjacking prevention&lt;/a&gt;. Afterwards, we rescued Dan from his hordes of manic fans by inviting him to dinner.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_616&#34; style=&#34;width: 411px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon3.jpg&#34;&gt;&lt;img class=&#34;wp-image-616&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon3.jpg&#34; alt=&#34;defcon3&#34; width=&#34;401&#34; height=&#34;401&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon3.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon3-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon3-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon3-624x624.jpg 624w&#34; sizes=&#34;(max-width: 401px) 100vw, 401px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    peter and dan sure are happy to be done with their talks!
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;After dinner, I walked around a bunch with my favorite DEF CON 23 car hacker &lt;a href=&#34;http://samy.pl&#34;&gt;Samy&lt;/a&gt; (no offense to Charlie Miller, Chris Valasek, Marc Rogers, Kevin Mahaffey, and all of Car Hacking Village tho!). All the villages were closed, but luckily the Silent Circle booth in the vendor room was poppin&amp;#8217;.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_623&#34; style=&#34;width: 411px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/silentcircle.jpg&#34;&gt;&lt;img class=&#34;wp-image-623&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/silentcircle.jpg&#34; alt=&#34;silentcircle&#34; width=&#34;401&#34; height=&#34;401&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/silentcircle.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/silentcircle-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/silentcircle-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/silentcircle-624x624.jpg 624w&#34; sizes=&#34;(max-width: 401px) 100vw, 401px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    we made a silent Silent Circle circle
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I was supposed to head to the airport shortly after, but I was having such an unexpectedly great time at DEF CON that I changed my flight.&lt;/p&gt;
+
+&lt;p&gt;After 3.5 energy drinks and an all-nighter, I ended up in a cigarrette-smoke-infested $2 hot-dog stand on the far side of dawn. Then I hailed a cab to the airport before collapsing in a heap of exhaustion.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5.jpg&#34;&gt;&lt;img class=&#34;alignnone wp-image-618&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5.jpg&#34; alt=&#34;defcon5&#34; width=&#34;408&#34; height=&#34;408&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5.jpg 1080w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/defcon5-624x624.jpg 624w&#34; sizes=&#34;(max-width: 408px) 100vw, 408px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m pretty darn sad that DEF CON is over &amp;#8211; it was a fantastic time, I met lots of cool people, and all 3 talks I attended inspired me to hack on something new. Too bad talk recordings aren&amp;#8217;t online yet, but fortunately Travis Goodspeed left me with some good ol&amp;#8217; fashioned &lt;a href=&#34;https://www.alchemistowl.org/pocorgtfo/&#34;&gt;bedtime reading&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/pocorgtfo.jpg&#34;&gt;&lt;img class=&#34;alignnone wp-image-622&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/pocorgtfo.jpg&#34; alt=&#34;pocorgtfo&#34; width=&#34;411&#34; height=&#34;411&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/pocorgtfo.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/pocorgtfo-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/pocorgtfo-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/pocorgtfo-624x624.jpg 624w&#34; sizes=&#34;(max-width: 411px) 100vw, 411px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;PS &amp;#8211; working on some new hacks. Hopefully more blog posts soon after catching up on sleep.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>pseudorandom podcast series, episode 1</title>
+      <link>https://diracdeltas.github.io/blog/pseudorandom-podcast-series-episode-1/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/pseudorandom-podcast-series-episode-1/</guid>
+      <description>&lt;p&gt;The combination of my roommate starting a Rust podcast and a long, animated conversation with a (drunk) storyteller last night caused me to become suddenly enamored with the idea of starting my own lil&amp;#8217; podcast. Lately I keep thinking about how many spontaneous, insightful conversations are never remembered, much less entombed in a publicly-accessible server for posterity. So a podcast seemed like an excellent way to share these moments without spending a lot of time writing (I&amp;#8217;m a regrettably slow writer). I&amp;#8217;d simply bring folks into my warehouse living room, give them a beverage of their choice, and spend a leisurely hour chatting about whatever miscellaneous topics came to mind.&lt;/p&gt;
+
+&lt;p&gt;And so, wasting no time, today I asked my ex-ex-colleague Peter Eckersley if he would like to be my first podcast guest. Peter runs the technology projects team at the Electronic Frontier Foundation and, more importantly, lives 3 blocks away from me. Fortuitously, Peter agreed to have me over for a chat later this afternoon.&lt;/p&gt;
+
+&lt;p&gt;When I arrived, it turned out that one of Peter&amp;#8217;s housemates was having friends over for dinner, so finding a quiet spot became a challenge. We ended up in a tiny room at the back of his house where every flat surface was covered in sewing equipment and sundry household items. As Peter grabbed a hammer to reconstruct the only available chair in the room, I set up my laptop and fancy (borrowed) podcast microphone. We gathered around as close as we could and hit the record button.&lt;/p&gt;
+
+&lt;p&gt;Except for one hiccup where Audacity decided to stop recording abruptly, the interview went smoothly and didn&amp;#8217;t need much editing. Next time I&amp;#8217;ll plan to put myself closer to the mic, do a longer intro, and maybe cut the length down to 15 minutes.&lt;/p&gt;
+
+&lt;p&gt;Overall, I had a fun time recording this podcast and am unduly excited about future episodes. Turns out a podcast takes ~10% of the time to write a blog post with the same content. 🙂&lt;/p&gt;
+
+&lt;p&gt;For this and future episodes in the Pseudorandom Podcast Series, here&amp;#8217;s an &lt;a href=&#34;http://feeds.soundcloud.com/users/soundcloud:users:156877463/sounds.rss&#34; target=&#34;_blank&#34;&gt;RSS feed&lt;/a&gt;. I&amp;#8217;m going to reach SoundCloud&amp;#8217;s limit of 180 minutes real quick at this rate, so I will probably host these somewhere else in the future or start a microfunding campaign to pay $15/month.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>tls everything</title>
+      <link>https://diracdeltas.github.io/blog/tls-everything/</link>
+      <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/tls-everything/</guid>
+      <description>&lt;p&gt;Yesterday the W3C &lt;a href=&#34;http://www.w3.org/2001/tag/&#34;&gt;Technical Architecture Group&lt;/a&gt; published a new finding titled, &amp;#8220;&lt;a href=&#34;https://w3ctag.github.io/web-https/&#34;&gt;The Web and Encryption&lt;/a&gt;.&amp;#8221; In it, they conclude:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;&amp;hellip; the Web platform should be designed to &lt;strong&gt;actively prefer secure origins&lt;/strong&gt; — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the &lt;strong&gt;end-to-end nature of TLS encryption must not be compromised&lt;/strong&gt; on the Web, in order to preserve this trust.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To many &lt;a href=&#34;https://eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt; users like myself, this seemed a decade or so beyond self-evident. So I was surprised to see a &lt;a href=&#34;http://lists.w3.org/Archives/Public/www-tag/2014Dec/0018.html&#34;&gt;flurry&lt;/a&gt; of &lt;a href=&#34;http://lists.w3.org/Archives/Public/www-tag/2014Dec/0051.html&#34;&gt;objections&lt;/a&gt; appear on the public mailing list thread discussing the TAG findings.&lt;/p&gt;
+
+&lt;p&gt;It seems bizarre to me that security-minded web developers are spending so much effort hardening the web platform by designing and implementing standards like CSP Level 2, WebCrypto, HTTP Public Key Pinning, and Subresource Integrity, while others are still debating whether requiring the bare minimum security guarantee on the web is a good thing. While &lt;a href=&#34;https://blog.matatall.com/&#34;&gt;some&lt;/a&gt; sites are preventing any javascript from running on their page unless it&amp;#8217;s been whitelisted, &lt;a href=&#34;http://www.nytimes.com/&#34;&gt;other&lt;/a&gt; sites can&amp;#8217;t even promise that any user will ever visit a page that hasn&amp;#8217;t been tampered with.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_502&#34; style=&#34;width: 430px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png&#34;&gt;&lt;img class=&#34;size-full wp-image-502&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png&#34; alt=&#34;wtf&#34; width=&#34;420&#34; height=&#34;604&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png 420w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf-208x300.png 208w&#34; sizes=&#34;(max-width: 420px) 100vw, 420px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    small consolation: the second one has more downloads
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Obviously we shouldn&amp;#8217;t ignore arguments for a plaintext-permissive web; they&amp;#8217;re statistically useful as indicators of misconceptions about HTTPS and sometimes also as indicators of real friction that website operators face. What can we learn?&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#8217;s some of my observations and responses to common anti-HTTPS points (as someone who lurks on standards mailing lists and often pokes website operators to deploy HTTPS, both professionally and recreationally):&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt; &lt;em&gt;&amp;#8220;HTTPS is expensive and hard to set up.&amp;#8221;&lt;/em&gt; This is objectively getting better. Cloudflare offers automatic &lt;a href=&#34;https://blog.cloudflare.com/introducing-universal-ssl/&#34;&gt;free SSL&lt;/a&gt; to their CDN customers, and &lt;a href=&#34;https://sslmate.com/&#34;&gt;SSLMate&lt;/a&gt; lets you get a cert for $10 using the command line. In the near future, the &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;LetsEncrypt&lt;/a&gt; cert authority will offer free certificates, deployed and managed using a nifty new &lt;a href=&#34;https://github.com/letsencrypt/acme-spec&#34;&gt;protocol&lt;/a&gt; called ACME that makes the entire process take &amp;lt;30 seconds.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;#8220;There is no value in using HTTPS for data that is, by nature, public (such as news articles).&amp;#8221;&lt;/em&gt; This misses the point that aggregated browsing patterns, even for only public sites, can reveal a lot of private information about a person. If it weren&amp;#8217;t, advertisers wouldn&amp;#8217;t use third-party tracking beacons. QED.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;#8220;TLS is slow.&amp;#8221;&lt;/em&gt; Chris Palmer thought you would ask this and gave an excellent &lt;a href=&#34;https://www.youtube.com/watch?v=ayD0LiZkWLQ&#34;&gt;presentation&lt;/a&gt; explaining why not. tl;dr: TLS is usually not noticeably slower, but if it is, chances are that you can &lt;a href=&#34;https://istlsfastyet.com/&#34;&gt;optimize away the difference&lt;/a&gt; (warning: the previous link is highly well-written and may cause you to become convinced that TLS is not slow).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;#8220;HTTPS breaks feature X.&amp;#8221;&lt;/em&gt; This is something I&amp;#8217;m intimately familar with, since most bug reports in HTTPS Everywhere (which I used to maintain) were caused by the extension switching a site to HTTPS and suddenly breaking some feature. &lt;a href=&#34;https://support.mozilla.org/en-US/kb/how-does-content-isnt-secure-affect-my-safety&#34;&gt;Mixed content blocking&lt;/a&gt; was the biggest culprit, but there were also cases where CORS stopped working because the header whitelisted the HTTP site but not the HTTPS one. (I also expected some &amp;#8220;features&amp;#8221; to break because HTTPS sites don&amp;#8217;t leak referer to HTTP ones, but surprisingly this never happened.) Luckily if you&amp;#8217;re using HTTPS Everywhere in Chrome, there is a panel in the developer console that helps you detect and fix mixed content on websites (shown below). Setting the CSP report-only header to report non-HTTPS subresources is similarly useful but doesn&amp;#8217;t tell you which resources can be rewritten.&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-501&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png&#34; alt=&#34;https-switch&#34; width=&#34;1293&#34; height=&#34;843&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png 1293w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-300x195.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-1024x667.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-624x406.png 624w&#34; sizes=&#34;(max-width: 1293px) 100vw, 1293px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&amp;#8220;HTTPS gives users a false sense of security.&amp;#8221;&lt;/em&gt; This comes up surprisingly often from various angles. Some people frame this as, &lt;em&gt;&amp;#8220;The CA system isn&amp;#8217;t trustworthy and is breakable by every government,&amp;#8221;&lt;/em&gt; while others say, &lt;em&gt;&amp;#8220;Even with HTTPS, you leak DNS lookups and valuable metadata,&amp;#8221;&lt;/em&gt; and others say, &lt;em&gt;&amp;#8220;But many site certificates are managed by the CDN, not the site the user thinks they&amp;#8217;re visiting securely.&amp;#8221;&lt;/em&gt; The baseline counterargument to all of these is that encryption, even encryption that is theoretically breakable by some people, is better than no encryption, which doesn&amp;#8217;t need to be broken by anyone. CA trustworthiness in particular is getting better with the implementation of certificate transparency and key pinning in browsers; let&amp;#8217;s hope that we solve DNSSEC someday too. Also, regardless of whether HTTPS gives people a false sense of security, HTTP almost certainly gives the average person a false sense of security; otherwise, why would anyone submit their Quora password in plaintext?&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png&#34;&gt;&lt;img class=&#34;wp-image-504 &#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png&#34; alt=&#34;quora&#34; width=&#34;603&#34; height=&#34;462&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png 1038w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-1024x784.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-624x477.png 624w&#34; sizes=&#34;(max-width: 603px) 100vw, 603px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In summary, it&amp;#8217;s very encouraging to see the TAG expressing support for a ubiquitous transit encryption on the web (someday), but from the resulting discussion, it&amp;#8217;s clear that developers still need to be convinced that HTTPS is efficient, reliable, affordable, and worthwhile. I think the TAG has a clear path forward here: separate the overgrown anti-HTTPS mythology from the actual measurable obstacles to HTTPS deployment, and encourage standards that fix real problems that developers and implementers have when transitioning to HTTPS. &lt;a href=&#34;https://github.com/letsencrypt/acme-spec/blob/master/draft-barnes-acme.txt&#34;&gt;ACME&lt;/a&gt;, &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21&#34;&gt;HPKP&lt;/a&gt;, &lt;a href=&#34;https://tools.ietf.org/html/rfc6962&#34;&gt;Certificate Transparency&lt;/a&gt;, and especially &lt;a href=&#34;https://w3c.github.io/webappsec/specs/powerfulfeatures/&#34;&gt;requiring minimum security standards&lt;/a&gt; for powerful new web platform features are good examples of work that motivates website operators to turn on HTTPS by lowering the cost and/or raising the benefits.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>certificate transparency for PGP?</title>
+      <link>https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/</link>
+      <pubDate>Thu, 14 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/</guid>
+      <description>&lt;p&gt;Yesterday, Prof. Matthew Green wrote a nice &lt;a href=&#34;http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html&#34;&gt;blog post&lt;/a&gt; about why PGP must die. Ignoring the UX design problem for now, his four main points were: (1) the keys themselves are too unwieldy, (2) key management is hard, (3) the protocol lacks forward secrecy, and (4) the crypto is archaic/non-sane by default.&lt;/p&gt;
+
+&lt;p&gt;Happily, (1) and (4) can be solved straightforwardly using more modern crypto primitives like Curve25519 and throwing away superfluous PGP key metadata that comes from options that are ignored 99.999999% of the time. Of course, we would then break backwards compatibility with PGP, so we might as well invent a protocol that has forward/future secrecy built-in via something like Trevor Perrin&amp;#8217;s &lt;a href=&#34;https://github.com/trevp/axolotl/wiki&#34;&gt;axolotl ratchet&lt;/a&gt;. Yay.&lt;/p&gt;
+
+&lt;p&gt;That still leaves (2) &amp;#8211; the problem of how to determine which public key should be associated with an endpoint (email address, IM account, phone number, etc.). Some ways that people have tried to solve this in existing encrypted messaging schemes include:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;A central authority tells Alice, &amp;#8220;This is Bob&amp;#8217;s public key&amp;#8221;, and Alice just goes ahead and starts using that key. iMessage does this, with Apple acting as the authority AFAICT. Key continuity may be enforced via pinning.&lt;/li&gt;
+&lt;li&gt;Alice and Bob verify each others&amp;#8217; key fingerprints via an out-of-band &amp;#8220;secure&amp;#8221; channel &amp;#8211; scanning QR codes when they meet in person, reading fingerprints to each other on the phone, romantically comparing short authentication strings, and so forth. This is used optionally in OTR and ZRTP to establish authenticated conversations.&lt;/li&gt;
+&lt;li&gt;Alice tries to use a web of trust to obtain a certification chain to Bob&amp;#8217;s key. Either she&amp;#8217;s verified Bob&amp;#8217;s key directly via #2 or there is some other trust path from her key to Bob&amp;#8217;s, perhaps because they&amp;#8217;ve both attended some &amp;#8220;parties&amp;#8221; where people don&amp;#8217;t have fun at all. This is what people are supposed to do with PGP.&lt;/li&gt;
+&lt;li&gt;Alice finds Bob&amp;#8217;s key fingerprint on some public record that she trusts to be directly controlled by Bob, such as his Twitter profile, DNS entry for a domain that he owns, or a gist on his Github account. This is what Keybase.io does. (I only added this one after &lt;strong&gt;@gertvdijk&lt;/strong&gt; pointed it out on Twitter, so thanks Gert.)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;IMO, if we&amp;#8217;re trying to improve email security for as many people as possible, the best solution minimizes the extent to which the authenticity of a conversation depends on user actions. Key management should be invisible to the average user, but it should still be auditable by paranoid folks. (Not just Paranoid! folks, haha.)&lt;/p&gt;
+
+&lt;p&gt;Out of the 3 options above, the only one in which users have to do zero work in order to have an authenticated conversation is #1. The downside is that Apple could do a targeted MITM attack on Alice&amp;#8217;s conversation with Bob by handing her a key that Apple/NSA/etc. controls, and Alice would never know. (Then again, even if Alice verified Bob&amp;#8217;s key out-of-band, Apple could still accomplish the same thing by pushing a malicious software update to Alice.)&lt;/p&gt;
+
+&lt;p&gt;Clearly, if we&amp;#8217;re using a central authority to certify people&amp;#8217;s keys, we need a way for anyone to check that the authority is not misbehaving and issuing fake keys for people. Luckily there is a scheme that is designed to do exactly this but for TLS certificates &amp;#8211; &lt;a href=&#34;http://www.certificate-transparency.org/&#34;&gt;Certificate Transparency&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;How does Certificate Transparency work? The end result is that a client that enforces Certificate Transparency (CT) recognizes a certificate as valid&lt;strong&gt; &lt;/strong&gt;if (1) the certificate has been signed by a recognized authority (which already happens in TLS) and (2) the certificate has been verifiably published in a public log. The latter can be accomplished through efficient mathematical proofs because the log is structured as a Merkle tree.&lt;/p&gt;
+
+&lt;p&gt;How would CT work for email? Say that I run a small mail service, yanmail.com, whose users would like to send encrypted emails to each other. In order to provide an environment for crypto operations that is more sandboxed and auditable than a regular webpage, I provide a YanMail browser extension. This extension includes (1) a PGP or post-PGP-asymmetric-encryption library, (2) a hardcoded signing key that belongs to me, and (3) a library that implements a Certificate Transparency auditor.&lt;/p&gt;
+
+&lt;p&gt;Now say that alice@yanmail.com wants to email bob@yanmail.com. Bob has already registered his public key with yanmail.com, perhaps by submitting it when he first made his account. Alice types in Bob&amp;#8217;s address, and the YanMail server sends her (1) a public key that supposedly belongs to Bob, signed by the YanMail signing key, and (2) a CT log proof that Bob&amp;#8217;s key is in the public CT log. Alice&amp;#8217;s CT client verifies the log proof; if it passes, then Alice trusts Bob&amp;#8217;s key to be authentic. (Real CT is more complicated than this, but I think I got the essential parts here.)&lt;/p&gt;
+
+&lt;p&gt;Now, if YanMail tries to deliver an NSA-controlled encryption key for Bob, Bob can at least theoretically check the CT log and know that he&amp;#8217;s being attacked. Otherwise, if the fake key isn&amp;#8217;t in the log, no other YanMail user would trust it. This is an incremental improvement over the iMessage key management situation: key certification trust is still centralized, but at least it&amp;#8217;s auditable.&lt;/p&gt;
+
+&lt;p&gt;What if Alice and Bob want to send encrypted email to non-YanMail users? Perhaps the browser extension also hard-codes the signing keys for these mail providers, which are used to certify their users&amp;#8217; encryption keys. Or perhaps the mail providers&amp;#8217; signing keys are inserted into DNS with DANE+DNSSEC. Or perhaps the client just trusts any valid CA-certified signing key for the mail provider.&lt;/p&gt;
+
+&lt;p&gt;For now, with the release of Google &lt;a href=&#34;https://code.google.com/p/end-to-end/&#34;&gt;End-to-End&lt;/a&gt; and Yahoo&amp;#8217;s &lt;a href=&#34;http://arstechnica.com/security/2014/08/yahoo-to-begin-offering-pgp-encryption-support-in-yahoo-mail-service/&#34;&gt;announcement&lt;/a&gt; to start supporting PGP as a first-class feature in Yahoo mail, CT for (post)-PGP seems promising as a way for users of these two large webmail services to send authenticated messages without having to deal with the pains of web-of-trust key management. Building better monitoring/auditing systems can be done incrementally once we get people to actually *use* end-to-end encryption.&lt;/p&gt;
+
+&lt;p&gt;Large caveat: CT doesn&amp;#8217;t provide a solution for key revocation as I understand it &amp;#8211; instead, in the TLS case, it still relies on CRL/OCSP. So if Bob&amp;#8217;s PGP/post-PGP key is stolen by an attacker who colludes with the YanMail server, they can get Alice to send MITM-able messages to Bob encrypted with his stolen key unless there is some reliable revocation mechanism. Ex: Bob communicates out-of-band to Alice that his old key is revoked, and she adds the revoked key to a list of keys that her client never accepts.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Written on 8/14/14 from a hotel room in Manila, Philippines&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;_==============&lt;/p&gt;
+
+&lt;p&gt;_&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (8/15/14)&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Thanks for the responses so far via Twitter and otherwise. Unsurprisingly, I&amp;#8217;m not the first to come up with this idea. Here are some reading materials related to CT for e2e communication:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://moderncrypto.org/mail-archive/messaging/2014/000226.html&#34;&gt;Discussion thread on the Modern Crypto messaging mailing list&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/andres-erbsen/dename&#34;&gt;Dename&lt;/a&gt; (semi-decentralized scheme for associating usernames with profiles, also uses Merkle trees)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://eprint.iacr.org/2013/595.pdf&#34;&gt;Paper on Enhanced Certificate Transparency for e2e mail (pdf)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://sump2.links.org/files/RevocationTransparency.pdf&#34;&gt;Ben Laurie&amp;#8217;s paper on Revocation Transparency (pdf)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (8/29/14):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Since I posted this, folks from Google presented a similar but more detailed &lt;a href=&#34;https://code.google.com/p/end-to-end/wiki/KeyDistribution&#34;&gt;proposal for E2E&lt;/a&gt;. There has been a nice &lt;a href=&#34;https://moderncrypto.org/mail-archive/messaging/2014/000708.html&#34;&gt;discussion&lt;/a&gt; about it on the Modern Crypto list, in addition to the one in the comments section of the proposal.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt; Update (7/18/15):&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I know it&amp;#8217;s pretty silly to be updating this after a year, but it&amp;#8217;d be a travesty to not mention &lt;a href=&#34;http://coniks.org&#34;&gt;CONIKS&lt;/a&gt; here.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Software Transparency: Part 1</title>
+      <link>https://diracdeltas.github.io/blog/software-transparency/</link>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/software-transparency/</guid>
+      <description>&lt;p&gt;Say that you want to &amp;#8220;securely&amp;#8221; acquire an app called EncryptedYo for &amp;#8220;securely&amp;#8221; communicating with your friends. You go to the developer&amp;#8217;s web site, which is HTTPS-only, and download a binary executable. Done!&lt;/p&gt;
+
+&lt;p&gt;Perhaps if you&amp;#8217;re paranoid, you fetch the developer&amp;#8217;s GPG key, make sure that there&amp;#8217;s a valid trust path to it from your own key, verify the detached signature that they&amp;#8217;ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you&amp;#8217;ve downloaded before installing it.&lt;/p&gt;
+
+&lt;p&gt;This is good enough as long as the only things you&amp;#8217;re worried about are MITM attacks on your network connection and compromise of the server hosting the software. It&amp;#8217;s not good enough if you&amp;#8217;re worried about any of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The developer getting a secret NSA order to insert a backdoor into the software.&lt;/li&gt;
+&lt;li&gt;The developer intentionally making false claims about the security of the software.&lt;/li&gt;
+&lt;li&gt;The developer&amp;#8217;s build machine getting compromised with malware that injects backdoors during the packaging process (pre-signing) or even a malicious compiler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All of the above are *Very Real Worries* &amp;trade; that users should have when installing software. As a maintainer of a &lt;a href=&#34;https://www.eff.org/https-everywhere&#34;&gt;security-enhancing browser extension&lt;/a&gt; used by millions of people, I used to worry about the third one before HTTPS Everywhere had a deterministic build process (more on that below). If my personal laptop was compromised by a malicious version of zip that rewrote the static update-fetching URL in the HTTPS Everywhere source code before compressing and packaging it, literally millions of Firefox installations would be pwned within a few days if I didn&amp;#8217;t somehow detect the attack before signing the package (which is basically impossible to do in general).&lt;/p&gt;
+
+&lt;p&gt;You might instinctively think that the scenarios above are at least *detectable* if the software is open source and has been well-audited, but that&amp;#8217;s not really true. Ex:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;How do I know that some binary executable that I downloaded from &lt;a href=&#34;https://coolbinaryexecutables.com&#34;&gt;https://coolbinaryexecutables.com&lt;/a&gt; actually corresponds to the well-audited, peer-reviewed source code posted at &lt;a href=&#34;https://github.com/coolstuff/EncryptedYo.git?&#34;&gt;https://github.com/coolstuff/EncryptedYo.git?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;How do I know that the binary executable that I downloaded is the same as the one that everyone else downloaded? In other words, how can I be sure that it&amp;#8217;s not my copy and *only* my copy that has a secret NSA backdoor?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;So it looks like there&amp;#8217;s a problem because we usually install software from opaque binaries or compressed archives that have no guarantee of actually corresponding to the published, version-controlled source code. You might try to solve this by cloning the EncryptedYo repo and building it yourself. You can even fetch it over Tor and/or compare your local git HEAD to someone else&amp;#8217;s copy&amp;#8217;s if you want a stronger guarantee against a targeted backdoor.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately that&amp;#8217;s too much to ask the average person to do *every single time* they need to update the software, especially if EncryptedYo&amp;#8217;s target audience includes non-technical people (ex: Glenn Greenwald).&lt;/p&gt;
+
+&lt;p&gt;This is why post-Snowden software developers need to start working on new code packaging and installation mechanisms that preserve &amp;#8220;software transparency,&amp;#8221; a phrase perhaps first used in this context by Seth Schoen. Software transparency, unlike open source by itself, is a guarantee that the packages you&amp;#8217;re installing or updating were created by building the published source code.&lt;/p&gt;
+
+&lt;p&gt;(Side note: Software transparency has open source code as a prerequisite, but a similar concept that I&amp;#8217;ve been calling &amp;#8220;binary transparency&amp;#8221; can be applied to closed-source software as well. Binary transparency is a guarantee that the binary you&amp;#8217;re downloading is the same as the one that everyone else is downloading, but not that the binary is non-compromised. One way to get this is to compare the checksum of your downloaded binary gainst an out-of-band append-only cryptographically-verifiable log (phew) of binary checksums, similar to what Ben Laurie proposed in &lt;a href=&#34;http://www.links.org/?p=1262&#34;&gt;this blog post&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;In the last year, software transparency has finally started to become a front-and-center goal of some projects. Organizations like Mozilla and EFF are &lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=885777&#34;&gt;beginning&lt;/a&gt; to &lt;a href=&#34;https://github.com/EFForg/https-everywhere/commit/e06a13a3283d93c96323970e1e43a897e4bfc944&#34;&gt;work&lt;/a&gt; on fully-reproducible build processes so that other people can independently build their software packages from source and make sure that their checksums are the same as the ones posted on mozilla.org or eff.org. Mike Perry of the Tor Project has &lt;a href=&#34;https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise&#34;&gt;written&lt;/a&gt; about the &lt;a href=&#34;https://blog.torproject.org/blog/deterministic-builds-part-two-technical-details&#34;&gt;painstaking, years-long process&lt;/a&gt; that it took to compile the Tor Browser Bundle deterministically inside a VM, but for many other software projects, the path to a reproducible build is as simple as &lt;a href=&#34;https://github.com/devrandom/gitian-builder/blob/master/bin/canon-zip&#34;&gt;normalizing timestamps&lt;/a&gt; in zip.&lt;/p&gt;
+
+&lt;p&gt;Of course, a reproducible build proccess doesn&amp;#8217;t by itself impact the average user, who is unlikely to try to replicate the build process for Firefox for Android before installing it on their phone. But at least it means that if Mozilla started posting backdoored binaries because their build machine was compromised, some members of their open source development community could in theory detect the attack after-the-fact and raise suspicions. That&amp;#8217;s more than we could do before.&lt;/p&gt;
+
+&lt;p&gt;IMO, every reasonably-paranoid software developer should be trying to adopt an independently reproducible build process. &lt;a href=&#34;https://gitian.org&#34;&gt;Gitian&lt;/a&gt; is a good place to start.&lt;/p&gt;
+
+&lt;p&gt;(Part 2 of this series, which I haven&amp;#8217;t written yet, is probably going to be about implementing software transparency in a way that protects end users before they get pwned, which nobody is doing much of yet AFAIK. In particular, it would be nice to start discussing ways to enforce software transparency for resources loaded in a browser, in hopes that this will bring either some clarity or more shouting to the debate about whether in-browser crypto apps are a good idea.)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>don’t forget to secure cookies ppl</title>
+      <link>https://diracdeltas.github.io/blog/wordpress-fail/</link>
+      <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/wordpress-fail/</guid>
+      <description>&lt;p&gt;Update (5/28/14): Regrettably, most of the stories covering this blog post have been all &amp;#8220;OMG EVERYTHING IS BROKEN&amp;#8221; rather than &amp;#8220;Here&amp;#8217;s how to make things better til WordPress rolls out a fix&amp;#8221; (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it&amp;#8217;s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;If you&amp;#8217;re a developer running your own WordPress install, make sure you set up SSL on all relevant servers and configure WordPress to auth flag cookies as &amp;#8220;secure.&amp;#8221;&lt;/li&gt;
+&lt;li&gt;If you&amp;#8217;re a WordPress user, don&amp;#8217;t be logged into WordPress on an untrusted network, or use a VPN. If you are and you visit a wordpress.com site (which confusingly may not actually have a wordpress.com domain name), your auth cookies are exposed.&lt;/li&gt;
+&lt;li&gt;[Experimental, probably not recommended] You can manually set the &amp;#8220;secure&amp;#8221; flag on the WP auth cookies in your browser. There&amp;#8217;s no guarantee that this works consistently, since the server can always send a set-cookie that reverts it into an insecure cookie. It may cause some WP functionality to break.&lt;/li&gt;
+&lt;li&gt;If you suspect that your WP cookie may have been stolen in the past, you can invalidate it by (1) waiting 3 years for it to expire on the server or (2) resetting your wordpress.com password. Note that logging out of WordPress does *not* invalidate the cookie on the server, so someone who stole it can use it even after you&amp;#8217;ve logged out. I verified that resetting your WP password does invalidate the old cookie; there may be other ways, but I haven&amp;#8217;t found any.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Original post below.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;While hunting down a bug report for &lt;a href=&#34;https://github.com/EFForg/privacybadgerfirefox&#34;&gt;Privacy Badger&lt;/a&gt;, I noticed the &amp;#8220;wordpress_logged_in&amp;#8221; cookie being sent over clear HTTP to a WordPress authentication endpoint (&lt;a href=&#34;http://r-login.wordpress.com/remote-login.php&#34;&gt;http://r-login.wordpress.com/remote-login.php&lt;/a&gt;) on someone&amp;#8217;s blog.&lt;/p&gt;
+
+&lt;div id=&#34;attachment_377&#34; style=&#34;width: 904px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png&#34;&gt;&lt;img class=&#34;size-full wp-image-377&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png&#34; alt=&#34;uh-oh&#34; width=&#34;894&#34; height=&#34;864&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png 894w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies-300x289.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies-624x603.png 624w&#34; sizes=&#34;(max-width: 894px) 100vw, 894px&#34; /&gt;&lt;/a&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    uh-oh
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sounds like bad news! As mom always said, you should set the &amp;#8220;secure&amp;#8221; flag on sensitive cookies so that they&amp;#8217;re never sent in plaintext.&lt;/p&gt;
+
+&lt;p&gt;To check whether this cookie did anything interesting, I logged out of my wordpress account, copied the wordpress_logged_in cookie into a fresh browser profile, and visited &lt;a href=&#34;http://wordpress.com&#34;&gt;http://wordpress.com&lt;/a&gt; in the new browser profile. Yep, I was logged in!&lt;/p&gt;
+
+&lt;p&gt;This wouldn&amp;#8217;t be so bad if the wordpress_logged_in cookie were invalidated when the original user logged out or logged back in, but it definitely still worked. Does it expire? In 3 years. (Not sure when it gets invalidated on the server side, haven&amp;#8217;t waited long enough to know.)&lt;/p&gt;
+
+&lt;p&gt;Is this as bad as sending username/password in plaintext? I tried to see if I could reset the original user&amp;#8217;s password.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-378&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png&#34; alt=&#34;wordpresspassword1&#34; width=&#34;992&#34; height=&#34;428&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png 992w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825-300x129.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825-624x269.png 624w&#34; sizes=&#34;(max-width: 992px) 100vw, 992px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;That didn&amp;#8217;t work, so I&amp;#8217;m assuming WordPress uses the actually-secure cookie (wordpress_sec) for super important operations like password change. Nice job, but &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;It turns out I could post to the original user&amp;#8217;s blog (and create new blog sites on their behalf):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-379&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png&#34; alt=&#34;wordpress_postblog&#34; width=&#34;928&#34; height=&#34;581&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png 928w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246-300x187.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246-624x390.png 624w&#34; sizes=&#34;(max-width: 928px) 100vw, 928px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I could see private posts:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-380&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png&#34; alt=&#34;wordpress_postsecretblog&#34; width=&#34;950&#34; height=&#34;523&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png 950w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834-300x165.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834-624x343.png 624w&#34; sizes=&#34;(max-width: 950px) 100vw, 950px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I could post comments on other blogs as them:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-381&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png&#34; alt=&#34;wordpress_postcomment&#34; width=&#34;1007&#34; height=&#34;534&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png 1007w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342-300x159.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342-624x330.png 624w&#34; sizes=&#34;(max-width: 1007px) 100vw, 1007px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I could see their blog stats:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-382&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png&#34; alt=&#34;wordpress_stats&#34; width=&#34;1042&#34; height=&#34;695&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png 1042w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-300x200.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-1024x682.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-624x416.png 624w&#34; sizes=&#34;(max-width: 1042px) 100vw, 1042px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;And so forth. I couldn&amp;#8217;t do some blog administrator tasks that required logging in again with the username/password, but still, not bad for a single cookie.&lt;/p&gt;
+
+&lt;p&gt;Moral of the story: don&amp;#8217;t visit a WordPress site while logged into your account on an untrusted local network.&lt;/p&gt;
+
+&lt;p&gt;Update: Thanks to Andrew Nacin of WordPress for informing me that auth cookies will be invalidated after a session ends in the next WordPress release and that SSL support on WordPress will be improving!&lt;/p&gt;
+
+&lt;p&gt;Update (5/26/14): I subsequently found that the insecure cookie could be used to set someone&amp;#8217;s 2fac auth device if they hadn&amp;#8217;t set it, thereby locking them out of their account. If someone has set up 2fac already, the attacker can still bypass login auth by cookie stealing &amp;#8211; the 2fac auth cookie is also sent over plaintext.&lt;/p&gt;
+
+&lt;p&gt;Update (5/26/14): A couple people have asked about whether the disclosure timeline below is reasonable, and my response is &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wordpress-fail/#comment-70&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Disclosure timeline:&lt;/p&gt;
+
+&lt;p&gt;Wed, 21 May 2014 16:12:17 PST: Reported issue to security@automattic.com, per the instructions at &lt;a href=&#34;http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#where-do-i-report-security-issues&#34;&gt;http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#where-do-i-report-security-issues&lt;/a&gt;; at this point, the report was mostly out of courtesy, since I figured it had to be obvious to them and many WP users already that the login cookie wasn&amp;#8217;t secured (it&amp;#8217;s just a simple config setting in WordPress to turn on the secure cookie flag, as I understand it). Received no indication that the email was received.&lt;/p&gt;
+
+&lt;p&gt;22 May 2014 16:43: Mentioned the lack of cookie securing publicly. &lt;a href=&#34;https://twitter.com/bcrypt/status/469624500850802688&#34;&gt;https://twitter.com/bcrypt/status/469624500850802688&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;22 May 2014 17:39: Received response from Andrew Nacin (not regarding lack of cookie securing but rather that the auth cookie lifetime will soon be that of a regular session cookie). &lt;a href=&#34;https://twitter.com/nacin/status/469638591614693376&#34;&gt;https://twitter.com/nacin/status/469638591614693376&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;23 May 2014 ~13:00: Discovered two-factor auth issue on accident, reported to both security@automattic.com and security@wordpress.org in reply to original email. I also mentioned it to Dan Goodin since I found the bug while trying to answer a question he had about cookies, but I did not disclose publicly.&lt;/p&gt;
+
+&lt;p&gt;25 May 2014 15:20: Received email response from security@automattic.com saying that they were looking into it internally (no mention of timeline). Wrote back to say thanks.&lt;/p&gt;
+
+&lt;p&gt;26 May 2014, ~10:00: Ars Technica article about this gets published, which mentioned the 2-fac auth issue. I updated this blog post to reflect that.&lt;/p&gt;
+
+&lt;p&gt;26-27 May 2014: Some commenters on the Ars Technica article discover an arguably worse bug than the one that the original article was about: WordPress sends the login form over HTTP. (Even though the form POST is over HTTPS, the local network attacker can modify the target on the HTTP page however he/she wants and then it&amp;#8217;s game over.) This wouldn&amp;#8217;t be so bad if everyone used a password manager and changed passwords semi-regularly, since most people are likely to login to WordPress through their blog&amp;#8217;s admin portal (which is always HTTPS as far as I can tell), except that password reuse is rampant. Robert Graham subsequently published &lt;a href=&#34;http://blog.erratasec.com/2014/05/wordpress-unsafe-at-any-speed.html&#34;&gt;this blog post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;29 May 2014, 5:52: Received reply from WordPress saying they would email me again when fixed.&lt;/p&gt;
+
+&lt;p&gt;30 May 2014, 14:51: Andrew Nacin says all issues are supposedly fixed.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>How to make a less-leaky Heartbleed bandage</title>
+      <link>https://diracdeltas.github.io/blog/some-heartbleed-tips/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/some-heartbleed-tips/</guid>
+      <description>&lt;p&gt;Mashable just put out a nice-looking chart showing &amp;#8220;&lt;a href=&#34;http://mashable.com/2014/04/09/heartbleed-bug-websites-affected/&#34; target=&#34;_blank&#34;&gt;Passwords You Need to Change Right Now&lt;/a&gt;&amp;#8221; change in light of the recent &lt;a href=&#34;http://heartbleed.com&#34; target=&#34;_blank&#34;&gt;Heartbleed&lt;/a&gt; carnage. However, it has some serious caveats that I wanted to mention:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;It&amp;#8217;s probably better to be suspicious of companies whose statements are in present-tense (ex: &amp;#8220;We have multiple protections&amp;#8221; or even &amp;#8220;We were not using OpenSSL&amp;#8221;). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then. I am also skeptical that every single company on the list successfully made sure that nothing that they&amp;#8217;ve used or given sensitive user data to had a vulnerable version of OpenSSL in the last 2 years.&lt;/li&gt;
+&lt;li&gt;The article neglects to mention that password reuse means you might have to change passwords on several services for every one that was leaked. The same goes for the fact that one can trigger password resets on multiple services by authenticating a single email account.&lt;/li&gt;
+&lt;li&gt;You should also clear all stored cookies just in case the server hasn&amp;#8217;t invalidated them as they should; many sites use persistent CSRF tokens so logging out doesn&amp;#8217;t automatically invalidate them. (Heartbleed trivially exposed user cookies.)&lt;/li&gt;
+&lt;li&gt;Don&amp;#8217;t forget to also change API keys if a service hasn&amp;#8217;t force-rotated those already.&lt;/li&gt;
+&lt;li&gt;It remains highly unclear whether any SSL certificates were compromised because of Heartbleed. If so, changing your password isn&amp;#8217;t going to help against a MITM who has the SSL private key unless the website has revoked its SSL certificate and you&amp;#8217;ve somehow gotten the revocation statement (LOL). This is complicated. Probably best not to worry about it right now because there&amp;#8217;s not much you can do, but we all might have to worry about it a whole lot more depending on which way the pendulum swings in the next few days.&lt;/li&gt;
+&lt;li&gt;Related-to-#5-but-much-easier: clear &lt;a href=&#34;https://www.imperialviolet.org/2013/06/27/botchingpfs.html&#34; target=&#34;_blank&#34;&gt;TLS session resumption&lt;/a&gt; data. I think this usually happens automatically when you restart the browser.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nonetheless, Mashable made a pretty good chart for keeping track of what information companies have made public regarding the Heartbleed fallout.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>decentralized trustworthiness measures and certificate pinning</title>
+      <link>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</link>
+      <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
+      <description>&lt;p&gt;On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by &lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn&#34;&gt;Zooko&lt;/a&gt;. Namely (pun intended): it&amp;#8217;s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. &lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko%27s_triangle&#34;&gt;Wikipedia&lt;/a&gt; defines these properties as:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Secure&lt;/strong&gt;: The quality that there is one, unique and specific entity to which the name maps. For instance, &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain_name&#34; title=&#34;Domain name&#34;&gt;domain names&lt;/a&gt; are unique because there is just one party able to prove that they are the owner of each domain name.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Decentralized&lt;/strong&gt;: The lack of a centralized authority for determining the meaning of a name. Instead, measures such as a &lt;a href=&#34;https://en.wikipedia.org/wiki/Web_of_trust&#34; title=&#34;Web of trust&#34;&gt;Web of trust&lt;/a&gt; are used.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Human-meaningful&lt;/strong&gt;: The quality of meaningfulness and memorability to the users of the naming system. Domain names and nicknaming are naming systems that are highly memorable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It&amp;#8217;s pretty easy to make systems that satisfy two of the three. Tor Hidden Service (.onion) addresses are secure and decentralized but not human-meaningful since they look like random crap. Regular domain names like stripe.com are secure and human-meaningful but not decentralized since they rely on centralized DNS records. Human names are human-meaningful and decentralized but not secure, because multiple people can share the same name (that&amp;#8217;s why you can&amp;#8217;t just tell the post office to send $1000 to John Smith and expect it to get to the right person).&lt;/p&gt;
+
+&lt;p&gt;It&amp;#8217;s fun to think of how to take a toy system that covers two edges of Zooko&amp;#8217;s triangle and bootstrap it along the third until you get an almost-satisfactory solution to the naming dilemma. Here&amp;#8217;s the one I thought of on the plane:&lt;/p&gt;
+
+&lt;p&gt;Imagine we live in a world with a special type of top-level domain called .ssl, which people have decided to make because they&amp;#8217;re sick of the NSA spying on them all the time. .ssl domains have some special requirements:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;All .ssl servers communicate only over SSL connections. Browsers refuse to send any data unencrypted to a .ssl domain.&lt;/li&gt;
+&lt;li&gt;All .ssl domain names are just the hash of the server&amp;#8217;s SSL public key.&lt;/li&gt;
+&lt;li&gt;The registrars refuse to register a domain name for you unless you show him/her a public key that hashes to that domain name.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This naming system wouldn&amp;#8217;t be human-meaningful, because people can&amp;#8217;t easily remember URLs like &lt;a href=&#34;https://2xtsq3ekkxjpfm4l.ssl&#34;&gt;https://2xtsq3ekkxjpfm4l.ssl&lt;/a&gt;. On the other hand, it&amp;#8217;s secure because the domain names are guaranteed to be unique (except in the overwhemingly-unlikely cases where two keys have the same hash or two servers happen to generate the same keypair). It&amp;#8217;s not truly decentralized, because we still use DNS to map domain names to IP addresses, but I argue that DNS isn&amp;#8217;t a point of compromise: if a MITM en route to the DNS server sends you to the wrong IP address, your browser refuses to talk to the server at that IP address because it won&amp;#8217;t show the right SSL certificate. This is an unavoidable denial-of-service vulnerability, but the benefit is that you detect the MITM attack immediately.&lt;/p&gt;
+
+&lt;p&gt;Of course, this assumes we already have a decentralized way to advertise these not-very-memorable domain names. Perhaps they spread by trusted emails, or word-of-mouth, or business cards at hacker cons. But still, the fact that they&amp;#8217;re so long and complicated and non-human-meaningful opens up serious phishing vulnerabilities for .ssl domains!&lt;/p&gt;
+
+&lt;p&gt;So, we&amp;#8217;d like to have petnames for .ssl domains to make them more memorable. Say that the owner of &amp;#8220;2xtsq3ekkxjpfm4l.ssl&amp;#8221; would like to have the petname &amp;#8220;forbes.ssl&amp;#8221;; how do we get everyone to agree on and use the petname-to-domain-name mappings? We could store the mappings in a distributed, replicated database and require that every client check several database servers and get consistent answers before resolving a petname to a domain name. But that&amp;#8217;s kinda slow, and maybe we&amp;#8217;re too cheap to set up enough servers to make this system robust against government MITM attacks.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#8217;s a simpler and cheaper solution that doesn&amp;#8217;t require any extra servers at all: require that the distance between the hash of the petname and the hash of [server&amp;#8217;s public SSL key] + [nonce] is less than some number D &lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn&#34;&gt;1&lt;/a&gt;. The server operator is responsible for finding a nonce that satisfies this inequality; otherwise, clients will refuse to accept the server&amp;#8217;s SSL certificate.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn&#34;&gt;1&lt;/a&gt; For purposes of this discussion, it doesn&amp;#8217;t really matter how we choose to measure the distance between two hashes, but it should satisfy the following: (1) two hashes that are identical have a distance of 0, and (2) the number of distinct hashes that are at distance N from a hash H0 should grow faster than linearly in N. We can pick Hamming distance, for example.&lt;/p&gt;
+
+&lt;p&gt;In other words, the procedure for getting a .ssl domain now looks like this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Alice wants forbes.ssl. She generates a SSL keypair and mines for a nonce that makes the hash of the public key plus nonce close enough to the hash of &amp;#8220;forbes&amp;#8221;.&lt;/li&gt;
+&lt;li&gt;Once Alice does enough work to find a satisfactory nonce, she adds it as an extra field in her SSL certificate. The registrar checks her work and gives her forbes.ssl if the name isn&amp;#8217;t already taken and her nonce is valid.&lt;/li&gt;
+&lt;li&gt;Alice sets up her site. She continues to mine for better nonces, in case she has adversaries who are secretly also mining for nonces in order to do MITM attacks on forbes.ssl in the future (more on this later).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Bob comes along and wants to visit Alice&amp;#8217;s site.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Bob goes to &lt;a href=&#34;https://forbes.ssl&#34;&gt;https://forbes.ssl&lt;/a&gt; in his browser.&lt;/li&gt;
+&lt;li&gt;His browser sees Alice&amp;#8217;s SSL certificate, which has a nonce. Before finishing the SSL handshake, it checks that the distance D1_forbes between the hash of &amp;#8220;forbes&amp;#8221; and the hash of [SSL public key]+[nonce] is less than Bob&amp;#8217;s maximum allowed distance, D1. Otherwise it abandons the handshake and shows Bob a scary warning screen.&lt;/li&gt;
+&lt;li&gt;If the handshake succeeds, Bob&amp;#8217;s browser caches Alice&amp;#8217;s SSL certificate and trusts it for some period of time T; if Bob sees a different certificate for Alice within time T, his browser will refuse to accept it, unless Alice has issued a revocation for her cert during that time.&lt;/li&gt;
+&lt;li&gt;After time T, Bob goes to Alice&amp;#8217;s site again. His maximum allowed distance has gone down from D1 to D2 during that time. Luckily, Alice has been mining for better nonces, so D1_forbes is down to D2_forbes. Bob&amp;#8217;s browser repeats Step 2 with the new distances and decides whether or not to trust Alice for the next time interval T.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In reality, you probably wouldn&amp;#8217;t want to use this system with SSL certs themselves; rather, it&amp;#8217;d be better to use the nonces to strengthen trust-on-first-use in a key pinning system like TACK. That is, Alice would mine for a nonce that reduces the distance between the hash of &amp;#8220;forbes&amp;#8221; and the hash of [TACK Signing Key]+[nonce].&lt;/p&gt;
+
+&lt;p&gt;For those unfamiliar with TACK, it&amp;#8217;s a system that allows SSL certificates to be pinned to a long-term TACK Signing Key provided by the site operator, which is trusted-on-first-sight and cached for a period of up to 30 days. Trust-on-first-use gets rid of the need to pin to a certificate authority, but it doesn&amp;#8217;t prevent a powerful adversary from MITM&amp;#8217;ing you every time you visit a site if they can MITM you the first time with a fake TACK Signing Key.&lt;/p&gt;
+
+&lt;p&gt;The main usefulness of nonces for TACK Signing Keys is this: it makes broad MITM attacks much more costly. Not only does the MITM have to show you a fake key, but they have to show you one with a valid nonce. If they wanted to do this for every site you visit, keeping in mind that your acceptable distances go down over time, they&amp;#8217;d have to continuously mine for hundreds or thousands of domains.&lt;/p&gt;
+
+&lt;p&gt;Not impossible, of course, but it&amp;#8217;s incrementally harder than just showing you a fake certificate.&lt;/p&gt;
+
+&lt;p&gt;Another nice thing about this scheme is that Bob can decide to set different distance thresholds for different types of sites, depending on how &amp;#8220;secure&amp;#8221; they should be. He can pick a very low distance D_bank for his banking website, because he knows that his bank has a lot of computational resources to mine for a very good nonce. On the other hand, he picks a relatively high distance D_friend for his friend&amp;#8217;s homepage, because he knows that his friend&amp;#8217;s one-page site doesn&amp;#8217;t take any sensitive information.&lt;/p&gt;
+
+&lt;p&gt;My intuition says that sites with high security needs (banks, e-commerce, etc.) also tend to have more computational resources for mining, but obviously this isn&amp;#8217;t true for sites like Wikileaks or some nonprofits that handle sensitive information liked Planned Parenthood. That&amp;#8217;s okay, because volunteers and site users can also mine for nonces! Ex: if Bob finds a better nonce for Alice, he can send it to her so that she has a stronger certificate.&lt;/p&gt;
+
+&lt;p&gt;Essentially, this causes proof of trustworthiness to become decentralized: if I start a whistleblower site, I can run a crowd-mining campaign to ask thousands of volunteers around the world to help me get a strong certificate. I win as long as their combined computing power is greater than that of my adversaries.&lt;/p&gt;
+
+&lt;p&gt;Of course, that last part isn&amp;#8217;t guaranteed. But it&amp;#8217;s interesting to think about what would happen either way.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The most subtle joke I’ve made all year</title>
+      <link>https://diracdeltas.github.io/blog/the-most-subtle-joke-ive-made-all-year/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/the-most-subtle-joke-ive-made-all-year/</guid>
+      <description>&lt;p class=&#34;js-tweet-text tweet-text&#34;&gt;
+  &lt;strong&gt;&lt;a href=&#34;https://twitter.com/shefferstroke&#34;&gt;Dan Auerbach&lt;/a&gt;&lt;/strong&gt;: Any doctor can prescribe any medication to anyone. That is a broken system.
+&lt;/p&gt;
+
+&lt;p class=&#34;js-tweet-text tweet-text&#34;&gt;
+  &lt;a href=&#34;https://twitter.com/bcrypt&#34;&gt;&lt;strong&gt;Yan&lt;/strong&gt;&lt;/a&gt;: Medication needs to be able to do doctor-&lt;a href=&#34;https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning&#34;&gt;pinning&lt;/a&gt;.
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Debunking Google’s HSTS claims</title>
+      <link>https://diracdeltas.github.io/blog/debunking-googles-hsts-claims/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/debunking-googles-hsts-claims/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;**Disclaimer**&lt;/strong&gt;: This post was published before I started working at EFF, hence some stylistic mistakes (calling it &amp;#8220;the EFF&amp;#8221; rather than just &amp;#8220;EFF&amp;#8221;) are excusable and left uncorrected. 🙂&lt;/p&gt;
+
+&lt;p&gt;Two days ago, the EFF published a report tiled, &amp;#8220;&lt;a href=&#34;https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what&#34;&gt;Encrypt the Web Report: Who&amp;#8217;s Doing What&lt;/a&gt;.&amp;#8221; The report included a chart that rated several large web companies on how well they were protecting user privacy via recommended encryption practices for data in transit. The five ranking categories were basic HTTPS support for web services, encryption of data between data centers, STARTTLS for opportunistic email encryption, support for SSL with perfect forward secrecy, and support for HTTP Strict Transport Security (HSTS). It looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://www.eff.org/files/2013/11/19/crypto-survey-graphic.png&#34; width=&#34;666&#34; height=&#34;1158&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By most measures, this is an amazing chart: it&amp;#8217;s easy to understand, seems technically correct, and is tailored to address the public&amp;#8217;s concerns about what companies are doing to protect people from the NSA. On the other hand, I don&amp;#8217;t like it much. Here&amp;#8217;s why:&lt;/p&gt;
+
+&lt;p&gt;The first problem with the report is that it inadequately explains the basis for each score. For instance, what does a green check in the &amp;#8220;HTTPS&amp;#8221; category mean? Does it mean that the company is encrypting &lt;em&gt;all&lt;/em&gt; web traffic, or just web traffic for logins and sensitive information? Sonic.net certainly got a green check in that category, yet you can check that going to &lt;a href=&#34;http://sonic.net&#34;&gt;http://sonic.net&lt;/a&gt; doesn&amp;#8217;t even redirect you to HTTPS. Amazon got a red square that says &amp;#8220;limited&amp;#8221;, but they seem to encrypt login and payment credentials just fine.&lt;/p&gt;
+
+&lt;p&gt;The second problem is that the report lacks transparency on how its data was acquired. It states, &amp;#8220;The information in this chart comes from several sources; the companies who responded to our survey questions; information we have determined by independently examining the listed websites and services and &lt;a href=&#34;https://www.facebook.com/notes/facebook-engineering/secure-browsing-by-defa%20ult/10151590414803920&#34;&gt;published&lt;/a&gt; &lt;a href=&#34;http://arstechnica.com/security/2013/11/we-still-dont-encrypt-server-to-server-data-admits-microsoft/&#34;&gt;reports&lt;/a&gt;.&amp;#8221; Does that mean the EFF sent a survey to a bunch of companies that asked them to check which boxes they thought that they fulfilled? Could we at least see the survey? Also, was each claim independently verified, or did the EFF just trust the companies that responded to the survey?&lt;/p&gt;
+
+&lt;p&gt;I looked at the chart for a while, re-read the text a couple times, and remained unconvinced that I should go ahead and share it with all my friends. After all, there is no greater crime than encouraging ordinary people to believe whatever large companies claim about their security practices. That just leads to less autonomy for the average user and more headaches for the average security engineer. So I decided to take a look at the HSTS category to see whether I could verify the chart myself.&lt;/p&gt;
+
+&lt;p&gt;For those who are unfamiliar, when a website says that they support HSTS, they generally mean that they send a special &amp;#8220;&lt;strong&gt;Strict-Transport Security&lt;/strong&gt;&amp;#8221; header with all HTTPS responses. This header tells your browser to only contact the website over HTTPS (a secure, encrypted protocol) for a certain length of time, preferably on the order of weeks or months. This is better than simply redirecting a user to HTTPS when they try to contact the site over HTTP &lt;a href=&#34;https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what&#34;&gt;1&lt;/a&gt;, because that initial HTTP request can get intercepted by a malicious attacker. By refusing to send the HTTP request at all and only sending the HTTPS version of it, your browser protects you from someone sending you forged HTTPS data after they&amp;#8217;ve intercepted the HTTP request.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what&#34;&gt;1&lt;/a&gt; HTTP traffic can be trivially read by anyone who intercepts those packets, so you should watch out for passwords, cookies, and other sensitive data sent over HTTP. I wrote a post a while back showing how easy it is &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/summertime-and-the-http-traffic-sniffing-is-easy/&#34;&gt;to sniff HTTP traffic with your laptop&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;(HSTS is a good idea, and all servers that support HTTPS should implement it.&lt;/p&gt;
+
+&lt;p&gt;If you decide to stop supporting HTTPS, you can just send an HSTS header with &amp;#8220;max-age=0.&amp;#8221;)&lt;/p&gt;
+
+&lt;p&gt;But HSTS still has a problem, which is that the first time a user ever contacts a website, they&amp;#8217;ll most likely do it over HTTP since they haven&amp;#8217;t received the HSTS header from the site yet! The Chromium browser tried to solve this problem by coming with an &lt;strong&gt;HSTS Preload List&lt;/strong&gt;, which is an ever-growing &lt;a href=&#34;http://src.chromium.org/viewvc/chrome/trunk/src/net/http/transport_security_state_static.json&#34;&gt;preloaded list of sites&lt;/a&gt; that want users to contact them over HTTPS the first time. Firefox, Chrome, and Chromium all come shipped with this list. (Fun note: &lt;a href=&#34;https://eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt;, the browser extension by the EFF that I worked on, is basically a gigantic HSTS preload list of 7000+ domains. The difference is that the HTTPS Everywhere list doesn&amp;#8217;t come with every browser, since it&amp;#8217;s much less stable, so you have to install it as an extension.)&lt;/p&gt;
+
+&lt;p&gt;Anyway, let&amp;#8217;s see if Google&amp;#8217;s main search supports HSTS. To check, open up a browser and type in &amp;#8220;&lt;a href=&#34;http://google.com.&amp;amp;#8221&#34;&gt;http://google.com.&amp;amp;#8221&lt;/a&gt;; If it supports HSTS, the HTTP request never returns a status code. If it doesn&amp;#8217;t support HSTS, the HTTP request returns a 302-redirect to HTTPS.&lt;/p&gt;
+
+&lt;p&gt;Results, examined in Firefox 25 with Firebug:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-232&#34; alt=&#34;Screenshot from 2013-11-20 01:42:30&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230.png&#34; width=&#34;980&#34; height=&#34;629&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230.png 980w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230-300x192.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230-624x400.png 624w&#34; sizes=&#34;(max-width: 980px) 100vw, 980px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nope! As you can see, the HTTP request completes. As it does that, it leaks our search query (&amp;#8220;how to use tor&amp;#8221;) and some of our preference cookies to the world.&lt;/p&gt;
+
+&lt;p&gt;The request then 302-redirects to HTTPS, as expected, but that HTTPS request doesn&amp;#8217;t contain an HSTS header at all. So there&amp;#8217;s no way that Google main search supports HSTS, at least in Firefox.&lt;/p&gt;
+
+&lt;p&gt;I was puzzled. Why would Google refuse to send the HSTS header, even though they support HTTPS pretty much everywhere, definitely on their main site? I did a bit more searching and concluded that it was because they &lt;em&gt;deliberately send ad clicks over plain HTTP&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;To prove this to yourself, do a Google search that returns some ads: for instance, &amp;#8220;where to buy ukuleles.&amp;#8221; If you open up Firebug&amp;#8217;s page inspector and look at the link for the ad, which supposedly goes to a ukulele retail site, you&amp;#8217;ll see a secret hidden link that you hit when you click on the ad! That link goes to &amp;#8220;&lt;a href=&#34;http://google.com/aclk?some_parameters=etc,&amp;amp;#8221&#34;&gt;http://google.com/aclk?some_parameters=etc,&amp;amp;#8221&lt;/a&gt;; and you can conclude that Google wants you to click on that HTTP link because they put it in the DOM exactly where you&amp;#8217;d want to click on it anyway.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-233&#34; alt=&#34;Screenshot from 2013-11-20 02:18:44&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844.png&#34; width=&#34;738&#34; height=&#34;616&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844.png 738w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844-300x250.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844-624x520.png 624w&#34; sizes=&#34;(max-width: 738px) 100vw, 738px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&amp;#8217;s click on that ukulele link. Yep, we end up redirected to &lt;a href=&#34;http://googleadservices.com&#34;&gt;http://googleadservices.com&lt;/a&gt; (plain HTTP again), which leaks our referer. That means the site that posted the ad as well as the NSA and anyone sniffing traffic at your local coffeeshop can see what ads you&amp;#8217;re looking at and what you were searching for when you clicked on them.&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-235&#34; alt=&#34;Screenshot from 2013-11-20 02:22:12&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212.png&#34; width=&#34;1297&#34; height=&#34;502&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212.png 1297w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212-300x116.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212-1024x396.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212-624x241.png 624w&#34; sizes=&#34;(max-width: 1297px) 100vw, 1297px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is presumably the reason that Google.com doesn&amp;#8217;t send the HSTS header and isn&amp;#8217;t on the HSTS preload list. But wait, there&amp;#8217;s plenty of Google domains that are in fact on the preload list, like mail.google.com, encrypted.google.com, accounts.google.com, security.google.com, and wallet.google.com. Don&amp;#8217;t they send the HSTS header?&lt;/p&gt;
+
+&lt;p&gt;I checked in Firefox, and none of them did except for accounts.google.com. The rest all 302-redirect to HTTPS, just like any HTTPS site that doesn&amp;#8217;t support HSTS.&lt;/p&gt;
+
+&lt;p&gt;Then I did a bit more reading and found out that HSTS preloads were &lt;a href=&#34;https://wiki.mozilla.org/Privacy/Features/HSTS_Preload_List&#34;&gt;implemented&lt;/a&gt; such that Firefox ignored any site on the preload list that didn&amp;#8217;t send a valid HSTS header with an expiration time greater than 18 weeks. This seems like a valid design choice. Why would a site want to be on the preload list but not support HSTS at all for people with non-Firefox/Chrome/Chromium browsers? And if they don&amp;#8217;t send the header in the first place, how do we know when the site stops supporting HSTS?&lt;/p&gt;
+
+&lt;p&gt;Given that Google doesn&amp;#8217;t really provide the benefits of HSTS to any browsers except Chrom{e, ium}, it&amp;#8217;s hard to argue that it deserves the green check mark in the HSTS category. The moral of the story is that the EFF is awesome, but having a healthy mistrust of what companies claim is even more awesome.&lt;/p&gt;
+
+&lt;p&gt;=====&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;[IMPORTANT EDIT (11/23/13): The following originally appeared in this post, but I&amp;#8217;ve removed it because it turns out I was accidentally using a version of Chrome that didn&amp;#8217;t have the HSTS preloads that I was testing for anyway. Thanks to Chris Palmer for pointing out that Chrome 23 is a year old at this point, and apologies to everyone for my error.]&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;del datetime=&#34;2013-11-23T06:02:07+00:00&#34;&gt;Alright, so I had to also check whether Chrome respected the preload list even for sites that didn&amp;#8217;t send the header. To be extra careful, I did this by packet-sniffing my laptop&amp;#8217;s traffic on port 80 (HTTP) with tshark rather than examining requests with Chrome developer tools. The relevant command on a wifi network, for anyone who&amp;#8217;s curious, is:&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;tshark -p port 80 -i wlan0 -T fields -e http.request.method -e http.request.full_uri -e http.user_agent -e http.cookie -e http.referer -e http.set-cookie -e http.location -E separator=, -E quote=d&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;del datetime=&#34;2013-11-23T06:20:04+00:00&#34;&gt;Let&amp;#8217;s try &lt;a href=&#34;http://wallet.google.com&#34;&gt;http://wallet.google.com&lt;/a&gt;. Yep, we leak HTTP traffic. (It then redirects to &lt;a href=&#34;https://accounts.google.com&#34;&gt;https://accounts.google.com&lt;/a&gt; because I haven&amp;#8217;t logged in to Wallet yet.)&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-237&#34; alt=&#34;Screenshot from 2013-11-22 01:38:21&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821.png&#34; width=&#34;1366&#34; height=&#34;713&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821.png 1366w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821-300x156.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821-1024x534.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821-624x325.png 624w&#34; sizes=&#34;(max-width: 1366px) 100vw, 1366px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;del datetime=&#34;2013-11-23T06:02:07+00:00&#34;&gt;How about &lt;a href=&#34;http://security.google.com?&#34;&gt;http://security.google.com?&lt;/a&gt; Yep, we leak HTTP traffic there too.&lt;br /&gt; &lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-238&#34; alt=&#34;Screenshot from 2013-11-22 01:40:11&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011.png&#34; width=&#34;1366&#34; height=&#34;768&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011.png 1366w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011-300x168.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011-1024x575.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011-624x350.png 624w&#34; sizes=&#34;(max-width: 1366px) 100vw, 1366px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Cypherpunks 2.0</title>
+      <link>https://diracdeltas.github.io/blog/thoughts-on-cypherpunks-2-0/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/thoughts-on-cypherpunks-2-0/</guid>
+      <description>&lt;p&gt;This is a post about fear. It&amp;#8217;s easy to write about things that everyone says they are afraid of, but less so about nightmares that you suspect might just be your own. The latter is much more distressing and also easier to push out of the way. I&amp;#8217;ll try to elaborate on something that has been in the back of my mind.&lt;/p&gt;
+
+&lt;p&gt;Last night, I went to a talk by my friend &lt;a href=&#34;https://twitter.com/eqe&#34; target=&#34;_blank&#34;&gt;Andy&lt;/a&gt; titled, &amp;#8220;&lt;a href=&#34;http://adi.is/s/cpunk20/#1&#34; target=&#34;_blank&#34;&gt;Cypherpunks 2.0&lt;/a&gt;.&amp;#8221; Andy thinks that there&amp;#8217;s been two major waves of activity in the &lt;a href=&#34;http://en.wikipedia.org/wiki/Cypherpunk#Main_principles&#34; target=&#34;_blank&#34;&gt;cypherpunk&lt;/a&gt; movement: the one that peaked in the 90s and put technologies like PGP, SSL, OTR, and Tor in the hands of ordinary people (at least in the U.S.); and the one that started this summer in response to the Snowden leaks.&lt;/p&gt;
+
+&lt;p&gt;Andy is hopeful. He points out that Cypherpunks 2.0 has dozens of active crypto and techno-activism mailing lists, as well as IRL meetups like Techno-Activism Third Mondays, CCC, and Cryptoparty. On the technology front, we&amp;#8217;re watching projects like Tahoe-LAFS, CryptoCat, Whonix, and Tails become what John Gilmore referred to as the physics and mathematics that guarantees a fair society when legal systems are insufficient (as they typically are).&lt;/p&gt;
+
+&lt;p&gt;There was a slide in Andy&amp;#8217;s talk that really stuck with everyone in the audience. It read:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;[Cypherpunks 1.0] &amp;#8220;Look at this utopia we can build, using cryptography!&amp;#8221;&lt;/p&gt;
+
+&lt;p&gt;[Cypherpunks 2.0] &amp;#8220;Look at this dystopia we have built, using cryptography!&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And yes, Cypherpunks 2.0 feels less like a revolution for utopia through free cryptography and more like an arms race against Orwellian governments that fundamentally disagree with us on whether privacy is a human right. Cypherpunks today don&amp;#8217;t talk about winning, for the most part. We talk about staying above water. We say that the best we can do is to make mass surveillance both illegal and extremely difficult through maximal use of end-to-end encryption. We&amp;#8217;re doing the best we can to prevent and protect people from the hells of targeted surveillance if they are ever so unlucky, but it&amp;#8217;s hard to make promises when you don&amp;#8217;t know if your adversary model is close to realistic.&lt;/p&gt;
+
+&lt;p&gt;Last night, I realized that every article I had read about the Snowden leaks either implicitly or explicitly suggested that we should be afraid, because the Orwellian dystopia is already here. Everyone is being watched all the time. Our crypto abilities are decades behind those of the government. Free societies cannot exist in such a state. Etc.&lt;/p&gt;
+
+&lt;p&gt;None of the above distresses me, though. Those of us who identify as cypherpunks or simply people who dislike surveillance are in a better spot than before. Every week, we learn a bit more about how government surveillance works, and we adjust our tactics accordingly. Pull, push, merge.&lt;/p&gt;
+
+&lt;p&gt;The part that I am truly, deeply, unapologetically terrified of is that we&amp;#8217;ll step away from our laptops, take a look at American society as a whole, and find that almost nobody cares.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ve had this fear in some form or another for a decade. In 2006, I was 15, rather cynical, and planning to drop out of public school in inner-city Saint Louis. I wanted generational identity instead of Facebook wall posts, protests instead of biweekly third-period Home Economics. There was nothing I despised more than apathy.&lt;/p&gt;
+
+&lt;p&gt;That year, I purchased the first book I ever bought for myself. It was &lt;em&gt;Amusing Ourselves to Death&lt;/em&gt;, an ever-relevant work of nonfiction written by Neil Postman in 1985. The foreword has a stunningly prophetic passage that, like a boomerang, swings out of the far blue distance and dares us to duck fast:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt; &amp;hellip; we had forgotten that alongside Orwell&amp;#8217;s dark vision, there was another- slightly older, slightly less well known, equally chilling: Aldous Huxley&amp;#8217;s &amp;#8220;Brave New World.&amp;#8221; Contrary to common belief even among the educated, Huxley and Orwell did not prophesy the same thing. Orwell warns that we will be overcome by an externally imposed oppression. But in Huxley&amp;#8217;s vision, no Big Brother is required to deprive people of their autonomy, maturity and history. As he saw it, people will come to love their oppression, to adore the technologies that undo their capacities to think.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Postman, in painful detail, considered the possibility that Huxley, not Orwell, was right. Nonetheless, nobody really wants to talk about Huxley. Orwellian surveillance is, in a certain light, a sexy thing to fight against. The apathy of the average person who spends 4 hours per day watching reality TV is not. For most of us, it&amp;#8217;s much more fun to hack on Tor than to explain to a grocery store cashier why they should support free software projects that are far less usable than Dropbox.&lt;/p&gt;
+
+&lt;p&gt;My fear is that outside of the technological elite, convenience will perpetually win over privacy. I&amp;#8217;m afraid that if staying alive in the war against surveillance relies on winning the war against apathy, Cypherpunks 2.0 is moving forward in the wrong direction.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Summertime, and the HTTP traffic sniffing is easy</title>
+      <link>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</link>
+      <pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</guid>
+      <description>&lt;p&gt;So it happens that every time you access a URL that starts with &amp;#8220;http://&amp;#8221;, anyone on your local network can see what you&amp;#8217;re doing with almost no effort worth writing about. This includes the page itself as well as any information that you&amp;#8217;re transferring, like credit card numbers and passwords (which are hopefully encrypted). It&amp;#8217;s worth reiterating that this isn&amp;#8217;t difficult at all, even if your network is WPA2-protected, as most supposedly-secure WiFi networks are nowadays.&lt;/p&gt;
+
+&lt;p&gt;This sounds like quite a displeasing predicament for those of us who find ourselves using shared wireless networks every day (aka, all of us), but I get the impression that most Internet-users don&amp;#8217;t understand exactly how simple it is to casually sniff HTTP traffic. So, in hopes of convincing you that it *is* in fact simpler than using any OS X package manager successfully, here is the absolute fastest, easiest way I found to reliably eavesdrop on HTTP traffic on most local networks. It should take less than 5 minutes to set up on your Linux thing (maybe also your Mac thing, but I haven&amp;#8217;t tried) and is straightforward to understand.&lt;/p&gt;
+
+&lt;p&gt;(This is intended for education purposes, and also for encouraging more people to use HTTPS instead of HTTP whenever possible, maybe even via the &lt;a href=&#34;https://www.eff.org/https-everywhere/&#34;&gt;browser extension&lt;/a&gt; that I&amp;#8217;m contributing to this summer. More on that in a bit.)&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Run the following to install some packages that we need. dsniff is a collection of various traffic analysis tools, of which we&amp;#8217;ll only use arpspoof; see &lt;a href=&#34;http://www.monkey.org/~dugsong/dsniff/&#34;&gt;here&lt;/a&gt;. tshark is a nice terminal-based packet analyzer; tcpdump also works.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;apt-get install dsniff&lt;/li&gt;
+&lt;li&gt;apt-get install tshark&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Turn your machine into ip-forwarding mode as root by flipping a 0 to a 1, or else people on your network won&amp;#8217;t be able to see their websites. Don&amp;#8217;t do this step if you actually want to launch a denial of service attack, I suppose. Also you might want to remember to turn it back to 0 after you&amp;#8217;re done.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;echo &amp;#8220;1&amp;#8221; &amp;gt; /proc/sys/net/ipv4/ip_forward&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Run the following commands as root on a WiFi network. To find your IP address, you can run ifconfig and look for the wlan0__ inet addr. To find your router&amp;#8217;s IP address, you can do something like run &lt;em&gt;traceroute google.com&lt;/em&gt; and pull out the IP address from the first hop, which is likely to be 192.168.x.x.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;arpspoof -i [your IP address] [the router IP address]&lt;/li&gt;
+&lt;li&gt;tshark -p port 80 -i wlan0 -T fields -e http.request.method -e http.request.full_uri -e http.user_agent&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;And voila, the second command spews out a stream of HTTP addresses that people on your network are accessing, along with the request method and the type of client software used. This is just the start; you can read the manpage for tshark to figure out how to pull more detailed info from the packets and then start writing scripts to modify them before forwarding them along. Ex: appending &lt;em&gt;-e text&lt;/em&gt; will show HTML data as text from the webpages.&lt;/p&gt;
+
+&lt;p&gt;What we&amp;#8217;ve done so far is:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Perform a attack called &lt;a href=&#34;https://en.wikipedia.org/wiki/ARP_spoofing&#34;&gt;ARP spoofing&lt;/a&gt; on the router. Essentially, we trick everyone on the network into thinking that your computer is the router so that all the traffic intended for the router goes to your computer instead. This is straightforward since ARP doesn&amp;#8217;t include authentication mechanisms.&lt;/li&gt;
+&lt;li&gt;Use tshark to extract interesting information from the packets that we&amp;#8217;ve intercepted.&lt;/li&gt;
+&lt;li&gt;Forward these packets along to their intended destination so nobody detects our spying.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;While sniffing packets as they floated by on a warm summer night in the attic of a Berkeley farmhouse in the process of testing this out, I could see which HTTP websites my housemates were accessing, what apps they were using on their phones, and what desktop clients they were running without them ever noticing. With a small amount of additional effort and a large amount of additional malice, I could have manipulated their traffic to interchange the titles of Wikipedia articles or whatever else I wanted, the possibilities bounded only by my imagination / knowledge of regular expressions.&lt;/p&gt;
+
+&lt;p&gt;[Note that although WPA2 encrypts data that goes between the router and devices on the network, this clearly doesn&amp;#8217;t prevent eavesdropping via arpspoof by other devices that have access to the network. &lt;a href=&#34;http://security.stackexchange.com/questions/2372/is-wpa2-wifi-protected-against-arp-poisoning-and-sniffing&#34;&gt;Stack Exchange&lt;/a&gt; explains that by operating at a &lt;a href=&#34;https://en.wikipedia.org/wiki/OSI_model&#34;&gt;layer&lt;/a&gt; above that at which WPA encryption occurs, an arpspoof attack causes the data to instead be encrypted for the attacker&amp;#8217;s device instead of the router.]&lt;/p&gt;
+
+&lt;p&gt;Sadface time. On the other hand, none of the above works if you&amp;#8217;re using &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS&lt;/a&gt;, where the S stands for &amp;#8220;secure,&amp;#8221; because in that case traffic is encrypted between you and the server you&amp;#8217;re trying to reach. On the other other hand, outgoing HTTPS requests from your device can still be subtly converted to insecure HTTP via an attack called &lt;a href=&#34;http://www.thoughtcrime.org/software/sslstrip/&#34;&gt;SSLstrip&lt;/a&gt; that makes use of arpspoof if you try to reach an HTTPS site by redirecting from HTTP. On the other other other hand, you can download the EFF&amp;#8217;s &lt;a href=&#34;https://www.eff.org/https-everywhere/&#34;&gt;HTTPS Everywhere extension&lt;/a&gt; for Chrome/Firefox, which rewrites HTTP URLs to HTTPS before you try to connect to the HTTP site. On the (other)*4 hand, there&amp;#8217;s some problems with SSL in practice because of intermediate certificate validation carelessness and so forth. I&amp;#8217;m now out of hands.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Some thoughts on Facebook implementing forward secrecy</title>
+      <link>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</link>
+      <pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
+      <description>&lt;p&gt;Last month, &lt;a href=&#34;http://news.cnet.com/8301-13578_3-57591179-38/data-meet-spies-the-unfinished-state-of-web-crypto/&#34;&gt;CNET announced&lt;/a&gt; that Facebook is working on implementing a property called &lt;strong&gt;forward secrecy&lt;/strong&gt; in its encryption of user data. The article is pretty long, but the gist of it is:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Perfect_forward_secrecy&#34;&gt;Forward secrecy&lt;/a&gt; is good news, at least theoretically. Right now, when you send data to Facebook&amp;#8217;s servers, your data gets encrypted so that someone who intercepts your data can&amp;#8217;t read it unless they have Facebook&amp;#8217;s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications. Forward secrecy in an encryption protocol, by definition, means that &lt;strong&gt;if the secret key is compromised, your communications are still safe from decryption&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Google is the only major web service that has forward secrecy in its encryption protocol enabled by default. Most services don&amp;#8217;t do this because it&amp;#8217;s computationally expensive.&lt;/li&gt;
+&lt;li&gt;The &lt;a href=&#34;http://www.guardian.co.uk/world/2013/jun/08/nsa-prism-server-collection-facebook-google&#34;&gt;leaked slides&lt;/a&gt; about the NSA surveillance program, PRISM, suggest that the NSA is tapping into Internet connections and collecting data in transit between your computer and Facebook&amp;#8217;s servers, or at least that this is possible.&lt;/li&gt;
+&lt;li&gt;Once your data is collected by the NSA, it can probably just sit around forever. That gives plenty of time for Facebook&amp;#8217;s secret keys to be brute-forced or obtained by the NSA through a court order. Without perfect secrecy, all your data can be decrypted once this happens.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So in other words, Facebook is implementing an extra security measure to protect &lt;strong&gt;data in transit&lt;/strong&gt; from users to their servers, and this announcement comes at an opportune time in light of the &lt;a href=&#34;https://en.wikipedia.org/wiki/Perfect_forward_secrecy&#34;&gt;PRISM&lt;/a&gt; revelations in early July.&lt;/p&gt;
+
+&lt;p&gt;But data in transit isn&amp;#8217;t the only kind of data that needs to be protected! What about &lt;strong&gt;data at rest&lt;/strong&gt;?&lt;/p&gt;
+
+&lt;p&gt;To clarify what I mean here, let&amp;#8217;s think about the flow of data from you to your friends when you make a FB post. This is simplified, but it goes something like:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;You type a message in a text box in your web browser and hit send.&lt;/li&gt;
+&lt;li&gt;Your browser encrypts that message before it leaves your computer and goes on its way to a Facebook server.&lt;/li&gt;
+&lt;li&gt;Your message travels over the Internet in encrypted form.&lt;/li&gt;
+&lt;li&gt;Your message reaches a Facebook server, which decrypts the message and stores it in a database so that it can be retrieved later to be shown on your profile, in your friends&amp;#8217; news feeds, in searches, and so forth.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In Steps 3 and 4, your data goes from in transit to at rest. Here&amp;#8217;s a handy diagram from &lt;a href=&#34;https://en.wikipedia.org/wiki/File:3_states_of_data.jpg&#34;&gt;Wikipedia&lt;/a&gt; that distinguishes the three states of data, which I&amp;#8217;m simplifying into two by merging &amp;#8220;data at rest&amp;#8221; and &amp;#8220;data in use&amp;#8221;:&lt;/p&gt;
+
+&lt;div style=&#34;width: 576px&#34; class=&#34;wp-caption alignnone&#34;&gt;
+  &lt;img alt=&#34;&#34; src=&#34;https://upload.wikimedia.org/wikipedia/commons/2/23/3_states_of_data.jpg&#34; width=&#34;566&#34; height=&#34;343&#34; /&gt;
+  
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    Three states of data.
+  &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Nowadays, it&amp;#8217;s expected for major web services to encrypt all data in transit by default using &lt;a href=&#34;https://en.wikipedia.org/wiki/HTTP_Secure&#34;&gt;HTTPS&lt;/a&gt;, which uses the &lt;strong&gt;SSL/TLS&lt;/strong&gt; cryptographic protocols. This is generally done by using a persistent private server key for both &lt;strong&gt;authentication&lt;/strong&gt; (verifying the server&amp;#8217;s identity) and &lt;strong&gt;encryption&lt;/strong&gt; (encoding the data so that only the server can read it). This does not provide forward secrecy, and all encrypted messages are compromised once the persistent server key is found.&lt;/p&gt;
+
+&lt;p&gt;Facebook&amp;#8217;s announcement, which follows one by Google in 2011, reflects a recent shift toward supporting forward secrecy by generating ephemeral Diffie Hellman keys for encryption during each session. A persistent RSA key is still used to authenticate the server. The ephemeral keys used for encryption, however, are &lt;strong&gt;not stored beyond a session&lt;/strong&gt;. Thus, even if the persistent key is compromised, data that has been obtained through eavesdropping on an Internet connection is still safe from decryption.&lt;/p&gt;
+
+&lt;p&gt;However, recall that in Step 4 above, Facebook decrypts your data and stores it in a database, presumably one that is password-protected or has some other security measure that lets a trusted set of people access it (database admins, for instance). At this point, your data is just sitting around in decrypted form, protected by whatever-FB-does-to-protect-its-servers. It would be impractical to do otherwise because performing encrypted query operations efficiently is &lt;a href=&#34;https://en.wikipedia.org/wiki/Homomorphic_encryption&#34; target=&#34;_blank&#34;&gt;hard maths&lt;/a&gt;, and basically the definition of a web app is something that stores data and performs interesting/useful queries.&lt;/p&gt;
+
+&lt;p&gt;With Facebook&amp;#8217;s announcement of support for forward secrecy in TLS/SSL, we&amp;#8217;ve been assured of increased attention to security for data in transit, but this of course says nothing about data at rest. Indeed, it seems that the NSA surveillance leaks have sparked relatively little discussion of policies at companies like Facebook for securing data at rest. That&amp;#8217;s surprising to me, because the oft-spoken phrase &amp;#8220;NSA back door&amp;#8221; vividly suggests that the NSA is in the trusted set of people who have access to the decrypted data in servers at FB, Google, and so forth.&lt;/p&gt;
+
+&lt;p&gt;To be clear, forward secrecy is effective against a particular adversary model, namely wiretapping. Although the CNET article points out that the NSA is probably doing a bunch of wiretapping these days and has agreements with Internet service providers to facilitate such, I assume it&amp;#8217;s still easy for the NSA to walk up to someone at Facebook and demand access to the database. In fact, regardless of how secure data is while in transit, it basically always needs to get decrypted on the server side in order to be useful for a web service. As long as it&amp;#8217;s easy for the web service to access the decrypted data, it&amp;#8217;s easy for the NSA to do so as well*.&lt;/p&gt;
+
+&lt;p&gt;*Barring policy changes that would legally prevent surveillance. Even so &amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;In short, there probably exists no NSA-proof cryptographic protocol for securing data at rest so long as companies agree to comply with gov-authorized surveillance programs. Forward secrecy doesn&amp;#8217;t seem like much of a deterrent to PRISM in that case.&lt;/p&gt;
+
+&lt;p&gt;But in terms of protecting our privacy from attackers who &lt;strong&gt;aren&amp;#8217;t&lt;/strong&gt; government spying agencies, the security of data at rest matters as much as, if not more than, security for data in transit. Unfortunately, whereas TLS/SSL is an established and widely-used standard for encrypting data in transit (albeit flawed in practice), procedures for securing data at rest seem to vary widely between companies (see Appendix A). These procedures are often described in vague terms if at all. For instance, &lt;a href=&#34;https://www.cloze.com/&#34;&gt;one service&lt;/a&gt; simply states that it &amp;#8220;provides multiple layers of security around your information, from access protected data centers, through network and application level security &amp;hellip; Sensitive information, such as your email, messages and passwords, is always encrypted.&amp;#8221; The methods of encryption, whether they are applied in transit or at rest, and other important details related to the security of the service are left out.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#8217;s hard to blame the product description writers for omitting these crucial details, because most users simply don&amp;#8217;t care as long as they feel reasonably secure. It&amp;#8217;s easy to feel secure with assurances like the ones quoted above, and news articles about implementations of forward secrecy in the works at FB. And then you get things like &lt;a href=&#34;http://thenextweb.com/twitter/2012/12/20/twitter-com-login-flaw-causes-passwords-to-be-sent-in-plain-text-in-some-cases/&#34;&gt;Twitter sending passwords in unencrypted form&lt;/a&gt; or &lt;a href=&#34;https://www.trustwave.com/spiderlabs/advisories/TWSL2011-007.txt&#34;&gt;Apple failing to properly authenticate SSL certificates&lt;/a&gt; or a whole &lt;a href=&#34;http://plaintextoffenders.com/&#34;&gt;Tumblr blog of websites that store and send passwords in plaintext&lt;/a&gt;, oops. There&amp;#8217;s a difference between feeling secure and actually being secure on the web, clearly, but paranoia is tiring and you should probably go check on the 12 Facebook notifications that you got while reading this blog post.&lt;/p&gt;
+
+&lt;p&gt;===========&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Appendix A: A Brief, Non-Representative Survey of Company Policies for Securing Data at Rest&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the course of researching this blog post, I made a post on a certain social media site asking my friends in tech about how their companies secured non-sensitive data at rest, where non-sensitive data includes user-to-user communications and metadata (but not passwords, SSNs, and financial data). The few answers I got were more sophisticated than, &amp;#8220;In plaintext, on a password-protected database,&amp;#8221; but I suspect there&amp;#8217;s some selection bias here. Anonymized responses below.&lt;/p&gt;
+
+&lt;p&gt;_&lt;strong&gt;_&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;#8217;ve worked with so many apps, and it&amp;#8217;s almost always a database behind a firewall. I&amp;#8217;ve occasionally built systems where financial data was stored in some more secure way: one, where financial data and transaction processing happened on a separate box with no services and a very minimal API (to limit exposure), and where it was impossible to retrieve the sensitive information via the API.&lt;br data-reactid=&#34;.r[n8ym].[0]{comment10200377727028310_4734438}.[2:0].[5:0:right].[4:1].[5:0:left].[2:1].[2:0].[2:0:2].[3:0].[4:0:1]&#34; /&gt;&lt;br data-reactid=&#34;.r[n8ym].[0]{comment10200377727028310_4734438}.[2:0].[5:0:right].[4:1].[5:0:left].[2:1].[2:0].[2:0:2].[3:0].[4:0:2]&#34; /&gt;The other one actually encrypted data using a key that was secured with the user&amp;#8217;s password. It was re-encrypted using the user&amp;#8217;s session on login, so the cleartext was only available when the user was logged in, during a request from that specific client. In this way, sensitive information was protected from our staff, and from an attacker, except that anyone who was actively using the system would be exposed (to a reasonably sophisticated attacker).&lt;br data-reactid=&#34;.r[n8ym].[0]{comment10200377727028310_4734438}.[2:0].[5:0:right].[4:1].[5:0:left].[2:1].[2:0].[2:0:2].[3:0].[4:0:4]&#34; /&gt;&lt;br data-reactid=&#34;.r[n8ym].[0]{comment10200377727028310_4734438}.[2:0].[5:0:right].[4:1].[5:0:left].[2:1].[2:0].[2:0:2].[3:0].[4:0:5]&#34; /&gt;None of these ideas provide protection from a government, though. Client-side encryption doesn&amp;#8217;t really, either. Just look at what happened to Hushmail. I really want there to be some trustable encryption API in the browser, so that client-side encryption for web apps could be a real thing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;_&lt;strong&gt;_&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We actually encrypt (with a separately stored per-user key) all of our user message content. It makes me way way more comfortable debugging problems that come up in production knowing I&amp;#8217;m not going to accidentally read a message that was meant for a friend or co-worker. It&amp;#8217;s pretty low-effort and low-resource-intensity for us to do this so it seems silly not to.&lt;/p&gt;
+
+&lt;p&gt;I guess the tradeoff is that for somebody like Facebook they&amp;#8217;d lose the ability to do queries in aggregate to make advertising or similar decisions based on content.&lt;/p&gt;
+
+&lt;p&gt;&amp;hellip; the keys [for encrypting messages] are stored with symmetric encryption. It defends us against outside attackers getting use out of dumps of our database but in theory with access to the layer that gets the messages and has the keys the encryption doesn&amp;#8217;t matter. The practical limit when we&amp;#8217;ve looked at doing more is one where as long as our site can display your messages then there&amp;#8217;s some set of our infrastructure an attacker could use to read those.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;_&lt;strong&gt;_&lt;/strong&gt;_&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;We use client-side encryption with client-generated keys for user history/bookmarks/passwords, etc. So adding a device to access said data involves JPAKE (key exchange) via our servers (which are treated as an untrusted 3rd party).&lt;/p&gt;
+
+&lt;p&gt;This means syncing is hard, but we associate each record with a record ID and sync them if the hash changes.&lt;/p&gt;
+
+&lt;p&gt;For telemetry, we use anonymized data &amp;#8211; uploads are linked to a UUID that only the client stores locally.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
