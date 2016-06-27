@@ -7,4 +7,5 @@ publishdir: "public"
 baseurl: "https://diracdeltas.github.io/blog"
 title: "discrete blogarithm"
 theme: "Lanyon"
+canonifyurls: true
 ...
