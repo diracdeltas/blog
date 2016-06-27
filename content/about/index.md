@@ -1,7 +1,7 @@
 ---
 title: a/s/l??
 author: yan
-date: 2013-05-24
+date: 2011-05-24
 
 ---
 [<img class="wp-image-592 alignright" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance-576x1024.jpg" alt="surveillance" width="282" height="502" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance-576x1024.jpg 576w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance-169x300.jpg 169w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance.jpg 585w" sizes="(max-width: 282px) 100vw, 282px" />][1]Hi, I&#8217;m yan / [bcrypt][2]. I like information freedom, infosec, stunt h4cks, cryptography, an internet that respects humans, theoretical physics, and art. I dislike non-consensual power structures. I&#8217;m a Senior Software Engineer at [Brave][3] and a [Technology Fellow][4] at the Electronic Frontier Foundation. Before that, I dropped out of high school, got my B.S. from MIT in Physics, and started a PhD at Stanford before dropping out of that too.

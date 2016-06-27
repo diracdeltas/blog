@@ -42,11 +42,6 @@
   </url>
   
   <url>
-    <loc>https://diracdeltas.github.io/blog/talks/</loc>
-    <lastmod>2015-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/</loc>
     <lastmod>2015-07-26T00:00:00+00:00</lastmod>
   </url>
@@ -247,11 +242,6 @@
   </url>
   
   <url>
-    <loc>https://diracdeltas.github.io/blog/about/</loc>
-    <lastmod>2013-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://diracdeltas.github.io/blog/gmailcheck/</loc>
     <lastmod>2013-05-24T00:00:00+00:00</lastmod>
   </url>
@@ -279,6 +269,16 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/hello-world/</loc>
     <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/talks/</loc>
+    <lastmod>2011-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/about/</loc>
+    <lastmod>2011-05-24T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
