@@ -434,12 +434,12 @@ a.pagination-item:hover {
 .theme-base-08 .sidebar,
 .theme-base-08 .sidebar-toggle:active,
 .theme-base-08 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #3e86b9;
+  background-color: #868da0;
 }
 .theme-base-08 .container a,
 .theme-base-08 .sidebar-toggle,
 .theme-base-08 .related-posts li a:hover {
-  color: #3e86b9;
+  color: #868da0;
 }
 
 /* Orange */
