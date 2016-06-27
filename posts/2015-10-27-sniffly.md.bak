@@ -1,0 +1,29 @@
+---
+title: sniffly
+author: yan
+date: 2015-10-27
+url: /sniffly/
+categories:
+  - code
+  - hacktivism
+  - travel
+
+---
+Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&#8217;m dizzy and lost and can&#8217;t remember whose couch I&#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.
+
+This kinda happened last month so I took a 4 week leave (2 paid, 2 unpaid) from my job to read books, work on open source projects, and couchsurf the East Coast. I spent a lot of rainy days curled up on a friend&#8217;s bed in Somerville, MA poking at my laptop, idle afternoons hiding in a corner of the MIT library poking at my laptop, and long electric evenings walking around New York City looking for a place to sit and poke at my laptop. A lot of laptop-poking happened while on &#8220;vacation&#8221; because I had promised some people that I would give two talks in October, one at <a href="http://secretcon.com/" target="_blank">SecretCon</a> and one at <a href="http://sandiego.toorcon.net/" target="_blank">ToorCon</a>.
+
+Predictably, I put off the ToorCon talk until 2 weeks ago. Also predictably, I started panicking and not sleeping anymore because I said I would show people a new browser fingerprinting technique which did not exist. Somehow, after a lot of head-banging-against-desk, I came up with one that sort-of worked about a week before the ToorCon and actually finished the code right before ToorCon. I named it <a href="https://github.com/diracdeltas/sniffly" target="_blank">Sniffly</a> because it sniffs browser history, and also because I was coming down with a cold.
+
+Here&#8217;s how Sniffly works:
+
+  1. A user visits the Sniffly page.
+  2. Their browser attempts to load images from various HSTS domains over HTTP. These domains were harvested from a scrape of HSTS domains in the Alexa Top 1M. It was really fun to write this scraper; I finally had a chance to use Python&#8217;s Twisted!
+  3. Sniffly sets a CSP policy that restricts images to HTTP, so image sources are blocked before they are redirected to HTTPS. This is crucial, because If the browser completes a request to the HTTPS site, then it will receive the HSTS pin, and the attack will no longer work when the user visits Sniffly.
+  4. When an image gets blocked by CSP, its `onerror` handler is called. In this case, the `onerror `handler does some fancy tricks to semi-reliably time how long it took for  the image to be redirected from HTTP to HTTPS. If this time is on the order of a millisecond, it was an HSTS redirect (no network request was made), which means the user has visited the image&#8217;s domain before. If it&#8217;s on the order of 100 milliseconds, then a network request probably occurred, meaning that the user hasn&#8217;t visited the image&#8217;s domain.
+
+<a href="https://zyan.scripts.mit.edu/sniffly/" target="_blank">Here&#8217;s a quick demo</a>. It only works in recent Chrome/Firefox versions when HTTPS Everywhere is disabled. The results also turn up a lot of false positives if you are running an adblocker, since ad-blocked domains are indistinguishable from HSTS-blocked domains from a timing perspective. (However, since HTTPS Everywhere domains and ad-blocked domains are mostly the same for every user, they can simply be subtracted out to get more accurate results for users who run these browser extensions.) I didn&#8217;t collect analytics on the site, but random testing with several friends showed a ~80% accuracy rate in the demo once browser extensions were accounted for.
+
+For more info, check out the <a href="https://github.com/diracdeltas/sniffly" target="_blank">source code</a>, <a href="https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf" target="_blank">ToorCon slides</a> (pdf), and <a href="https://www.youtube.com/watch?v=kk2GkZv6Wjs" target="_blank">talk recording</a>. Someone submitted the demo to <a href="https://news.ycombinator.com/item?id=10455735" target="_blank">Hacker News</a> and, to my horror, it was the #1 link for 6+ hours yesterday (!). I feel bewildered that this kind of attention is being granted (<a href="https://zyan.scripts.mit.edu/blog/backdooring-js/" target="_blank">again</a>) to random side projects that I do alone in my spare time, but I guess I should take whatever validation I can get right now. It would be sweet if people looked at my work and paid me to hack on interesting stuff for the public so i never had to work a real job again. Maybe someday it&#8217;ll happen; until then I&#8217;ll prolly hold down a day job and take more fake vacations.
+
+PS: I think I fixed the anti-SEO settings on this blog. Maybe now it will show up in at least one search engine. That was real dumb.
