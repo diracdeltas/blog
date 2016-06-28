@@ -7,6 +7,8 @@ categories:
   - Uncategorized
 
 ---
+*FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.*
+
 Having recently given some [talks][1] about [Content Security Policy][2] (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.
 
 This lil&#8217; blog is hosted by the [MIT Student Information Processing Board][3] and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML <meta> tags instead so that these instructions would work for people who don&#8217;t have shell access to their WordPress host. Unfortunately, CSP using <meta> hasn&#8217;t landed in Firefox yet ([tracking bug][4]) so I should probably do the .htaccess thing anyway.

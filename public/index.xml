@@ -5,8 +5,38 @@
     <link>https://diracdeltas.github.io/blog/</link>
     <description>Recent content on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 May 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://diracdeltas.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>bus diaries</title>
+      <link>https://diracdeltas.github.io/blog/bus-diaries/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/bus-diaries/</guid>
+      <description>
+
+&lt;p&gt;While migrating my blog from WordPress to Hugo + GitHub Pages, I found two old diary entries from last autumn, a period of life when I rode buses a lot. They are copied below.&lt;/p&gt;
+
+&lt;h2 id=&#34;oct-28-2015&#34;&gt;oct 28, 2015&lt;/h2&gt;
+
+&lt;p&gt;they told me not to, so i&amp;rsquo;m taking the bus from downtown LA to LAX. on my right, a man is asking everyone except me for 50 cents. everyone except me is a black guy.&lt;/p&gt;
+
+&lt;p&gt;the bus stops for the zillionth time and a high schooler in a white t-shirt with some arm tattoos gets on. he sits down to my left and asks me what my arm tattoo is of. i start explaining particle physics. he asks what the hell i&amp;rsquo;m doing on the bus in LA. &amp;ldquo;hanging out,&amp;rdquo; i shrug. he thinks i am 19 years old and smart and beautiful and cool so he asks me out. i say sorry i live in san francisco, i am on my way to the airport, and just for the record, i am 24 years old. the guy next to him hears this and high-fives me because he used to live in oakland. the kid asks me if i could please change my flight so we can chill. i say no. then he says, &amp;ldquo;you are the dopest girl i&amp;rsquo;ve ever met. imma get off the bus and call my friend and tell him &amp;lsquo;bout you.&amp;rdquo; i say thanks. he remembers i&amp;rsquo;m not from south LA so he tells me it&amp;rsquo;s a real bad neighborhood and i should not talk to anyone if i get off the bus here. i say thank you, that information may be relevant to my immediate perambulations. the kid is obviously a bit sad we can&amp;rsquo;t hang out, so we say our goodbyes as he is getting off the bus to go to his friend&amp;rsquo;s house. i tell him he is young and i&amp;rsquo;m sure he will meet lots more people on the bus in the future.&lt;/p&gt;
+
+&lt;p&gt;the guy from Oakland starts to play rap music at full volume on his phone. the man on my right leans over to him and whispers, &amp;ldquo;50 Cent?&amp;rdquo; i tell him, no sir, i believe this track is by Biggie. &amp;ldquo;that&amp;rsquo;s right,&amp;rdquo; he nods, as the guy from Oakland hands him 50 cents.&lt;/p&gt;
+
+&lt;h2 id=&#34;nov-11-2015&#34;&gt;nov 11, 2015&lt;/h2&gt;
+
+&lt;p&gt;assuming you don&amp;rsquo;t have actual sleeping pills, the trick is to drink way too much alcohol the night before and then eat enough pasta in the morning before getting on the bus that you pass out as soon as you hit the highway. pasta is basically a date rape food, in case you somehow haven&amp;rsquo;t noticed. when you get on the bus, it&amp;rsquo;ll probably be half full of lonely-looking people with deep lines of weariness creased in their drooping faces. they shuffle onto the bus, reluctantly set their things in the adjacent seats, plug in their earbuds, and let their eyelids float down slowly like gentle sea creatures. the bus takes you from boston to new york city for just $14 and it only explodes catastrophically sometimes.&lt;/p&gt;
+
+&lt;p&gt;before i pass out, i stare out the window at chunks of highway blurring by. it&amp;rsquo;s so fucking ugly here, you have no idea. the sky is the color of dirty dishwater. the sky pisses cold rain indiscriminately onto decrepit warehouses and rusty gas stations and weather-chipped rest stop signs creaking out their last desperate cries of dreary pretend-hospitality. it&amp;rsquo;s 3 in the afternoon and getting dark, which is such bullshit. really, nothing quite compares to the desolate feeling of sitting on a $14 bus surrounded by sad sleepy strangers while the feeble daylight dissolves into lonely darkness on a rainy afternoon in the middle-of-nowhere, connecticut (?). everyone obviously knows that the grip of winter is clenching tighter around their battered shoulders with every passing day now but nobody wants to talk about it. nobody wants to talk at all.&lt;/p&gt;
+
+&lt;p&gt;i hate it here. i miss it too. california turns everyone into sun-drenched polyester-clad ingrates, drunk on their own invincibility against the gentlest of elements. self-sufficiency is cheap in kind climates; rarely do you crave friendly company to pass the endless hours of icy drizzly darkness, nor do you exchange parsimoniously-heartfelt smiles of shared hardship with your neighbor while numbly stabbing your shovels into the frozen sidewalk. but when you wake up in the middle of the night to reach for a warm comforting hand that isn&amp;rsquo;t there, at least you&amp;rsquo;re not shivering.&lt;/p&gt;
+
+&lt;p&gt;i probably should have had more pasta.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>xychelsea part 2</title>
@@ -267,7 +297,7 @@
 &lt;/p&gt;
 
 &lt;p class=&#34;p1&#34;&gt;
-  Update (6/02/16): &lt;a href=&#34;https://github.com/diracdeltas/blog/blob/master/post/2016-05-26-xychelsea-part-2.md&#34;&gt;Part 2&lt;/a&gt; of this story is up for those who want to keep reading.
+  Update (6/02/16): &lt;a href=&#34;https://diracdeltas.github.io/blog/xychelsea-part-2&#34;&gt;Part 2&lt;/a&gt; of this story is up for those who want to keep reading.
 &lt;/p&gt;
 </description>
     </item>
@@ -361,7 +391,7 @@
 
 &lt;p&gt;For more info, check out the &lt;a href=&#34;https://github.com/diracdeltas/sniffly&#34; target=&#34;_blank&#34;&gt;source code&lt;/a&gt;, &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf&#34; target=&#34;_blank&#34;&gt;ToorCon slides&lt;/a&gt; (pdf), and &lt;a href=&#34;https://www.youtube.com/watch?v=kk2GkZv6Wjs&#34; target=&#34;_blank&#34;&gt;talk recording&lt;/a&gt;. Someone submitted the demo to &lt;a href=&#34;https://news.ycombinator.com/item?id=10455735&#34; target=&#34;_blank&#34;&gt;Hacker News&lt;/a&gt; and, to my horror, it was the #1 link for 6+ hours yesterday (!). I feel bewildered that this kind of attention is being granted (&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/backdooring-js/&#34; target=&#34;_blank&#34;&gt;again&lt;/a&gt;) to random side projects that I do alone in my spare time, but I guess I should take whatever validation I can get right now. It would be sweet if people looked at my work and paid me to hack on interesting stuff for the public so i never had to work a real job again. Maybe someday it&amp;#8217;ll happen; until then I&amp;#8217;ll prolly hold down a day job and take more fake vacations.&lt;/p&gt;
 
-&lt;p&gt;PS: I think I fixed the anti-SEO settings on this blog. Maybe now it will show up in at least one search engine. That was real dumb.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update: As of March 2016, Sniffly (CVE-2016-1617) has been fixed in the major browsers. Thank you Uncle Google for the bug bounty $$.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -556,7 +586,9 @@ function getTimeLeft(expiry) {
       <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/</guid>
-      <description>&lt;p&gt;Having recently given some &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/txjs2015.pdf&#34;&gt;talks&lt;/a&gt; about &lt;a href=&#34;http://www.w3.org/TR/CSP/&#34;&gt;Content Security Policy&lt;/a&gt; (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Having recently given some &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/txjs2015.pdf&#34;&gt;talks&lt;/a&gt; about &lt;a href=&#34;http://www.w3.org/TR/CSP/&#34;&gt;Content Security Policy&lt;/a&gt; (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.&lt;/p&gt;
 
 &lt;p&gt;This lil&amp;#8217; blog is hosted by the &lt;a href=&#34;https://scripts.mit.edu/&#34;&gt;MIT Student Information Processing Board&lt;/a&gt; and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML &lt;meta&gt; tags instead so that these instructions would work for people who don&amp;#8217;t have shell access to their WordPress host. Unfortunately, CSP using &lt;meta&gt; hasn&amp;#8217;t landed in Firefox yet (&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=663570&#34;&gt;tracking bug&lt;/a&gt;) so I should probably do the .htaccess thing anyway.&lt;/p&gt;
 
@@ -771,46 +803,6 @@ function getTimeLeft(expiry) {
 &lt;p&gt;But I suppose part of the definition of shy is the fear of exposing yourself to untrusted parties, for which they can reject you, humiliate you, and otherwise destroy that which you value or at least begrudgingly tolerate. Sadly, the shyness of analytical minds seems justified, because pretty much nobody has worked out how to communicate rejection without passing unfair judgement or otherwise patterning poisonous behavior. There is an art to divulging hidden feelings, an art to giving rejection, an art to handling sadness graciously, and an art to growing friendships from tenuous beginnings. None of these are taught to adolescent humans. Instead, we learn to hide ourselves and shame others.&lt;/p&gt;
 
 &lt;p&gt;I feel unprepared to write anything resembling a guide on how to do this, having recoiled from human contact for most of my life thanks to shyness, but I think it&amp;#8217;s well worth some human brain cycles. Here&amp;#8217;s hoping to live in a culture of rejection-positivity.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>tls everything</title>
-      <link>https://diracdeltas.github.io/blog/tls-everything/</link>
-      <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://diracdeltas.github.io/blog/tls-everything/</guid>
-      <description>&lt;p&gt;Yesterday the W3C &lt;a href=&#34;http://www.w3.org/2001/tag/&#34;&gt;Technical Architecture Group&lt;/a&gt; published a new finding titled, &amp;#8220;&lt;a href=&#34;https://w3ctag.github.io/web-https/&#34;&gt;The Web and Encryption&lt;/a&gt;.&amp;#8221; In it, they conclude:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;#8220;&amp;hellip; the Web platform should be designed to &lt;strong&gt;actively prefer secure origins&lt;/strong&gt; — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the &lt;strong&gt;end-to-end nature of TLS encryption must not be compromised&lt;/strong&gt; on the Web, in order to preserve this trust.&amp;#8221;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To many &lt;a href=&#34;https://eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt; users like myself, this seemed a decade or so beyond self-evident. So I was surprised to see a &lt;a href=&#34;http://lists.w3.org/Archives/Public/www-tag/2014Dec/0018.html&#34;&gt;flurry&lt;/a&gt; of &lt;a href=&#34;http://lists.w3.org/Archives/Public/www-tag/2014Dec/0051.html&#34;&gt;objections&lt;/a&gt; appear on the public mailing list thread discussing the TAG findings.&lt;/p&gt;
-
-&lt;p&gt;It seems bizarre to me that security-minded web developers are spending so much effort hardening the web platform by designing and implementing standards like CSP Level 2, WebCrypto, HTTP Public Key Pinning, and Subresource Integrity, while others are still debating whether requiring the bare minimum security guarantee on the web is a good thing. While &lt;a href=&#34;https://blog.matatall.com/&#34;&gt;some&lt;/a&gt; sites are preventing any javascript from running on their page unless it&amp;#8217;s been whitelisted, &lt;a href=&#34;http://www.nytimes.com/&#34;&gt;other&lt;/a&gt; sites can&amp;#8217;t even promise that any user will ever visit a page that hasn&amp;#8217;t been tampered with.&lt;/p&gt;
-
-&lt;div id=&#34;attachment_502&#34; style=&#34;width: 430px&#34; class=&#34;wp-caption alignnone&#34;&gt;
-  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png&#34;&gt;&lt;img class=&#34;size-full wp-image-502&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png&#34; alt=&#34;wtf&#34; width=&#34;420&#34; height=&#34;604&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png 420w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf-208x300.png 208w&#34; sizes=&#34;(max-width: 420px) 100vw, 420px&#34; /&gt;&lt;/a&gt;
-  
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    small consolation: the second one has more downloads
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Obviously we shouldn&amp;#8217;t ignore arguments for a plaintext-permissive web; they&amp;#8217;re statistically useful as indicators of misconceptions about HTTPS and sometimes also as indicators of real friction that website operators face. What can we learn?&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s some of my observations and responses to common anti-HTTPS points (as someone who lurks on standards mailing lists and often pokes website operators to deploy HTTPS, both professionally and recreationally):&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt; &lt;em&gt;&amp;#8220;HTTPS is expensive and hard to set up.&amp;#8221;&lt;/em&gt; This is objectively getting better. Cloudflare offers automatic &lt;a href=&#34;https://blog.cloudflare.com/introducing-universal-ssl/&#34;&gt;free SSL&lt;/a&gt; to their CDN customers, and &lt;a href=&#34;https://sslmate.com/&#34;&gt;SSLMate&lt;/a&gt; lets you get a cert for $10 using the command line. In the near future, the &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;LetsEncrypt&lt;/a&gt; cert authority will offer free certificates, deployed and managed using a nifty new &lt;a href=&#34;https://github.com/letsencrypt/acme-spec&#34;&gt;protocol&lt;/a&gt; called ACME that makes the entire process take &amp;lt;30 seconds.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;#8220;There is no value in using HTTPS for data that is, by nature, public (such as news articles).&amp;#8221;&lt;/em&gt; This misses the point that aggregated browsing patterns, even for only public sites, can reveal a lot of private information about a person. If it weren&amp;#8217;t, advertisers wouldn&amp;#8217;t use third-party tracking beacons. QED.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;#8220;TLS is slow.&amp;#8221;&lt;/em&gt; Chris Palmer thought you would ask this and gave an excellent &lt;a href=&#34;https://www.youtube.com/watch?v=ayD0LiZkWLQ&#34;&gt;presentation&lt;/a&gt; explaining why not. tl;dr: TLS is usually not noticeably slower, but if it is, chances are that you can &lt;a href=&#34;https://istlsfastyet.com/&#34;&gt;optimize away the difference&lt;/a&gt; (warning: the previous link is highly well-written and may cause you to become convinced that TLS is not slow).&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;#8220;HTTPS breaks feature X.&amp;#8221;&lt;/em&gt; This is something I&amp;#8217;m intimately familar with, since most bug reports in HTTPS Everywhere (which I used to maintain) were caused by the extension switching a site to HTTPS and suddenly breaking some feature. &lt;a href=&#34;https://support.mozilla.org/en-US/kb/how-does-content-isnt-secure-affect-my-safety&#34;&gt;Mixed content blocking&lt;/a&gt; was the biggest culprit, but there were also cases where CORS stopped working because the header whitelisted the HTTP site but not the HTTPS one. (I also expected some &amp;#8220;features&amp;#8221; to break because HTTPS sites don&amp;#8217;t leak referer to HTTP ones, but surprisingly this never happened.) Luckily if you&amp;#8217;re using HTTPS Everywhere in Chrome, there is a panel in the developer console that helps you detect and fix mixed content on websites (shown below). Setting the CSP report-only header to report non-HTTPS subresources is similarly useful but doesn&amp;#8217;t tell you which resources can be rewritten.&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-501&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png&#34; alt=&#34;https-switch&#34; width=&#34;1293&#34; height=&#34;843&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png 1293w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-300x195.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-1024x667.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-624x406.png 624w&#34; sizes=&#34;(max-width: 1293px) 100vw, 1293px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;&amp;#8220;HTTPS gives users a false sense of security.&amp;#8221;&lt;/em&gt; This comes up surprisingly often from various angles. Some people frame this as, &lt;em&gt;&amp;#8220;The CA system isn&amp;#8217;t trustworthy and is breakable by every government,&amp;#8221;&lt;/em&gt; while others say, &lt;em&gt;&amp;#8220;Even with HTTPS, you leak DNS lookups and valuable metadata,&amp;#8221;&lt;/em&gt; and others say, &lt;em&gt;&amp;#8220;But many site certificates are managed by the CDN, not the site the user thinks they&amp;#8217;re visiting securely.&amp;#8221;&lt;/em&gt; The baseline counterargument to all of these is that encryption, even encryption that is theoretically breakable by some people, is better than no encryption, which doesn&amp;#8217;t need to be broken by anyone. CA trustworthiness in particular is getting better with the implementation of certificate transparency and key pinning in browsers; let&amp;#8217;s hope that we solve DNSSEC someday too. Also, regardless of whether HTTPS gives people a false sense of security, HTTP almost certainly gives the average person a false sense of security; otherwise, why would anyone submit their Quora password in plaintext?&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png&#34;&gt;&lt;img class=&#34;wp-image-504 &#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png&#34; alt=&#34;quora&#34; width=&#34;603&#34; height=&#34;462&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png 1038w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-1024x784.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-624x477.png 624w&#34; sizes=&#34;(max-width: 603px) 100vw, 603px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In summary, it&amp;#8217;s very encouraging to see the TAG expressing support for a ubiquitous transit encryption on the web (someday), but from the resulting discussion, it&amp;#8217;s clear that developers still need to be convinced that HTTPS is efficient, reliable, affordable, and worthwhile. I think the TAG has a clear path forward here: separate the overgrown anti-HTTPS mythology from the actual measurable obstacles to HTTPS deployment, and encourage standards that fix real problems that developers and implementers have when transitioning to HTTPS. &lt;a href=&#34;https://github.com/letsencrypt/acme-spec/blob/master/draft-barnes-acme.txt&#34;&gt;ACME&lt;/a&gt;, &lt;a href=&#34;https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21&#34;&gt;HPKP&lt;/a&gt;, &lt;a href=&#34;https://tools.ietf.org/html/rfc6962&#34;&gt;Certificate Transparency&lt;/a&gt;, and especially &lt;a href=&#34;https://w3c.github.io/webappsec/specs/powerfulfeatures/&#34;&gt;requiring minimum security standards&lt;/a&gt; for powerful new web platform features are good examples of work that motivates website operators to turn on HTTPS by lowering the cost and/or raising the benefits.&lt;/p&gt;
 </description>
     </item>
     

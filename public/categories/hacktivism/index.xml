@@ -117,7 +117,7 @@
 &lt;/p&gt;
 
 &lt;p class=&#34;p1&#34;&gt;
-  Update (6/02/16): &lt;a href=&#34;https://github.com/diracdeltas/blog/blob/master/post/2016-05-26-xychelsea-part-2.md&#34;&gt;Part 2&lt;/a&gt; of this story is up for those who want to keep reading.
+  Update (6/02/16): &lt;a href=&#34;https://diracdeltas.github.io/blog/xychelsea-part-2&#34;&gt;Part 2&lt;/a&gt; of this story is up for those who want to keep reading.
 &lt;/p&gt;
 </description>
     </item>
@@ -147,7 +147,7 @@
 
 &lt;p&gt;For more info, check out the &lt;a href=&#34;https://github.com/diracdeltas/sniffly&#34; target=&#34;_blank&#34;&gt;source code&lt;/a&gt;, &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf&#34; target=&#34;_blank&#34;&gt;ToorCon slides&lt;/a&gt; (pdf), and &lt;a href=&#34;https://www.youtube.com/watch?v=kk2GkZv6Wjs&#34; target=&#34;_blank&#34;&gt;talk recording&lt;/a&gt;. Someone submitted the demo to &lt;a href=&#34;https://news.ycombinator.com/item?id=10455735&#34; target=&#34;_blank&#34;&gt;Hacker News&lt;/a&gt; and, to my horror, it was the #1 link for 6+ hours yesterday (!). I feel bewildered that this kind of attention is being granted (&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/backdooring-js/&#34; target=&#34;_blank&#34;&gt;again&lt;/a&gt;) to random side projects that I do alone in my spare time, but I guess I should take whatever validation I can get right now. It would be sweet if people looked at my work and paid me to hack on interesting stuff for the public so i never had to work a real job again. Maybe someday it&amp;#8217;ll happen; until then I&amp;#8217;ll prolly hold down a day job and take more fake vacations.&lt;/p&gt;
 
-&lt;p&gt;PS: I think I fixed the anti-SEO settings on this blog. Maybe now it will show up in at least one search engine. That was real dumb.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update: As of March 2016, Sniffly (CVE-2016-1617) has been fixed in the major browsers. Thank you Uncle Google for the bug bounty $$.&lt;/strong&gt;&lt;/p&gt;
 </description>
     </item>
     

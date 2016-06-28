@@ -55,7 +55,9 @@
       <h1 class="post-title">this blog uses Content Security Policy</h1>
         <section id="main">
           <h5 id="date"> Sun Jul 26, 2015 </h5>
-          <p>Having recently given some <a href="https://zyan.scripts.mit.edu/presentations/txjs2015.pdf">talks</a> about <a href="http://www.w3.org/TR/CSP/">Content Security Policy</a> (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.</p>
+          <p><em>FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.</em></p>
+
+<p>Having recently given some <a href="https://zyan.scripts.mit.edu/presentations/txjs2015.pdf">talks</a> about <a href="http://www.w3.org/TR/CSP/">Content Security Policy</a> (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.</p>
 
 <p>This lil&#8217; blog is hosted by the <a href="https://scripts.mit.edu/">MIT Student Information Processing Board</a> and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML <meta> tags instead so that these instructions would work for people who don&#8217;t have shell access to their WordPress host. Unfortunately, CSP using <meta> hasn&#8217;t landed in Firefox yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663570">tracking bug</a>) so I should probably do the .htaccess thing anyway.</p>
 

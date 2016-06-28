@@ -238,7 +238,9 @@
       <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/</guid>
-      <description>&lt;p&gt;Having recently given some &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/txjs2015.pdf&#34;&gt;talks&lt;/a&gt; about &lt;a href=&#34;http://www.w3.org/TR/CSP/&#34;&gt;Content Security Policy&lt;/a&gt; (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Having recently given some &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/txjs2015.pdf&#34;&gt;talks&lt;/a&gt; about &lt;a href=&#34;http://www.w3.org/TR/CSP/&#34;&gt;Content Security Policy&lt;/a&gt; (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.&lt;/p&gt;
 
 &lt;p&gt;This lil&amp;#8217; blog is hosted by the &lt;a href=&#34;https://scripts.mit.edu/&#34;&gt;MIT Student Information Processing Board&lt;/a&gt; and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML &lt;meta&gt; tags instead so that these instructions would work for people who don&amp;#8217;t have shell access to their WordPress host. Unfortunately, CSP using &lt;meta&gt; hasn&amp;#8217;t landed in Firefox yet (&lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=663570&#34;&gt;tracking bug&lt;/a&gt;) so I should probably do the .htaccess thing anyway.&lt;/p&gt;
 

@@ -110,5 +110,5 @@ categories:
 </p>
 
 <p class="p1">
-  Update (6/02/16): <a href="https://github.com/diracdeltas/blog/blob/master/post/2016-05-26-xychelsea-part-2.md">Part 2</a> of this story is up for those who want to keep reading.
+  Update (6/02/16): <a href="https://diracdeltas.github.io/blog/xychelsea-part-2">Part 2</a> of this story is up for those who want to keep reading.
 </p>
