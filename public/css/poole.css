@@ -116,8 +116,9 @@ ul, ol, dl {
   margin-bottom: 1rem;
 }
 
-#main > ul {
+#main > ul#list {
   padding-left: 0;
+  list-style: none;
 }
 
 
