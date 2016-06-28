@@ -10,7 +10,7 @@ Hi, I&#8217;m yan, AKA [bcrypt][2]. I like information freedom, infosec, stunt
 
 I&#8217;m a Senior Software Engineer at [Brave][3] and a [Technology Fellow][4] at the Electronic Frontier Foundation. Before that, I dropped out of high school, got my B.S. from MIT in Physics, and started a PhD at Stanford before dropping out of that too.
 
-You can reach me on [Twitter][2] or by encrypted email if you&#8217;d like [[contact info][5]]. I am usually located in some linear combination of SF / Boston / NYC / Berlin / LA.
+I am reachable via SMTP at [first name] at [undergrad college] dot edu. My PGP key is in the strong set and available on public keyservers (BDE7 D508 3BB3 5EDC 7A66  BD97 388C E229 FAC7 8CF7). As a weak measure in support of the deprecation of PGP, I am strictly slower in replying to encrypted email than regular email.
 
 Most of my work is <a href="https://github.com/diracdeltas" target="_blank">open source on Github</a>.
 
@@ -58,7 +58,7 @@ Most of my work is <a href="https://github.com/diracdeltas" target="_blank">open
 ## Miscellaneous:
   <ul>
     <li>
-      <a href="http://www.w3.org/2001/tag/">W3C Technical Architecture Group</a> (elected member)
+      <a href="http://www.w3.org/2001/tag/">W3C Technical Architecture Group</a> (former elected member)
     </li>
     <li>
       <a href="https://noisebridge.net/">Noisebridge</a> (former board member)
