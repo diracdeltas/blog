@@ -6,6 +6,7 @@ date: 2011-08-10
 ---
 ## Scheduled talks:
 
+  * [HOPE XI](https://xi.hope.net/schedule.html), July 24, New York City (panelist)
   * <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>, July 18-22, New York City (resident)
   * <a href="http://jsconfbp.com/" target="_blank">JSConf Budapest</a>, May 12-13, Budapest
   * <a href="https://fronteers.nl/congres/2016-spring" target="_blank">Fronteers</a>, Apr. 1 2016, Amsterdam
