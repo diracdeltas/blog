@@ -6,10 +6,10 @@ date: 2011-08-10
 ---
 ## Scheduled talks:
 
-  * [HOPE XI](https://xi.hope.net/schedule.html), July 24, New York City (panelist)
-  * [BrooklynJS](http://brooklynjs.com/), July 21, Brooklyn
-  * <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>, July 18-22, New York City (resident)
-  * <a href="http://jsconfbp.com/" target="_blank">JSConf Budapest</a>, May 12-13, Budapest
+  * [HOPE XI](https://xi.hope.net/schedule.html), July 24 2016, New York City (panelist)
+  * [BrooklynJS](http://brooklynjs.com/), July 21 2016, Brooklyn
+  * <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>, July 18-22 2016, New York City (resident)
+  * <a href="http://jsconfbp.com/" target="_blank">JSConf Budapest</a>, May 12-13 2016, Budapest
   * <a href="https://fronteers.nl/congres/2016-spring" target="_blank">Fronteers</a>, Apr. 1 2016, Amsterdam
   * <a href="http://gr1p.org/en/projects/people-data-power/calendar-people-data-power/" target="_blank">People, Data & Power Workshop</a>, Mar. 21 2016, Amsterdam (keynote)
   * [Usenix Enigma Conference,][1] Jan. 26 2016, San Francisco (co-presented with Peter Eckersley)
