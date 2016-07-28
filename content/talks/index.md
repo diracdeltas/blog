@@ -6,6 +6,7 @@ date: 2011-08-10
 ---
 ## Scheduled talks:
 
+  * [ForwardJS](https://forwardjs.com), July 29 2016, San Francisco (panelist)
   * [HOPE XI](https://xi.hope.net/schedule.html), July 24 2016, New York City (panelist)
   * [BrooklynJS](http://brooklynjs.com/), July 21 2016, Brooklyn
   * <a href="https://www.recurse.com/" target="_blank">Recurse Center</a>, July 18-22 2016, New York City (resident)
