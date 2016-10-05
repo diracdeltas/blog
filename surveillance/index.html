@@ -1,0 +1,127 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="https://diracdeltas.github.io/blog">
+    <title> surveillance, whistleblowing, and security engineering </title>
+    <link rel="canonical" href="https://diracdeltas.github.io/blog/surveillance/">
+    
+
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+
+</head>
+
+
+<body class="theme-base-08">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+    </p>
+  </div>
+</div>
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">surveillance, whistleblowing, and security engineering</h1>
+        <section id="main">
+          <h5 id="date"> Wed Oct 5, 2016 </h5>
+          <p>Yesterday morning, Reuters dropped a news story revealing that Yahoo <a href="http://www.reuters.com/article/us-yahoo-nsa-exclusive-idUSKCN1241YT">installed a backdoor</a> on their own infrastructure in 2015 in compliance with a secret order from either the FBI or the NSA. While we all know that the US government routinely asks tech companies for surveillance help, a couple aspects of the Yahoo story stand out:</p>
+
+<ol>
+<li><p>The backdoor was installed in such a way that it was intercepting and querying all Yahoo Mail users&rsquo; emails, not just emails of investigation targets.</p></li>
+
+<li><p>The program was implemented so carelessly that it could have allowed hackers to read all incoming Yahoo mail. Of course this also means FBI/NSA could have been reading all incoming Yahoo mail.</p></li>
+
+<li><p>Yahoo execs deliberately bypassed review from the security team when installing the backdoor. In fact, when members of the security team found it within weeks of its installation, they immediately assumed it had been installed by malicious hackers, rather than Yahoo&rsquo;s own mail team. (This says something about what the backdoor code may have looked like.)</p></li>
+
+<li><p>Yahoo apparently made no effort to challenge this overly-broad surveillance order which needlessly put hundreds of millions of users at risk.</p></li>
+</ol>
+
+<p>At the time this was happening, I was on the Yahoo Security team leading development on the <a href="https://github.com/yahoo/end-to-end">End-to-End</a> project. According to the Reuters report, the mail backdoor was installed at almost the exact same time that Alex Stamos and I <a href="https://yahoo.tumblr.com/post/113708033335/user-focused-security-end-to-end-encryption">announced</a> the open-source launch of a Chrome extension for easy-to-use end-to-end encryption in Yahoo Mail at SXSW 2015. Ironically, if only we had been able to <a href="http://www.nytimes.com/2016/09/29/technology/yahoo-data-breach-hacking.html">actually ship E2E</a>, we would have given users a way to protect themselves from the exact backdoor scenario that they ended up in!</p>
+
+<p>Imagine for a moment that you are a security engineer who discovers a backdoor that your company execs have been trying to hide from your team. Would you quit on ethical grounds or stay so that you can prevent this from happening again? I don&rsquo;t think there is one right answer. Personally I am grateful both for those who left and blew the whistle, and for those who stayed to protect Yahoo&rsquo;s 800 million users.</p>
+
+<p>Part of the job function of security engineers and pen testers is being ready for the moment you encounter something that you think should be disclosed but your company wants to keep secret. Think about what you would be willing to lose. Be prepared to escalate internally. Know the terms of your NDA and your exit agreement; try your best to honor them. Most of all, keep pushing for end-to-end encryption.</p>
+
+        </section>
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  <hr />
+  
+    <span class="left">
+    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/bus-diaries/">bus diaries</a>
+    </span>
+  
+
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
