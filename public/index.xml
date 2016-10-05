@@ -5,8 +5,34 @@
     <link>https://diracdeltas.github.io/blog/</link>
     <description>Recent content on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 27 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Oct 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://diracdeltas.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>surveillance, whistleblowing, and security engineering</title>
+      <link>https://diracdeltas.github.io/blog/surveillance/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/surveillance/</guid>
+      <description>&lt;p&gt;Yesterday morning, Reuters dropped a news story revealing that Yahoo &lt;a href=&#34;http://www.reuters.com/article/us-yahoo-nsa-exclusive-idUSKCN1241YT&#34;&gt;installed a backdoor&lt;/a&gt; on their own infrastructure in 2015 in compliance with a secret order from either the FBI or the NSA. While we all know that the US government routinely asks tech companies for surveillance help, a couple aspects of the Yahoo story stand out:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;The backdoor was installed in such a way that it was intercepting and querying all Yahoo Mail users&amp;rsquo; emails, not just emails of investigation targets.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The program was implemented so carelessly that it could have allowed hackers to read all incoming Yahoo mail. Of course this also means FBI/NSA could have been reading all incoming Yahoo mail.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Yahoo execs deliberately bypassed review from the security team when installing the backdoor. In fact, when members of the security team found it within weeks of its installation, they immediately assumed it had been installed by malicious hackers, rather than Yahoo&amp;rsquo;s own mail team. (This says something about what the backdoor code may have looked like.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Yahoo apparently made no effort to challenge this overly-broad surveillance order which needlessly put hundreds of millions of users at risk.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;At the time this was happening, I was on the Yahoo Security team leading development on the &lt;a href=&#34;https://github.com/yahoo/end-to-end&#34;&gt;End-to-End&lt;/a&gt; project. According to the Reuters report, the mail backdoor was installed at almost the exact same time that Alex Stamos and I &lt;a href=&#34;https://yahoo.tumblr.com/post/113708033335/user-focused-security-end-to-end-encryption&#34;&gt;announced&lt;/a&gt; the open-source launch of a Chrome extension for easy-to-use end-to-end encryption in Yahoo Mail at SXSW 2015. Ironically, if only we had been able to &lt;a href=&#34;http://www.nytimes.com/2016/09/29/technology/yahoo-data-breach-hacking.html&#34;&gt;actually ship E2E&lt;/a&gt;, we would have given users a way to protect themselves from the exact backdoor scenario that they ended up in!&lt;/p&gt;
+
+&lt;p&gt;Imagine for a moment that you are a security engineer who discovers a backdoor that your company execs have been trying to hide from your team. Would you quit on ethical grounds or stay so that you can prevent this from happening again? I don&amp;rsquo;t think there is one right answer. Personally I am grateful both for those who left and blew the whistle, and for those who stayed to protect Yahoo&amp;rsquo;s 800 million users.&lt;/p&gt;
+
+&lt;p&gt;Part of the job function of security engineers and pen testers is being ready for the moment you encounter something that you think should be disclosed but your company wants to keep secret. Think about what you would be willing to lose. Be prepared to escalate internally. Know the terms of your NDA and your exit agreement; try your best to honor them. Most of all, keep pushing for end-to-end encryption.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>bus diaries</title>
@@ -769,40 +795,6 @@ function getTimeLeft(expiry) {
 &lt;p&gt;i painted this while standing in my bathroom on valentine&amp;#8217;s day&amp;#8217;s night, unable to sleep and grotesquely feeling the weight of the oncoming dawn. it was my first time drawing on canvas.&lt;/p&gt;
 
 &lt;p&gt;as i worked, i kept thinking about all these people passing to and from doomed relationships, that feeling of being stupidly and everlastingly perched on the brink between hope and mutilation. that&amp;#8217;s more or less what this is about.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>solving boolean satisfiability on human circuits</title>
-      <link>https://diracdeltas.github.io/blog/2sat/</link>
-      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://diracdeltas.github.io/blog/2sat/</guid>
-      <description>&lt;p&gt;I remember quite clearly sitting in Scott Aaronson&amp;#8217;s computability and complexity theory &lt;a href=&#34;http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/&#34;&gt;course&lt;/a&gt; at MIT in 2011. I was a 19 year-old physics major back then, so Scott&amp;#8217;s class was mostly new and fascinating.&lt;/p&gt;
-
-&lt;p&gt;One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length. For instance, you could prove that certain decision problems couldn&amp;#8217;t be solved by a deterministic Turing machine in polynomial time. I raised my hand.&lt;/p&gt;
-
-&lt;p&gt;&amp;#8220;Yes?&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;&amp;#8220;But time is reference-frame dependent! What if you ran the deterministic Turing machine on earth while you yourself were on a rocket going at relativistic speeds?&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;Scott&amp;#8217;s eyes lit up. &amp;#8220;Aha!&amp;#8221; he said, without pause. &amp;#8220;Suppose you traveled faster as the input length increased, so from your perspective, a problem in EXP is decidable in polynomial time. However you would be using more and more energy to propel your spaceship. So there is necessarily a tradeoff in the resources needed to solve the problem.&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;In retrospect, this was pretty characteristic of why I liked the class so much. Scott didn&amp;#8217;t give the easy and useless answer, which would have been that *by our definition* all running times are measured in a fixed inertial reference frame. Instead he reminds us that we, as humans, ultimately care about the totality of resources needed to solve a problem. Time complexity analysis is just one step toward grasping at how hard, how expensive, how painful something really is; mired as we may be in mathematical formalism, the reality of our dying planet and unpaid bills stays within sight when Scott lectures.&lt;/p&gt;
-
-&lt;p&gt;All this came to mind when I read Scott&amp;#8217;s now-infamous &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=2091#comment-326664&#34;&gt;blog comment&lt;/a&gt; about growing up as a shy, self-proclaimed and self-hating male nerd; followed by the much-cited &lt;a href=&#34;http://www.newstatesman.com/laurie-penny/on-nerd-entitlement-rebel-alliance-empire&#34;&gt;response&lt;/a&gt; from journalist Laurie Penny about growing up as a shy, self-proclaimed and self-hating female nerd; followed by Scott&amp;#8217;s latest &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=2119&#34;&gt;blog post&lt;/a&gt; clarifying what he believes about feminism and the plight of shy nerdy people anguished by sexual frustration. What suprised me about the latter was that Scott went so far as to write:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;&amp;#8220;How to help all the young male nerds I meet who suffer from this problem, in a way that passes feminist muster, and that triggers the world’s sympathy rather than outrage, is a problem that interests me as much as P vs. NP, and right now that seems about equally hard.&amp;#8221;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;(&amp;#8220;As much as P vs NP&amp;#8221;?! Remember that Scott once bet his house on the invalidity of a paper claiming to prove P != NP, cf. &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=456&#34;&gt;http://www.scottaaronson.com/blog/?p=456&lt;/a&gt;.)&lt;/p&gt;
-
-&lt;p&gt;Sometimes I think that the obvious step towards solving the problem Scott mentions is for the frustrated person to politely and non-expectantly inform the other person of his/her desires. In an ideal world, they would then discuss them until reaching an amicable resolution, at which point they can return to platonically multiplying tensors or whatever.&lt;/p&gt;
-
-&lt;p&gt;But I suppose part of the definition of shy is the fear of exposing yourself to untrusted parties, for which they can reject you, humiliate you, and otherwise destroy that which you value or at least begrudgingly tolerate. Sadly, the shyness of analytical minds seems justified, because pretty much nobody has worked out how to communicate rejection without passing unfair judgement or otherwise patterning poisonous behavior. There is an art to divulging hidden feelings, an art to giving rejection, an art to handling sadness graciously, and an art to growing friendships from tenuous beginnings. None of these are taught to adolescent humans. Instead, we learn to hide ourselves and shame others.&lt;/p&gt;
-
-&lt;p&gt;I feel unprepared to write anything resembling a guide on how to do this, having recoiled from human contact for most of my life thanks to shyness, but I think it&amp;#8217;s well worth some human brain cycles. Here&amp;#8217;s hoping to live in a culture of rejection-positivity.&lt;/p&gt;
 </description>
     </item>
     
