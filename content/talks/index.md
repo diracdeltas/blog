@@ -6,6 +6,7 @@ date: 2011-08-10
 ---
 ## Scheduled talks:
 
+  * [AppSec California](https://2017.appseccalifornia.org/), Jan. 23-25 2016, Santa Monica
   * [Symbiosis Gathering](http://www.hacktivistvillage.com/schedule), Sept. 23 2016, Oakdale, CA (panelist)
   * [ForwardJS](https://forwardjs.com), July 29 2016, San Francisco (panelist)
   * [HOPE XI](https://xi.hope.net/schedule.html), July 24 2016, New York City (panelist)
