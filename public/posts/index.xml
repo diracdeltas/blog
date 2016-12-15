@@ -14,7 +14,9 @@
       <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/surveillance/</guid>
-      <description>&lt;p&gt;Yesterday morning, Reuters dropped a news story revealing that Yahoo &lt;a href=&#34;http://www.reuters.com/article/us-yahoo-nsa-exclusive-idUSKCN1241YT&#34;&gt;installed a backdoor&lt;/a&gt; on their own infrastructure in 2015 in compliance with a secret order from either the FBI or the NSA. While we all know that the US government routinely asks tech companies for surveillance help, a couple aspects of the Yahoo story stand out:&lt;/p&gt;
+      <description>&lt;p&gt;[Update (12/14/16): &lt;a href=&#34;http://www.reuters.com/article/us-yahoo-nsa-order-idUSKCN12800D&#34;&gt;Reuters&lt;/a&gt; has specified that the rootkit was implemented as a Linux kernel module. Wow.]&lt;/p&gt;
+
+&lt;p&gt;Yesterday morning, Reuters dropped a news story revealing that Yahoo &lt;a href=&#34;http://www.reuters.com/article/us-yahoo-nsa-exclusive-idUSKCN1241YT&#34;&gt;installed a backdoor&lt;/a&gt; on their own infrastructure in 2015 in compliance with a secret order from either the FBI or the NSA. While we all know that the US government routinely asks tech companies for surveillance help, a couple aspects of the Yahoo story stand out:&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;The backdoor was installed in such a way that it was intercepting and querying all Yahoo Mail users&amp;rsquo; emails, not just emails of investigation targets.&lt;/p&gt;&lt;/li&gt;
