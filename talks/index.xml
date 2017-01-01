@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Talks-rsses on discrete blogarithm</title>
+    <title>Talks on discrete blogarithm</title>
     <link>https://diracdeltas.github.io/blog/talks/index.xml</link>
-    <description>Recent content in Talks-rsses on discrete blogarithm</description>
+    <description>Recent content in Talks on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 10 Aug 2011 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://diracdeltas.github.io/blog/talks/index.xml" rel="self" type="application/rss+xml" />
@@ -19,7 +19,8 @@
 &lt;h2 id=&#34;scheduled-talks&#34;&gt;Scheduled talks:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://2017.appseccalifornia.org/&#34;&gt;AppSec California&lt;/a&gt;, Jan. 23-25 2016, Santa Monica&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.dibiconference.com/&#34;&gt;DIBI 2017&lt;/a&gt;, Mar. 30-31 2017, Edinburgh, Scotland&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://2017.appseccalifornia.org/&#34;&gt;AppSec California&lt;/a&gt;, Jan. 23-25 2017, Santa Monica&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;http://www.hacktivistvillage.com/schedule&#34;&gt;Symbiosis Gathering&lt;/a&gt;, Sept. 23 2016, Oakdale, CA (panelist)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://forwardjs.com&#34;&gt;ForwardJS&lt;/a&gt;, July 29 2016, San Francisco (panelist)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://xi.hope.net/schedule.html&#34;&gt;HOPE XI&lt;/a&gt;, July 24 2016, New York City (panelist)&lt;/li&gt;
