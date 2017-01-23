@@ -5,8 +5,82 @@
     <link>https://diracdeltas.github.io/blog/index.xml</link>
     <description>Recent content on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://diracdeltas.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>a post-truth thought experiment</title>
+      <link>https://diracdeltas.github.io/blog/post-truth/</link>
+      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/post-truth/</guid>
+      <description>
+
+&lt;h2 id=&#34;a-perfect-game-theoretic-analysis-machine&#34;&gt;A perfect game-theoretic analysis machine&lt;/h2&gt;
+
+&lt;p&gt;Imagine that you had a magic machine. You tell the machine what your goals are. The machine tells you, in any situation, the optimal statement to say in order to achieve your goals, and who to say it to. The statement may or may not be true.&lt;/p&gt;
+
+&lt;p&gt;Under which circumstances, if any, would you follow the machine&amp;rsquo;s instructions?&lt;/p&gt;
+
+&lt;p&gt;Example 1: Bob tells the machine that his goal is to become as rich as possible. The machine instructs Bob to publish a &amp;ldquo;fake news&amp;rdquo; article about how climate change is an illuminati conspiracy theory.&lt;/p&gt;
+
+&lt;p&gt;Example 2: Alice tells the machine that her goal is to cure cancer. The machine instructs her to tell the local florist that her favorite color is red when in reality it is blue.&lt;/p&gt;
+
+&lt;p&gt;Instinctively, most truth-loving people would consider Bob to be immoral for following his instructions; however, we would probably not say the same of Alice. Many of us would even admit that in Alice&amp;rsquo;s situation we would follow the machine&amp;rsquo;s instructions. This suggests that, for many people, there exists a class of situations in which cost/benefit analysis favors lying.&lt;/p&gt;
+
+&lt;h2 id=&#34;anecdata&#34;&gt;Anecdata&lt;/h2&gt;
+
+&lt;p&gt;Because the plural of &amp;ldquo;anecdote&amp;rdquo; is &amp;ldquo;anecdata,&amp;rdquo; I asked an abbreviated form of this question on &lt;a href=&#34;https://twitter.com/bcrypt/status/823272031273652224&#34;&gt;Twitter&lt;/a&gt;. Most people said they would not lie because of one of the following reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Lying causes them to have negative feelings, like guilt and stress.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The reputational risk caused by lying is too great. (Although you could solve this by telling the machine that your goal is to achieve X while never getting caught lying.)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The truth is more aesthetically pleasing.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Inertia; telling the truth is their default behavior, and they see no compelling incentive to change.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;what-is-truth&#34;&gt;What is truth?&lt;/h2&gt;
+
+&lt;p&gt;Before criticizing &lt;a href=&#34;https://www.nytimes.com/2017/01/22/us/politics/president-trump-inauguration-crowd-white-house.html&#34;&gt;&amp;ldquo;alternative facts&amp;rdquo;&lt;/a&gt; and &lt;a href=&#34;https://www.washingtonpost.com/news/the-fix/wp/2016/11/16/post-truth-named-2016-word-of-the-year-by-oxford-dictionaries/&#34;&gt;post-truth&lt;/a&gt; politics, we should examine what truth means to us and why we love it so much in the first place.&lt;/p&gt;
+
+&lt;p&gt;In my mind, a conservative definition of &amp;ldquo;telling the truth&amp;rdquo; is &amp;ldquo;saying things that are consistent with our observations.&amp;rdquo; For instance, if a helicopter pilot sees around 400,000 people at the inauguration, it would be truthful for them to say there were 300,000-500,000 people at the inauguration, but it would be a lie to claim there was only 1 person.&lt;/p&gt;
+
+&lt;p&gt;A less-conservative definition might be, &amp;ldquo;saying things that are consistent with what we believe.&amp;rdquo; For instance, I may not have directly observed the moon landing, but I could honestly tell someone that humans have landed on the moon because I believe it happened based on the numerous credible (to me) scientists and history books that say so. In fact, the scientific community has established standards for what counts as &amp;ldquo;credible,&amp;rdquo; based on peer review and the reproducibility of results.&lt;/p&gt;
+
+&lt;p&gt;The problem is, other communities&amp;rsquo; standards for credibility are far less stringent and well-defined. For instance, you might judge Donald Trump&amp;rsquo;s press secretary&amp;rsquo;s media briefings to be a credible source of facts. By the less-conservative definition, you are then &amp;ldquo;telling the truth&amp;rdquo; when you claim to your friends that more people attended his inauguration than any other in history.&lt;/p&gt;
+
+&lt;p&gt;Since the conservative definition is too limited for useful discussion, I will henceforth define truth as the set of statements that are believable according to some standard of credibility. To lie is to assert that a statement that is outside this set is in this set, either intentionally or non-intentionally. Note that if two communities have differing standards of credibility, a statement that is a truth to one community may be a falsehood to the other.&lt;/p&gt;
+
+&lt;h2 id=&#34;are-we-biased-toward-a-particular-kind-of-truth&#34;&gt;Are we biased toward a particular kind of truth?&lt;/h2&gt;
+
+&lt;p&gt;Yes; I think a lot of us, especially scientists and engineers, are biased towards telling the truth as determined by scientific standards of credibility. I use the word &amp;ldquo;bias&amp;rdquo; because we do not usually justify why telling the truth is preferable to lying, or why our standards of credibility are the right ones. We may allude to vague notions such as &amp;ldquo;lies hurt people,&amp;rdquo; which we&amp;rsquo;ve heard over and over since childhood, or we may assert that science is good, but we fall short of an argument meeting the rigor that we typically demand from people with opposing viewpoints. It seems ironic for scientists and rationalists to critique others&amp;rsquo; conceptions of (post-)truth while quietly treating the correctness of our own as a foregone conclusion.&lt;/p&gt;
+
+&lt;p&gt;Anyway, here are a few reasons to justify my conception of truth and why I don&amp;rsquo;t usually lie:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;I don&amp;rsquo;t personally care about the pursuit and propagation of (my definition of) truth as a goal in itself; however, it has historically been an effective means of accomplishing goals that I do care about, such as improving the average quality of life for all humans. Thanks to centuries of people defining truth as &amp;lsquo;that which can be tested using the scientific method&amp;rsquo;, we have stuff like penicillin and airplanes.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The discovery of a lie is likely to cause suffering, in part due to current societal norms and assumptions about lying (ex: the belief that if someone loves you, they wouldn&amp;rsquo;t lie to you). As someone whose goal is to minimize suffering, I therefore try not to knowingly lie or make statements that could turn out to not be true. Of course, it&amp;rsquo;s possible that telling the truth will ultimately cause more suffering in some indirect way, but I usually do not have enough information to determine when this is the case.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In certain circumstances, behavioral economics research has shown that &lt;a href=&#34;https://en.wikipedia.org/wiki/The_Market_for_Lemons&#34;&gt;telling the truth&lt;/a&gt; leads to a better state for people overall than when some or all parties are lying.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Admittedly, the first reason is the most compelling for me. Extrapolating from this utilitarian standpoint implies that if I had a machine that told me which lies to tell (or which standards of credibility to use) so that I could start a movement that ultimately improved billions of lives, I would tell those lies.&lt;/p&gt;
+
+&lt;p&gt;This is an uncomfortable thought because my love for scientific truth is as deep as it is irrational. After all, if you take a birds&amp;rsquo; eye view at the history of human civilization, science is just a meme that has gone viral in the last several centuries or so. Maybe a new meme will appear soon.&lt;/p&gt;
+
+&lt;h2 id=&#34;dealing-with-the-post-truth-world&#34;&gt;Dealing with the post-truth world&lt;/h2&gt;
+
+&lt;p&gt;The machine at the beginning of this post is not a purely hypothetical construct. Increasingly, over the last election cycle and the first few days of the Trump presidency, it has become apparent to me that some people believe that they have version 0.0000001 of this machine, and they are willing to follow its instructions without regard for scientific truth. In horror, we (the pre-post-truth people) stifle screams at the crumbling foundations of rational discourse, and then we scroll down to the next tweet. Thanks to infinite scroll, the horror is literally unending.&lt;/p&gt;
+
+&lt;p&gt;Few people seem to be asking, is it right to fabricate falsehoods for one&amp;rsquo;s own causes if the other side has been doing the same? The mainstream answer is no, either because lying is seen as inherently immoral or because of the long-term reputation cost. The latter can be addressed by spreading the lies from &lt;a href=&#34;https://www.nytimes.com/2017/01/18/us/fake-news-hillary-clinton-cameron-harris.html&#34;&gt;sources that already have ~zero reputation&lt;/a&gt;; moreover, it is no longer a problem once people agree that lying is chill and/or lying becomes so commonplace that it&amp;rsquo;s expected of news sites and social media posts.&lt;/p&gt;
+
+&lt;p&gt;How effective is honesty at achieving your goals, and at what point do you decide that lying is a more effective means to an end? I want to say &amp;ldquo;never&amp;rdquo; for the second question, but I can clearly imagine a world in which it is the wrong answer.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>surveillance, whistleblowing, and security engineering</title>
@@ -779,24 +853,6 @@ function getTimeLeft(expiry) {
 &lt;p&gt;&lt;a href=&#34;http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/&#34;&gt;1&lt;/a&gt; &lt;a href=&#34;http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF&#34;&gt;http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/&#34;&gt;2&lt;/a&gt; &lt;a href=&#34;https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235&#34;&gt;https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>canvas #1</title>
-      <link>https://diracdeltas.github.io/blog/canvas/</link>
-      <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://diracdeltas.github.io/blog/canvas/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2.jpeg&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-538&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2.jpeg&#34; alt=&#34;painting2&#34; width=&#34;887&#34; height=&#34;596&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2.jpeg 887w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2-300x202.jpeg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2-624x419.jpeg 624w&#34; sizes=&#34;(max-width: 887px) 100vw, 887px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;that could have been us&lt;/strong&gt;&lt;/em&gt;, 2015&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Oil pastels, lipstick, eyeliner, cold medicine, and ballpoint pen on canvas.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;i painted this while standing in my bathroom on valentine&amp;#8217;s day&amp;#8217;s night, unable to sleep and grotesquely feeling the weight of the oncoming dawn. it was my first time drawing on canvas.&lt;/p&gt;
-
-&lt;p&gt;as i worked, i kept thinking about all these people passing to and from doomed relationships, that feeling of being stupidly and everlastingly perched on the brink between hope and mutilation. that&amp;#8217;s more or less what this is about.&lt;/p&gt;
 </description>
     </item>
     
