@@ -23,13 +23,19 @@ Most of my work is <a href="https://github.com/diracdeltas" target="_blank">open
       <a href="https://github.com/brave/browser-laptop">Brave</a> (developer)
     </li>
     <li>
+      <a href="https://github.com/brave/sync">Brave Sync</a> (maintainer)
+    </li>
+    <li>
+      <a href="https://diracdeltas.github.io/niceware/">Niceware</a> (maintainer)
+    </li>
+    <li>
       <a href="https://pressfreedomfoundation.org/securedrop">SecureDrop</a> (developer)
     </li>
     <li>
-      <a href="https://letsencrypt.org/" target="_blank">Let’s Encrypt</a> (developer)
+      <a href="https://letsencrypt.org/">Let’s Encrypt</a> (developer)
     </li>
     <li>
-      <a href="https://github.com/yahoo/end-to-end" target="_blank">Yahoo End to End</a> (ex-maintainer)
+      <a href="https://github.com/yahoo/end-to-end">Yahoo End to End</a> (ex-maintainer)
     </li>
     <li>
       <a href="https://github.com/efforg/privacybadgerfirefox">Privacy Badger Firefox</a> (ex-maintainer)
