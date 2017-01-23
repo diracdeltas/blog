@@ -16,7 +16,7 @@
       <guid>https://diracdeltas.github.io/blog/post-truth/</guid>
       <description>
 
-&lt;h2 id=&#34;a-perfect-game-theoretic-analysis-machine&#34;&gt;A perfect game-theoretic analysis machine&lt;/h2&gt;
+&lt;h2 id=&#34;1-a-perfect-game-theoretic-analysis-machine&#34;&gt;1. A perfect game-theoretic analysis machine&lt;/h2&gt;
 
 &lt;p&gt;Imagine that you had a magic machine. You tell the machine what your goals are. The machine tells you, in any situation, the optimal statement to say in order to achieve your goals, and who to say it to. The statement may or may not be true.&lt;/p&gt;
 
@@ -28,7 +28,7 @@
 
 &lt;p&gt;Instinctively, most truth-loving people would consider Bob to be immoral for following his instructions; however, we would probably not say the same of Alice. Many of us would even admit that in Alice&amp;rsquo;s situation we would follow the machine&amp;rsquo;s instructions. This suggests that, for many people, there exists a class of situations in which cost/benefit analysis favors lying.&lt;/p&gt;
 
-&lt;h2 id=&#34;anecdata&#34;&gt;Anecdata&lt;/h2&gt;
+&lt;h2 id=&#34;2-anecdata&#34;&gt;2. Anecdata&lt;/h2&gt;
 
 &lt;p&gt;Because the plural of &amp;ldquo;anecdote&amp;rdquo; is &amp;ldquo;anecdata,&amp;rdquo; I asked an abbreviated form of this question on &lt;a href=&#34;https://twitter.com/bcrypt/status/823272031273652224&#34;&gt;Twitter&lt;/a&gt;. Most people said they would not lie because of one of the following reasons:&lt;/p&gt;
 
@@ -42,7 +42,7 @@
 &lt;li&gt;&lt;p&gt;Inertia; telling the truth is their default behavior, and they see no compelling incentive to change.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;what-is-truth&#34;&gt;What is truth?&lt;/h2&gt;
+&lt;h2 id=&#34;3-what-is-truth&#34;&gt;3. What is truth?&lt;/h2&gt;
 
 &lt;p&gt;Before criticizing &lt;a href=&#34;https://www.nytimes.com/2017/01/22/us/politics/president-trump-inauguration-crowd-white-house.html&#34;&gt;&amp;ldquo;alternative facts&amp;rdquo;&lt;/a&gt; and &lt;a href=&#34;https://www.washingtonpost.com/news/the-fix/wp/2016/11/16/post-truth-named-2016-word-of-the-year-by-oxford-dictionaries/&#34;&gt;post-truth&lt;/a&gt; politics, we should examine what truth means to us and why we love it so much in the first place.&lt;/p&gt;
 
@@ -54,7 +54,7 @@
 
 &lt;p&gt;Since the conservative definition is too limited for useful discussion, I will henceforth define truth as the set of statements that are believable according to some standard of credibility. To lie is to assert that a statement that is outside this set is in this set, either intentionally or non-intentionally. Note that if two communities have differing standards of credibility, a statement that is a truth to one community may be a falsehood to the other.&lt;/p&gt;
 
-&lt;h2 id=&#34;are-we-biased-toward-a-particular-kind-of-truth&#34;&gt;Are we biased toward a particular kind of truth?&lt;/h2&gt;
+&lt;h2 id=&#34;4-are-we-biased-toward-a-particular-kind-of-truth&#34;&gt;4. Are we biased toward a particular kind of truth?&lt;/h2&gt;
 
 &lt;p&gt;Yes; I think a lot of us, especially scientists and engineers, are biased towards telling the truth as determined by scientific standards of credibility. I use the word &amp;ldquo;bias&amp;rdquo; because we do not usually justify why telling the truth is preferable to lying, or why our standards of credibility are the right ones. We may allude to vague notions such as &amp;ldquo;lies hurt people,&amp;rdquo; which we&amp;rsquo;ve heard over and over since childhood, or we may assert that science is good, but we fall short of an argument meeting the rigor that we typically demand from people with opposing viewpoints. It seems ironic for scientists and rationalists to critique others&amp;rsquo; conceptions of (post-)truth while quietly treating the correctness of our own as a foregone conclusion.&lt;/p&gt;
 
@@ -72,9 +72,9 @@
 
 &lt;p&gt;This is an uncomfortable thought because my love for scientific truth is as deep as it is irrational. After all, if you take a birds&amp;rsquo; eye view at the history of human civilization, science is just a meme that has gone viral in the last several centuries or so. Maybe a new meme will appear soon.&lt;/p&gt;
 
-&lt;h2 id=&#34;dealing-with-the-post-truth-world&#34;&gt;Dealing with the post-truth world&lt;/h2&gt;
+&lt;h2 id=&#34;5-dealing-with-the-post-truth-world&#34;&gt;5. Dealing with the post-truth world&lt;/h2&gt;
 
-&lt;p&gt;The machine at the beginning of this post is not a purely hypothetical construct. Increasingly, over the last election cycle and the first few days of the Trump presidency, it has become apparent to me that some people believe that they have version 0.0000001 of this machine, and they are willing to follow its instructions without regard for scientific truth. In horror, we (the pre-post-truth people) stifle screams at the crumbling foundations of rational discourse, and then we scroll down to the next tweet. Thanks to infinite scroll, the horror is literally unending.&lt;/p&gt;
+&lt;p&gt;The machine in Part 1 is not a purely hypothetical construct. Increasingly, over the last election cycle and the first few days of the Trump presidency, it has become apparent to me that some people believe that they have version 0.0000001 of this machine, and they are willing to follow its instructions without regard for scientific truth. In horror, we (the pre-post-truth people) stifle screams at the crumbling foundations of rational discourse, and then we scroll down to the next tweet. Thanks to infinite scroll, the horror is literally unending.&lt;/p&gt;
 
 &lt;p&gt;Few people seem to be asking, is it right to fabricate falsehoods for one&amp;rsquo;s own causes if the other side has been doing the same? The mainstream answer is no, either because lying is seen as inherently immoral or because of the long-term reputation cost. The latter can be addressed by spreading the lies from &lt;a href=&#34;https://www.nytimes.com/2017/01/18/us/fake-news-hillary-clinton-cameron-harris.html&#34;&gt;sources that already have ~zero reputation&lt;/a&gt;; moreover, it is no longer a problem once people agree that lying is chill and/or lying becomes so commonplace that it&amp;rsquo;s expected of news sites and social media posts.&lt;/p&gt;
 
