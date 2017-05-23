@@ -2,10 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/code/index.xml</link>
+    <link>https://diracdeltas.github.io/blog/categories/code/</link>
     <description>Recent content in Code on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="https://diracdeltas.github.io/blog/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://diracdeltas.github.io/blog/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>sniffly</title>
@@ -13,27 +16,7 @@
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/sniffly/</guid>
-      <description>&lt;p&gt;Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&amp;#8217;m dizzy and lost and can&amp;#8217;t remember whose couch I&amp;#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.&lt;/p&gt;
-
-&lt;p&gt;This kinda happened last month so I took a 4 week leave (2 paid, 2 unpaid) from my job to read books, work on open source projects, and couchsurf the East Coast. I spent a lot of rainy days curled up on a friend&amp;#8217;s bed in Somerville, MA poking at my laptop, idle afternoons hiding in a corner of the MIT library poking at my laptop, and long electric evenings walking around New York City looking for a place to sit and poke at my laptop. A lot of laptop-poking happened while on &amp;#8220;vacation&amp;#8221; because I had promised some people that I would give two talks in October, one at &lt;a href=&#34;http://secretcon.com/&#34; target=&#34;_blank&#34;&gt;SecretCon&lt;/a&gt; and one at &lt;a href=&#34;http://sandiego.toorcon.net/&#34; target=&#34;_blank&#34;&gt;ToorCon&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Predictably, I put off the ToorCon talk until 2 weeks ago. Also predictably, I started panicking and not sleeping anymore because I said I would show people a new browser fingerprinting technique which did not exist. Somehow, after a lot of head-banging-against-desk, I came up with one that sort-of worked about a week before the ToorCon and actually finished the code right before ToorCon. I named it &lt;a href=&#34;https://github.com/diracdeltas/sniffly&#34; target=&#34;_blank&#34;&gt;Sniffly&lt;/a&gt; because it sniffs browser history, and also because I was coming down with a cold.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s how Sniffly works:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A user visits the Sniffly page.&lt;/li&gt;
-&lt;li&gt;Their browser attempts to load images from various HSTS domains over HTTP. These domains were harvested from a scrape of HSTS domains in the Alexa Top 1M. It was really fun to write this scraper; I finally had a chance to use Python&amp;#8217;s Twisted!&lt;/li&gt;
-&lt;li&gt;Sniffly sets a CSP policy that restricts images to HTTP, so image sources are blocked before they are redirected to HTTPS. This is crucial, because If the browser completes a request to the HTTPS site, then it will receive the HSTS pin, and the attack will no longer work when the user visits Sniffly.&lt;/li&gt;
-&lt;li&gt;When an image gets blocked by CSP, its &lt;code&gt;onerror&lt;/code&gt; handler is called. In this case, the &lt;code&gt;onerror &lt;/code&gt;handler does some fancy tricks to semi-reliably time how long it took for  the image to be redirected from HTTP to HTTPS. If this time is on the order of a millisecond, it was an HSTS redirect (no network request was made), which means the user has visited the image&amp;#8217;s domain before. If it&amp;#8217;s on the order of 100 milliseconds, then a network request probably occurred, meaning that the user hasn&amp;#8217;t visited the image&amp;#8217;s domain.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/sniffly/&#34; target=&#34;_blank&#34;&gt;Here&amp;#8217;s a quick demo&lt;/a&gt;. It only works in recent Chrome/Firefox versions when HTTPS Everywhere is disabled. The results also turn up a lot of false positives if you are running an adblocker, since ad-blocked domains are indistinguishable from HSTS-blocked domains from a timing perspective. (However, since HTTPS Everywhere domains and ad-blocked domains are mostly the same for every user, they can simply be subtracted out to get more accurate results for users who run these browser extensions.) I didn&amp;#8217;t collect analytics on the site, but random testing with several friends showed a ~80% accuracy rate in the demo once browser extensions were accounted for.&lt;/p&gt;
-
-&lt;p&gt;For more info, check out the &lt;a href=&#34;https://github.com/diracdeltas/sniffly&#34; target=&#34;_blank&#34;&gt;source code&lt;/a&gt;, &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf&#34; target=&#34;_blank&#34;&gt;ToorCon slides&lt;/a&gt; (pdf), and &lt;a href=&#34;https://www.youtube.com/watch?v=kk2GkZv6Wjs&#34; target=&#34;_blank&#34;&gt;talk recording&lt;/a&gt;. Someone submitted the demo to &lt;a href=&#34;https://news.ycombinator.com/item?id=10455735&#34; target=&#34;_blank&#34;&gt;Hacker News&lt;/a&gt; and, to my horror, it was the #1 link for 6+ hours yesterday (!). I feel bewildered that this kind of attention is being granted (&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/backdooring-js/&#34; target=&#34;_blank&#34;&gt;again&lt;/a&gt;) to random side projects that I do alone in my spare time, but I guess I should take whatever validation I can get right now. It would be sweet if people looked at my work and paid me to hack on interesting stuff for the public so i never had to work a real job again. Maybe someday it&amp;#8217;ll happen; until then I&amp;#8217;ll prolly hold down a day job and take more fake vacations.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update: As of March 2016, Sniffly (CVE-2016-1617) has been fixed in the major browsers. Thank you Uncle Google for the bug bounty $$.&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&amp;#8217;m dizzy and lost and can&amp;#8217;t remember whose couch I&amp;#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
     </item>
     
     <item>
@@ -42,173 +25,7 @@
       <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/backdooring-js/</guid>
-      <description>
-
-&lt;p&gt;In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of &lt;a href=&#34;https://www.alchemistowl.org/pocorgtfo/&#34;&gt;POC||GTFO 0x08&lt;/a&gt; from Travis Goodspeed. The coolest article I&amp;#8217;ve read so far in it is &amp;#8220;Deniable Backdoors Using Compiler Bugs,&amp;#8221; in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.&lt;/p&gt;
-
-&lt;p&gt;That got me thinking about whether you could use the same backdoor technique on javascript. JS runs pretty much everywhere these days (browsers, servers, &lt;a href=&#34;http://postscapes.com/javascript-and-the-internet-of-things&#34;&gt;arduinos and robots&lt;/a&gt;, maybe even cars someday) but it&amp;#8217;s an interpreted language, not compiled. However, it&amp;#8217;s quite common to minify and optimize JS to reduce file size and improve performance. Perhaps that gives us enough room to insert a backdoor by abusing a JS &lt;em&gt;minifier.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;part-i-finding-a-good-minifier-bug&#34;&gt;Part I: Finding a good minifier bug&lt;/h3&gt;
-
-&lt;p&gt;Question: Do popular JS minifiers really have bugs that could lead to security problems?&lt;/p&gt;
-
-&lt;p&gt;Answer: After about 10 minutes of searching, I found one in &lt;a href=&#34;https://github.com/mishoo/UglifyJS2&#34;&gt;UglifyJS&lt;/a&gt;, a popular minifier used by jQuery to build a script that runs on something like &lt;a href=&#34;http://blog.jquery.com/2014/01/13/the-state-of-jquery-2014/&#34;&gt;70% of the top websites&lt;/a&gt; on the Internet. The &lt;a href=&#34;https://github.com/mishoo/UglifyJS2/issues/751&#34;&gt;bug itself&lt;/a&gt;, fixed in the 2.4.24 release, is straightforward but not totally obvious, so let&amp;#8217;s walk through it.&lt;/p&gt;
-
-&lt;p&gt;UglifyJS does a bunch of things to try to reduce file size. One of the compression flags that is on-by-default will compress expressions such as:&lt;/p&gt;
-
-&lt;pre&gt;!a &amp;&amp; !b &amp;&amp; !c &amp;&amp; !d
-&lt;/pre&gt;
-
-&lt;p&gt;That expression is 20 characters. Luckily, if we apply &lt;a href=&#34;https://en.wikipedia.org/wiki/De_Morgan%27s_laws&#34;&gt;De Morgan&amp;#8217;s Law&lt;/a&gt;, we can rewrite it as:&lt;/p&gt;
-
-&lt;pre&gt;!(a || b || c || d)
-&lt;/pre&gt;
-
-&lt;p&gt;which is only 19 characters. Sweet! Except that De Morgan&amp;#8217;s Law doesn&amp;#8217;t necessarily work if any of the subexpressions has a non-Boolean return value. For instance,&lt;/p&gt;
-
-&lt;pre&gt;!false &amp;&amp; 1
-&lt;/pre&gt;
-
-&lt;p&gt;will return the number 1. On the other hand,&lt;/p&gt;
-
-&lt;pre&gt;!(false || !1)
-&lt;/pre&gt;
-
-&lt;p&gt;simply returns true.&lt;/p&gt;
-
-&lt;p&gt;So if we can trick the minifier into erroneously applying De Morgan&amp;#8217;s law, we can make the program behave differently before and after minification! Turns out it&amp;#8217;s not too hard to trick UglifyJS 2.4.23 into doing this, since it will always use the rewritten expression if it is shorter than the original. (UglifyJS 2.4.24 patches this by making sure that subexpressions are boolean before attempting to rewrite.)&lt;/p&gt;
-
-&lt;h3 id=&#34;part-ii-building-a-backdoor-in-some-hypothetical-auth-code&#34;&gt;Part II: Building a backdoor in some hypothetical auth code&lt;/h3&gt;
-
-&lt;p&gt;Cool, we&amp;#8217;ve found the minifier bug of our dreams. Now let&amp;#8217;s try to abuse it!&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#8217;s say that you are working for some company, and you want to deliberately create vulnerabilities in their Node.js website. You are tasked with writing some server-side javascript that validates whether user auth tokens are expired. First you make sure that the Node package uses uglify-js@2.4.23, which has the bug that we care about.&lt;/p&gt;
-
-&lt;p&gt;Next you write the token validation function, inserting a bunch of plausible-looking config and user validation checks to force the minifier to compress the long (not-)boolean expression:&lt;/p&gt;
-
-&lt;pre&gt;function isTokenValid(user) {
-    var timeLeft =
-        !!config &amp;&amp; // config object exists
-        !!user.token &amp;&amp; // user object has a token
-        !user.token.invalidated &amp;&amp; // token is not explicitly invalidated
-        !config.uninitialized &amp;&amp; // config is initialized
-        !config.ignoreTimestamps &amp;&amp; // don&#39;t ignore timestamps
-        getTimeLeft(user.token.expiry); // &amp;gt; 0 if expiration is in the future
-
-    // The token must not be expired
-    return timeLeft &amp;gt; 0;
-}
-
-function getTimeLeft(expiry) {
-  return expiry - getSystemTime();
-}
-&lt;/pre&gt;
-
-&lt;p&gt;Running &lt;code&gt;uglifyjs -c&lt;/code&gt; on the snippet above produces the following:&lt;/p&gt;
-
-&lt;pre&gt;function isTokenValid(user){var timeLeft=!(!config||!user.token||user.token.invalidated||config.uninitialized||config.ignoreTimestamps||!getTimeLeft(user.token.expiry));return timeLeft&amp;gt;0}function getTimeLeft(expiry){return expiry-getSystemTime()}&lt;/pre&gt;
-
-&lt;p&gt;In the original form, if the config and user checks pass, &lt;code&gt;timeLeft&lt;/code&gt; is a negative integer if the token is expired. In the minified form, &lt;code&gt;timeLeft&lt;/code&gt; must be a boolean (since &amp;#8220;!&amp;#8221; in JS does type-coercion to booleans). In fact, if the config and user checks pass, the value of &lt;code&gt;timeLeft&lt;/code&gt; is always &lt;code&gt;true&lt;/code&gt; unless &lt;code&gt;getTimeLeft&lt;/code&gt; coincidentally happens to be 0.&lt;/p&gt;
-
-&lt;p&gt;Voila! Since &lt;code&gt;true &amp;gt; 0&lt;/code&gt; in javascript (yay for type coercion!), auth tokens that are past their expiration time will still be valid forever.&lt;/p&gt;
-
-&lt;h3 id=&#34;part-iii-backdooring-jquery&#34;&gt;Part III: Backdooring jQuery&lt;/h3&gt;
-
-&lt;p&gt;Next let&amp;#8217;s abuse our favorite minifier bug to write some patches to jQuery itself that could lead to backdoors. We&amp;#8217;ll work with &lt;a href=&#34;https://github.com/jquery/jquery/tree/1.11.3&#34;&gt;jQuery 1.11.3&lt;/a&gt;, which is the current jQuery 1 stable release as of this writing.&lt;/p&gt;
-
-&lt;p&gt;jQuery 1.11.3 uses &lt;a href=&#34;https://github.com/jquery/jquery/blob/1.11.3/package.json#L39&#34;&gt;grunt-contrib-uglify 0.3.2&lt;/a&gt; for minification, which in turn depends on &lt;a href=&#34;https://github.com/gruntjs/grunt-contrib-uglify/blob/v0.3.2/package.json#L30&#34;&gt;uglify-js ~2.4.0&lt;/a&gt;. So uglify-js@2.4.23 satisfies the dependency, and we can manually edit package.json in grunt-contrib-uglify to force it to use this version.&lt;/p&gt;
-
-&lt;p&gt;There are only a handful of places in jQuery where the DeMorgan&amp;#8217;s Law rewrite optimization is triggered. None of these cause bugs, so we&amp;#8217;ll have to add some ourselves.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Backdoor Patch #1:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;First let&amp;#8217;s add a potential backdoor in jQuery&amp;#8217;s .html() method. The &lt;a href=&#34;https://github.com/diracdeltas/jquery/commit/e50c8ce26736027386aa7a698baeca7740a54a0b&#34;&gt;patch&lt;/a&gt; looks weird and superfluous, but we can convince anyone that it shouldn&amp;#8217;t actually change what the method does. Indeed, pre-minification, the unit tests pass.&lt;/p&gt;
-
-&lt;p&gt;After minification with uglify-js@2.4.23, jQuery&amp;#8217;s .html() method will set the inner HTML to &amp;#8220;true&amp;#8221; instead of the provided value, so a bunch of tests fail.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-670&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 1.35.48 PM&#34; width=&#34;844&#34; height=&#34;785&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png 844w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM-300x279.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM-624x580.png 624w&#34; sizes=&#34;(max-width: 844px) 100vw, 844px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;However, the jQuery maintainers are probably using the patched version of uglifyjs. Indeed, tests pass with uglify-js@2.4.24, so this patch might not seem too suspicious.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-671&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 1.39.47 PM&#34; width=&#34;1057&#34; height=&#34;281&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png 1057w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-300x80.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-1024x272.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-624x166.png 624w&#34; sizes=&#34;(max-width: 1057px) 100vw, 1057px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Cool. Now let&amp;#8217;s run grunt to build jQuery with this patch and write some silly code that triggers the backdoor:&lt;/p&gt;
-
-&lt;pre&gt;&amp;lt;html&amp;gt;
-    &amp;lt;script src=&#34;../dist/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
-    &amp;lt;button&amp;gt;click me to see if this site is safe&amp;lt;/button&amp;gt;
-    &amp;lt;script&amp;gt;
-        $(&#39;button&#39;).click(function(e) {
-            $(&#39;#result&#39;).html(&#39;&amp;lt;b&amp;gt;false!!&amp;lt;/b&amp;gt;&#39;);
-        });
-    &amp;lt;/script&amp;gt;
-    &amp;lt;div id=&#39;result&#39;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;Here&amp;#8217;s the result of clicking that button when we run the pre-minified jQuery build:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-672&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 4.44.45 PM&#34; width=&#34;511&#34; height=&#34;449&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png 511w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM-300x264.png 300w&#34; sizes=&#34;(max-width: 511px) 100vw, 511px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;As expected, the user is warned that the site is not safe. Which is ironic, because it doesn&amp;#8217;t use our minifier-triggered backdoor.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s what happens when we instead use the minified jQuery build:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-673&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 4.45.10 PM&#34; width=&#34;505&#34; height=&#34;465&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png 505w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM-300x276.png 300w&#34; sizes=&#34;(max-width: 505px) 100vw, 505px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now users will totally think that this site is safe even when the site authors are trying to warn them otherwise.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Backdoor Patch #2:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;The first backdoor might be too easy to detect, since anyone using it will probably notice that a bunch of HTML is being set to the string &amp;#8220;true&amp;#8221; instead of the HTML that they want to set. So our &lt;a href=&#34;https://github.com/diracdeltas/jquery/commit/a2092d8a85474c90e2e4d306a21a14af55365b58&#34;&gt;second backdoor patch&lt;/a&gt; is one that only gets triggered in unusual cases.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-675&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 7.48.14 PM&#34; width=&#34;1020&#34; height=&#34;313&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png 1020w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM-300x92.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM-624x191.png 624w&#34; sizes=&#34;(max-width: 1020px) 100vw, 1020px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Basically, we&amp;#8217;ve modified jQuery.event.remove (used in the .off() method) so that the code path that calls &lt;a href=&#34;https://learn.jquery.com/events/event-extensions/&#34;&gt;special event removal hooks&lt;/a&gt; never gets reached after minification. (Since &lt;code&gt;spliced&lt;/code&gt; is always boolean, its length is always undefined, which is not &amp;gt; 0.) This doesn&amp;#8217;t necessarily change the behavior of a site unless the developer has defined such a hook.&lt;/p&gt;
-
-&lt;p&gt;Say that the site we want to backdoor has the following HTML:&lt;/p&gt;
-
-&lt;pre&gt;&amp;lt;html&amp;gt;
-    &amp;lt;script src=&#34;../dist/jquery.min.js&#34;&amp;gt;&amp;lt;/script&amp;gt;
-    &amp;lt;button&amp;gt;click me to see if special event handlers are called!&amp;lt;/button&amp;gt;
-    &amp;lt;div&amp;gt;FAIL&amp;lt;/div&amp;gt;
-    &amp;lt;script&amp;gt;
-        // Add a special event hook for onclick removal
-        jQuery.event.special.click.remove = function(handleObj) {
-            $(&#39;div&#39;).text(&#39;SUCCESS&#39;);
-        };
-        $(&#39;button&#39;).click(function myHandler(e) {
-            // Trigger the special event hook
-            $(&#39;button&#39;).off(&#39;click&#39;);
-        });
-    &amp;lt;/script&amp;gt;
-&amp;lt;/html&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;If we run it with unminified jQuery, the removal hook gets called as expected:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-677&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 4.43.10 PM&#34; width=&#34;705&#34; height=&#34;545&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png 705w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM-300x232.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM-624x482.png 624w&#34; sizes=&#34;(max-width: 705px) 100vw, 705px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;But the removal hook never gets called if we use the minified build:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-678&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png&#34; alt=&#34;Screen Shot 2015-08-23 at 4.43.42 PM&#34; width=&#34;714&#34; height=&#34;544&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png 714w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM-624x475.png 624w&#34; sizes=&#34;(max-width: 714px) 100vw, 714px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Obviously this is bad news if the event removal hook does some security-critical function, like checking if an origin is whitelisted before passing a user&amp;#8217;s auth token to it.&lt;/p&gt;
-
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-
-&lt;p&gt;The backdoor examples that I&amp;#8217;ve illustrated are pretty contrived, but the fact that they can exist at all should probably worry JS developers. Although JS minifiers are not nearly as complex or important as C++ compilers, they have power over a lot of the code that ends up running on the web.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#8217;s good that UglifyJS has added test cases for &lt;a href=&#34;https://github.com/mishoo/UglifyJS2/blob/master/test/compress/issue-751.js&#34;&gt;known bugs&lt;/a&gt;, but I would still advise anyone who uses a non-formally verified minifier to be wary. Don&amp;#8217;t minify/compress server-side code unless you have to, and make sure you run browser tests/scans against code post-minification. [Addendum: Don&amp;#8217;t forget that even if you aren&amp;#8217;t using a minifier, your CDN might minify files in production for you. For instance, Cloudflare&amp;#8217;s collapsify &lt;a href=&#34;https://github.com/cloudflare/collapsify/commit/e59253193282f2047eea1c770be57cb10c3c4a3a&#34;&gt;uses uglifyjs&lt;/a&gt;.]&lt;/p&gt;
-
-&lt;p&gt;Now, back to reading the rest of POC||GTFO.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;PS&lt;/strong&gt;: If you have thoughts or ideas for future PoC, please leave a comment or find me on Twitter (&lt;a href=&#34;https://twitter.com/bcrypt&#34;&gt;@bcrypt&lt;/a&gt;). The code from this blog post is up on &lt;a href=&#34;https://github.com/diracdeltas/jquery&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;[Update 1: Thanks @joshssharp for posting this to Hacker News. I&amp;#8217;m flattered to have been on the front page allllll night long (cue 70&amp;#8217;s soul music). Bonus points &amp;#8211; the thread taught me &lt;a href=&#34;https://news.ycombinator.com/item?id=10108672&#34;&gt;something surprising&lt;/a&gt; about why it would make sense to minify server-side.]&lt;/p&gt;
-
-&lt;p&gt;[Update 2: There is now a &lt;a href=&#34;https://lists.debian.org/debian-devel/2015/08/msg00427.html&#34;&gt;long thread&lt;/a&gt; about minifiers on debian-devel which spawned &lt;a href=&#34;https://wiki.debian.org/onlyjob/no-minification&#34;&gt;this wiki page&lt;/a&gt; and &lt;a href=&#34;https://news.ycombinator.com/item?id=10146157&#34;&gt;another HN thread&lt;/a&gt;. It&amp;#8217;s cool that JS developers are paying attention to this class of potential security vulnerabilities, but I hope that people complaining about minification also consider transpilers and other JS pseudo-compilers. I&amp;#8217;ll talk more about that in a future blog post.]&lt;/p&gt;
-</description>
+      <description>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of POC||GTFO 0x08 from Travis Goodspeed. The coolest article I&amp;#8217;ve read so far in it is &amp;#8220;Deniable Backdoors Using Compiler Bugs,&amp;#8221; in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</description>
     </item>
     
     <item>
@@ -217,33 +34,8 @@ function getTimeLeft(expiry) {
       <pubDate>Fri, 17 Jul 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/lessons-from-the-ad-blocker-trenches/</guid>
-      <description>&lt;p&gt;Greetings from the beautiful museum district of Berlin, where I&amp;#8217;ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we&amp;#8217;ve produced two documents this week that I think are pretty good:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3.org/2001/tag/doc/encryption-finding/&#34;&gt;no encryption backdoors&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.w3.org/2001/tag/doc/unsanctioned-tracking/&#34;&gt;no non-consensual web tracking&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (&lt;a href=&#34;https://eff.org/privacybadger&#34; target=&#34;_blank&#34;&gt;Privacy Badger Firefox&lt;/a&gt;).&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Beware of ad blockers that don&amp;#8217;t actually block requests to tracking domains. For instance, an ad blocker that simply hides ads using CSS rules is not really useful for preventing tracking. Many users can&amp;#8217;t tell the difference.&lt;/li&gt;
-&lt;li&gt;Third-party cookies are not the only way to track users anymore, which means that browser features and extensions that only block/delete third-party cookies are not as useful as they once were. This 2012 survey paper [&lt;a href=&#34;https://jonathanmayer.org/papers_data/trackingsurvey12.pdf&#34; target=&#34;_blank&#34;&gt;PDF&lt;/a&gt;] by Jonathan Mayer et. al. has a table of non-cookie browser tracking methods, which is probably out of date by now: &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-577&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM.png&#34; alt=&#34;Screen Shot 2015-07-17 at 4.32.55 PM&#34; width=&#34;421&#34; height=&#34;684&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM.png 421w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM-185x300.png 185w&#34; sizes=&#34;(max-width: 421px) 100vw, 421px&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Detecting whether a domain is performing third-party tracking is not straightforward. Naively, you could do this by counting the number of first-party domains that a domain reads high-entropy cookies from in a third-party context. However, this doesn&amp;#8217;t encompass reading non-cookie browser state that could be used to uniquely identify users in aggregate (see table above). A more general but probably impractical approach is to try to tag every piece of site-readable browser state with an entropy estimate so that you can score sites by the total entropy that is readable by them in a third-party context. (We assume that while a site is being accessed as a first-party, the user implicitly consents to letting it read information about them. This is a gross simplification, since first parties can read lots of information that users don&amp;#8217;t consent to by invisible fingerprinting. Also, I am recklessly using the term &amp;#8220;entropy&amp;#8221; here in a way that would probably cause undergrad thermodynamics professors to have aneurysms.)&lt;/li&gt;
-&lt;li&gt;The browser definition of &amp;#8220;third-party&amp;#8221; only roughly approximates the real-life definition. For instance, dropbox.com and dropboxusercontent.com are the same party from a business and privacy perspective but not from the cookie-scoping or DNS or same-origin-policy perspective.&lt;/li&gt;
-&lt;li&gt;The hardest-to-block tracking domains are the ones who cause collateral damage when blocked. A good example of this is Disqus, commonly embedded as a third-party widget on blogs and forums; if we block requests to Disqus (which include cookies for logged-in users), we severely impede the functionality of many websites. So Disqus is too usability-expensive to block, even though they can track your behavior from site to site.&lt;/li&gt;
-&lt;li&gt;The hardest-to-block tracking methods are the ones that cause collateral damage when disabled. For instance, &lt;a href=&#34;http://www.radicalresearch.co.uk/lab/hstssupercookies&#34;&gt;HSTS&lt;/a&gt; and &lt;a href=&#34;https://tools.ietf.org/html/rfc7469#section-5&#34;&gt;HPKP&lt;/a&gt; both store user-specific persistent data that can be abused to probe users&amp;#8217; browsing histories and/or mark users so that you can re-identify them after the first time they visit your site. However, clearing HSTS/HPKP state between browser sessions dilutes their security value, so browsers/extensions are reluctant to do so.&lt;/li&gt;
-&lt;li&gt;Specifiers and implementers sometimes argue that Feature X, which adds some fingerprinting/tracking surface, is okay because it&amp;#8217;s no worse than cookies. I am skeptical of this argument for the following reasons:&lt;br clear=&#34;none&#34; /&gt;a. Unless explicitly required, there is no guarantee that browsers will treat Feature X the same as cookies in privacy-paranoid edge cases. For instance, if Safari blocks 3rd party cookies by default, will it block 3rd party media stream captures (which will store a unique deviceid) by default too?&lt;br clear=&#34;none&#34; /&gt;b. Ad blockers and anti-tracking tools like Disconnect, Privacy Badger, and Torbutton were mostly written to block and detect tracking on the basis of cookies, not arbitrary persistent data. It&amp;#8217;s arguable that they should be blocking these other things as soon as they are shipped in browsers, but that requires developer time.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;That&amp;#8217;s all. And here&amp;#8217;s some photos I took while walking around Berlin in a jetlagged haze for hours last night:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-586&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1.jpg&#34; alt=&#34;berlin1&#34; width=&#34;391&#34; height=&#34;391&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1.jpg 1080w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-624x624.jpg 624w&#34; sizes=&#34;(max-width: 391px) 100vw, 391px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2.jpg&#34;&gt;&lt;img class=&#34;alignnone  wp-image-587&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2.jpg&#34; alt=&#34;berlin2&#34; width=&#34;392&#34; height=&#34;392&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2.jpg 1080w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-624x624.jpg 624w&#34; sizes=&#34;(max-width: 392px) 100vw, 392px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Update (7/18/15): Artur Janc of Google pointed out this &lt;a href=&#34;https://www.chromium.org/Home/chromium-security/client-identification-mechanisms&#34; target=&#34;_blank&#34;&gt;document by folks at Chromium&lt;/a&gt; analyzing various client identification methods, including several I hadn&amp;#8217;t thought about.&lt;/p&gt;
-</description>
+      <description>Greetings from the beautiful museum district of Berlin, where I&amp;#8217;ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we&amp;#8217;ve produced two documents this week that I think are pretty good:
+ no encryption backdoors no non-consensual web tracking  I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
     </item>
     
     <item>
@@ -252,64 +44,8 @@ function getTimeLeft(expiry) {
       <pubDate>Thu, 14 Aug 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/</guid>
-      <description>&lt;p&gt;Yesterday, Prof. Matthew Green wrote a nice &lt;a href=&#34;http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html&#34;&gt;blog post&lt;/a&gt; about why PGP must die. Ignoring the UX design problem for now, his four main points were: (1) the keys themselves are too unwieldy, (2) key management is hard, (3) the protocol lacks forward secrecy, and (4) the crypto is archaic/non-sane by default.&lt;/p&gt;
-
-&lt;p&gt;Happily, (1) and (4) can be solved straightforwardly using more modern crypto primitives like Curve25519 and throwing away superfluous PGP key metadata that comes from options that are ignored 99.999999% of the time. Of course, we would then break backwards compatibility with PGP, so we might as well invent a protocol that has forward/future secrecy built-in via something like Trevor Perrin&amp;#8217;s &lt;a href=&#34;https://github.com/trevp/axolotl/wiki&#34;&gt;axolotl ratchet&lt;/a&gt;. Yay.&lt;/p&gt;
-
-&lt;p&gt;That still leaves (2) &amp;#8211; the problem of how to determine which public key should be associated with an endpoint (email address, IM account, phone number, etc.). Some ways that people have tried to solve this in existing encrypted messaging schemes include:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A central authority tells Alice, &amp;#8220;This is Bob&amp;#8217;s public key&amp;#8221;, and Alice just goes ahead and starts using that key. iMessage does this, with Apple acting as the authority AFAICT. Key continuity may be enforced via pinning.&lt;/li&gt;
-&lt;li&gt;Alice and Bob verify each others&amp;#8217; key fingerprints via an out-of-band &amp;#8220;secure&amp;#8221; channel &amp;#8211; scanning QR codes when they meet in person, reading fingerprints to each other on the phone, romantically comparing short authentication strings, and so forth. This is used optionally in OTR and ZRTP to establish authenticated conversations.&lt;/li&gt;
-&lt;li&gt;Alice tries to use a web of trust to obtain a certification chain to Bob&amp;#8217;s key. Either she&amp;#8217;s verified Bob&amp;#8217;s key directly via #2 or there is some other trust path from her key to Bob&amp;#8217;s, perhaps because they&amp;#8217;ve both attended some &amp;#8220;parties&amp;#8221; where people don&amp;#8217;t have fun at all. This is what people are supposed to do with PGP.&lt;/li&gt;
-&lt;li&gt;Alice finds Bob&amp;#8217;s key fingerprint on some public record that she trusts to be directly controlled by Bob, such as his Twitter profile, DNS entry for a domain that he owns, or a gist on his Github account. This is what Keybase.io does. (I only added this one after &lt;strong&gt;@gertvdijk&lt;/strong&gt; pointed it out on Twitter, so thanks Gert.)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;IMO, if we&amp;#8217;re trying to improve email security for as many people as possible, the best solution minimizes the extent to which the authenticity of a conversation depends on user actions. Key management should be invisible to the average user, but it should still be auditable by paranoid folks. (Not just Paranoid! folks, haha.)&lt;/p&gt;
-
-&lt;p&gt;Out of the 3 options above, the only one in which users have to do zero work in order to have an authenticated conversation is #1. The downside is that Apple could do a targeted MITM attack on Alice&amp;#8217;s conversation with Bob by handing her a key that Apple/NSA/etc. controls, and Alice would never know. (Then again, even if Alice verified Bob&amp;#8217;s key out-of-band, Apple could still accomplish the same thing by pushing a malicious software update to Alice.)&lt;/p&gt;
-
-&lt;p&gt;Clearly, if we&amp;#8217;re using a central authority to certify people&amp;#8217;s keys, we need a way for anyone to check that the authority is not misbehaving and issuing fake keys for people. Luckily there is a scheme that is designed to do exactly this but for TLS certificates &amp;#8211; &lt;a href=&#34;http://www.certificate-transparency.org/&#34;&gt;Certificate Transparency&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;How does Certificate Transparency work? The end result is that a client that enforces Certificate Transparency (CT) recognizes a certificate as valid&lt;strong&gt; &lt;/strong&gt;if (1) the certificate has been signed by a recognized authority (which already happens in TLS) and (2) the certificate has been verifiably published in a public log. The latter can be accomplished through efficient mathematical proofs because the log is structured as a Merkle tree.&lt;/p&gt;
-
-&lt;p&gt;How would CT work for email? Say that I run a small mail service, yanmail.com, whose users would like to send encrypted emails to each other. In order to provide an environment for crypto operations that is more sandboxed and auditable than a regular webpage, I provide a YanMail browser extension. This extension includes (1) a PGP or post-PGP-asymmetric-encryption library, (2) a hardcoded signing key that belongs to me, and (3) a library that implements a Certificate Transparency auditor.&lt;/p&gt;
-
-&lt;p&gt;Now say that alice@yanmail.com wants to email bob@yanmail.com. Bob has already registered his public key with yanmail.com, perhaps by submitting it when he first made his account. Alice types in Bob&amp;#8217;s address, and the YanMail server sends her (1) a public key that supposedly belongs to Bob, signed by the YanMail signing key, and (2) a CT log proof that Bob&amp;#8217;s key is in the public CT log. Alice&amp;#8217;s CT client verifies the log proof; if it passes, then Alice trusts Bob&amp;#8217;s key to be authentic. (Real CT is more complicated than this, but I think I got the essential parts here.)&lt;/p&gt;
-
-&lt;p&gt;Now, if YanMail tries to deliver an NSA-controlled encryption key for Bob, Bob can at least theoretically check the CT log and know that he&amp;#8217;s being attacked. Otherwise, if the fake key isn&amp;#8217;t in the log, no other YanMail user would trust it. This is an incremental improvement over the iMessage key management situation: key certification trust is still centralized, but at least it&amp;#8217;s auditable.&lt;/p&gt;
-
-&lt;p&gt;What if Alice and Bob want to send encrypted email to non-YanMail users? Perhaps the browser extension also hard-codes the signing keys for these mail providers, which are used to certify their users&amp;#8217; encryption keys. Or perhaps the mail providers&amp;#8217; signing keys are inserted into DNS with DANE+DNSSEC. Or perhaps the client just trusts any valid CA-certified signing key for the mail provider.&lt;/p&gt;
-
-&lt;p&gt;For now, with the release of Google &lt;a href=&#34;https://code.google.com/p/end-to-end/&#34;&gt;End-to-End&lt;/a&gt; and Yahoo&amp;#8217;s &lt;a href=&#34;http://arstechnica.com/security/2014/08/yahoo-to-begin-offering-pgp-encryption-support-in-yahoo-mail-service/&#34;&gt;announcement&lt;/a&gt; to start supporting PGP as a first-class feature in Yahoo mail, CT for (post)-PGP seems promising as a way for users of these two large webmail services to send authenticated messages without having to deal with the pains of web-of-trust key management. Building better monitoring/auditing systems can be done incrementally once we get people to actually *use* end-to-end encryption.&lt;/p&gt;
-
-&lt;p&gt;Large caveat: CT doesn&amp;#8217;t provide a solution for key revocation as I understand it &amp;#8211; instead, in the TLS case, it still relies on CRL/OCSP. So if Bob&amp;#8217;s PGP/post-PGP key is stolen by an attacker who colludes with the YanMail server, they can get Alice to send MITM-able messages to Bob encrypted with his stolen key unless there is some reliable revocation mechanism. Ex: Bob communicates out-of-band to Alice that his old key is revoked, and she adds the revoked key to a list of keys that her client never accepts.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Written on 8/14/14 from a hotel room in Manila, Philippines&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;_==============&lt;/p&gt;
-
-&lt;p&gt;_&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update (8/15/14)&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;Thanks for the responses so far via Twitter and otherwise. Unsurprisingly, I&amp;#8217;m not the first to come up with this idea. Here are some reading materials related to CT for e2e communication:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://moderncrypto.org/mail-archive/messaging/2014/000226.html&#34;&gt;Discussion thread on the Modern Crypto messaging mailing list&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/andres-erbsen/dename&#34;&gt;Dename&lt;/a&gt; (semi-decentralized scheme for associating usernames with profiles, also uses Merkle trees)&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://eprint.iacr.org/2013/595.pdf&#34;&gt;Paper on Enhanced Certificate Transparency for e2e mail (pdf)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://sump2.links.org/files/RevocationTransparency.pdf&#34;&gt;Ben Laurie&amp;#8217;s paper on Revocation Transparency (pdf)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Update (8/29/14):&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Since I posted this, folks from Google presented a similar but more detailed &lt;a href=&#34;https://code.google.com/p/end-to-end/wiki/KeyDistribution&#34;&gt;proposal for E2E&lt;/a&gt;. There has been a nice &lt;a href=&#34;https://moderncrypto.org/mail-archive/messaging/2014/000708.html&#34;&gt;discussion&lt;/a&gt; about it on the Modern Crypto list, in addition to the one in the comments section of the proposal.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt; Update (7/18/15):&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I know it&amp;#8217;s pretty silly to be updating this after a year, but it&amp;#8217;d be a travesty to not mention &lt;a href=&#34;http://coniks.org&#34;&gt;CONIKS&lt;/a&gt; here.&lt;/p&gt;
-</description>
+      <description>Yesterday, Prof. Matthew Green wrote a nice blog post about why PGP must die. Ignoring the UX design problem for now, his four main points were: (1) the keys themselves are too unwieldy, (2) key management is hard, (3) the protocol lacks forward secrecy, and (4) the crypto is archaic/non-sane by default.
+Happily, (1) and (4) can be solved straightforwardly using more modern crypto primitives like Curve25519 and throwing away superfluous PGP key metadata that comes from options that are ignored 99.</description>
     </item>
     
     <item>
@@ -318,43 +54,8 @@ function getTimeLeft(expiry) {
       <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/software-transparency/</guid>
-      <description>&lt;p&gt;Say that you want to &amp;#8220;securely&amp;#8221; acquire an app called EncryptedYo for &amp;#8220;securely&amp;#8221; communicating with your friends. You go to the developer&amp;#8217;s web site, which is HTTPS-only, and download a binary executable. Done!&lt;/p&gt;
-
-&lt;p&gt;Perhaps if you&amp;#8217;re paranoid, you fetch the developer&amp;#8217;s GPG key, make sure that there&amp;#8217;s a valid trust path to it from your own key, verify the detached signature that they&amp;#8217;ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you&amp;#8217;ve downloaded before installing it.&lt;/p&gt;
-
-&lt;p&gt;This is good enough as long as the only things you&amp;#8217;re worried about are MITM attacks on your network connection and compromise of the server hosting the software. It&amp;#8217;s not good enough if you&amp;#8217;re worried about any of the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The developer getting a secret NSA order to insert a backdoor into the software.&lt;/li&gt;
-&lt;li&gt;The developer intentionally making false claims about the security of the software.&lt;/li&gt;
-&lt;li&gt;The developer&amp;#8217;s build machine getting compromised with malware that injects backdoors during the packaging process (pre-signing) or even a malicious compiler.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All of the above are *Very Real Worries* &amp;trade; that users should have when installing software. As a maintainer of a &lt;a href=&#34;https://www.eff.org/https-everywhere&#34;&gt;security-enhancing browser extension&lt;/a&gt; used by millions of people, I used to worry about the third one before HTTPS Everywhere had a deterministic build process (more on that below). If my personal laptop was compromised by a malicious version of zip that rewrote the static update-fetching URL in the HTTPS Everywhere source code before compressing and packaging it, literally millions of Firefox installations would be pwned within a few days if I didn&amp;#8217;t somehow detect the attack before signing the package (which is basically impossible to do in general).&lt;/p&gt;
-
-&lt;p&gt;You might instinctively think that the scenarios above are at least *detectable* if the software is open source and has been well-audited, but that&amp;#8217;s not really true. Ex:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;How do I know that some binary executable that I downloaded from &lt;a href=&#34;https://coolbinaryexecutables.com&#34;&gt;https://coolbinaryexecutables.com&lt;/a&gt; actually corresponds to the well-audited, peer-reviewed source code posted at &lt;a href=&#34;https://github.com/coolstuff/EncryptedYo.git?&#34;&gt;https://github.com/coolstuff/EncryptedYo.git?&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;How do I know that the binary executable that I downloaded is the same as the one that everyone else downloaded? In other words, how can I be sure that it&amp;#8217;s not my copy and *only* my copy that has a secret NSA backdoor?&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;So it looks like there&amp;#8217;s a problem because we usually install software from opaque binaries or compressed archives that have no guarantee of actually corresponding to the published, version-controlled source code. You might try to solve this by cloning the EncryptedYo repo and building it yourself. You can even fetch it over Tor and/or compare your local git HEAD to someone else&amp;#8217;s copy&amp;#8217;s if you want a stronger guarantee against a targeted backdoor.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately that&amp;#8217;s too much to ask the average person to do *every single time* they need to update the software, especially if EncryptedYo&amp;#8217;s target audience includes non-technical people (ex: Glenn Greenwald).&lt;/p&gt;
-
-&lt;p&gt;This is why post-Snowden software developers need to start working on new code packaging and installation mechanisms that preserve &amp;#8220;software transparency,&amp;#8221; a phrase perhaps first used in this context by Seth Schoen. Software transparency, unlike open source by itself, is a guarantee that the packages you&amp;#8217;re installing or updating were created by building the published source code.&lt;/p&gt;
-
-&lt;p&gt;(Side note: Software transparency has open source code as a prerequisite, but a similar concept that I&amp;#8217;ve been calling &amp;#8220;binary transparency&amp;#8221; can be applied to closed-source software as well. Binary transparency is a guarantee that the binary you&amp;#8217;re downloading is the same as the one that everyone else is downloading, but not that the binary is non-compromised. One way to get this is to compare the checksum of your downloaded binary gainst an out-of-band append-only cryptographically-verifiable log (phew) of binary checksums, similar to what Ben Laurie proposed in &lt;a href=&#34;http://www.links.org/?p=1262&#34;&gt;this blog post&lt;/a&gt;.)&lt;/p&gt;
-
-&lt;p&gt;In the last year, software transparency has finally started to become a front-and-center goal of some projects. Organizations like Mozilla and EFF are &lt;a href=&#34;https://bugzilla.mozilla.org/show_bug.cgi?id=885777&#34;&gt;beginning&lt;/a&gt; to &lt;a href=&#34;https://github.com/EFForg/https-everywhere/commit/e06a13a3283d93c96323970e1e43a897e4bfc944&#34;&gt;work&lt;/a&gt; on fully-reproducible build processes so that other people can independently build their software packages from source and make sure that their checksums are the same as the ones posted on mozilla.org or eff.org. Mike Perry of the Tor Project has &lt;a href=&#34;https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise&#34;&gt;written&lt;/a&gt; about the &lt;a href=&#34;https://blog.torproject.org/blog/deterministic-builds-part-two-technical-details&#34;&gt;painstaking, years-long process&lt;/a&gt; that it took to compile the Tor Browser Bundle deterministically inside a VM, but for many other software projects, the path to a reproducible build is as simple as &lt;a href=&#34;https://github.com/devrandom/gitian-builder/blob/master/bin/canon-zip&#34;&gt;normalizing timestamps&lt;/a&gt; in zip.&lt;/p&gt;
-
-&lt;p&gt;Of course, a reproducible build proccess doesn&amp;#8217;t by itself impact the average user, who is unlikely to try to replicate the build process for Firefox for Android before installing it on their phone. But at least it means that if Mozilla started posting backdoored binaries because their build machine was compromised, some members of their open source development community could in theory detect the attack after-the-fact and raise suspicions. That&amp;#8217;s more than we could do before.&lt;/p&gt;
-
-&lt;p&gt;IMO, every reasonably-paranoid software developer should be trying to adopt an independently reproducible build process. &lt;a href=&#34;https://gitian.org&#34;&gt;Gitian&lt;/a&gt; is a good place to start.&lt;/p&gt;
-
-&lt;p&gt;(Part 2 of this series, which I haven&amp;#8217;t written yet, is probably going to be about implementing software transparency in a way that protects end users before they get pwned, which nobody is doing much of yet AFAIK. In particular, it would be nice to start discussing ways to enforce software transparency for resources loaded in a browser, in hopes that this will bring either some clarity or more shouting to the debate about whether in-browser crypto apps are a good idea.)&lt;/p&gt;
-</description>
+      <description>Say that you want to &amp;#8220;securely&amp;#8221; acquire an app called EncryptedYo for &amp;#8220;securely&amp;#8221; communicating with your friends. You go to the developer&amp;#8217;s web site, which is HTTPS-only, and download a binary executable. Done!
+Perhaps if you&amp;#8217;re paranoid, you fetch the developer&amp;#8217;s GPG key, make sure that there&amp;#8217;s a valid trust path to it from your own key, verify the detached signature that they&amp;#8217;ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you&amp;#8217;ve downloaded before installing it.</description>
     </item>
     
     <item>
@@ -363,22 +64,8 @@ function getTimeLeft(expiry) {
       <pubDate>Wed, 25 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/stuff-i-use/</guid>
-      <description>
-
-&lt;p&gt;This was my favorite part of &lt;a href=&#34;http://yan.zhu.usesthis.com/&#34;&gt;my interview&lt;/a&gt; with The Setup:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;h4 id=&#34;what-would-be-your-dream-setup&#34;&gt;What would be your dream setup?&lt;/h4&gt;
-
-&lt;p&gt;Let&amp;#8217;s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn&amp;#8217;t support DRM; (2) an open-source maps application for &lt;a href=&#34;https://developers.google.com/android/?csw=1&#34; title=&#34;A mobile phone platform.&#34;&gt;Android&lt;/a&gt;/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements. (I&amp;#8217;ll work on the latter if someone else does the first two.)&lt;/p&gt;
-
-&lt;p&gt;Slightly more ambitious: every device should come with root access for the user if they want it. Going down the stack, it would be nice if all computing devices by default ran a &lt;a href=&#34;https://www.fsf.org/campaigns/free-bios.html&#34; title=&#34;An article about the benefits of a free BIOS.&#34;&gt;free BIOS&lt;/a&gt; and other free firmware on top of easily-modifiable, open hardware.&lt;/p&gt;
-
-&lt;p&gt;Respecting the autonomy of users by allowing them to understand and modify their devices is crucial for creating widespread technical literacy and, subsequently, a world in which ordinary people can detect when their rights are being threatened by technology providers and governments. I have a crazy dream that, someday, ordinary families will sit down at their kitchen tables to install software updates together and read the change logs aloud over breakfast.&lt;/p&gt;
-
-&lt;p&gt;Shooting for the stars now: let&amp;#8217;s design computers so that software engineering doesn&amp;#8217;t force us to occupy constrained, mostly-immobile positions in florescent-lit rooms for 8+ hours every day. I&amp;#8217;d like to code and go backpacking at the same time.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+      <description>This was my favorite part of my interview with The Setup:
+ What would be your dream setup? Let&amp;#8217;s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn&amp;#8217;t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
     </item>
     
     <item>
@@ -387,62 +74,9 @@ function getTimeLeft(expiry) {
       <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/a-boring-xss-dissection/</guid>
-      <description>&lt;p&gt;Hi there. Have a funny picture:&lt;/p&gt;
+      <description>Hi there. Have a funny picture:
 
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji.png&#34;&gt;&lt;img class=&#34;alignnone  wp-image-401&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji.png&#34; alt=&#34;td_emoji&#34; width=&#34;710&#34; height=&#34;527&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji.png 1110w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji-300x222.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji-1024x760.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji-624x463.png 624w&#34; sizes=&#34;(max-width: 710px) 100vw, 710px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally &lt;a href=&#34;http://heartbleed.com/&#34;&gt;broken&lt;/a&gt;, compared to 2-3 hours for an &lt;a href=&#34;http://abcnews.go.com/Technology/tweetdeck-hacked-site-affected-security-issue/story?id=24092189&#34;&gt;XSS&lt;/a&gt; bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.)&lt;/p&gt;
-
-&lt;p&gt;I don&amp;#8217;t use TweetDeck, but I managed to download the much-XSSed Chrome extension today shortly before it was fixed. I unminified the content script (the one that modifies page content on the client side, therefore probably causing whatever XSS was there) and took a diff with the patched version (3.7.2) after it came out. &lt;a href=&#34;http://pastebin.com/R57Y8rVy&#34;&gt;Pastebin here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;A couple things stood out:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Some people on Twitter (or maybe the people who XSSed their accounts, haha) implied that the XSS was due to Twitter not escaping user input. This seems false, because I can see safely-escaped HTML in HTTP responses from Twitter in my browser. This is sort of interesting, because it implies that the TweetDeck client is somehow unescaping escaped HTML.&lt;/li&gt;
-&lt;li&gt;The bulk of the not-very-well-obfuscated-but-still-hard-to-read diff between 3.7.1 and 3.7.2 was ripping out emoji &amp;#8220;parsing&amp;#8221; code. &amp;#8220;parsing&amp;#8221; is in quotes because TweetDeck processes tweets and tries to replace all Emoji characters with HTML image tags before showing them to you.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;3.7.2, quite happily, replaced the &amp;#8220;emojify&amp;#8221; function with the identity function (pictured above).&lt;/p&gt;
-
-&lt;p&gt;After staring at the diff some more, I sort-of figured out what was going on. TweetDeck runs a utility function on the DOM that extracts every text node, t, that contains an emoji character. Then for each text node t, it does the equivalent of:&lt;/p&gt;
-
-&lt;pre&gt;someDiv.innerHTML = this.emoji.parse(t.nodeValue);
-var i = document.createDocumentFragment();
-while (someDiv.hasChildNodes()) {
-  i.appendChild(someDiv.firstChild);
-}
-t.parentNode.replaceChild(i, t);&lt;/pre&gt;
-
-&lt;p&gt;where emoji.parse is the function that replaces emoji with HTML img tags.&lt;/p&gt;
-
-&lt;p&gt;&amp;#8220;innerHTML is evil!!&amp;#8221; one might say. This is true, but not the sole problem in this case because Chrome and Firefox will not automatically execute js inside &lt;script&gt; tags created by setting innerHTML. While it&amp;#8217;s true that you can get scripts to execute anyway through &lt;img onError=&amp;#8221;&amp;#8230;&amp;#8221;&gt; or whatever, there were consistent reports today of people who got XSSed through &lt;script&gt; tags in tweets.&lt;/p&gt;
-
-&lt;p&gt;So given that it&amp;#8217;s not 120% obvious where the bug is in the TweetDeck code, here&amp;#8217;s what happens when you try out the code snippet above on a tweet containing both XSS payload and emoji, like this one:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-403&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1.png&#34; alt=&#34;xss1&#34; width=&#34;1142&#34; height=&#34;834&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1-300x219.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1-1024x747.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1-624x455.png 624w&#34; sizes=&#34;(max-width: 1142px) 100vw, 1142px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;For convenience, I ID&amp;#8217;ed the element containing the tweet text with &amp;#8220;xss-test&amp;#8221;. Looks like the innerHTML is properly escaped to start with!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-405&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0.png&#34; alt=&#34;xss0&#34; width=&#34;1142&#34; height=&#34;739&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0-300x194.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0-1024x662.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0-624x403.png 624w&#34; sizes=&#34;(max-width: 1142px) 100vw, 1142px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Now let&amp;#8217;s grab the text node corresponding to the tweet, create a new div, and set the innerHTML of the div to be the nodeValue of our text node (TweetDeck would have converted emoji into images at this point, but this was already done to start with). Note that the new innerHTML doesn&amp;#8217;t seem to have safe HTML entity-encoded characters (&amp;lt;, &amp;gt;) anymore!&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-406&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3.png&#34; alt=&#34;xss3&#34; width=&#34;1142&#34; height=&#34;835&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3-300x219.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3-1024x748.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3-624x456.png 624w&#34; sizes=&#34;(max-width: 1142px) 100vw, 1142px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Moving on, we create a documentFragment and append *both* children of the new div to it. Note that the second child is a script element, which wasn&amp;#8217;t originally part of the DOM! Finally, we do some DOM surgery to replace the original text node with our newly-created fragment.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-407&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5.png&#34; alt=&#34;xss5&#34; width=&#34;1142&#34; height=&#34;835&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5-300x219.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5-1024x748.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5-624x456.png 624w&#34; sizes=&#34;(max-width: 1142px) 100vw, 1142px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And voila, the &lt;script&gt;&amp;#8230;&lt;/script&gt; text in the tweet disappears, because now the browser sees it as a script element instead of as text.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#8217;s not hard to imagine ways this bug could have been created. UX designer says, &amp;#8220;We need to add better emoji rendering before the release next week.&amp;#8221; Another developer decides that emoji need to be converted into images and copies-and-modifies some code from the same script that renders &amp;#8220;@&amp;#8221; mentions in text as HTML links but forgets to re-sanitize the non-emoji text. The code looks pretty okay, with no obvious problems, so it gets pushed out.&lt;/p&gt;
-
-&lt;p&gt;This is the sort of thing that I suspect is *all over* every semi-clever agilely-developed app, waiting to be uncovered as soon as a mischievious Austrian teenager accidentally hits the wrong key. Most applications simply don&amp;#8217;t have enough users for these bugs to surface yet, and many will die out before they ever do, which is a blessing in itself. Sometimes the bugs are found and fixed before they explode all over Ars Technica, either by a scrutinous engineer or by an honest user or perhaps by someone looking to claim a bug bounty.&lt;/p&gt;
-
-&lt;p&gt;But these generally aren&amp;#8217;t bugs that can be trivially prevented, unless the developer who&amp;#8217;s working on improving emoji rendering for your project also happens to have enough of a security background to know that changing some safe innerHTML to the nodeValue of the safe innerHTML will suddenly create dangerous innerHTML. Or perhaps if you had a dedicated person reviewing each commit for security holes as it comes in, or at least a pre-release hook for automated fuzz testing to check for unwanted script execution, but last I checked, nobody was telling web application devs to do this.&lt;/p&gt;
-
-&lt;p&gt;My favorite solution is actually for everyone to just deal with being XSSed semi-frequently in the future. This means that developers should stop exposing sensitive tokens to javascript (or quickly expire tokens that are), use safe CSP directives whenever possible, and make it easy for users to review and undo actions. On the other side of the bargain, users should either start using NoScript-like browser settings to whitelist Javascript or at least blacklist known Rickroll links.&lt;/p&gt;
-</description>
+Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally broken, compared to 2-3 hours for an XSS bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.</description>
     </item>
     
     <item>
@@ -451,87 +85,7 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/wordpress-fail/</guid>
-      <description>&lt;p&gt;Update (5/28/14): Regrettably, most of the stories covering this blog post have been all &amp;#8220;OMG EVERYTHING IS BROKEN&amp;#8221; rather than &amp;#8220;Here&amp;#8217;s how to make things better til WordPress rolls out a fix&amp;#8221; (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it&amp;#8217;s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;If you&amp;#8217;re a developer running your own WordPress install, make sure you set up SSL on all relevant servers and configure WordPress to auth flag cookies as &amp;#8220;secure.&amp;#8221;&lt;/li&gt;
-&lt;li&gt;If you&amp;#8217;re a WordPress user, don&amp;#8217;t be logged into WordPress on an untrusted network, or use a VPN. If you are and you visit a wordpress.com site (which confusingly may not actually have a wordpress.com domain name), your auth cookies are exposed.&lt;/li&gt;
-&lt;li&gt;[Experimental, probably not recommended] You can manually set the &amp;#8220;secure&amp;#8221; flag on the WP auth cookies in your browser. There&amp;#8217;s no guarantee that this works consistently, since the server can always send a set-cookie that reverts it into an insecure cookie. It may cause some WP functionality to break.&lt;/li&gt;
-&lt;li&gt;If you suspect that your WP cookie may have been stolen in the past, you can invalidate it by (1) waiting 3 years for it to expire on the server or (2) resetting your wordpress.com password. Note that logging out of WordPress does *not* invalidate the cookie on the server, so someone who stole it can use it even after you&amp;#8217;ve logged out. I verified that resetting your WP password does invalidate the old cookie; there may be other ways, but I haven&amp;#8217;t found any.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Original post below.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-
-&lt;p&gt;While hunting down a bug report for &lt;a href=&#34;https://github.com/EFForg/privacybadgerfirefox&#34;&gt;Privacy Badger&lt;/a&gt;, I noticed the &amp;#8220;wordpress_logged_in&amp;#8221; cookie being sent over clear HTTP to a WordPress authentication endpoint (&lt;a href=&#34;http://r-login.wordpress.com/remote-login.php&#34;&gt;http://r-login.wordpress.com/remote-login.php&lt;/a&gt;) on someone&amp;#8217;s blog.&lt;/p&gt;
-
-&lt;div id=&#34;attachment_377&#34; style=&#34;width: 904px&#34; class=&#34;wp-caption alignnone&#34;&gt;
-  &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png&#34;&gt;&lt;img class=&#34;size-full wp-image-377&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png&#34; alt=&#34;uh-oh&#34; width=&#34;894&#34; height=&#34;864&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png 894w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies-300x289.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies-624x603.png 624w&#34; sizes=&#34;(max-width: 894px) 100vw, 894px&#34; /&gt;&lt;/a&gt;
-  
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    uh-oh
-  &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Sounds like bad news! As mom always said, you should set the &amp;#8220;secure&amp;#8221; flag on sensitive cookies so that they&amp;#8217;re never sent in plaintext.&lt;/p&gt;
-
-&lt;p&gt;To check whether this cookie did anything interesting, I logged out of my wordpress account, copied the wordpress_logged_in cookie into a fresh browser profile, and visited &lt;a href=&#34;http://wordpress.com&#34;&gt;http://wordpress.com&lt;/a&gt; in the new browser profile. Yep, I was logged in!&lt;/p&gt;
-
-&lt;p&gt;This wouldn&amp;#8217;t be so bad if the wordpress_logged_in cookie were invalidated when the original user logged out or logged back in, but it definitely still worked. Does it expire? In 3 years. (Not sure when it gets invalidated on the server side, haven&amp;#8217;t waited long enough to know.)&lt;/p&gt;
-
-&lt;p&gt;Is this as bad as sending username/password in plaintext? I tried to see if I could reset the original user&amp;#8217;s password.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-378&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png&#34; alt=&#34;wordpresspassword1&#34; width=&#34;992&#34; height=&#34;428&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png 992w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825-300x129.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825-624x269.png 624w&#34; sizes=&#34;(max-width: 992px) 100vw, 992px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;That didn&amp;#8217;t work, so I&amp;#8217;m assuming WordPress uses the actually-secure cookie (wordpress_sec) for super important operations like password change. Nice job, but &amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;It turns out I could post to the original user&amp;#8217;s blog (and create new blog sites on their behalf):&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-379&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png&#34; alt=&#34;wordpress_postblog&#34; width=&#34;928&#34; height=&#34;581&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png 928w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246-300x187.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246-624x390.png 624w&#34; sizes=&#34;(max-width: 928px) 100vw, 928px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I could see private posts:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-380&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png&#34; alt=&#34;wordpress_postsecretblog&#34; width=&#34;950&#34; height=&#34;523&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png 950w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834-300x165.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834-624x343.png 624w&#34; sizes=&#34;(max-width: 950px) 100vw, 950px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I could post comments on other blogs as them:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-381&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png&#34; alt=&#34;wordpress_postcomment&#34; width=&#34;1007&#34; height=&#34;534&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png 1007w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342-300x159.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342-624x330.png 624w&#34; sizes=&#34;(max-width: 1007px) 100vw, 1007px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I could see their blog stats:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-382&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png&#34; alt=&#34;wordpress_stats&#34; width=&#34;1042&#34; height=&#34;695&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png 1042w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-300x200.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-1024x682.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-624x416.png 624w&#34; sizes=&#34;(max-width: 1042px) 100vw, 1042px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And so forth. I couldn&amp;#8217;t do some blog administrator tasks that required logging in again with the username/password, but still, not bad for a single cookie.&lt;/p&gt;
-
-&lt;p&gt;Moral of the story: don&amp;#8217;t visit a WordPress site while logged into your account on an untrusted local network.&lt;/p&gt;
-
-&lt;p&gt;Update: Thanks to Andrew Nacin of WordPress for informing me that auth cookies will be invalidated after a session ends in the next WordPress release and that SSL support on WordPress will be improving!&lt;/p&gt;
-
-&lt;p&gt;Update (5/26/14): I subsequently found that the insecure cookie could be used to set someone&amp;#8217;s 2fac auth device if they hadn&amp;#8217;t set it, thereby locking them out of their account. If someone has set up 2fac already, the attacker can still bypass login auth by cookie stealing &amp;#8211; the 2fac auth cookie is also sent over plaintext.&lt;/p&gt;
-
-&lt;p&gt;Update (5/26/14): A couple people have asked about whether the disclosure timeline below is reasonable, and my response is &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wordpress-fail/#comment-70&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Disclosure timeline:&lt;/p&gt;
-
-&lt;p&gt;Wed, 21 May 2014 16:12:17 PST: Reported issue to security@automattic.com, per the instructions at &lt;a href=&#34;http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#where-do-i-report-security-issues&#34;&gt;http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#where-do-i-report-security-issues&lt;/a&gt;; at this point, the report was mostly out of courtesy, since I figured it had to be obvious to them and many WP users already that the login cookie wasn&amp;#8217;t secured (it&amp;#8217;s just a simple config setting in WordPress to turn on the secure cookie flag, as I understand it). Received no indication that the email was received.&lt;/p&gt;
-
-&lt;p&gt;22 May 2014 16:43: Mentioned the lack of cookie securing publicly. &lt;a href=&#34;https://twitter.com/bcrypt/status/469624500850802688&#34;&gt;https://twitter.com/bcrypt/status/469624500850802688&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;22 May 2014 17:39: Received response from Andrew Nacin (not regarding lack of cookie securing but rather that the auth cookie lifetime will soon be that of a regular session cookie). &lt;a href=&#34;https://twitter.com/nacin/status/469638591614693376&#34;&gt;https://twitter.com/nacin/status/469638591614693376&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;23 May 2014 ~13:00: Discovered two-factor auth issue on accident, reported to both security@automattic.com and security@wordpress.org in reply to original email. I also mentioned it to Dan Goodin since I found the bug while trying to answer a question he had about cookies, but I did not disclose publicly.&lt;/p&gt;
-
-&lt;p&gt;25 May 2014 15:20: Received email response from security@automattic.com saying that they were looking into it internally (no mention of timeline). Wrote back to say thanks.&lt;/p&gt;
-
-&lt;p&gt;26 May 2014, ~10:00: Ars Technica article about this gets published, which mentioned the 2-fac auth issue. I updated this blog post to reflect that.&lt;/p&gt;
-
-&lt;p&gt;26-27 May 2014: Some commenters on the Ars Technica article discover an arguably worse bug than the one that the original article was about: WordPress sends the login form over HTTP. (Even though the form POST is over HTTPS, the local network attacker can modify the target on the HTTP page however he/she wants and then it&amp;#8217;s game over.) This wouldn&amp;#8217;t be so bad if everyone used a password manager and changed passwords semi-regularly, since most people are likely to login to WordPress through their blog&amp;#8217;s admin portal (which is always HTTPS as far as I can tell), except that password reuse is rampant. Robert Graham subsequently published &lt;a href=&#34;http://blog.erratasec.com/2014/05/wordpress-unsafe-at-any-speed.html&#34;&gt;this blog post&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;29 May 2014, 5:52: Received reply from WordPress saying they would email me again when fixed.&lt;/p&gt;
-
-&lt;p&gt;30 May 2014, 14:51: Andrew Nacin says all issues are supposedly fixed.&lt;/p&gt;
-</description>
+      <description>Update (5/28/14): Regrettably, most of the stories covering this blog post have been all &amp;#8220;OMG EVERYTHING IS BROKEN&amp;#8221; rather than &amp;#8220;Here&amp;#8217;s how to make things better til WordPress rolls out a fix&amp;#8221; (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it&amp;#8217;s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:</description>
     </item>
     
     <item>
@@ -540,19 +94,7 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Sun, 16 Mar 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/zero-bit-vulnerabilities/</guid>
-      <description>&lt;p&gt;The other day, I overheard Seth Schoen ask the question, &amp;#8220;What is the smallest change you can make to a piece of software to create a serious vulnerability?&amp;#8221; We agreed that one bit is generally &lt;a href=&#34;https://en.wikipedia.org/wiki/Off-by-one_error#Fencepost_error&#34; target=&#34;_blank&#34;&gt;sufficient&lt;/a&gt;; for instance, in x86 assembly, the operations JL and JLE (corresponding to &amp;#8220;jump if less than&amp;#8221; and &amp;#8220;jump if less than or equal to&amp;#8221;) differ by one bit, and the difference between the two could very easily cause serious problems via memory corruption or otherwise. As a simple human-understandable example, imagine replacing &amp;#8220;&amp;lt;&amp;#8221; with &amp;#8220;&amp;lt;=&amp;#8221; in a bus ticket machine that says: &amp;#8220;if ticket_issue_date &amp;lt; today, reject rider; else allow rider.&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;At this point, I started feeling one-bit-upsmanship and wondered whether there was such a thing as a zero-bit vulnerability. Obviously, a binary that is &amp;#8220;safe&amp;#8221; on one machine can be malicious on a different machine (ex: if the second machine has been infected with malware), so let&amp;#8217;s require that the software must be non-vulnerable and vulnerable on two machines that start in identical states. For simplicity, let&amp;#8217;s also require that both machines are perfectly (read: unrealistically) airgapped, in the sense that there&amp;#8217;s no way for them to change state based on input from other computers.&lt;/p&gt;
-
-&lt;p&gt;This seems pretty much impossible to me unless we consider vulnerabilities probabilistically generated by environmental noise during code execution. Two examples for illustration:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A program that behaves in an unsafe way if the character &amp;#8220;A&amp;#8221; is output by a random character generator that uses true hardware randomness (ex: quantum tunneling rates in a semiconductor).&lt;/li&gt;
-&lt;li&gt;A program that behaves in an unsafe way when there are single-bit flips due to radioactive decay, cosmic ray collisions, background radiation, or other particle interactions in the machine&amp;#8217;s hardware. It turns out that these are &lt;a href=&#34;https://en.wikipedia.org/wiki/Soft_error#Causes_of_soft_errors&#34; target=&#34;_blank&#34;&gt;well-known&lt;/a&gt; and have, in some historical cases, caused actual problems. In 2000, Sun &lt;a href=&#34;http://www.theregister.co.uk/2001/03/07/sun_suffers_ultrasparc_ii_cache/&#34; target=&#34;_blank&#34;&gt;reportedly&lt;/a&gt; received complaints from 60 clients about an error caused by background radiation that flipped, on average, &lt;a href=&#34;http://queue.acm.org/detail.cfm?id=1839574&#34; target=&#34;_blank&#34;&gt;one bit per processor per year&lt;/a&gt;! (In other words, Sun suffers due to sun.)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Which brings up a fun hypothetical question: if you design an SSL library that will always report invalid certificates as valid if ANY one bit in the library is flipped (but behaves correctly in the absence of single-bit flip errors), have you made a zero-bit backdoor?&lt;/p&gt;
-</description>
+      <description>The other day, I overheard Seth Schoen ask the question, &amp;#8220;What is the smallest change you can make to a piece of software to create a serious vulnerability?&amp;#8221; We agreed that one bit is generally sufficient; for instance, in x86 assembly, the operations JL and JLE (corresponding to &amp;#8220;jump if less than&amp;#8221; and &amp;#8220;jump if less than or equal to&amp;#8221;) differ by one bit, and the difference between the two could very easily cause serious problems via memory corruption or otherwise.</description>
     </item>
     
     <item>
@@ -561,71 +103,8 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
-      <description>&lt;p&gt;On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by &lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn&#34;&gt;Zooko&lt;/a&gt;. Namely (pun intended): it&amp;#8217;s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. &lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko%27s_triangle&#34;&gt;Wikipedia&lt;/a&gt; defines these properties as:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Secure&lt;/strong&gt;: The quality that there is one, unique and specific entity to which the name maps. For instance, &lt;a href=&#34;https://en.wikipedia.org/wiki/Domain_name&#34; title=&#34;Domain name&#34;&gt;domain names&lt;/a&gt; are unique because there is just one party able to prove that they are the owner of each domain name.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Decentralized&lt;/strong&gt;: The lack of a centralized authority for determining the meaning of a name. Instead, measures such as a &lt;a href=&#34;https://en.wikipedia.org/wiki/Web_of_trust&#34; title=&#34;Web of trust&#34;&gt;Web of trust&lt;/a&gt; are used.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Human-meaningful&lt;/strong&gt;: The quality of meaningfulness and memorability to the users of the naming system. Domain names and nicknaming are naming systems that are highly memorable.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It&amp;#8217;s pretty easy to make systems that satisfy two of the three. Tor Hidden Service (.onion) addresses are secure and decentralized but not human-meaningful since they look like random crap. Regular domain names like stripe.com are secure and human-meaningful but not decentralized since they rely on centralized DNS records. Human names are human-meaningful and decentralized but not secure, because multiple people can share the same name (that&amp;#8217;s why you can&amp;#8217;t just tell the post office to send $1000 to John Smith and expect it to get to the right person).&lt;/p&gt;
-
-&lt;p&gt;It&amp;#8217;s fun to think of how to take a toy system that covers two edges of Zooko&amp;#8217;s triangle and bootstrap it along the third until you get an almost-satisfactory solution to the naming dilemma. Here&amp;#8217;s the one I thought of on the plane:&lt;/p&gt;
-
-&lt;p&gt;Imagine we live in a world with a special type of top-level domain called .ssl, which people have decided to make because they&amp;#8217;re sick of the NSA spying on them all the time. .ssl domains have some special requirements:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;All .ssl servers communicate only over SSL connections. Browsers refuse to send any data unencrypted to a .ssl domain.&lt;/li&gt;
-&lt;li&gt;All .ssl domain names are just the hash of the server&amp;#8217;s SSL public key.&lt;/li&gt;
-&lt;li&gt;The registrars refuse to register a domain name for you unless you show him/her a public key that hashes to that domain name.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;This naming system wouldn&amp;#8217;t be human-meaningful, because people can&amp;#8217;t easily remember URLs like &lt;a href=&#34;https://2xtsq3ekkxjpfm4l.ssl&#34;&gt;https://2xtsq3ekkxjpfm4l.ssl&lt;/a&gt;. On the other hand, it&amp;#8217;s secure because the domain names are guaranteed to be unique (except in the overwhemingly-unlikely cases where two keys have the same hash or two servers happen to generate the same keypair). It&amp;#8217;s not truly decentralized, because we still use DNS to map domain names to IP addresses, but I argue that DNS isn&amp;#8217;t a point of compromise: if a MITM en route to the DNS server sends you to the wrong IP address, your browser refuses to talk to the server at that IP address because it won&amp;#8217;t show the right SSL certificate. This is an unavoidable denial-of-service vulnerability, but the benefit is that you detect the MITM attack immediately.&lt;/p&gt;
-
-&lt;p&gt;Of course, this assumes we already have a decentralized way to advertise these not-very-memorable domain names. Perhaps they spread by trusted emails, or word-of-mouth, or business cards at hacker cons. But still, the fact that they&amp;#8217;re so long and complicated and non-human-meaningful opens up serious phishing vulnerabilities for .ssl domains!&lt;/p&gt;
-
-&lt;p&gt;So, we&amp;#8217;d like to have petnames for .ssl domains to make them more memorable. Say that the owner of &amp;#8220;2xtsq3ekkxjpfm4l.ssl&amp;#8221; would like to have the petname &amp;#8220;forbes.ssl&amp;#8221;; how do we get everyone to agree on and use the petname-to-domain-name mappings? We could store the mappings in a distributed, replicated database and require that every client check several database servers and get consistent answers before resolving a petname to a domain name. But that&amp;#8217;s kinda slow, and maybe we&amp;#8217;re too cheap to set up enough servers to make this system robust against government MITM attacks.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s a simpler and cheaper solution that doesn&amp;#8217;t require any extra servers at all: require that the distance between the hash of the petname and the hash of [server&amp;#8217;s public SSL key] + [nonce] is less than some number D &lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn&#34;&gt;1&lt;/a&gt;. The server operator is responsible for finding a nonce that satisfies this inequality; otherwise, clients will refuse to accept the server&amp;#8217;s SSL certificate.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn&#34;&gt;1&lt;/a&gt; For purposes of this discussion, it doesn&amp;#8217;t really matter how we choose to measure the distance between two hashes, but it should satisfy the following: (1) two hashes that are identical have a distance of 0, and (2) the number of distinct hashes that are at distance N from a hash H0 should grow faster than linearly in N. We can pick Hamming distance, for example.&lt;/p&gt;
-
-&lt;p&gt;In other words, the procedure for getting a .ssl domain now looks like this:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Alice wants forbes.ssl. She generates a SSL keypair and mines for a nonce that makes the hash of the public key plus nonce close enough to the hash of &amp;#8220;forbes&amp;#8221;.&lt;/li&gt;
-&lt;li&gt;Once Alice does enough work to find a satisfactory nonce, she adds it as an extra field in her SSL certificate. The registrar checks her work and gives her forbes.ssl if the name isn&amp;#8217;t already taken and her nonce is valid.&lt;/li&gt;
-&lt;li&gt;Alice sets up her site. She continues to mine for better nonces, in case she has adversaries who are secretly also mining for nonces in order to do MITM attacks on forbes.ssl in the future (more on this later).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Bob comes along and wants to visit Alice&amp;#8217;s site.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Bob goes to &lt;a href=&#34;https://forbes.ssl&#34;&gt;https://forbes.ssl&lt;/a&gt; in his browser.&lt;/li&gt;
-&lt;li&gt;His browser sees Alice&amp;#8217;s SSL certificate, which has a nonce. Before finishing the SSL handshake, it checks that the distance D1_forbes between the hash of &amp;#8220;forbes&amp;#8221; and the hash of [SSL public key]+[nonce] is less than Bob&amp;#8217;s maximum allowed distance, D1. Otherwise it abandons the handshake and shows Bob a scary warning screen.&lt;/li&gt;
-&lt;li&gt;If the handshake succeeds, Bob&amp;#8217;s browser caches Alice&amp;#8217;s SSL certificate and trusts it for some period of time T; if Bob sees a different certificate for Alice within time T, his browser will refuse to accept it, unless Alice has issued a revocation for her cert during that time.&lt;/li&gt;
-&lt;li&gt;After time T, Bob goes to Alice&amp;#8217;s site again. His maximum allowed distance has gone down from D1 to D2 during that time. Luckily, Alice has been mining for better nonces, so D1_forbes is down to D2_forbes. Bob&amp;#8217;s browser repeats Step 2 with the new distances and decides whether or not to trust Alice for the next time interval T.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In reality, you probably wouldn&amp;#8217;t want to use this system with SSL certs themselves; rather, it&amp;#8217;d be better to use the nonces to strengthen trust-on-first-use in a key pinning system like TACK. That is, Alice would mine for a nonce that reduces the distance between the hash of &amp;#8220;forbes&amp;#8221; and the hash of [TACK Signing Key]+[nonce].&lt;/p&gt;
-
-&lt;p&gt;For those unfamiliar with TACK, it&amp;#8217;s a system that allows SSL certificates to be pinned to a long-term TACK Signing Key provided by the site operator, which is trusted-on-first-sight and cached for a period of up to 30 days. Trust-on-first-use gets rid of the need to pin to a certificate authority, but it doesn&amp;#8217;t prevent a powerful adversary from MITM&amp;#8217;ing you every time you visit a site if they can MITM you the first time with a fake TACK Signing Key.&lt;/p&gt;
-
-&lt;p&gt;The main usefulness of nonces for TACK Signing Keys is this: it makes broad MITM attacks much more costly. Not only does the MITM have to show you a fake key, but they have to show you one with a valid nonce. If they wanted to do this for every site you visit, keeping in mind that your acceptable distances go down over time, they&amp;#8217;d have to continuously mine for hundreds or thousands of domains.&lt;/p&gt;
-
-&lt;p&gt;Not impossible, of course, but it&amp;#8217;s incrementally harder than just showing you a fake certificate.&lt;/p&gt;
-
-&lt;p&gt;Another nice thing about this scheme is that Bob can decide to set different distance thresholds for different types of sites, depending on how &amp;#8220;secure&amp;#8221; they should be. He can pick a very low distance D_bank for his banking website, because he knows that his bank has a lot of computational resources to mine for a very good nonce. On the other hand, he picks a relatively high distance D_friend for his friend&amp;#8217;s homepage, because he knows that his friend&amp;#8217;s one-page site doesn&amp;#8217;t take any sensitive information.&lt;/p&gt;
-
-&lt;p&gt;My intuition says that sites with high security needs (banks, e-commerce, etc.) also tend to have more computational resources for mining, but obviously this isn&amp;#8217;t true for sites like Wikileaks or some nonprofits that handle sensitive information liked Planned Parenthood. That&amp;#8217;s okay, because volunteers and site users can also mine for nonces! Ex: if Bob finds a better nonce for Alice, he can send it to her so that she has a stronger certificate.&lt;/p&gt;
-
-&lt;p&gt;Essentially, this causes proof of trustworthiness to become decentralized: if I start a whistleblower site, I can run a crowd-mining campaign to ask thousands of volunteers around the world to help me get a strong certificate. I win as long as their combined computing power is greater than that of my adversaries.&lt;/p&gt;
-
-&lt;p&gt;Of course, that last part isn&amp;#8217;t guaranteed. But it&amp;#8217;s interesting to think about what would happen either way.&lt;/p&gt;
-
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-</description>
+      <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it&amp;#8217;s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
+ Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
     </item>
     
     <item>
@@ -634,72 +113,8 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/debunking-googles-hsts-claims/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;**Disclaimer**&lt;/strong&gt;: This post was published before I started working at EFF, hence some stylistic mistakes (calling it &amp;#8220;the EFF&amp;#8221; rather than just &amp;#8220;EFF&amp;#8221;) are excusable and left uncorrected. 🙂&lt;/p&gt;
-
-&lt;p&gt;Two days ago, the EFF published a report tiled, &amp;#8220;&lt;a href=&#34;https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what&#34;&gt;Encrypt the Web Report: Who&amp;#8217;s Doing What&lt;/a&gt;.&amp;#8221; The report included a chart that rated several large web companies on how well they were protecting user privacy via recommended encryption practices for data in transit. The five ranking categories were basic HTTPS support for web services, encryption of data between data centers, STARTTLS for opportunistic email encryption, support for SSL with perfect forward secrecy, and support for HTTP Strict Transport Security (HSTS). It looks like this:&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&#34;alignnone&#34; alt=&#34;&#34; src=&#34;https://www.eff.org/files/2013/11/19/crypto-survey-graphic.png&#34; width=&#34;666&#34; height=&#34;1158&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;By most measures, this is an amazing chart: it&amp;#8217;s easy to understand, seems technically correct, and is tailored to address the public&amp;#8217;s concerns about what companies are doing to protect people from the NSA. On the other hand, I don&amp;#8217;t like it much. Here&amp;#8217;s why:&lt;/p&gt;
-
-&lt;p&gt;The first problem with the report is that it inadequately explains the basis for each score. For instance, what does a green check in the &amp;#8220;HTTPS&amp;#8221; category mean? Does it mean that the company is encrypting &lt;em&gt;all&lt;/em&gt; web traffic, or just web traffic for logins and sensitive information? Sonic.net certainly got a green check in that category, yet you can check that going to &lt;a href=&#34;http://sonic.net&#34;&gt;http://sonic.net&lt;/a&gt; doesn&amp;#8217;t even redirect you to HTTPS. Amazon got a red square that says &amp;#8220;limited&amp;#8221;, but they seem to encrypt login and payment credentials just fine.&lt;/p&gt;
-
-&lt;p&gt;The second problem is that the report lacks transparency on how its data was acquired. It states, &amp;#8220;The information in this chart comes from several sources; the companies who responded to our survey questions; information we have determined by independently examining the listed websites and services and &lt;a href=&#34;https://www.facebook.com/notes/facebook-engineering/secure-browsing-by-defa%20ult/10151590414803920&#34;&gt;published&lt;/a&gt; &lt;a href=&#34;http://arstechnica.com/security/2013/11/we-still-dont-encrypt-server-to-server-data-admits-microsoft/&#34;&gt;reports&lt;/a&gt;.&amp;#8221; Does that mean the EFF sent a survey to a bunch of companies that asked them to check which boxes they thought that they fulfilled? Could we at least see the survey? Also, was each claim independently verified, or did the EFF just trust the companies that responded to the survey?&lt;/p&gt;
-
-&lt;p&gt;I looked at the chart for a while, re-read the text a couple times, and remained unconvinced that I should go ahead and share it with all my friends. After all, there is no greater crime than encouraging ordinary people to believe whatever large companies claim about their security practices. That just leads to less autonomy for the average user and more headaches for the average security engineer. So I decided to take a look at the HSTS category to see whether I could verify the chart myself.&lt;/p&gt;
-
-&lt;p&gt;For those who are unfamiliar, when a website says that they support HSTS, they generally mean that they send a special &amp;#8220;&lt;strong&gt;Strict-Transport Security&lt;/strong&gt;&amp;#8221; header with all HTTPS responses. This header tells your browser to only contact the website over HTTPS (a secure, encrypted protocol) for a certain length of time, preferably on the order of weeks or months. This is better than simply redirecting a user to HTTPS when they try to contact the site over HTTP &lt;a href=&#34;https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what&#34;&gt;1&lt;/a&gt;, because that initial HTTP request can get intercepted by a malicious attacker. By refusing to send the HTTP request at all and only sending the HTTPS version of it, your browser protects you from someone sending you forged HTTPS data after they&amp;#8217;ve intercepted the HTTP request.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.eff.org/deeplinks/2013/11/encrypt-web-report-whos-doing-what&#34;&gt;1&lt;/a&gt; HTTP traffic can be trivially read by anyone who intercepts those packets, so you should watch out for passwords, cookies, and other sensitive data sent over HTTP. I wrote a post a while back showing how easy it is &lt;a href=&#34;https://zyan.scripts.mit.edu/blog/summertime-and-the-http-traffic-sniffing-is-easy/&#34;&gt;to sniff HTTP traffic with your laptop&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;(HSTS is a good idea, and all servers that support HTTPS should implement it.&lt;/p&gt;
-
-&lt;p&gt;If you decide to stop supporting HTTPS, you can just send an HSTS header with &amp;#8220;max-age=0.&amp;#8221;)&lt;/p&gt;
-
-&lt;p&gt;But HSTS still has a problem, which is that the first time a user ever contacts a website, they&amp;#8217;ll most likely do it over HTTP since they haven&amp;#8217;t received the HSTS header from the site yet! The Chromium browser tried to solve this problem by coming with an &lt;strong&gt;HSTS Preload List&lt;/strong&gt;, which is an ever-growing &lt;a href=&#34;http://src.chromium.org/viewvc/chrome/trunk/src/net/http/transport_security_state_static.json&#34;&gt;preloaded list of sites&lt;/a&gt; that want users to contact them over HTTPS the first time. Firefox, Chrome, and Chromium all come shipped with this list. (Fun note: &lt;a href=&#34;https://eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt;, the browser extension by the EFF that I worked on, is basically a gigantic HSTS preload list of 7000+ domains. The difference is that the HTTPS Everywhere list doesn&amp;#8217;t come with every browser, since it&amp;#8217;s much less stable, so you have to install it as an extension.)&lt;/p&gt;
-
-&lt;p&gt;Anyway, let&amp;#8217;s see if Google&amp;#8217;s main search supports HSTS. To check, open up a browser and type in &amp;#8220;&lt;a href=&#34;http://google.com.&amp;amp;#8221&#34;&gt;http://google.com.&amp;amp;#8221&lt;/a&gt;; If it supports HSTS, the HTTP request never returns a status code. If it doesn&amp;#8217;t support HSTS, the HTTP request returns a 302-redirect to HTTPS.&lt;/p&gt;
-
-&lt;p&gt;Results, examined in Firefox 25 with Firebug:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-232&#34; alt=&#34;Screenshot from 2013-11-20 01:42:30&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230.png&#34; width=&#34;980&#34; height=&#34;629&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230.png 980w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230-300x192.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-014230-624x400.png 624w&#34; sizes=&#34;(max-width: 980px) 100vw, 980px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Nope! As you can see, the HTTP request completes. As it does that, it leaks our search query (&amp;#8220;how to use tor&amp;#8221;) and some of our preference cookies to the world.&lt;/p&gt;
-
-&lt;p&gt;The request then 302-redirects to HTTPS, as expected, but that HTTPS request doesn&amp;#8217;t contain an HSTS header at all. So there&amp;#8217;s no way that Google main search supports HSTS, at least in Firefox.&lt;/p&gt;
-
-&lt;p&gt;I was puzzled. Why would Google refuse to send the HSTS header, even though they support HTTPS pretty much everywhere, definitely on their main site? I did a bit more searching and concluded that it was because they &lt;em&gt;deliberately send ad clicks over plain HTTP&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;To prove this to yourself, do a Google search that returns some ads: for instance, &amp;#8220;where to buy ukuleles.&amp;#8221; If you open up Firebug&amp;#8217;s page inspector and look at the link for the ad, which supposedly goes to a ukulele retail site, you&amp;#8217;ll see a secret hidden link that you hit when you click on the ad! That link goes to &amp;#8220;&lt;a href=&#34;http://google.com/aclk?some_parameters=etc,&amp;amp;#8221&#34;&gt;http://google.com/aclk?some_parameters=etc,&amp;amp;#8221&lt;/a&gt;; and you can conclude that Google wants you to click on that HTTP link because they put it in the DOM exactly where you&amp;#8217;d want to click on it anyway.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-233&#34; alt=&#34;Screenshot from 2013-11-20 02:18:44&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844.png&#34; width=&#34;738&#34; height=&#34;616&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844.png 738w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844-300x250.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-021844-624x520.png 624w&#34; sizes=&#34;(max-width: 738px) 100vw, 738px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Let&amp;#8217;s click on that ukulele link. Yep, we end up redirected to &lt;a href=&#34;http://googleadservices.com&#34;&gt;http://googleadservices.com&lt;/a&gt; (plain HTTP again), which leaks our referer. That means the site that posted the ad as well as the NSA and anyone sniffing traffic at your local coffeeshop can see what ads you&amp;#8217;re looking at and what you were searching for when you clicked on them.&lt;a href=&#34;http://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-235&#34; alt=&#34;Screenshot from 2013-11-20 02:22:12&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212.png&#34; width=&#34;1297&#34; height=&#34;502&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212.png 1297w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212-300x116.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212-1024x396.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-20-022212-624x241.png 624w&#34; sizes=&#34;(max-width: 1297px) 100vw, 1297px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This is presumably the reason that Google.com doesn&amp;#8217;t send the HSTS header and isn&amp;#8217;t on the HSTS preload list. But wait, there&amp;#8217;s plenty of Google domains that are in fact on the preload list, like mail.google.com, encrypted.google.com, accounts.google.com, security.google.com, and wallet.google.com. Don&amp;#8217;t they send the HSTS header?&lt;/p&gt;
-
-&lt;p&gt;I checked in Firefox, and none of them did except for accounts.google.com. The rest all 302-redirect to HTTPS, just like any HTTPS site that doesn&amp;#8217;t support HSTS.&lt;/p&gt;
-
-&lt;p&gt;Then I did a bit more reading and found out that HSTS preloads were &lt;a href=&#34;https://wiki.mozilla.org/Privacy/Features/HSTS_Preload_List&#34;&gt;implemented&lt;/a&gt; such that Firefox ignored any site on the preload list that didn&amp;#8217;t send a valid HSTS header with an expiration time greater than 18 weeks. This seems like a valid design choice. Why would a site want to be on the preload list but not support HSTS at all for people with non-Firefox/Chrome/Chromium browsers? And if they don&amp;#8217;t send the header in the first place, how do we know when the site stops supporting HSTS?&lt;/p&gt;
-
-&lt;p&gt;Given that Google doesn&amp;#8217;t really provide the benefits of HSTS to any browsers except Chrom{e, ium}, it&amp;#8217;s hard to argue that it deserves the green check mark in the HSTS category. The moral of the story is that the EFF is awesome, but having a healthy mistrust of what companies claim is even more awesome.&lt;/p&gt;
-
-&lt;p&gt;=====&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;[IMPORTANT EDIT (11/23/13): The following originally appeared in this post, but I&amp;#8217;ve removed it because it turns out I was accidentally using a version of Chrome that didn&amp;#8217;t have the HSTS preloads that I was testing for anyway. Thanks to Chris Palmer for pointing out that Chrome 23 is a year old at this point, and apologies to everyone for my error.]&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;del datetime=&#34;2013-11-23T06:02:07+00:00&#34;&gt;Alright, so I had to also check whether Chrome respected the preload list even for sites that didn&amp;#8217;t send the header. To be extra careful, I did this by packet-sniffing my laptop&amp;#8217;s traffic on port 80 (HTTP) with tshark rather than examining requests with Chrome developer tools. The relevant command on a wifi network, for anyone who&amp;#8217;s curious, is:&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;tshark -p port 80 -i wlan0 -T fields -e http.request.method -e http.request.full_uri -e http.user_agent -e http.cookie -e http.referer -e http.set-cookie -e http.location -E separator=, -E quote=d&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;del datetime=&#34;2013-11-23T06:20:04+00:00&#34;&gt;Let&amp;#8217;s try &lt;a href=&#34;http://wallet.google.com&#34;&gt;http://wallet.google.com&lt;/a&gt;. Yep, we leak HTTP traffic. (It then redirects to &lt;a href=&#34;https://accounts.google.com&#34;&gt;https://accounts.google.com&lt;/a&gt; because I haven&amp;#8217;t logged in to Wallet yet.)&lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-237&#34; alt=&#34;Screenshot from 2013-11-22 01:38:21&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821.png&#34; width=&#34;1366&#34; height=&#34;713&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821.png 1366w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821-300x156.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821-1024x534.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-013821-624x325.png 624w&#34; sizes=&#34;(max-width: 1366px) 100vw, 1366px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;del datetime=&#34;2013-11-23T06:02:07+00:00&#34;&gt;How about &lt;a href=&#34;http://security.google.com?&#34;&gt;http://security.google.com?&lt;/a&gt; Yep, we leak HTTP traffic there too.&lt;br /&gt; &lt;/del&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011.png&#34;&gt;&lt;img class=&#34;alignnone size-full wp-image-238&#34; alt=&#34;Screenshot from 2013-11-22 01:40:11&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011.png&#34; width=&#34;1366&#34; height=&#34;768&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011.png 1366w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011-300x168.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011-1024x575.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/11/Screenshot-from-2013-11-22-014011-624x350.png 624w&#34; sizes=&#34;(max-width: 1366px) 100vw, 1366px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>**Disclaimer**: This post was published before I started working at EFF, hence some stylistic mistakes (calling it &amp;#8220;the EFF&amp;#8221; rather than just &amp;#8220;EFF&amp;#8221;) are excusable and left uncorrected. 🙂
+Two days ago, the EFF published a report tiled, &amp;#8220;Encrypt the Web Report: Who&amp;#8217;s Doing What.&amp;#8221; The report included a chart that rated several large web companies on how well they were protecting user privacy via recommended encryption practices for data in transit.</description>
     </item>
     
     <item>
@@ -708,12 +123,8 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/tabstash-onetab-for-firefox/</guid>
-      <description>&lt;p&gt;I wrote a Firefox addon one afternoon in France called TabStash. It&amp;#8217;s quite simple: you click a button to close all your tabs except the current one. You click it again to open all of them. (Chrome has a popular extension called &lt;a href=&#34;http://one-tab.com&#34;&gt;OneTab&lt;/a&gt; that does this, but at the time there wasn&amp;#8217;t a Firefox version.)&lt;/p&gt;
-
-&lt;p&gt;A couple nights ago, I finally got around to sending it to the Mozilla addon store. It came out yesterday and already has some downloads, to my surprise.&lt;/p&gt;
-
-&lt;p&gt;Anyway, you can find it at &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/tabstash/&#34;&gt;https://addons.mozilla.org/en-US/firefox/addon/tabstash/&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <description>I wrote a Firefox addon one afternoon in France called TabStash. It&amp;#8217;s quite simple: you click a button to close all your tabs except the current one. You click it again to open all of them. (Chrome has a popular extension called OneTab that does this, but at the time there wasn&amp;#8217;t a Firefox version.)
+A couple nights ago, I finally got around to sending it to the Mozilla addon store.</description>
     </item>
     
     <item>
@@ -722,42 +133,10 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
-      <description>&lt;p&gt;Below is an amalgamation of some posts that I made recently on a popular microblogging platform:&lt;/p&gt;
-
-&lt;p&gt;========&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;userContent&#34;&gt;I&amp;#8217;ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially &lt;span class=&#34;text_exposed_show&#34;&gt;in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;In 2006, NIST published an algorithm for elliptic-curve based random number generation that was shown to be easily breakable but ONLY by whoever chose the elliptic curve parameters. Luckily this algorithm was crazy slow so nobody used it, even though it was the (only?) NIST-recommended way of generating random bits with elliptic curves.&lt;/p&gt;
-
-&lt;p&gt;But it turns out there are some &lt;a href=&#34;https://eprint.iacr.org/2003/058.pdf&#34;&gt;relatively-obscure papers&lt;/a&gt; that suggest that you can gain a decent cryptographic advantage by picking the elliptic curve parameters! [Edit: It was later &lt;a href=&#34;http://www.scottaaronson.com/blog/?p=1517#comment-87087&#34;&gt;pointed out&lt;/a&gt; to me that this particular attack is not close to anything &lt;span class=&#34;userContent&#34;&gt;&lt;span class=&#34;text_exposed_show&#34;&gt;the NSA could be doing right now, for various reasons. It is of course unclear whether they have knowledge of other elliptic curve parameter-based attacks that are not in the academic literature.]&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;This is terrifying, because the elliptic curve parameters chosen for relatively-mysterious reasons by NIST (probably via NSA) are used by Google, OpenSSL, and any RFC-compliant implementation of elliptic curves in OpenPGP (gnupg-ecc, for instance).&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;userContent&#34;&gt;&lt;span class=&#34;text_exposed_show&#34;&gt;==========&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;userContent&#34;&gt;Some people might be wondering if they can trust companies who issue statements that their closed-source software products don&amp;#8217;t contain NSA backdoors (Microsoft, Google, Apple, etc.). Here is an example of why not.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;It has been known since &lt;span class=&#34;text_exposed_show&#34;&gt;2006 that Dual EC DRBG (a NIST-standardized random bit generation algorithm) has a major vulnerability that makes no sense except as an NSA backdoor. Essentially, the algorithm contains some constant parameters that are left unexplained; some researchers then showed that whoever determined these parameters could easily predict the output of the algorithm if they had access to a special set of secret numbers (analogous to an RSA private key). This is a beautiful design for a crytographic backdoor, because the secret numbers are difficult to find except by the person who set the constant parameters in the algorithm.&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Despite being slower than other random bit generators, Dual EC DRBG is implemented in a bunch of software products by major companies like RSA Security, Microsoft, Cisco, BlackBerry, McAfee, Certicom, and Samsung. For a full list, see: &lt;a href=&#34;http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html&#34; target=&#34;_blank&#34; rel=&#34;nofollow nofollow&#34;&gt;&lt;a href=&#34;http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html&#34;&gt;http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Most of these products are closed-source, so you can&amp;#8217;t check whether your encryption keys are being generated with Dual EC DRBG.&lt;/p&gt;
-
-&lt;p&gt;This is a pretty strong argument that secure software is necessarily open source software.&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;userContent&#34;&gt;&lt;span class=&#34;text_exposed_show&#34;&gt;========&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;userContent&#34;&gt;&lt;span class=&#34;text_exposed_show&#34;&gt;Additional citations:&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span data-ft=&#34;{&amp;quot;tn&amp;quot;:&amp;quot;K&amp;quot;}&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2]&#34;&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0]&#34;&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[3]&#34;&gt;Bruce Schneier on the 2006 backdoor discovery in Dual_EC_DRBG: &lt;/span&gt;&lt;a href=&#34;https://www.schneier.com/blog/archives/2007/11/the_strange_sto.html&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[4]&#34;&gt;&lt;a href=&#34;https://www.schneier.com/&amp;amp;#8230;/2007/11/the_strange_sto.html&#34;&gt;https://www.schneier.com/&amp;amp;#8230;/2007/11/the_strange_sto.html&lt;/a&gt;&lt;/a&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[6]&#34; /&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[7]&#34; /&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[8]&#34;&gt;Google&amp;#8217;s blog post announcing SSL w/ forward secrecy, specifically mentioning that they use the P-256 curve: &lt;/span&gt;&lt;a href=&#34;https://www.imperialviolet.org/2011/11/22/forwardsecret.html&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[9]&#34;&gt;&lt;a href=&#34;https://www.imperialviolet.org/2011/11/22/forwardsecret.html&#34;&gt;https://www.imperialviolet.org/2011/11/22/forwardsecret.html&lt;/a&gt;&lt;/a&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[10]&#34; /&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[11]&#34; /&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[12]&#34;&gt;Wiki section on NIST-recommended curves: &lt;/span&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve_cryptography#NIST-recommended_elliptic_curves&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[13]&#34;&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Elliptic_curve_cryptography&amp;amp;#8230&#34;&gt;https://en.wikipedia.org/wiki/Elliptic_curve_cryptography&amp;amp;#8230&lt;/a&gt;;&lt;/a&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[14]&#34; /&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[15]&#34; /&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[16]&#34;&gt;RFC section stating that P-256 is REQUIRED for ecc in openpgp: &lt;/span&gt;&lt;a href=&#34;http://tools.ietf.org/html/rfc6637#section-12.1&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[17]&#34;&gt;&lt;a href=&#34;http://tools.ietf.org/html/rfc6637#section-12.1&#34;&gt;http://tools.ietf.org/html/rfc6637#section-12.1&lt;/a&gt;&lt;/a&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[18]&#34; /&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[19]&#34; /&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[20]&#34;&gt;Description of elliptic curve usage in OpenSSL: &lt;/span&gt;&lt;a href=&#34;http://wiki.openssl.org/index.php/Elliptic_Curve_Cryptography&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[21]&#34;&gt;&lt;a href=&#34;http://wiki.openssl.org/&amp;amp;#8230;/Elliptic_Curve_Cryptography&#34;&gt;http://wiki.openssl.org/&amp;amp;#8230;/Elliptic_Curve_Cryptography&lt;/a&gt;&lt;/a&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[22]&#34; /&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[23]&#34; /&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[24]&#34;&gt;Presentation on security dangers of NIST curves: &lt;/span&gt;&lt;a href=&#34;http://cr.yp.to/talks/2013.05.31/slides-dan+tanja-20130531-4x3.pdf&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[25]&#34;&gt;&lt;a href=&#34;http://cr.yp.to/&amp;amp;#8230;/slides-dan+tanja-20130531-4&amp;amp;#215;3.pdf&#34;&gt;http://cr.yp.to/&amp;amp;#8230;/slides-dan+tanja-20130531-4&amp;amp;#215;3.pdf&lt;/a&gt;&lt;/a&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[26]&#34; /&gt;&lt;br data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[27]&#34; /&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[28]&#34;&gt;NSA page recommending you use elliptic curves lol: &lt;/span&gt;&lt;a href=&#34;http://www.nsa.gov/business/programs/elliptic_curve.shtml&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[29]&#34;&gt;&lt;a href=&#34;http://www.nsa.gov/business/programs/elliptic_curve.shtml&#34;&gt;http://www.nsa.gov/business/programs/elliptic_curve.shtml&lt;/a&gt;&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span data-ft=&#34;{&amp;quot;tn&amp;quot;:&amp;quot;K&amp;quot;}&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2]&#34;&gt;&lt;span data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0]&#34;&gt;&lt;a href=&#34;http://www.nsa.gov/business/programs/elliptic_curve.shtml&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; data-reactid=&#34;.r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[29]&#34;&gt; &lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;userContent&#34;&gt;&lt;span class=&#34;text_exposed_show&#34;&gt;========&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;span class=&#34;userContent&#34;&gt;&lt;span class=&#34;text_exposed_show&#34;&gt;UPDATE (9/23/13): RSA security has issued an advisory to stop using some of their products where DUAL_EC_DRBG is the default random number generator (&lt;a href=&#34;http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/&#34;&gt;http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/&lt;/a&gt;). Matthew Green also made an excellent blog post about this topic over at &lt;a href=&#34;http://blog.cryptographyengineering.com/2013/09/the-many-flaws-of-dualecdrbg.html&#34;&gt;http://blog.cryptographyengineering.com/2013/09/the-many-flaws-of-dualecdrbg.html&lt;/a&gt;.&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-</description>
+      <description>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:
+========
+I&amp;#8217;ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
+There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</description>
     </item>
     
     <item>
@@ -766,16 +145,8 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/some-favorite-git-commands/</guid>
-      <description>&lt;p&gt;Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I&amp;#8217;d list a few lesser-known commands that I like:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;em&gt;git log&lt;/em&gt; _&lt;em&gt;-pretty=oneline -n&lt;number&gt; &amp;#8211;abbrev-commit&lt;/em&gt; -G&lt;regex&gt;_: This shows the &lt;number&gt; latest commits in oneline format with shortened commit hashes that added or removed lines matching &lt;regex&gt;. The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.&lt;/li&gt;
-&lt;li&gt;&lt;em&gt;git checkout &lt;branch&gt; &lt;path/to/file&gt;; git reset; git add -p; git commit&lt;/em&gt;: This is almost always less preferable to &lt;em&gt;git cherry-pick&lt;/em&gt;, but it is useful when you want only certain hunks of commits to certain files in &lt;branch&gt;. &lt;em&gt;git checkout&lt;/em&gt; copies the file from the other branch into the current branch and stages the changes for commit. &lt;em&gt;git reset&lt;/em&gt; unstages them so we can select the parts we want to add to our branch on a hunk-by-hunk basis using &lt;em&gt;git add -p&lt;/em&gt;. Unfortunately this doesn&amp;#8217;t preserve authorship of the changes from &lt;branch&gt;.&lt;/li&gt;
-&lt;li&gt;git update hooks: We decided that it would be great if the HTTPS Everywhere git server could automatically reject commits that broke the build. It turns out that this is possible using a server-side git update hook, which runs just before updating the refs on the git server. The strategy is to create a temporary copy of the remote with the newly pushed changes, do a test build, and reject the changes if the build fails. See &lt;a href=&#34;https://github.com/diracdeltas/https-everywhere/blob/master/hooks/update&#34;&gt;here&lt;/a&gt; for an example of this in HTTPS Everywhere adapted from a Stack Overflow answer.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;More to come!&lt;/p&gt;
-</description>
+      <description>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I&amp;#8217;d list a few lesser-known commands that I like:
+ git log _-pretty=oneline -n &amp;#8211;abbrev-commit -G_: This shows the  latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
     </item>
     
     <item>
@@ -784,16 +155,47 @@ t.parentNode.replaceChild(i, t);&lt;/pre&gt;
       <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/https-everywhere-3-3-is-out/</guid>
-      <description>&lt;p&gt;Quick update to mention that a new version of the &lt;a href=&#34;https://www.eff.org/https-everywhere&#34;&gt;browser extension&lt;/a&gt; I&amp;#8217;ve been helping with this summer has just been released!&lt;/p&gt;
-
-&lt;p&gt;This release was spurred by the impending arrival of Firefox 23, which notably has &lt;a href=&#34;https://blog.mozilla.org/tanvi/2013/04/10/mixed-content-blocking-enabled-in-firefox-23/&#34;&gt;Mixed Active Content Blocking enabled by default&lt;/a&gt;. In summary, this means that scripts loaded via HTTP on an otherwise-HTTPS site will be blocked automatically for security reasons. Although this is good news in general, it would have suddenly caused HTTPS Everywhere to become &lt;a href=&#34;https://trac.torproject.org/projects/tor/ticket/9196&#34;&gt;way less usable&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.eff.org/about/staff/micah-lee&#34;&gt;Micah&lt;/a&gt; at the EFF did tons of work on this one to make sure that mixed content rules in HTTPS Everywhere wouldn&amp;#8217;t break a massive number of websites for FF23 users, while I implemented the UI to alert users to the fact that they would have to re-input any custom preferences once they updated to 3.3 (unfortunately). I also ended up fixing a previously-undiscovered bug along the way that prevented the HTTPS Everywhere tool-tip from showing up when users install the extension.&lt;/p&gt;
-
-&lt;p&gt;It&amp;#8217;s kind of sad that the tool-tip didn&amp;#8217;t show up for most people before. Did you know that you can disable HTTPS Everywhere rules by clicking on the toolbar icon? This is very handy when certain rules cause a site to break for some reason.&lt;/p&gt;
-
-&lt;p&gt;Anyway, happy upgrading!&lt;/p&gt;
-</description>
+      <description>Quick update to mention that a new version of the browser extension I&amp;#8217;ve been helping with this summer has just been released!
+This release was spurred by the impending arrival of Firefox 23, which notably has Mixed Active Content Blocking enabled by default. In summary, this means that scripts loaded via HTTP on an otherwise-HTTPS site will be blocked automatically for security reasons. Although this is good news in general, it would have suddenly caused HTTPS Everywhere to become way less usable.</description>
+    </item>
+    
+    <item>
+      <title>Summertime, and the HTTP traffic sniffing is easy</title>
+      <link>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</link>
+      <pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</guid>
+      <description>So it happens that every time you access a URL that starts with &amp;#8220;http://&amp;#8221;, anyone on your local network can see what you&amp;#8217;re doing with almost no effort worth writing about. This includes the page itself as well as any information that you&amp;#8217;re transferring, like credit card numbers and passwords (which are hopefully encrypted). It&amp;#8217;s worth reiterating that this isn&amp;#8217;t difficult at all, even if your network is WPA2-protected, as most supposedly-secure WiFi networks are nowadays.</description>
+    </item>
+    
+    <item>
+      <title>Some thoughts on Facebook implementing forward secrecy</title>
+      <link>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</link>
+      <pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
+      <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
+ Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook&amp;#8217;s servers, your data gets encrypted so that someone who intercepts your data can&amp;#8217;t read it unless they have Facebook&amp;#8217;s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+    </item>
+    
+    <item>
+      <title>gmailcheck</title>
+      <link>https://diracdeltas.github.io/blog/gmailcheck/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/gmailcheck/</guid>
+      <description>I&amp;#8217;m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.
+Thus far in my computer-using life, I&amp;#8217;ve never owned a monitor.</description>
+    </item>
+    
+    <item>
+      <title>Two maps of SF crime data</title>
+      <link>https://diracdeltas.github.io/blog/two-maps-of-sf-crime-data/</link>
+      <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/two-maps-of-sf-crime-data/</guid>
+      <description>In Jan. 2013, someone cut the brakes on my bike while it was locked up oustide Noisebridge and stole the handlebars. This was a major nuisance, since my ankle was sprained at the time and bicycling was my sole means of getting around the city.
+It was also a hard time for other reasons. Two people that I cared about had passed away the previous week in unrelated incidents that caused a great deal of shock for those who knew them.</description>
     </item>
     
   </channel>

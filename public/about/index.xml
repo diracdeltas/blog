@@ -2,11 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/about/index.xml</link>
+    <link>https://diracdeltas.github.io/blog/about/</link>
     <description>Recent content in Abouts on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 24 May 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://diracdeltas.github.io/blog/about/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://diracdeltas.github.io/blog/about/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>a/s/l??</title>
@@ -14,83 +16,8 @@
       <pubDate>Tue, 24 May 2011 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/about/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance.jpg&#34;&gt;&lt;img class=&#34;wp-image-592 alignright&#34; src=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance-576x1024.jpg&#34; alt=&#34;surveillance&#34; style=&#34;width:40%; display:flex; float: right;&#34; srcset=&#34;https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance-576x1024.jpg 576w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance-169x300.jpg 169w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2013/05/surveillance.jpg 585w&#34; sizes=&#34;(max-width: 282px) 100vw, 282px&#34; /&gt;&lt;/a&gt;
-Hi, I&amp;#8217;m yan, AKA &lt;a href=&#34;https://twitter.com/bcrypt&#34;&gt;bcrypt&lt;/a&gt;. I like information freedom, infosec, stunt h4cks, cryptography, an internet that respects humans, theoretical physics, and art. I dislike non-consensual power structures.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;m a Senior Software Engineer at &lt;a href=&#34;https://brave.com&#34;&gt;Brave&lt;/a&gt; and a &lt;a href=&#34;https://www.eff.org/about/staff/yan-zhu-0&#34;&gt;Technology Fellow&lt;/a&gt; at the Electronic Frontier Foundation. Before that, I dropped out of high school, got my B.S. from MIT in Physics, and started a PhD at Stanford before dropping out of that too.&lt;/p&gt;
-
-&lt;p&gt;I am reachable via SMTP at [first name] at [undergrad college] dot edu. My PGP key is in the strong set and available on public keyservers (BDE7 D508 3BB3 5EDC 7A66  BD97 388C E229 FAC7 8CF7). As a weak measure in support of the deprecation of PGP, I am strictly slower in replying to encrypted email than regular email.&lt;/p&gt;
-
-&lt;p&gt;Most of my work is &lt;a href=&#34;https://github.com/diracdeltas&#34; target=&#34;_blank&#34;&gt;open source on Github&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;software&#34;&gt;Software:&lt;/h2&gt;
-
-&lt;p&gt;&lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://eff.org/https-everywhere&#34;&gt;HTTPS Everywhere&lt;/a&gt; (ex-maintainer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://github.com/brave/browser-laptop&#34;&gt;Brave&lt;/a&gt; (developer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://github.com/brave/sync&#34;&gt;Brave Sync&lt;/a&gt; (maintainer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://diracdeltas.github.io/niceware/&#34;&gt;Niceware&lt;/a&gt; (maintainer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://pressfreedomfoundation.org/securedrop&#34;&gt;SecureDrop&lt;/a&gt; (developer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://letsencrypt.org/&#34;&gt;Let’s Encrypt&lt;/a&gt; (developer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://github.com/yahoo/end-to-end&#34;&gt;Yahoo End to End&lt;/a&gt; (ex-maintainer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://github.com/efforg/privacybadgerfirefox&#34;&gt;Privacy Badger Firefox&lt;/a&gt; (ex-maintainer)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://torproject.org/&#34;&gt;Tor Browser Bundle&lt;/a&gt; (infrequent contributor)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://hackpad.com/&#34;&gt;Hackpad&lt;/a&gt; (ex-developer)
-    &lt;/li&gt;
-  &lt;/ul&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;specs-and-drafts&#34;&gt;Specs and drafts:&lt;/h2&gt;
-
-&lt;p&gt;&lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;http://www.w3.org/TR/powerful-features/&#34;&gt;W3C Powerful Features&lt;/a&gt; (co-author)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://tools.ietf.org/html/rfc7469&#34;&gt;RFC7469&lt;/a&gt; (acknowledged contributor)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;http://www.w3.org/2001/tag/doc/encryption-finding/&#34;&gt;End-to-End Encryption and the Web&lt;/a&gt; (author)
-    &lt;/li&gt;
-  &lt;/ul&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;miscellaneous&#34;&gt;Miscellaneous:&lt;/h2&gt;
-
-&lt;p&gt;&lt;ul&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;http://www.w3.org/2001/tag/&#34;&gt;W3C Technical Architecture Group&lt;/a&gt; (former elected member)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://noisebridge.net/&#34;&gt;Noisebridge&lt;/a&gt; (former board member)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;http://aaronswartzhackathon.org/&#34;&gt;Aaron Swartz Worldwide Memorial Hackathons&lt;/a&gt; (founder)
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&#34;https://securingchange.org/&#34;&gt;Securing Change&lt;/a&gt; (co-founder)
-    &lt;/li&gt;
-  &lt;/ul&gt;&lt;/p&gt;
-</description>
+      <description>Hi, I&amp;#8217;m yan, AKA bcrypt. I like information freedom, infosec, stunt h4cks, cryptography, an internet that respects humans, theoretical physics, and art. I dislike non-consensual power structures.
+I&amp;#8217;m a Senior Software Engineer at Brave and a Technology Fellow at the Electronic Frontier Foundation. Before that, I dropped out of high school, got my B.S. from MIT in Physics, and started a PhD at Stanford before dropping out of that too.</description>
     </item>
     
   </channel>
