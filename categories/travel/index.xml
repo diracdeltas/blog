@@ -2,10 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Travel on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/travel/index.xml</link>
+    <link>https://diracdeltas.github.io/blog/categories/travel/</link>
     <description>Recent content in Travel on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <atom:link href="https://diracdeltas.github.io/blog/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://diracdeltas.github.io/blog/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>sniffly</title>
@@ -13,27 +16,7 @@
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/sniffly/</guid>
-      <description>&lt;p&gt;Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&amp;#8217;m dizzy and lost and can&amp;#8217;t remember whose couch I&amp;#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.&lt;/p&gt;
-
-&lt;p&gt;This kinda happened last month so I took a 4 week leave (2 paid, 2 unpaid) from my job to read books, work on open source projects, and couchsurf the East Coast. I spent a lot of rainy days curled up on a friend&amp;#8217;s bed in Somerville, MA poking at my laptop, idle afternoons hiding in a corner of the MIT library poking at my laptop, and long electric evenings walking around New York City looking for a place to sit and poke at my laptop. A lot of laptop-poking happened while on &amp;#8220;vacation&amp;#8221; because I had promised some people that I would give two talks in October, one at &lt;a href=&#34;http://secretcon.com/&#34; target=&#34;_blank&#34;&gt;SecretCon&lt;/a&gt; and one at &lt;a href=&#34;http://sandiego.toorcon.net/&#34; target=&#34;_blank&#34;&gt;ToorCon&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Predictably, I put off the ToorCon talk until 2 weeks ago. Also predictably, I started panicking and not sleeping anymore because I said I would show people a new browser fingerprinting technique which did not exist. Somehow, after a lot of head-banging-against-desk, I came up with one that sort-of worked about a week before the ToorCon and actually finished the code right before ToorCon. I named it &lt;a href=&#34;https://github.com/diracdeltas/sniffly&#34; target=&#34;_blank&#34;&gt;Sniffly&lt;/a&gt; because it sniffs browser history, and also because I was coming down with a cold.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s how Sniffly works:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;A user visits the Sniffly page.&lt;/li&gt;
-&lt;li&gt;Their browser attempts to load images from various HSTS domains over HTTP. These domains were harvested from a scrape of HSTS domains in the Alexa Top 1M. It was really fun to write this scraper; I finally had a chance to use Python&amp;#8217;s Twisted!&lt;/li&gt;
-&lt;li&gt;Sniffly sets a CSP policy that restricts images to HTTP, so image sources are blocked before they are redirected to HTTPS. This is crucial, because If the browser completes a request to the HTTPS site, then it will receive the HSTS pin, and the attack will no longer work when the user visits Sniffly.&lt;/li&gt;
-&lt;li&gt;When an image gets blocked by CSP, its &lt;code&gt;onerror&lt;/code&gt; handler is called. In this case, the &lt;code&gt;onerror &lt;/code&gt;handler does some fancy tricks to semi-reliably time how long it took for  the image to be redirected from HTTP to HTTPS. If this time is on the order of a millisecond, it was an HSTS redirect (no network request was made), which means the user has visited the image&amp;#8217;s domain before. If it&amp;#8217;s on the order of 100 milliseconds, then a network request probably occurred, meaning that the user hasn&amp;#8217;t visited the image&amp;#8217;s domain.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://zyan.scripts.mit.edu/sniffly/&#34; target=&#34;_blank&#34;&gt;Here&amp;#8217;s a quick demo&lt;/a&gt;. It only works in recent Chrome/Firefox versions when HTTPS Everywhere is disabled. The results also turn up a lot of false positives if you are running an adblocker, since ad-blocked domains are indistinguishable from HSTS-blocked domains from a timing perspective. (However, since HTTPS Everywhere domains and ad-blocked domains are mostly the same for every user, they can simply be subtracted out to get more accurate results for users who run these browser extensions.) I didn&amp;#8217;t collect analytics on the site, but random testing with several friends showed a ~80% accuracy rate in the demo once browser extensions were accounted for.&lt;/p&gt;
-
-&lt;p&gt;For more info, check out the &lt;a href=&#34;https://github.com/diracdeltas/sniffly&#34; target=&#34;_blank&#34;&gt;source code&lt;/a&gt;, &lt;a href=&#34;https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf&#34; target=&#34;_blank&#34;&gt;ToorCon slides&lt;/a&gt; (pdf), and &lt;a href=&#34;https://www.youtube.com/watch?v=kk2GkZv6Wjs&#34; target=&#34;_blank&#34;&gt;talk recording&lt;/a&gt;. Someone submitted the demo to &lt;a href=&#34;https://news.ycombinator.com/item?id=10455735&#34; target=&#34;_blank&#34;&gt;Hacker News&lt;/a&gt; and, to my horror, it was the #1 link for 6+ hours yesterday (!). I feel bewildered that this kind of attention is being granted (&lt;a href=&#34;https://zyan.scripts.mit.edu/blog/backdooring-js/&#34; target=&#34;_blank&#34;&gt;again&lt;/a&gt;) to random side projects that I do alone in my spare time, but I guess I should take whatever validation I can get right now. It would be sweet if people looked at my work and paid me to hack on interesting stuff for the public so i never had to work a real job again. Maybe someday it&amp;#8217;ll happen; until then I&amp;#8217;ll prolly hold down a day job and take more fake vacations.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update: As of March 2016, Sniffly (CVE-2016-1617) has been fixed in the major browsers. Thank you Uncle Google for the bug bounty $$.&lt;/strong&gt;&lt;/p&gt;
-</description>
+      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&amp;#8217;m dizzy and lost and can&amp;#8217;t remember whose couch I&amp;#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
     </item>
     
     <item>
@@ -42,43 +25,8 @@
       <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/hopex/</guid>
-      <description>&lt;p&gt;4 years ago, I went to &lt;a href=&#34;http://www.hope.net&#34;&gt;HOPE&lt;/a&gt; for the first time on a last-minute press pass from my &lt;a href=&#34;http://tech.mit.edu/&#34;&gt;college newspaper&lt;/a&gt;. Some relevant facts about the trip:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I was 19 and had never been to a hacker con before.&lt;/li&gt;
-&lt;li&gt;I didn&amp;#8217;t identify as a hacker (or an activist).&lt;/li&gt;
-&lt;li&gt;I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.&lt;/li&gt;
-&lt;li&gt;HOPE that year was the pinnacle of paranoia in probably the most paranoid period of my life. This was 2010, a few months after Chelsea Manning was arrested for leaking a trove of documents to WikiLeaks. Coincidentally, Chelsea Manning had visited my house in the autumn of 2009; this was cause enough for suspicion from certain groups and frequent questions from reporters once the WikiLeaks story broke. Julian Assange was scheduled to give the keynote at HOPE, so you can imagine the atmosphere that year.&lt;/li&gt;
-&lt;li&gt;Overall it was a fun experience regardless.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This year I finally made it back to HOPE. Things were a little different than last time:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;I flew in from Europe instead of driving from Boston.&lt;/li&gt;
-&lt;li&gt;I was representing EFF and Freedom of the Press Foundation, two organizations that were almost-universally loved by the attendees.&lt;/li&gt;
-&lt;li&gt;I co-presented two talks in front of overflowing rooms of people and got lots of audience feedback.&lt;/li&gt;
-&lt;li&gt;I didn&amp;#8217;t have time to talk to all the people that I wanted to, much less all the people who were trying to ask me questions.&lt;/li&gt;
-&lt;li&gt;Whereas last time I made it to several talks per day, this year I was working from 4 AM in the morning until whenever-I-had-to-give-a-presentation for the first 2/3rds of the conference, then running off to meetings or working shifts at the EFF/FPF booths. As a result, I made it to a total of 3 or 4 talks that weren&amp;#8217;t mine. 🙁&lt;/li&gt;
-&lt;li&gt;It was eerie to have contributed to a &lt;a href=&#34;https://pressfreedomfoundation.org/securedrop&#34;&gt;project&lt;/a&gt; that kept getting name-dropped during the conference by the likes of Daniel Ellsberg and Barton Gellman. Literally dozens of people approached me to say that they wanted to help out with SecureDrop or set up an instance. Wow!&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Predictably, it was strange to be a very-minor celebrity at a conference where I&amp;#8217;d previously felt like an outsider and deliberately tried to make myself invisible. 4 years ago, my experience in the last 4 days would have seemed impossible for a plethora of reasons: I wasn&amp;#8217;t a good public speaker*, I had a lot of self-doubt that I could contribute anything to the event,  I felt weird for not having the same interests and background as the vast majority of people at HOPE, I didn&amp;#8217;t know much about computers, I didn&amp;#8217;t think that I was working on anything interesting, etc.&lt;/p&gt;
-
-&lt;p&gt;*Public speaking workshops are immensely helpful here; so does taking an introductory voice acting class.&lt;/p&gt;
-
-&lt;p&gt;Despite the slowly-fading jetlag and piling exhaustion after a month of international travel, it felt nice to contribute back to a conference that had been an eye-opening experience to me the first time.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Many thanks to the following people for working on presentations with me, giving last-minute feedback, and/or letting me sleep in their room: Parker Higgins, Bill Budington, Garrett Robinson, Trevor Timm, Runa Sandvik, James Dolan, Kevin Gallagher, Noah Swartz. Also thanks for Oliver Day for appointing me CSO of his company even though I haven&amp;#8217;t fixed the SSL cert for his website yet.&lt;/em&gt;&lt;/p&gt;
-
-&lt;div style=&#34;width: 610px&#34; class=&#34;wp-caption alignnone&#34;&gt;
-  &lt;img src=&#34;https://pbs.twimg.com/media/Bs8Q1jgCYAANSFB.jpg&#34; alt=&#34;&#34; width=&#34;600&#34; height=&#34;398&#34; /&gt;
-  
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    Photo by Scott J. O&amp;#8217;Brien (@scottjobrien)
-  &lt;/p&gt;
-&lt;/div&gt;
-</description>
+      <description>4 years ago, I went to HOPE for the first time on a last-minute press pass from my college newspaper. Some relevant facts about the trip:
+ I was 19 and had never been to a hacker con before. I didn&amp;#8217;t identify as a hacker (or an activist). I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</description>
     </item>
     
     <item>
@@ -87,22 +35,7 @@
       <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/the-other-blog-post-i-was-going-to-write/</guid>
-      <description>&lt;p&gt;It&amp;#8217;s always unnerving to realize that your happiness is highly correlated with some particular event, object, person, substance, or thought pattern. Various components of pop culture have led us to believe that happiness is {a warm gun | two kinds of ice cream | high serotonin levels | coca-cola} and so forth, but nobody ever says that happiness is a volatile multidimensional product of quickly-fluctuating vectors along a dozen axes.&lt;/p&gt;
-
-&lt;p&gt;For a while I thought that happiness was jumping on a plane with the wrong power adapter and a boarding pass that you aren&amp;#8217;t sure how you managed to pay for. I did this last week, and it felt good (long walks, surrealistic jetlag, mint tea, sharing beds with old friends, riesling, cold arms, trampling through abandoned grass) until I got a 103 degree (F) fever on the plane ride home and was decapacitated for two days.&lt;/p&gt;
-
-&lt;p&gt;One loveable thing about a non-permanent, non-excruciating-but-still-debilitating sickness is that it pares down expectations until they&amp;#8217;re almost manageable. Happiness becomes a two-step process: (1) regain appetite until soup sounds like it would be okay, and (2) obtain soup.&lt;/p&gt;
-
-&lt;p&gt;As I got better, I started to realize that happiness, for me, is usually predicated on feeling engaged with the world and thereby interested in outcomes. This may not actually be true, but sometimes plausibility and convenience in the right proportions is better than truth.&lt;/p&gt;
-
-&lt;p&gt;Academic systems, at least in the limit of platonic idealism, are all about being engaged with the world, insofar as exploring it makes you feel like you&amp;#8217;re more a part of it. Travel is similar. So are urban exploration and reading books and the process of growing up.&lt;/p&gt;
-
-&lt;p&gt;This year, for the first time, it all seems incredibly hard. Increasingly often in the past few weeks, I find myself having to make an effort to feel like I&amp;#8217;m adding something to the world and vice versa. A stronger and scarier form of this feeling is stagnation.&lt;/p&gt;
-
-&lt;p&gt;So, yesterday, I decided to start consciously keeping track of things that make me feel engaged with the world, even if they only work for a moment or two. Hitting the submit button on a blog post is one of them; another is thoughtfully-placed punctuation that ever-so-slightly tilts the tone of a sentence. Yet another: grasping another small morsel of German conjugation.&lt;/p&gt;
-
-&lt;p&gt;Re: the sibling topic of optimizing for long-term fulfillment: It seems increasingly debatable to me whether this is all folklore and guesswork outside of well-established health practices (ex: not smoking cigarettes).&lt;/p&gt;
-</description>
+      <description>It&amp;#8217;s always unnerving to realize that your happiness is highly correlated with some particular event, object, person, substance, or thought pattern. Various components of pop culture have led us to believe that happiness is {a warm gun | two kinds of ice cream | high serotonin levels | coca-cola} and so forth, but nobody ever says that happiness is a volatile multidimensional product of quickly-fluctuating vectors along a dozen axes.</description>
     </item>
     
     <item>
@@ -111,136 +44,15 @@
       <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/memphis-haiku-collection/</guid>
-      <description>&lt;p&gt;Tonight I found a collection of stupendously precocious (lolol) poems I wrote on a trip to Memphis at age 13. Here they are, untouched, in all their prematurely cynical glory:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;I&amp;#8217;m going to Hell&lt;/p&gt;
-
-&lt;p&gt;I mean Memphis, in two hours&lt;/p&gt;
-
-&lt;p&gt;Do not raid my house.&lt;/p&gt;
-
-&lt;p&gt;If I don&amp;#8217;t return&lt;/p&gt;
-
-&lt;p&gt;Do not mope like Charlie Brown&lt;/p&gt;
-
-&lt;p&gt;You&amp;#8217;re not in my will.&lt;/p&gt;
-
-&lt;p&gt;I gave my pet bird&lt;/p&gt;
-
-&lt;p&gt;To some short college student&lt;/p&gt;
-
-&lt;p&gt;With lots of birdseed.&lt;/p&gt;
-
-&lt;p&gt;My root beer is flat&lt;/p&gt;
-
-&lt;p&gt;I must have left it too long&lt;/p&gt;
-
-&lt;p&gt;Is this relevant?&lt;/p&gt;
-
-&lt;p&gt;We are carpooling&lt;/p&gt;
-
-&lt;p&gt;With some friend of my father&amp;#8217;s&lt;/p&gt;
-
-&lt;p&gt;Hope he pays for gas.&lt;/p&gt;
-
-&lt;p&gt;Going to find Elvis&lt;/p&gt;
-
-&lt;p&gt;Because Lauren told me to&lt;/p&gt;
-
-&lt;p&gt;Even though he&amp;#8217;s dead.&lt;/p&gt;
-
-&lt;p&gt;Auditorium&lt;/p&gt;
-
-&lt;p&gt;The word has five sylables&lt;/p&gt;
-
-&lt;p&gt;I didn&amp;#8217;t spell that right.&lt;/p&gt;
-
-&lt;p&gt;The smoky mountains&lt;/p&gt;
-
-&lt;p&gt;Because only you can stop&lt;/p&gt;
-
-&lt;p&gt;Those big forest fires.&lt;/p&gt;
-
-&lt;p&gt;At Holiday Inn&lt;/p&gt;
-
-&lt;p&gt;They give you little bottles&lt;/p&gt;
-
-&lt;p&gt;Of lousy shampoo.&lt;/p&gt;
-
-&lt;p&gt;Someone tell Kathy&lt;/p&gt;
-
-&lt;p&gt;Of the YMCA band&lt;/p&gt;
-
-&lt;p&gt;I can&amp;#8217;t audition.&lt;/p&gt;
-
-&lt;p&gt;Chinese food is good&lt;/p&gt;
-
-&lt;p&gt;Especially the sushi&lt;/p&gt;
-
-&lt;p&gt;Wait, that&amp;#8217;s Japanese.&lt;/p&gt;
-
-&lt;p&gt;They had a nurse shark&lt;/p&gt;
-
-&lt;p&gt;But everyone thought it was a&lt;/p&gt;
-
-&lt;p&gt;Mutant catfish.&lt;/p&gt;
-
-&lt;p&gt;Sushi bars are good&lt;/p&gt;
-
-&lt;p&gt;And so is the free soy sauce there&lt;/p&gt;
-
-&lt;p&gt;I spilled a bottle.&lt;/p&gt;
-
-&lt;p&gt;Graceland was real big&lt;/p&gt;
-
-&lt;p&gt;But the tour guides were real dumb&lt;/p&gt;
-
-&lt;p&gt;That&amp;#8217;s why I got lost.&lt;/p&gt;
-
-&lt;p&gt;I did meet Elvis&lt;/p&gt;
-
-&lt;p&gt;He was at his old garden&lt;/p&gt;
-
-&lt;p&gt;Deep under the ground.&lt;/p&gt;
-
-&lt;p&gt;His airplane&amp;#8217;s inside&lt;/p&gt;
-
-&lt;p&gt;Was covered in plastic wrap&lt;/p&gt;
-
-&lt;p&gt;Must have been itchy.&lt;/p&gt;
-
-&lt;p&gt;He had many suits&lt;/p&gt;
-
-&lt;p&gt;All colors, jeweled and sequined&lt;/p&gt;
-
-&lt;p&gt;Now worn by dummies.&lt;/p&gt;
-
-&lt;p&gt;The gift shop was cool&lt;/p&gt;
-
-&lt;p&gt;A nice place to be until&lt;/p&gt;
-
-&lt;p&gt;You saw the price tags.&lt;/p&gt;
-
-&lt;p&gt;I bought a milk-shake&lt;/p&gt;
-
-&lt;p&gt;It had lots of iced vanilla&lt;/p&gt;
-
-&lt;p&gt;My brain is frozen.&lt;/p&gt;
-
-&lt;p&gt;The hotel forgets&lt;/p&gt;
-
-&lt;p&gt;To give me a bed at night.&lt;/p&gt;
-
-&lt;p&gt;Now that is stupid.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;d better go now&lt;/p&gt;
-
-&lt;p&gt;It&amp;#8217;s been great writing these, but&lt;/p&gt;
-
-&lt;p&gt;The Simpsons is on.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
+      <description>Tonight I found a collection of stupendously precocious (lolol) poems I wrote on a trip to Memphis at age 13. Here they are, untouched, in all their prematurely cynical glory:
+ I&amp;#8217;m going to Hell
+I mean Memphis, in two hours
+Do not raid my house.
+If I don&amp;#8217;t return
+Do not mope like Charlie Brown
+You&amp;#8217;re not in my will.
+I gave my pet bird
+To some short college student</description>
     </item>
     
     <item>
@@ -249,46 +61,8 @@
       <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/on-artificially-bounded-futures/</guid>
-      <description>&lt;p&gt;I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.&lt;/p&gt;
-
-&lt;p&gt;The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students. Bad user interfaces are astonishingly powerful, and nothing cripples the human spirit like a poorly-written manpage.&lt;/p&gt;
-
-&lt;p&gt;I also gave a short talk to about ~30 undergrads titled, &amp;#8220;Things you should be afraid of that you probably didn&amp;#8217;t know about.&amp;#8221; The alternate title was, &amp;#8220;Useful self-preservation tactics in surveillance states.&amp;#8221; The alternate alternate title was, &amp;#8220;On the possibility of preserving student culture at MIT.&amp;#8221; I admit I was trying to get more people to show up on a Friday night.&lt;/p&gt;
-
-&lt;p&gt;The problem was that, after an unexpected adventure in NYC the day before followed by an untimely laptop battery failure, I had barely twenty minutes to prep for the talk. So I went for a short run around the Charles River and formulated some thoughts. They went something like:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Surveillance is bad. Do MIT undergrads care? Or are they still trying to implement metacircular evaluators in Scheme?&lt;/li&gt;
-&lt;li&gt;DO NOT LET PEOPLE GIVE INTO CRYPTO-NIHILISM. Show them that we can only fight what we know.&lt;/li&gt;
-&lt;li&gt;Privacy, if it actually exists, must belong to a community. Privacy that belongs to individuals is necessary but not sufficient.&lt;/li&gt;
-&lt;li&gt;Ethical choices are painful and often ambiguous. Say you&amp;#8217;re the CEO of a company that makes a groundbreaking app that reduces vehicle emissions by 90% in the US. In order to do so, you need to collect data on where everyone&amp;#8217;s cars are located at all times. Then one day the government puts you in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Qwest&#34;&gt;position&lt;/a&gt; where your choices are to either (secretly) give them years and years of private user data or let the company shut down (and lose all your money). What do you do?&lt;/li&gt;
-&lt;li&gt;Imagine if the MIT administration wiretapped all student communications on the Internet and forced every mailing list to contain an administrator. Imagine the student response. Now imagine the same situation at the national scale. This is a useful exercise to brainstorm realistic ways of fighting problems that seem too large and abstract for us to think about at first (ex: mass unchecked government surveillance).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;To my surprise, the talk went over rather well. People asked lots of excellent questions, like what kind of tinfoil hat to buy. Phew.&lt;/p&gt;
-
-&lt;p&gt;Another thing that has come up a lot on this trip is the idea of having a career. As much as I feel uncomfortable about it sometimes, I can&amp;#8217;t help but admit that the topic of What To Do In Life has been on my mind lately. The annual MIT Career Fair was a week ago, a bizarre anti-celebratory festival during the first week of classes where hundreds of companies try to recruit students by giving them free Rubix cubes. This year, one courageous sophomore wrote an &lt;a href=&#34;http://tech.mit.edu/V133/N39/ogrady.html&#34;&gt;opinion article&lt;/a&gt; in the school newspaper about how  &lt;span class=&#34;userContent&#34;&gt;the Career Fair is useless for inspiring faith in the student population&amp;#8217;s ability to give a fuck about problems other than making cool-but-also-profitable&lt;span class=&#34;text_exposed_show&#34;&gt; technology and making hella cash.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Obviously this is a thorny issue wrapped in questions of whether the author has properly normalized for her own privilege (she probably has) and if large tech companies like FB/Apple/Google are already doing the maximal amount of good for humanity that they can while remaining profitable (they probably aren&amp;#8217;t), BUT it was still surprising that most critical comments essentially said: &amp;#8220;Stop looking down on other people / some of us need to make a living / not all corporations are completely evil.&amp;#8221; Multiple commenters accused the author of &amp;#8220;entitlement&amp;#8221;, which seems like a ridiculous term to cast as an insult (aren&amp;#8217;t we all entitled to pursuit of happiness?).&lt;/p&gt;
-
-&lt;p&gt;Disliking the percentage of commenters who were unfairly bashing on the author, I wrote an uncharacteristically optimistic comment for someone who doesn&amp;#8217;t have a consistent job:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This post was entirely justified and necessary. (Minus the fact that Quizlet probably doesn&amp;#8217;t deserve to be on that list, as RJ pointed out.)&lt;/p&gt;
-
-&lt;p&gt;A number of the criticizing comments here have argued that companies like Apple and Facebook, on their way to making massive profits, ultimately spawn technologies that do good for the world; furthermore, even MIT students need to support themselves day-to-day regardless of their greater goals. But I think a salient counter-argument is that MIT grads can and absolutely must hold themselves to a higher standard than what these companies represent.&lt;/p&gt;
-
-&lt;p&gt;What I am implicitly saying is that (1) there are greater problems that humanity faces than how to get people to trigger certain javascript callbacks that generate ad revenue, and (2) people with the intellect and stamina to lead technological revolutions have a near-moral responsibility to solve these greater problems. The fact is that most MIT graduates can find a job and figure out a way to support themselves in most circumstances, which means they have a rare privilege among young people: the ability to take on great risks and be okay if they fail.&lt;/p&gt;
-
-&lt;p&gt;In practice, a dismayingly small percentage of MIT graduates use this privilege for tackling the hardest and most valuable problems of our generation. Climate change is a fine example, given that the lower limit of the time it&amp;#8217;ll take for atmospheric methane to collapse the global economy is on the order of &lt;a href=&#34;http://www.theguardian.com/environment/2013/jul/24/arctic-thawing-permafrost-climate-change&#34;&gt;decades&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Even those of us who work as software engineers and tech CEO&amp;#8217;s usually fail to address the question of whether we are making technology for a world where knowledge is free and accessible to everyone, or a world where governments and corporations can freely intrude on the private communications of every single person. Too often, we generate technology that is groundbreaking and astonishing without conscientiously addressing their potential to destroy civil liberties and strip away basic human rights. We can and must exert more pull over the ethical consequences of our innovation.&lt;/p&gt;
-
-&lt;p&gt;It is absolutely our moral responsibility to try to make the world we want to live in.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I really hope I didn&amp;#8217;t make all of that up.&lt;/p&gt;
-</description>
+      <description>I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.
+The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students.</description>
     </item>
     
     <item>
@@ -297,78 +71,8 @@
       <pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/quest-ce-que-le-fuck/</guid>
-      <description>&lt;p&gt;This morning, I found myself running down the middle of an empty highway in rural France at 5 AM. A litany of WTF&amp;#8217;s rang through my head.&lt;/p&gt;
-
-&lt;p&gt;The sun rose, gently, turning attention to row upon row of freshly-cut crops stretching exorbitantly toward the horizon. Beyond softly rolling hills in the distance, there was the faint quilted pattern of a tiny village, cows and baguettes and all. Except for the thin ribbon of a two-lane highway, it was vague what century this place haunted.&lt;/p&gt;
-
-&lt;p&gt;I remember hypothesizing here a month ago, in the car-loathing aftermath of backseating several thousand miles around the US, that I was finally done with travelling for a while. I had just arrived back in San Francisco, unpacked my backpack, fixed my bike, and started interning at the EFF.&lt;/p&gt;
-
-&lt;p&gt;A week later, realizing that I could work remotely and that there were better places for human existence than 2 blocks from Market Avenue, I bought a plane ticket for Europe. I had hatched some sort of hazy half-plan to ditch the life I had constructed in SF and backpack around a continent that I had never visited, full of languages I couldn&amp;#8217;t speak, until my visa ran out in 3 months&amp;#8217; time. I would carry as little as possible, find like-minded hacker-type people to stay with, and spend most of my time writing code for the EFF, undeterred by distractions like understanding what other people were saying to me. Plus, since I wasn&amp;#8217;t paying San Francisco cost-of-living prices and sold my Burning Man ticket, I would probably save money overall. Nothing could go wrong.&lt;/p&gt;
-
-&lt;p&gt;After sleeping through the entirety of the flight from SF to Paris while cradling a Kindle that I had intended to use, I unloaded myself into a subway at CDG, got off in the 6-euro-couscous-vendor district, and promptly reached the apartment of a Paris-dwelling ex-housemate who I barely saw the entire time. My impression of Paris from 2 days of aimless wandering is of a city whose historical and cultural significance is completely blighted by the lack of any usable WiFi except at McDonalds. I did not like Paris or find it fit for habitation, needless to say.&lt;/p&gt;
-
-&lt;p&gt;Fortunately I was rescued by a group of old friends, who invited me to stay and work with them in (1) a former convent turned into (2) an artist co-op / workspace owned by (3) a man with a pet peacock in (4) a tiny rural town in northern France. Several times a day, I will remember each of these four things in turn and suddenly feel like I&amp;#8217;m dreaming.&lt;/p&gt;
-
-&lt;p&gt;This is my room:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270626797/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5332/9270626797_ec92a221c0.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270631001/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7295/9270631001_4eebf4b26c.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;And this is the view:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270628773/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7436/9270628773_0907da9d50.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270634693/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3806/9270634693_94632cf405.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The night I arrived, we grilled meat and vegetables in the garden, with wine and baguettes aplenty.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9273414054/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3728/9273414054_53e7b76aa4.jpg&#34; width=&#34;375&#34; height=&#34;500&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9273422164/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7296/9273422164_b14bc2c398.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The peacock made a cameo.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270638219/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3751/9270638219_983a970393.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I took a wander around the convent and basked in its eccentricities.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9273425096/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm3.staticflickr.com/2866/9273425096_349aa9455d.jpg&#34; width=&#34;375&#34; height=&#34;500&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270631819/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3797/9270631819_2960edbc27.jpg&#34; width=&#34;375&#34; height=&#34;500&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270640555/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3749/9270640555_3d8c4a8e35.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9273422908/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7346/9273422908_aa741eab24.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9270639967/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7358/9270639967_de1c9948dd.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/9273412294/&#34; title=&#34;PA-F (St. Erme, France) by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7370/9273412294_36b913a1d7.jpg&#34; width=&#34;500&#34; height=&#34;375&#34; alt=&#34;PA-F (St. Erme, France)&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I started settling into a routine after a couple days. It goes something like:&lt;/p&gt;
-
-&lt;p&gt;5 AM: Wake up&lt;/p&gt;
-
-&lt;p&gt;5:30 AM: Go for a run as the sun rises.&lt;/p&gt;
-
-&lt;p&gt;6:30 AM: Breakfast, shower, etc.&lt;/p&gt;
-
-&lt;p&gt;7 AM: Start work.&lt;/p&gt;
-
-&lt;p&gt;3 PM: Go to bed.&lt;/p&gt;
-
-&lt;p&gt;7 PM: Wake up, eat lots of baguette, start work again.&lt;/p&gt;
-
-&lt;p&gt;10 PM: Cook and eat dinner with friends.&lt;/p&gt;
-
-&lt;p&gt;11 PM: Try to work, mostly end up emailing/IRCing with people in the US who are now awake.&lt;/p&gt;
-
-&lt;p&gt;2 AM: Go to bed #2.&lt;/p&gt;
-
-&lt;p&gt;This is almost ideal, except that the only grocery store in town is 40 minutes away by foot and closed whenever I&amp;#8217;m awake and not work-binging.&lt;/p&gt;
-
-&lt;p&gt;I like it here a lot. It&amp;#8217;s quiet. There aren&amp;#8217;t many people to talk to, since my friends are busy hacking away on a P2P video-sharing project all the time. I get to read a lot. Javascript has become fun &amp;#8211; oh wait, maybe I have Stockholm Syndrome.&lt;/p&gt;
-</description>
+      <description>This morning, I found myself running down the middle of an empty highway in rural France at 5 AM. A litany of WTF&amp;#8217;s rang through my head.
+The sun rose, gently, turning attention to row upon row of freshly-cut crops stretching exorbitantly toward the horizon. Beyond softly rolling hills in the distance, there was the faint quilted pattern of a tiny village, cows and baguettes and all. Except for the thin ribbon of a two-lane highway, it was vague what century this place haunted.</description>
     </item>
     
     <item>
@@ -377,50 +81,8 @@
       <pubDate>Mon, 10 Jun 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/marfa-tx/</guid>
-      <description>&lt;p&gt;Large American cities breed complacency. We grow up in the suburbs, we move to the cities after college, we get jobs and buy apartments and curate routines. We find comfort in the monoculture of coffeeshops, the ubiquity of free wifi and indie periodicals. College students flip through biology textbooks, their thumbs skimming over blue-framed iPhone screens.&lt;/p&gt;
-
-&lt;p&gt;The small town of Marfa, Texas subverts urban complacency. The streets are hot, desolate, effortlessly dusty. Buildings arranged sparse like haiku lines. A lone gas station on the corner offers only two varieties of bottled water.&lt;/p&gt;
-
-&lt;p&gt;Upon closer inspection, a startling fraction of the blank-faced single-story buildings in Marfa reveal themselves to be contemporary art museums.&lt;/p&gt;
-
-&lt;p&gt;At night, the heat departs the sidewalks reluctantly like rising angels on their way to the dentist. Warm lamplight floods the streets, supplanting the blues and purples of a late desert sunset. We walk to a bar down the block, where a high school graduation party is underway. The high schooler is nowhere to be found, but his family members run plentiful. 2-4 middle-aged couples dance the macarena as the DJ shuffles windows around on a laptop.&lt;/p&gt;
-
-&lt;p&gt;At 11:20 pm, an old man hands us beers and drives us down a dark lonely highway in an obnoxiously loud bus. He herds us out into a field of moonlit grass rife with ant hills. As we shiver in the stiff breeze, he points into the distance at a pair of faint pulsing lights, orange and yellow, bobbing on the horizon. The Marfa Lights, he says. Nobody knows what they are, not even the scientists from Austin who came and studied them for months. Some say aliens; others say cars on the highway.&lt;/p&gt;
-
-&lt;p&gt;&amp;#8220;What happens if you look at them through a telescope?&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;&amp;#8220;Well you see the same thing, only bigger.&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;The next day, we are fed sweet French toast and taken to art. We walk from bungalow to bungalow, gazing. There are rows upon rows of aluminum blocks whose gleaming surfaces cast geometric deceptions, chaotic multicolored masses of twisted metal, rooms suffused in unearthly neon light, cartoonish paintings of tesselating women, and an abandoned Soviet schoolhouse left in disarray.&lt;/p&gt;
-
-&lt;p&gt;Marfa feels like an alien outpost in the morass of stereotypes that is America.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8992680213/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7402/8992680213_9f08c10e51.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8992666063/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5324/8992666063_e2b3459c5c.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8992681417/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3678/8992681417_1f78003ae4.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8992680851/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5345/8992680851_db26e29aca.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8993877360/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5325/8993877360_837c10c0f5.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8992684955/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm3.staticflickr.com/2837/8992684955_81aa675181.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8993881598/&#34; title=&#34;Del Rio + Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm6.staticflickr.com/5443/8993881598_a3b39c31ff.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Del Rio + Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8969821507/&#34; title=&#34;Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3704/8969821507_e4979e6a77.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8971033616/&#34; title=&#34;Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7387/8971033616_81e5a34863.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8969848035/&#34; title=&#34;Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm3.staticflickr.com/2808/8969848035_c2fda24b05.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8971048372/&#34; title=&#34;Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7363/8971048372_d1a9ccbab9.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8971070650/&#34; title=&#34;Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm4.staticflickr.com/3743/8971070650_7a505b996a.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8969886419/&#34; title=&#34;Marfa, TX by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm3.staticflickr.com/2883/8969886419_c90d9f9518.jpg&#34; width=&#34;500&#34; height=&#34;332&#34; alt=&#34;Marfa, TX&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>Large American cities breed complacency. We grow up in the suburbs, we move to the cities after college, we get jobs and buy apartments and curate routines. We find comfort in the monoculture of coffeeshops, the ubiquity of free wifi and indie periodicals. College students flip through biology textbooks, their thumbs skimming over blue-framed iPhone screens.
+The small town of Marfa, Texas subverts urban complacency. The streets are hot, desolate, effortlessly dusty.</description>
     </item>
     
     <item>
@@ -429,20 +91,7 @@
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/goodbye-cambridge/</guid>
-      <description>&lt;p&gt;Tonight, if I&amp;#8217;m lucky, I&amp;#8217;ll sleep on this soft green velvet couch where I spent 80% of my junior year of undergrad proving the &lt;a href=&#34;http://web.mit.edu/zyan/www/21cm.pdf&#34;&gt;existence of dark matter&lt;/a&gt;, determining the &lt;a href=&#34;http://web.mit.edu/zyan/www/johnson.pdf&#34;&gt;electron charge&lt;/a&gt;, reading papers on adiabatic quantum computation, and overfitting most things that I encountered. If I&amp;#8217;m unlucky, I&amp;#8217;ll stay up the whole night and hack away at some Python scripts testing a hypothesis I have about &lt;a href=&#34;http://dinaburg.org/bitsquatting.html&#34;&gt;bitsquatting&lt;/a&gt;, or maybe I&amp;#8217;ll jailbreak my new Kindle, but probably I&amp;#8217;ll find myself brewing a kettle of tea and nostalgically gazing at the rain falling on the porch where I used to sit and read books in summer.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;ve spent almost a month in Cambridge, MA, the first city that ever felt like a home to me. I arrived in 2008 for the first time with a couple bags of clothes and no concrete idea of how to use an electric dishwasher. I was put in a dorm room at MIT (Random Hall, to be precise) with huge windows and a sponged-on periwinkle paint job. People outside deep-fried oreos and broccoli. And then began the college move-in rituals: running down the street to the pharmacy to buy soap, laundry for the first time, canned soup, roommate reading Sylvia Plath, trying hard not to brush against the walls of the shower stall, purchasing textbooks for the first and last time.&lt;/p&gt;
-
-&lt;p&gt;Four years went by. I climbed roofs, wore scarves in winter, carefully checked proofs, and listened to people when they talked about feelings. My time ran out; I flew to San Francisco and lived in places not intended for human habitation. Sometimes I felt alone because nobody was around. At other times, I felt alone because I couldn&amp;#8217;t establish a sincere connection to the people around me. The plans that I had made for the West Coast started to dissolve, and I realized at the age of 21 that there did exist something akin to a soul, in the strict sense of an identity capable of empathy. I fell out-of-practice with the ability to feel empathy for others. The idea of having close friends was appealing enough that I tricked myself into thinking that it was frequently realized, but in actuality I felt isolated from humankind much of the time.&lt;/p&gt;
-
-&lt;p&gt;This proved to be non-problematic until I woke up one day feeling like the future wasn&amp;#8217;t going to be better than the past. This was one of the most precisely terrifying thoughts that I can remember having, precise in the sense that it is extremely well-defined and has immediate consequences for how one approaches life on a day-to-day basis.&lt;/p&gt;
-
-&lt;p&gt;I left San Francisco and was vague about the reasons to almost everyone who asked.&lt;/p&gt;
-
-&lt;p&gt;Almost miraculously, things got better in Cambridge. I spent time with an old friend with whom I&amp;#8217;ve had a twin-like understanding in the past; in a glowingly inevitable moment, our identities seemingly merged into one. I went for long runs in the middle of the night. I sat in a church parking lot as the sun was setting, gluing spray-painted floppy disks to a friend&amp;#8217;s car. Someone that I hadn&amp;#8217;t talked to in years explained her dreams to me and then explained the structure of the human ear, which led to the discovery of a mind-blowing balancing trick. A friend from San Francisco visited, and we unexpectedly lost a couple days with each other coding and walking around the city and watching short films. I went to an outdoor arts festival in Delaware and kept a fire for friends wandering past in the middle of the night.&lt;/p&gt;
-
-&lt;p&gt;In a few hours, I&amp;#8217;ll be on a plane headed to Austin, TX, where the start of a road trip awaits. Austin -&amp;gt; Marfa, TX -&amp;gt; White Sands -&amp;gt; Grand Canyon -&amp;gt; Joshua Tree -&amp;gt; LA -&amp;gt; Big Sur -&amp;gt; SF -&amp;gt; Seattle. And then back to SF.&lt;/p&gt;
-</description>
+      <description>Tonight, if I&amp;#8217;m lucky, I&amp;#8217;ll sleep on this soft green velvet couch where I spent 80% of my junior year of undergrad proving the existence of dark matter, determining the electron charge, reading papers on adiabatic quantum computation, and overfitting most things that I encountered. If I&amp;#8217;m unlucky, I&amp;#8217;ll stay up the whole night and hack away at some Python scripts testing a hypothesis I have about bitsquatting, or maybe I&amp;#8217;ll jailbreak my new Kindle, but probably I&amp;#8217;ll find myself brewing a kettle of tea and nostalgically gazing at the rain falling on the porch where I used to sit and read books in summer.</description>
     </item>
     
     <item>
@@ -451,10 +100,8 @@
       <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/i/</guid>
-      <description>&lt;p&gt;Vegan food everywhere! Taco bars with speedy wifi! Fresca margaritas! This is the American Dream INCARNATE.&lt;/p&gt;
-
-&lt;p&gt;Tomorrow I shall go explore the city and die of heat stroke.&lt;/p&gt;
-</description>
+      <description>Vegan food everywhere! Taco bars with speedy wifi! Fresca margaritas! This is the American Dream INCARNATE.
+Tomorrow I shall go explore the city and die of heat stroke.</description>
     </item>
     
     <item>
@@ -463,44 +110,17 @@
       <pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/40-minutes-in-nyc/</guid>
-      <description>&lt;p&gt;40 minutes in Tribeca on the way from Newtown to Boston&lt;/p&gt;
-
-&lt;p&gt;is all we have&lt;/p&gt;
-
-&lt;p&gt;before the parking meter runs out&lt;/p&gt;
-
-&lt;p&gt;so I transcribe the light of the setting sun in shorthand&lt;/p&gt;
-
-&lt;p&gt;(a cricket clutter of shutter clicks)&lt;/p&gt;
-
-&lt;p&gt;while you look for a bathroom.&lt;/p&gt;
-
-&lt;p&gt;the sun is running out&lt;/p&gt;
-
-&lt;p&gt;like a roll of toilet paper&lt;/p&gt;
-
-&lt;p&gt;waning into weary ribbons&lt;/p&gt;
-
-&lt;p&gt;as it soars toward heaven,&lt;/p&gt;
-
-&lt;p&gt;forgetful of the symmetries of the parabola,&lt;/p&gt;
-
-&lt;p&gt;the ache in the arms of your neighbor&amp;#8217;s sycamore.&lt;/p&gt;
-
-&lt;p&gt;we leave with eight minutes to spare.&lt;/p&gt;
-
-&lt;p&gt;skeletons of metal and glass rip the skin of the sky,&lt;/p&gt;
-
-&lt;p&gt;autumn spread thick like marmalade&lt;/p&gt;
-
-&lt;p&gt;on this slice of highway.&lt;/p&gt;
-
-&lt;p&gt;the jar is running out&lt;/p&gt;
-
-&lt;p&gt;but the grocery store is closed.&lt;/p&gt;
-
-&lt;p&gt;87% of bathrooms in Tribeca are for employees only.&lt;/p&gt;
-</description>
+      <description>40 minutes in Tribeca on the way from Newtown to Boston
+is all we have
+before the parking meter runs out
+so I transcribe the light of the setting sun in shorthand
+(a cricket clutter of shutter clicks)
+while you look for a bathroom.
+the sun is running out
+like a roll of toilet paper
+waning into weary ribbons
+as it soars toward heaven,
+forgetful of the symmetries of the parabola,</description>
     </item>
     
     <item>
@@ -509,78 +129,18 @@
       <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
       
       <guid>https://diracdeltas.github.io/blog/hello-world/</guid>
-      <description>&lt;p&gt;so I don&amp;#8217;t know whether to turn around at your doorway&lt;/p&gt;
-
-&lt;p&gt;so hesitation drips the milk from sore eyes&lt;/p&gt;
-
-&lt;p&gt;so I scratch the walls&lt;/p&gt;
-
-&lt;p&gt;so I peel flakes of plaster&lt;/p&gt;
-
-&lt;p&gt;tumble like dead moths&lt;/p&gt;
-
-&lt;p&gt;erode my fingernails&lt;/p&gt;
-
-&lt;p&gt;which have grown long and desperate like homeless shadows&lt;/p&gt;
-
-&lt;p&gt;before the sun rises&lt;/p&gt;
-
-&lt;p&gt;we dimple red sheets under hard white ceilings&lt;/p&gt;
-
-&lt;p&gt;limbs curled into smiles&lt;/p&gt;
-
-&lt;p&gt;and then we are chasing each other&lt;/p&gt;
-
-&lt;p&gt;canyons underfoot&lt;/p&gt;
-
-&lt;p&gt;dust and sky tangled in your hair&lt;/p&gt;
-
-&lt;p&gt;skin eating the sun&lt;/p&gt;
-
-&lt;p&gt;like a stick of yellow butter&lt;/p&gt;
-
-&lt;p&gt;the sky is heavy on our backs&lt;/p&gt;
-
-&lt;p&gt;back in your room&lt;/p&gt;
-
-&lt;p&gt;the walls crawl like hands of clocks&lt;/p&gt;
-
-&lt;p&gt;we dip fingers into skin and bone&lt;/p&gt;
-
-&lt;p&gt;draw each other close&lt;/p&gt;
-
-&lt;p&gt;like curtains in lamplight&lt;/p&gt;
-
-&lt;p&gt;and then I&amp;#8217;m at the terminal&lt;/p&gt;
-
-&lt;p&gt;a mold of you blooming across my tired posture&lt;/p&gt;
-
-&lt;p&gt;as the janitor cleans&lt;/p&gt;
-
-&lt;p&gt;the floor on which I lie, hugging myself,&lt;/p&gt;
-
-&lt;p&gt;leaving an unvacuumed fetusprint on the carpet&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;m in Santa Barbara&lt;/p&gt;
-
-&lt;p&gt;The tides are coming fast&lt;/p&gt;
-
-&lt;p&gt;and I am running away from them into some kind of loneliness.&lt;/p&gt;
-
-&lt;p&gt;come&lt;/p&gt;
-
-&lt;p&gt;bring your&lt;/p&gt;
-
-&lt;p&gt;guitar strings and&lt;/p&gt;
-
-&lt;p&gt;unfinished crosswords and&lt;/p&gt;
-
-&lt;p&gt;laundry on the floor as teacups chatter impassively&lt;/p&gt;
-
-&lt;p&gt;a gigabyte of sunlight melting losslessly into red red shadows&lt;/p&gt;
-
-&lt;p&gt;4/7/2012&lt;/p&gt;
-</description>
+      <description>so I don&amp;#8217;t know whether to turn around at your doorway
+so hesitation drips the milk from sore eyes
+so I scratch the walls
+so I peel flakes of plaster
+tumble like dead moths
+erode my fingernails
+which have grown long and desperate like homeless shadows
+before the sun rises
+we dimple red sheets under hard white ceilings
+limbs curled into smiles
+and then we are chasing each other
+canyons underfoot</description>
     </item>
     
   </channel>
