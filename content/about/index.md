@@ -29,6 +29,9 @@ Most of my work is <a href="https://github.com/diracdeltas" target="_blank">open
       <a href="https://diracdeltas.github.io/niceware/">Niceware</a> (maintainer)
     </li>
     <li>
+      <a href="https://github.com/diracdeltas/signal-muon">Signal Muon</a> (maintainer)
+    </li>
+    <li>
       <a href="https://pressfreedomfoundation.org/securedrop">SecureDrop</a> (developer)
     </li>
     <li>
@@ -64,10 +67,16 @@ Most of my work is <a href="https://github.com/diracdeltas" target="_blank">open
 ## Miscellaneous:
   <ul>
     <li>
-      <a href="http://www.w3.org/2001/tag/">W3C Technical Architecture Group</a> (former elected member)
+      <a href="http://z.cash.foundation/">Zcash Foundation</a> (board member, 2017 - present)
     </li>
     <li>
-      <a href="https://noisebridge.net/">Noisebridge</a> (former board member)
+      <a href="https://www.defcon.org/">DEF CON</a> (CfP review board member, 2017)
+    </li>
+    <li>
+      <a href="http://www.w3.org/2001/tag/">W3C Technical Architecture Group</a> (elected member, 2015 - 2016)
+    </li>
+    <li>
+      <a href="https://noisebridge.net/">Noisebridge</a> (board member, 2013 - 2014)
     </li>
     <li>
       <a href="http://aaronswartzhackathon.org/">Aaron Swartz Worldwide Memorial Hackathons</a> (founder)
