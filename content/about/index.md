@@ -82,7 +82,7 @@ Most of my work is <a href="https://github.com/diracdeltas" target="_blank">open
       <a href="http://aaronswartzhackathon.org/">Aaron Swartz Worldwide Memorial Hackathons</a> (founder)
     </li>
     <li>
-      <a href="https://securingchange.org/">Securing Change</a> (co-founder)
+      <a href="http://securingchange.org/">Securing Change</a> (co-founder)
     </li>
   </ul>
 

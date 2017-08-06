@@ -52,10 +52,9 @@ date: 2011-08-10
 
   * [The Ad-Blocking Hacker Making Your Browser More Paranoid][31]
   * <a href="https://motherboard.vice.com/read/gmail-android-app-bug-lets-you-send-emails-pretending-to-be-someone-else" target="_blank">Gmail Android Bug Lets You Send Emails Pretending To Be Someone Else</a>
-  * <a href="https://motherboard.vice.com/read/gmail-android-app-bug-lets-you-send-emails-pretending-to-be-someone-else" target="_blank">Sniffly: covered in various places, #1 on Hacker News</a>
+  * <a href="https://arstechnica.com/information-technology/2015/10/unpatched-browser-weaknesses-can-be-exploited-to-track-millions-of-web-users/" target="_blank">Sniffly: covered in various places, #1 on Hacker News</a>
   * [ZEIT ONLINE: Kampf dem Klartext][32]
   * [Backdooring JS][33]: front page of [Hacker News][34] and [various][35] [subreddits][36]
-  * [DuoSec: Presenting the 2015 Women in Security Awards][37]
   * [SC Magazine: Women in Security Issue][38]
   * [Yahoo! End-to-End Email Preview Promises Greater Protection for Journalists][39]
   * [Forbes 30 Under 30: Rising Stars of Enterprise Technology][40]
@@ -105,7 +104,6 @@ date: 2011-08-10
  [34]: https://news.ycombinator.com/item?id=10107833
  [35]: https://www.reddit.com/r/netsec/comments/3i6hjr/backdooring_your_javascript_using_minifier_bugs/
  [36]: https://www.reddit.com/r/programming/comments/3i7k4a/backdooring_your_javascript_using_minifier_bugs/
- [37]: https://www.duosecurity.com/women-in-security
  [38]: http://www.scmagazine.com/women-in-it-security-women-to-watch/article/421397/5/
  [39]: https://cpj.org/blog/2015/03/yahoo-end-to-end-email-preview-brings-promise-of-g.php
  [40]: http://www.forbes.com/sites/bruceupbin/2015/01/05/meet-the-30-under-30-rising-stars-in-enterprise-technology/
