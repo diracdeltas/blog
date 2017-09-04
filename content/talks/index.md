@@ -1,5 +1,5 @@
 ---
-title: IRL or GTFO
+title: IRL || GTFO
 author: yan
 date: 2011-08-10
 
@@ -7,6 +7,7 @@ date: 2011-08-10
 ## Scheduled talks and appearances:
 
   * [Strangeloop 2017](https://www.thestrangeloop.com/), Sept. 28-30 2017, St. Louis (co-presenting with Garrett Robinson)
+  * [August Beats and Board Games](https://soundcloud.com/diracdeltas/beats-and-board-games-mix), August 17 2017, SF (DJ set)
   * [DEF CON 25](https://www.defcon.org/html/defcon-25/dc-25-index.html), July 27-30 2017, Las Vegas (review board member)
   * [DIBI 2017](http://www.dibiconference.com/), Mar. 30-31 2017, Edinburgh, Scotland (keynote)
   * [AppSec California](https://2017.appseccalifornia.org/), Jan. 23-25 2017, Santa Monica
