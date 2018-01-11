@@ -6,7 +6,11 @@ date: 2011-08-10
 ---
 ## Scheduled talks and appearances:
 
+  * [MIT Women's unConference](https://alum.mit.edu/communities/mit-womens-unconference), March 10 2018, Boston
+  * University of Toronto Encryption Workshop, Feb. 9 2018, Toronto
+  * [Bay Area Electron Meetup](https://www.meetup.com/Bay-Area-Electron-User-Group/events/246604286/), Feb. 7 2018, SF
   * [Strangeloop 2017](https://www.thestrangeloop.com/), Sept. 28-30 2017, St. Louis (co-presenting with Garrett Robinson)
+  * [Equity, November 2017 Edition](https://soundcloud.com/diracdeltas/2stoked4wednesday), Nov. 8 2017, SF (DJ set)
   * [Noisebridge 10 Year Anniversary Exhibition and Ball](https://noisebridge.net/wiki/Noisebridge_10_Year_Anniversary_Exhibition_and_Ball), Sept. 28-30 2017, SF
   * [August Beats and Board Games](https://soundcloud.com/diracdeltas/beats-and-board-games-mix), August 17 2017, SF (DJ set)
   * [DEF CON 25](https://www.defcon.org/html/defcon-25/dc-25-index.html), July 27-30 2017, Las Vegas (review board member)
@@ -43,6 +47,7 @@ date: 2011-08-10
 
 ## Slides/video that might be cool, who knows:
 
+  * _It Me: Under the Hood of Web Authentication_, StrangeLoop 2017 [[Video](https://www.youtube.com/watch?v=gF-M4ja9lrA)]
   * _Weird New Tricks for Browser Fingerprinting_, ToorCon 2015 [[Slides][20], [Video][21]]
   * _JS and Security Get Married_, NCC Group Open Forum [[Slides][22]]
   * _Let&#8217;s Encrypt: Mining Free Certificates for The Entire Web_, DEF CON 2015 [[Slides][23], [Video][24]]
