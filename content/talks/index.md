@@ -7,6 +7,7 @@ date: 2011-08-10
 ## Scheduled talks and appearances:
 
   * [MIT Women's unConference](https://alum.mit.edu/communities/mit-womens-unconference), March 10 2018, Boston
+  * Guest Lecture at UC Berkeley, Feb. 14 2018, Berkeley
   * University of Toronto Encryption Workshop, Feb. 9 2018, Toronto
   * [Bay Area Electron Meetup](https://www.meetup.com/Bay-Area-Electron-User-Group/events/246604286/), Feb. 7 2018, SF
   * [Strangeloop 2017](https://www.thestrangeloop.com/), Sept. 28-30 2017, St. Louis (co-presenting with Garrett Robinson)
