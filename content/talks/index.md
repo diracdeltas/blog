@@ -6,7 +6,9 @@ date: 2011-08-10
 ---
 ## Scheduled talks and appearances:
 
+  * Berkeley OCF Tech Talk, April 2 2018, Berkeley
   * [MIT Women's unConference](https://alum.mit.edu/communities/mit-womens-unconference), March 10 2018, Boston
+  * [ETHDenver](https://ethdenver.com/), Feb. 16 - 18 2018, Denver
   * Guest Lecture at UC Berkeley, Feb. 14 2018, Berkeley
   * University of Toronto Encryption Workshop, Feb. 9 2018, Toronto
   * [Bay Area Electron Meetup](https://www.meetup.com/Bay-Area-Electron-User-Group/events/246604286/), Feb. 7 2018, SF
