@@ -5,10 +5,20 @@
     <link>https://diracdeltas.github.io/blog/posts/</link>
     <description>Recent content in Posts on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 Feb 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://diracdeltas.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>the information apocalypse</title>
+      <link>https://diracdeltas.github.io/blog/information-apocalypse/</link>
+      <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/information-apocalypse/</guid>
+      <description>My friend Aviv was recently the subject of a popular Buzzfeed article about the possibility of an impending &amp;ldquo;information apocalypse&amp;rdquo;. tl;dr: Aviv extrapolates from the fake news crisis that started in 2016 to a world in which anyone can create AI-assisted misinformation campaigns indistinguishable from reality to the average observer. From there, a series of possible dystopian scenarios arise, including:
+ “Diplomacy manipulation,” in which someone uses deepfakes-style video manipulation tools to produce a realistic video of a political leader declaring war, in order to provoke their enemy into retaliation.</description>
+    </item>
     
     <item>
       <title>a post-truth thought experiment</title>
