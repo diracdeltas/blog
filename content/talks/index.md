@@ -4,8 +4,11 @@ author: yan
 date: 2011-08-10
 
 ---
-## Scheduled talks and appearances:
+## Scheduled talks etc.:
 
+  * [DEF CON 26](https://www.defcon.org/html/defcon-26/dc-26-index.html), August 9-12 2018, Las Vegas (review board member)
+  * [Decentralized Web Summit](https://decentralizedweb.net/), August 2 2018, SF
+  * [HOPE](https://hope.net/schedule.html), July 21 2018, NYC
   * Berkeley OCF Tech Talk, April 2 2018, Berkeley
   * [MIT Women's unConference](https://alum.mit.edu/communities/mit-womens-unconference), March 10 2018, Boston
   * [ETHDenver](https://ethdenver.com/), Feb. 16 - 18 2018, Denver
