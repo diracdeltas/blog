@@ -6,7 +6,7 @@ date: 2011-08-10
 ---
 ## Scheduled talks etc.:
 
-  * [DEF CON 26](https://www.defcon.org/html/defcon-26/dc-26-index.html), August 9-12 2018, Las Vegas (review board member)
+  * [DEF CON 26](https://www.defcon.org/html/defcon-26/dc-26-index.html), August 9-12 2018, Las Vegas (review board member and pool party DJ)
   * [Decentralized Web Summit](https://decentralizedweb.net/), August 2 2018, SF
   * [HOPE](https://hope.net/schedule.html), July 21 2018, NYC
   * Berkeley OCF Tech Talk, April 2 2018, Berkeley
@@ -16,9 +16,9 @@ date: 2011-08-10
   * University of Toronto Encryption Workshop, Feb. 9 2018, Toronto
   * [Bay Area Electron Meetup](https://www.meetup.com/Bay-Area-Electron-User-Group/events/246604286/), Feb. 7 2018, SF
   * [Strangeloop 2017](https://www.thestrangeloop.com/), Sept. 28-30 2017, St. Louis (co-presenting with Garrett Robinson)
-  * [Equity, November 2017 Edition](https://soundcloud.com/diracdeltas/2stoked4wednesday), Nov. 8 2017, SF (DJ set)
+  * [Equity, November 2017 Edition](https://soundcloud.com/azuki/2stoked4wednesday), Nov. 8 2017, SF (DJ set)
   * [Noisebridge 10 Year Anniversary Exhibition and Ball](https://noisebridge.net/wiki/Noisebridge_10_Year_Anniversary_Exhibition_and_Ball), Sept. 28-30 2017, SF
-  * [August Beats and Board Games](https://soundcloud.com/diracdeltas/beats-and-board-games-mix), August 17 2017, SF (DJ set)
+  * [August Beats and Board Games](https://soundcloud.com/azuki/beats-and-board-games-mix), August 17 2017, SF (DJ set)
   * [DEF CON 25](https://www.defcon.org/html/defcon-25/dc-25-index.html), July 27-30 2017, Las Vegas (review board member)
   * [DIBI 2017](http://www.dibiconference.com/), Mar. 30-31 2017, Edinburgh, Scotland (keynote)
   * [AppSec California](https://2017.appseccalifornia.org/), Jan. 23-25 2017, Santa Monica
