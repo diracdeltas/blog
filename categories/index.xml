@@ -5,40 +5,22 @@
     <link>https://diracdeltas.github.io/blog/categories/</link>
     <description>Recent content in Categories on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 31 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 May 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://diracdeltas.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Academia</title>
-      <link>https://diracdeltas.github.io/blog/categories/academia/</link>
-      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      <title>Uncategorized</title>
+      <link>https://diracdeltas.github.io/blog/categories/uncategorized/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/academia/</guid>
+      <guid>https://diracdeltas.github.io/blog/categories/uncategorized/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Code</title>
-      <link>https://diracdeltas.github.io/blog/categories/code/</link>
-      <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://diracdeltas.github.io/blog/categories/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Encrypt the Web</title>
-      <link>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</link>
-      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hacktivism</title>
+      <title>hacktivism</title>
       <link>https://diracdeltas.github.io/blog/categories/hacktivism/</link>
       <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
       
@@ -47,25 +29,16 @@
     </item>
     
     <item>
-      <title>Physics</title>
-      <link>https://diracdeltas.github.io/blog/categories/physics/</link>
-      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      <title>code</title>
+      <link>https://diracdeltas.github.io/blog/categories/code/</link>
+      <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/physics/</guid>
+      <guid>https://diracdeltas.github.io/blog/categories/code/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Poetry</title>
-      <link>https://diracdeltas.github.io/blog/categories/poetry/</link>
-      <pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://diracdeltas.github.io/blog/categories/poetry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Travel</title>
+      <title>travel</title>
       <link>https://diracdeltas.github.io/blog/categories/travel/</link>
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
@@ -74,11 +47,38 @@
     </item>
     
     <item>
-      <title>Uncategorized</title>
-      <link>https://diracdeltas.github.io/blog/categories/uncategorized/</link>
-      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      <title>encrypt the web</title>
+      <link>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/uncategorized/</guid>
+      <guid>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>academia</title>
+      <link>https://diracdeltas.github.io/blog/categories/academia/</link>
+      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/categories/academia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>physics</title>
+      <link>https://diracdeltas.github.io/blog/categories/physics/</link>
+      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/categories/physics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>poetry</title>
+      <link>https://diracdeltas.github.io/blog/categories/poetry/</link>
+      <pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/categories/poetry/</guid>
       <description></description>
     </item>
     

@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://diracdeltas.github.io/blog/posts/</loc>
+    <lastmod>2018-02-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/</loc>
+    <lastmod>2018-02-19T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://diracdeltas.github.io/blog/information-apocalypse/</loc>
     <lastmod>2018-02-19T00:00:00+00:00</lastmod>
   </url>
@@ -23,8 +35,26 @@
   </url>
   
   <url>
+    <loc>https://diracdeltas.github.io/blog/categories/</loc>
+    <lastmod>2016-05-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/categories/uncategorized/</loc>
+    <lastmod>2016-05-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://diracdeltas.github.io/blog/xychelsea-part-2/</loc>
     <lastmod>2016-05-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/categories/hacktivism/</loc>
+    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -43,8 +73,20 @@
   </url>
   
   <url>
+    <loc>https://diracdeltas.github.io/blog/categories/code/</loc>
+    <lastmod>2015-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://diracdeltas.github.io/blog/sniffly/</loc>
     <lastmod>2015-10-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/categories/travel/</loc>
+    <lastmod>2015-10-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -68,6 +110,12 @@
   </url>
   
   <url>
+    <loc>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</loc>
+    <lastmod>2015-06-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://diracdeltas.github.io/blog/pseudorandom-podcast-series-episode-1/</loc>
     <lastmod>2015-06-07T00:00:00+00:00</lastmod>
   </url>
@@ -85,6 +133,18 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/canvas/</loc>
     <lastmod>2015-02-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/categories/academia/</loc>
+    <lastmod>2014-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/categories/physics/</loc>
+    <lastmod>2014-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -278,6 +338,12 @@
   </url>
   
   <url>
+    <loc>https://diracdeltas.github.io/blog/categories/poetry/</loc>
+    <lastmod>2012-11-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://diracdeltas.github.io/blog/untitled-3/</loc>
     <lastmod>2012-11-15T00:00:00+00:00</lastmod>
   </url>
@@ -295,72 +361,6 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/about/</loc>
     <lastmod>2011-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/academia/</loc>
-    <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/</loc>
-    <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/code/</loc>
-    <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</loc>
-    <lastmod>2015-06-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/hacktivism/</loc>
-    <lastmod>2016-05-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/physics/</loc>
-    <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/poetry/</loc>
-    <lastmod>2012-11-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/posts/</loc>
-    <lastmod>2018-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/travel/</loc>
-    <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/uncategorized/</loc>
-    <lastmod>2016-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/</loc>
-    <lastmod>2018-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
