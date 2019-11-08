@@ -11,12 +11,13 @@
     
     
     <item>
-      <title>ignore this</title>
-      <link>https://diracdeltas.github.io/blog/test-deploy/</link>
+      <title>Writing Custom Control Surfaces for Ableton</title>
+      <link>https://diracdeltas.github.io/blog/ableton-midi/</link>
       <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/test-deploy/</guid>
-      <description>my site deploy script has been very broken for a while! testing if this works now.</description>
+      <guid>https://diracdeltas.github.io/blog/ableton-midi/</guid>
+      <description>Recently I&amp;rsquo;ve been really interested in what goes on in Ableton Live under the hood, since it&amp;rsquo;s a widely-used piece of proprietary software for making bangers. It turns out you can get pretty far knowing just a small amount of Python scripting!
+For instance, I found that .als files (and .adv&amp;rsquo;s, and .adg&amp;rsquo;s, and probably more) are just gzipped XML and so therefore you can do some fun processing on them using any XML library, such as Python&amp;rsquo;s.</description>
     </item>
     
     <item>
