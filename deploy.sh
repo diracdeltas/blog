@@ -17,4 +17,8 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin gh-staging
-git subtree push --prefix=public git@github.com:diracdeltas/blog.git gh-pages
+git checkout gh-pages
+git cherry-pick gh-staging
+git push origin gh-pages
+
+#git subtree push --prefix=public git@github.com:diracdeltas/blog.git gh-pages
