@@ -1,14 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on discrete blogarithm</title>
     <link>https://diracdeltas.github.io/blog/posts/</link>
     <description>Recent content in Posts on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 19 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://diracdeltas.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ignore this</title>
+      <link>https://diracdeltas.github.io/blog/test-deploy/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://diracdeltas.github.io/blog/test-deploy/</guid>
+      <description>my site deploy script has been very broken for a while! testing if this works now.</description>
+    </item>
     
     <item>
       <title>the information apocalypse</title>
