@@ -1,0 +1,254 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="https://diracdeltas.github.io/blog">
+    <title> Writing Custom Control Surfaces for Ableton </title>
+    <link rel="canonical" href="https://diracdeltas.github.io/blog/ableton-midi/">
+    
+
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
+<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+
+</head>
+
+
+<body class="theme-base-08">
+  
+
+
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
+    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
+    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+    </p>
+  </div>
+</div>
+
+
+  
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
+        </h3>
+      </div>
+    </div>
+
+    
+    <div class="container content">
+      <h1 class="post-title">Writing Custom Control Surfaces for Ableton</h1>
+        <section id="main">
+          <h5 id="date"> Thu Nov 7, 2019 </h5>
+          
+
+<p>Recently I&rsquo;ve been really interested in what goes on in Ableton Live under the hood,
+since it&rsquo;s a widely-used piece of proprietary software for making bangers.
+It turns out you can get pretty far knowing just a small amount of Python
+scripting!</p>
+
+<p>For instance, I found that .als files (and .adv&rsquo;s, and .adg&rsquo;s, and probably
+more) are just gzipped XML and so therefore you can do some fun processing on
+them using any XML library, such as Python&rsquo;s. So, remembering the week that it
+took me to convert all my Ableton DJ sets into Rekordbox, I wrote a script to
+automatically <a href="https://github.com/diracdeltas/rekordbox-scripts/blob/master/ableton-to-cues.py">convert Ableton cues to Rekordbox and
+vice-versa</a>. This could have definitely saved me about 10 hours of boring work time that could have been spent making bangers instead!</p>
+
+<p>This week, I started looking into Ableton&rsquo;s Python interface for control
+surfaces and you&rsquo;ll never guess what happened next (a bunch of boring stuff).</p>
+
+<h2 id="what-s-a-control-surface">What&rsquo;s a control surface?</h2>
+
+<p><a href="https://help.ableton.com/hc/en-us/articles/209774285-Using-Control-Surfaces">According to Ableton</a>, &ldquo;Control Surfaces are specially written scripts which allow controllers to interface with Live&rdquo;.</p>
+
+<p>Most people who use Ableton interact with it through a tactile controller, such as
+a MIDI keyboard or an Ableton Push or the APC40 controller. Control surfaces
+are scripts which act as a bridge between Ableton and the controller, telling
+Ableton what each button/knob/fader/etc. on the controller should do.</p>
+
+<p>It turns out that these control surfaces are simply Python scripts.</p>
+
+<h2 id="where-does-ableton-store-its-control-surface-scripts">Where does Ableton store its control surface scripts?</h2>
+
+<p>Ableton comes with a bunch of control surface scripts pre-installed for common
+controllers such as the Launchkey, Push, and APCs. For these controllers, you can just plug
+in the controller, open Ableton Preferences, and select the control surface for
+it via a drop-down list in the Link/MIDI tab.</p>
+
+<p>These scripts are stored in <code>/Applications/Ableton Live
+$VERSION.app/Contents/App Resources/MIDI Remote Scripts/</code> on Mac (where
+<code>$VERSION</code> is <code>10 Suite</code> for instance if you have Live 10 Suite installed) and
+<code>\ProgramData\Ableton\Live x.x\Resources\MIDI Remote Scripts\</code> on Windows.</p>
+
+<p>For the rest of this post we will refer to this as the MIDI Remote Scripts
+directory.</p>
+
+<h2 id="loading-a-custom-control-surface-script">Loading a custom control surface script</h2>
+
+<p>If you want to load your own custom control surface script for an existing
+MIDI controller, the steps are fairly straightforward:</p>
+
+<ol>
+<li>Find the existing control surface for the MIDI controller in the MIDI Remote
+Scripts directory. For instance, for the APC40, this would be in <code>APC40/</code> as
+a bunch of .pyc files. You can either decompile the .pyc yourself or find
+the decompiled version in
+<a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts">https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts</a>.</li>
+<li>Copy these decompiled Python files to a new directory in the MIDI Remote
+Scripts directory.</li>
+<li>Customize them (more on this in the next section).</li>
+<li>Now open Ableton and go to the Link/MIDI tab of Preferences. Ableton should
+automatically compile the .py files to .pyc. If everything loaded without
+errors, you will see your new MIDI Remote Scripts directory show up as
+an option in the Control Surface dropdown.</li>
+</ol>
+
+<h2 id="customizing-control-surfaces">Customizing control surfaces</h2>
+
+<p>In the MIDI Remote Scripts directory, there&rsquo;s various directories that start
+with <code>_</code>. These are libraries which other control surfaces can make use of. One
+particularly useful one is <code>_Framework</code>, which includes definitions for useful
+classes like <code>ButtonElement</code>, which represents a button on the controller.</p>
+
+<p>The best intro I&rsquo;ve found to <code>_Framework</code> is this one by Hanz Petrov:
+<a href="https://livecontrol.q3f.org/ableton-liveapi/articles/introduction-to-the-framework-classes/">https://livecontrol.q3f.org/ableton-liveapi/articles/introduction-to-the-framework-classes/</a>.</p>
+
+<p>Let&rsquo;s say we want to take the Metronome button on an APC40MKII and instead map
+that to turn on looping for the currently active clip. Assume we&rsquo;ve already
+created a <code>ControlSurface</code> subclass as a starting point.</p>
+
+<ol>
+<li>As a shortcut to calling <code>ButtonElement</code> directly, note that there is an
+<code>_APC</code> library already which provides a <code>make_button</code> utility method for APC
+controllers. <a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/_APC/ControlElementUtils.py#L16">Github link
+here.</a></li>
+<li><code>make_button</code> takes an identifier as input. To figure out what we
+need to pass here for the metronome button, we can look at the APC control
+protocol
+<a href="https://6be54c364949b623a3c0-4409a68c214f3a9eeca8d0265e9266c0.ssl.cf2.rackcdn.com/989/documents/APC40Mk2_Communications_Protocol_v1.2.pdf">documentation</a> which conveniently lists identifiers for all the buttons on the APC40MKII. We see that 0x5a, or 90, is the identifier for the metronome button.</li>
+<li>Now we have to add a listener to the button using the <code>add_value_listener</code> method of <code>ButtonElement</code> that
+triggers when the button is pressed. Let&rsquo;s call this handler <code>start_loop</code>.</li>
+<li>In <code>start_loop</code>, we can call the <code>song()</code>
+<a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/_Framework/ControlSurface.py#L126">method</a> of the ControlSurface
+superclass in order to get a reference to the Live.Song.Song object that we are
+currently controlling. For documentation on this and other Live
+objects that are available in Python, see <a href="https://julienbayle.studio/PythonLiveAPI_documentation/Live10.1.xml">here</a>.</li>
+<li><code>song().view.highlighted_clip_slot.clip</code> now gives us the active clip. This
+is a Live.Clip.Clip object according to the docs above. So we can simply set
+<code>clip.looping</code> to a truthy value like 1 to make the clip loop!</li>
+</ol>
+
+<p>In reality, I&rsquo;ve found the best way to figure these things out is to simply
+copy/paste code from other control surface scripts as needed. In particular,
+Will Marshall&rsquo;s <a href="ihttps://github.com/willrjmarshall/AbletonDJTemplateUnsupported">unsupported Ableton 8 control surface
+scripts</a> are
+really helpful.</p>
+
+<h2 id="debugging-tips">Debugging tips</h2>
+
+<ol>
+<li>You can log to Ableton&rsquo;s main log file using the ControlSurface
+<code>log_message</code> method defined
+<a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/_Framework/ControlSurface.py#L250">here</a>.
+On Mac, the log file is at
+<code>/Users/[username]/Library/Preferences/Ableton/Live x.x.x/Log.txt</code> and on
+Windows it&rsquo;s <code>\Users\[username]\AppData\Roaming\Ableton\Live
+x.x.x\Preferences\Log.txt</code>. This file also contains errors emitted by
+Python.</li>
+<li>You can also reload the MIDI control surface without restarting Ableton
+
+<ul>
+<li>simply re-open the currently open session from <code>File &gt; Open Recent Set</code>.</li>
+</ul></li>
+<li>If you find that Ableton doesn&rsquo;t auto-compile Python, you can compile using
+<code>python -m compileall .</code></li>
+<li>As mentioned previously, if a script throws an error immediately, it won&rsquo;t
+show up in Ableton&rsquo;s list of available control surfaces.</li>
+</ol>
+
+<h2 id="example">Example</h2>
+
+<p>As an example, see this <a href="https://www.youtube.com/watch?v=YILKOWhN2ag">Youtube
+video</a> and <a href="https://github.com/diracdeltas/apc40mk2">Github
+repo</a> for adding CDJ-style looping
+buttons to the APC40MK2. The work for this was done originally for Ableton 8 by
+Will Marshall and I only made some minor edits to make it more CDJ-like and
+loadable in Live 10.</p>
+
+<p>Note that you can accomplish much of this already without control surface
+scripts simply by
+using Ableton&rsquo;s MIDI mapping mode. One exception is the ability to halve and
+double loop lengths.</p>
+
+<p>I hope this helps to show that control surface scripts are a quite powerful and
+flexible way to get your Ableton controller to behave exactly the way you want.
+Happy hacking!</p>
+
+        </section>
+    </div>
+  </div>
+
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  
+
+<div class="container">
+  <hr />
+  <hr />
+  
+
+  
+    <span class="right">
+    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/information-apocalypse/"> &nbsp; the information apocalypse</a> &raquo;
+    </span>
+  
+</div>
+
+  <br />
+  
+<div class="container">
+  <ul class="catlist">
+    <li><em>Categories: </em></li>
+    
+  </ul>
+</div>
+
+
+
+  
+  
+
+<div class="container content">
+<footer>
+  <div>
+    <p class="right credit">
+    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
+    </p>
+  </div>
+</footer>
+</div>
+
+
+
+</body>
+</html>
+
+
+
+
