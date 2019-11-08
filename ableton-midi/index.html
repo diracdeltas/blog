@@ -156,9 +156,10 @@ is a Live.Clip.Clip object according to the docs above. So we can simply set
 
 <p>In reality, I&rsquo;ve found the best way to figure these things out is to simply
 copy/paste code from other control surface scripts as needed. In particular,
-Will Marshall&rsquo;s <a href="ihttps://github.com/willrjmarshall/AbletonDJTemplateUnsupported">unsupported Ableton 8 control surface
+Will Marshall&rsquo;s <a href="https://github.com/willrjmarshall/AbletonDJTemplateUnsupported">unsupported Ableton 8 control surface
 scripts</a> are
-really helpful.</p>
+really helpful. Also the unofficial <a href="https://julienbayle.studio/PythonLiveAPI_documentation/Live10.1.xml">Live Python API
+documentation</a> is crucial.</p>
 
 <h2 id="debugging-tips">Debugging tips</h2>
 
@@ -171,11 +172,7 @@ On Mac, the log file is at
 Windows it&rsquo;s <code>\Users\[username]\AppData\Roaming\Ableton\Live
 x.x.x\Preferences\Log.txt</code>. This file also contains errors emitted by
 Python.</li>
-<li>You can also reload the MIDI control surface without restarting Ableton
-
-<ul>
-<li>simply re-open the currently open session from <code>File &gt; Open Recent Set</code>.</li>
-</ul></li>
+<li>You can also reload the MIDI control surface without restarting Ableton: simply re-open the currently open session from <code>File &gt; Open Recent Set</code>.</li>
 <li>If you find that Ableton doesn&rsquo;t auto-compile Python, you can compile using
 <code>python -m compileall .</code></li>
 <li>As mentioned previously, if a script throws an error immediately, it won&rsquo;t
