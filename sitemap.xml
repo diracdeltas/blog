@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://diracdeltas.github.io/blog/posts/</loc>
-    <lastmod>2018-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://diracdeltas.github.io/blog/</loc>
+    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://diracdeltas.github.io/blog/</loc>
-    <lastmod>2018-02-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
+    <loc>https://diracdeltas.github.io/blog/test-deploy/</loc>
+    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://diracdeltas.github.io/blog/posts/</loc>
+    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -37,13 +40,11 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/</loc>
     <lastmod>2016-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/uncategorized/</loc>
     <lastmod>2016-05-26T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -54,7 +55,6 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/hacktivism/</loc>
     <lastmod>2016-05-25T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -75,7 +75,6 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/code/</loc>
     <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -86,7 +85,6 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/travel/</loc>
     <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -112,7 +110,6 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</loc>
     <lastmod>2015-06-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -138,13 +135,11 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/academia/</loc>
     <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/physics/</loc>
     <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -340,7 +335,6 @@
   <url>
     <loc>https://diracdeltas.github.io/blog/categories/poetry/</loc>
     <lastmod>2012-11-24T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
