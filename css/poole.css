@@ -278,10 +278,7 @@ tbody tr:nth-child(odd) th {
 ul.category {text-transform: capitalize;}
 ul.category li {margin-bottom: 1rem;}
 
-ul.catlist { list-style: none; margin: 0; padding: 0; }
-ul.catlist li { display: inline; }
-ul.catlist li:after { content: "・"; }
-ul.catlist li:last-child:after { content: ""; }
+ul.catlist { display: none; }
 
 /* This gets Google to fall into place */
 .social {
