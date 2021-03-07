@@ -2,78 +2,74 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>code on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/code/</link>
+    <link>https://blog.azuki.vip/categories/code/</link>
     <description>Recent content in code on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://diracdeltas.github.io/blog/categories/code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/categories/code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>sniffly</title>
-      <link>https://diracdeltas.github.io/blog/sniffly/</link>
+      <link>https://blog.azuki.vip/sniffly/</link>
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/sniffly/</guid>
-      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&amp;#8217;m dizzy and lost and can&amp;#8217;t remember whose couch I&amp;#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
+      <guid>https://blog.azuki.vip/sniffly/</guid>
+      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I’m dizzy and lost and can’t remember whose couch I’m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
     </item>
     
     <item>
       <title>backdooring your javascript using minifier bugs</title>
-      <link>https://diracdeltas.github.io/blog/backdooring-js/</link>
+      <link>https://blog.azuki.vip/backdooring-js/</link>
       <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/backdooring-js/</guid>
-      <description>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of POC||GTFO 0x08 from Travis Goodspeed. The coolest article I&amp;#8217;ve read so far in it is &amp;#8220;Deniable Backdoors Using Compiler Bugs,&amp;#8221; in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</description>
+      <guid>https://blog.azuki.vip/backdooring-js/</guid>
+      <description>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of POC||GTFO 0x08 from Travis Goodspeed. The coolest article I’ve read so far in it is “Deniable Backdoors Using Compiler Bugs,” in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</description>
     </item>
     
     <item>
       <title>lessons from the ad blocker trenches</title>
-      <link>https://diracdeltas.github.io/blog/lessons-from-the-ad-blocker-trenches/</link>
+      <link>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</link>
       <pubDate>Fri, 17 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/lessons-from-the-ad-blocker-trenches/</guid>
-      <description>Greetings from the beautiful museum district of Berlin, where I&amp;#8217;ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we&amp;#8217;ve produced two documents this week that I think are pretty good:
+      <guid>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</guid>
+      <description>Greetings from the beautiful museum district of Berlin, where I’ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we’ve produced two documents this week that I think are pretty good:
  no encryption backdoors no non-consensual web tracking  I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
     </item>
     
     <item>
       <title>certificate transparency for PGP?</title>
-      <link>https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/</link>
+      <link>https://blog.azuki.vip/certificate-transparency-for-pgp/</link>
       <pubDate>Thu, 14 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/</guid>
+      <guid>https://blog.azuki.vip/certificate-transparency-for-pgp/</guid>
       <description>Yesterday, Prof. Matthew Green wrote a nice blog post about why PGP must die. Ignoring the UX design problem for now, his four main points were: (1) the keys themselves are too unwieldy, (2) key management is hard, (3) the protocol lacks forward secrecy, and (4) the crypto is archaic/non-sane by default.
 Happily, (1) and (4) can be solved straightforwardly using more modern crypto primitives like Curve25519 and throwing away superfluous PGP key metadata that comes from options that are ignored 99.</description>
     </item>
     
     <item>
       <title>Software Transparency: Part 1</title>
-      <link>https://diracdeltas.github.io/blog/software-transparency/</link>
+      <link>https://blog.azuki.vip/software-transparency/</link>
       <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/software-transparency/</guid>
-      <description>Say that you want to &amp;#8220;securely&amp;#8221; acquire an app called EncryptedYo for &amp;#8220;securely&amp;#8221; communicating with your friends. You go to the developer&amp;#8217;s web site, which is HTTPS-only, and download a binary executable. Done!
-Perhaps if you&amp;#8217;re paranoid, you fetch the developer&amp;#8217;s GPG key, make sure that there&amp;#8217;s a valid trust path to it from your own key, verify the detached signature that they&amp;#8217;ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you&amp;#8217;ve downloaded before installing it.</description>
+      <guid>https://blog.azuki.vip/software-transparency/</guid>
+      <description>Say that you want to “securely” acquire an app called EncryptedYo for “securely” communicating with your friends. You go to the developer’s web site, which is HTTPS-only, and download a binary executable. Done!
+Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure that there’s a valid trust path to it from your own key, verify the detached signature that they’ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you’ve downloaded before installing it.</description>
     </item>
     
     <item>
       <title>stuff i use</title>
-      <link>https://diracdeltas.github.io/blog/stuff-i-use/</link>
+      <link>https://blog.azuki.vip/stuff-i-use/</link>
       <pubDate>Wed, 25 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/stuff-i-use/</guid>
+      <guid>https://blog.azuki.vip/stuff-i-use/</guid>
       <description>This was my favorite part of my interview with The Setup:
- What would be your dream setup? Let&amp;#8217;s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn&amp;#8217;t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
+ What would be your dream setup? Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
     </item>
     
     <item>
       <title>a boring xss dissection</title>
-      <link>https://diracdeltas.github.io/blog/a-boring-xss-dissection/</link>
+      <link>https://blog.azuki.vip/a-boring-xss-dissection/</link>
       <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/a-boring-xss-dissection/</guid>
+      <guid>https://blog.azuki.vip/a-boring-xss-dissection/</guid>
       <description>Hi there. Have a funny picture:
 
 Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally broken, compared to 2-3 hours for an XSS bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.</description>
@@ -81,119 +77,119 @@ Today, I was briefly worried by the observation that mainstream media takes 24-3
     
     <item>
       <title>don’t forget to secure cookies ppl</title>
-      <link>https://diracdeltas.github.io/blog/wordpress-fail/</link>
+      <link>https://blog.azuki.vip/wordpress-fail/</link>
       <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/wordpress-fail/</guid>
-      <description>Update (5/28/14): Regrettably, most of the stories covering this blog post have been all &amp;#8220;OMG EVERYTHING IS BROKEN&amp;#8221; rather than &amp;#8220;Here&amp;#8217;s how to make things better til WordPress rolls out a fix&amp;#8221; (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it&amp;#8217;s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:</description>
+      <guid>https://blog.azuki.vip/wordpress-fail/</guid>
+      <description>Update (5/28/14): Regrettably, most of the stories covering this blog post have been all “OMG EVERYTHING IS BROKEN” rather than “Here’s how to make things better til WordPress rolls out a fix” (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it’s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:</description>
     </item>
     
     <item>
       <title>Zero-bit vulnerabilities?</title>
-      <link>https://diracdeltas.github.io/blog/zero-bit-vulnerabilities/</link>
+      <link>https://blog.azuki.vip/zero-bit-vulnerabilities/</link>
       <pubDate>Sun, 16 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/zero-bit-vulnerabilities/</guid>
-      <description>The other day, I overheard Seth Schoen ask the question, &amp;#8220;What is the smallest change you can make to a piece of software to create a serious vulnerability?&amp;#8221; We agreed that one bit is generally sufficient; for instance, in x86 assembly, the operations JL and JLE (corresponding to &amp;#8220;jump if less than&amp;#8221; and &amp;#8220;jump if less than or equal to&amp;#8221;) differ by one bit, and the difference between the two could very easily cause serious problems via memory corruption or otherwise.</description>
+      <guid>https://blog.azuki.vip/zero-bit-vulnerabilities/</guid>
+      <description>The other day, I overheard Seth Schoen ask the question, “What is the smallest change you can make to a piece of software to create a serious vulnerability?” We agreed that one bit is generally sufficient; for instance, in x86 assembly, the operations JL and JLE (corresponding to “jump if less than” and “jump if less than or equal to”) differ by one bit, and the difference between the two could very easily cause serious problems via memory corruption or otherwise.</description>
     </item>
     
     <item>
       <title>decentralized trustworthiness measures and certificate pinning</title>
-      <link>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</link>
+      <link>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</link>
       <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
-      <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it&amp;#8217;s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
+      <guid>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
+      <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it’s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
  Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
     </item>
     
     <item>
       <title>Debunking Google’s HSTS claims</title>
-      <link>https://diracdeltas.github.io/blog/debunking-googles-hsts-claims/</link>
+      <link>https://blog.azuki.vip/debunking-googles-hsts-claims/</link>
       <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/debunking-googles-hsts-claims/</guid>
-      <description>**Disclaimer**: This post was published before I started working at EFF, hence some stylistic mistakes (calling it &amp;#8220;the EFF&amp;#8221; rather than just &amp;#8220;EFF&amp;#8221;) are excusable and left uncorrected. 🙂
-Two days ago, the EFF published a report tiled, &amp;#8220;Encrypt the Web Report: Who&amp;#8217;s Doing What.&amp;#8221; The report included a chart that rated several large web companies on how well they were protecting user privacy via recommended encryption practices for data in transit.</description>
+      <guid>https://blog.azuki.vip/debunking-googles-hsts-claims/</guid>
+      <description>**Disclaimer**: This post was published before I started working at EFF, hence some stylistic mistakes (calling it “the EFF” rather than just “EFF”) are excusable and left uncorrected. 🙂
+Two days ago, the EFF published a report tiled, “Encrypt the Web Report: Who’s Doing What.” The report included a chart that rated several large web companies on how well they were protecting user privacy via recommended encryption practices for data in transit.</description>
     </item>
     
     <item>
       <title>Tabstash: OneTab for Firefox</title>
-      <link>https://diracdeltas.github.io/blog/tabstash-onetab-for-firefox/</link>
+      <link>https://blog.azuki.vip/tabstash-onetab-for-firefox/</link>
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/tabstash-onetab-for-firefox/</guid>
-      <description>I wrote a Firefox addon one afternoon in France called TabStash. It&amp;#8217;s quite simple: you click a button to close all your tabs except the current one. You click it again to open all of them. (Chrome has a popular extension called OneTab that does this, but at the time there wasn&amp;#8217;t a Firefox version.)
+      <guid>https://blog.azuki.vip/tabstash-onetab-for-firefox/</guid>
+      <description>I wrote a Firefox addon one afternoon in France called TabStash. It’s quite simple: you click a button to close all your tabs except the current one. You click it again to open all of them. (Chrome has a popular extension called OneTab that does this, but at the time there wasn’t a Firefox version.)
 A couple nights ago, I finally got around to sending it to the Mozilla addon store.</description>
     </item>
     
     <item>
       <title>Some thoughts on the NSA and elliptic curve cryptography</title>
-      <link>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
+      <link>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
+      <guid>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
       <description>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:
 ========
-I&amp;#8217;ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
+I’ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
 There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</description>
     </item>
     
     <item>
       <title>Some favorite git commands</title>
-      <link>https://diracdeltas.github.io/blog/some-favorite-git-commands/</link>
+      <link>https://blog.azuki.vip/some-favorite-git-commands/</link>
       <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/some-favorite-git-commands/</guid>
-      <description>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I&amp;#8217;d list a few lesser-known commands that I like:
- git log _-pretty=oneline -n &amp;#8211;abbrev-commit -G_: This shows the  latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
+      <guid>https://blog.azuki.vip/some-favorite-git-commands/</guid>
+      <description>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I’d list a few lesser-known commands that I like:
+ git log _-pretty=oneline -n –abbrev-commit -G_: This shows the  latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
     </item>
     
     <item>
       <title>HTTPS Everywhere 3.3 is out!</title>
-      <link>https://diracdeltas.github.io/blog/https-everywhere-3-3-is-out/</link>
+      <link>https://blog.azuki.vip/https-everywhere-3-3-is-out/</link>
       <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/https-everywhere-3-3-is-out/</guid>
-      <description>Quick update to mention that a new version of the browser extension I&amp;#8217;ve been helping with this summer has just been released!
+      <guid>https://blog.azuki.vip/https-everywhere-3-3-is-out/</guid>
+      <description>Quick update to mention that a new version of the browser extension I’ve been helping with this summer has just been released!
 This release was spurred by the impending arrival of Firefox 23, which notably has Mixed Active Content Blocking enabled by default. In summary, this means that scripts loaded via HTTP on an otherwise-HTTPS site will be blocked automatically for security reasons. Although this is good news in general, it would have suddenly caused HTTPS Everywhere to become way less usable.</description>
     </item>
     
     <item>
       <title>Summertime, and the HTTP traffic sniffing is easy</title>
-      <link>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</link>
+      <link>https://blog.azuki.vip/summertime-and-the-http-traffic-sniffing-is-easy/</link>
       <pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</guid>
-      <description>So it happens that every time you access a URL that starts with &amp;#8220;http://&amp;#8221;, anyone on your local network can see what you&amp;#8217;re doing with almost no effort worth writing about. This includes the page itself as well as any information that you&amp;#8217;re transferring, like credit card numbers and passwords (which are hopefully encrypted). It&amp;#8217;s worth reiterating that this isn&amp;#8217;t difficult at all, even if your network is WPA2-protected, as most supposedly-secure WiFi networks are nowadays.</description>
+      <guid>https://blog.azuki.vip/summertime-and-the-http-traffic-sniffing-is-easy/</guid>
+      <description>So it happens that every time you access a URL that starts with “http://”, anyone on your local network can see what you’re doing with almost no effort worth writing about. This includes the page itself as well as any information that you’re transferring, like credit card numbers and passwords (which are hopefully encrypted). It’s worth reiterating that this isn’t difficult at all, even if your network is WPA2-protected, as most supposedly-secure WiFi networks are nowadays.</description>
     </item>
     
     <item>
       <title>Some thoughts on Facebook implementing forward secrecy</title>
-      <link>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</link>
+      <link>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</link>
       <pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
+      <guid>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
       <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
- Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook&amp;#8217;s servers, your data gets encrypted so that someone who intercepts your data can&amp;#8217;t read it unless they have Facebook&amp;#8217;s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+ Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
     </item>
     
     <item>
       <title>gmailcheck</title>
-      <link>https://diracdeltas.github.io/blog/gmailcheck/</link>
+      <link>https://blog.azuki.vip/gmailcheck/</link>
       <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/gmailcheck/</guid>
-      <description>I&amp;#8217;m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.
-Thus far in my computer-using life, I&amp;#8217;ve never owned a monitor.</description>
+      <guid>https://blog.azuki.vip/gmailcheck/</guid>
+      <description>I’m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.
+Thus far in my computer-using life, I’ve never owned a monitor.</description>
     </item>
     
     <item>
       <title>Two maps of SF crime data</title>
-      <link>https://diracdeltas.github.io/blog/two-maps-of-sf-crime-data/</link>
+      <link>https://blog.azuki.vip/two-maps-of-sf-crime-data/</link>
       <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/two-maps-of-sf-crime-data/</guid>
+      <guid>https://blog.azuki.vip/two-maps-of-sf-crime-data/</guid>
       <description>In Jan. 2013, someone cut the brakes on my bike while it was locked up oustide Noisebridge and stole the handlebars. This was a major nuisance, since my ankle was sprained at the time and bicycling was my sole means of getting around the city.
 It was also a hard time for other reasons. Two people that I cared about had passed away the previous week in unrelated incidents that caused a great deal of shock for those who knew them.</description>
     </item>

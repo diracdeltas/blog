@@ -1,51 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gmail on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/tags/gmail/</link>
-    <description>Recent content in Gmail on discrete blogarithm</description>
+    <title>gmail on discrete blogarithm</title>
+    <link>https://blog.azuki.vip/tags/gmail/</link>
+    <description>Recent content in gmail on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 May 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://diracdeltas.github.io/blog/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Fri, 24 May 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/tags/gmail/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>gmailcheck</title>
-      <link>https://diracdeltas.github.io/blog/gmailcheck/</link>
+      <link>https://blog.azuki.vip/gmailcheck/</link>
       <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/gmailcheck/</guid>
-      <description>&lt;p&gt;I&amp;#8217;m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.&lt;/p&gt;
-
-&lt;p&gt;Thus far in my computer-using life, I&amp;#8217;ve never owned a monitor. I don&amp;#8217;t have a smartphone, so everything I do is on a pint-sized Thinkpad X220: writing, coding, ebook reading, garden-variety Internet browsing, photo/audio editing, bike trip navigation, sleeping, etc.&lt;/p&gt;
-
-&lt;p&gt;But recently, I was in the lovely town of Cambridge, MA on a warm spring day, staring out the window of a tired blue house at trees heavy with the impending procreation of innumerable songbirds, feathers washed in ecstatic glow of pollen. Mysterious stirrings of latent desire dripped from the stretched-out sky. Something changed inside me. Suddenly I felt like editing config files.&lt;/p&gt;
-
-&lt;p&gt;So I shut the window and did that for a while, maybe a couple hours or until I started showing symptoms of Vitamin D deficiency, don&amp;#8217;t really remember.&lt;/p&gt;
-
-&lt;p&gt;At the end of this abortive config-puberty, I &lt;a href=&#34;https://github.com/diracdeltas/dotfiles&#34;&gt;threw everything on Github&lt;/a&gt; because typing &amp;#8216;git push&amp;#8217; releases a lot of dopamine in my body and apparently I like that.&lt;/p&gt;
-
-&lt;p&gt;The observant git tree-traveler will notice that there&amp;#8217;s a Python script called gmailcheck in that repo. This is something I&amp;#8217;m glad I wrote, because it solves a real problem without being overly complicated.&lt;/p&gt;
-
-&lt;p&gt;The problem is this: I spend most of my productive work time in the terminal, which is usually the master window in my tiling window setup. I usually also have a browser window open for Google searches. Using gmail, as it turns out, is hella dumb in a window of this size. Furthermore, checking gmail in the browser usually leads to an unending parade of distractions as I start to add events to my calendar, respond to some emails that can wait, click on links that friends have sent, open up &lt;a href=&#34;https://www.noisebridge.net/&#34;&gt;Noisebridge&lt;/a&gt;-discuss threads with titles like &amp;#8220;Who put mercury in the laser cutter? Also, kindergarteners visit TUESDAY,&amp;#8221; etc.&lt;/p&gt;
-
-&lt;p&gt;On the other hand, not checking email at all is not an option, since my phone is usually useless, and anyone who needs to tell me something important is advised to do so over email.&lt;/p&gt;
-
-&lt;p&gt;Essentially, I needed something that would show me whether I had important emails in the terminal. Maybe like Mutt but with the removal of all features that could possibly lead to distractions.&lt;/p&gt;
-
-&lt;p&gt;Seems like a pretty simple Python script, and it was. &lt;a href=&#34;https://github.com/diracdeltas/dotfiles/blob/master/bin/gmailcheck&#34;&gt;Gmailcheck v1.0&lt;/a&gt; will show you basic information about unread emails from the last hour, or whatever time you want to hard-code in for now. I added some extra bells and whistles, like hipster colors and highlighting of emails that gmail auto-labels &amp;#8220;Important.&amp;#8221; If you want to actually respond to an email or do other fancy stuff, you can click on the link and just go to gmail&amp;#8217;s web interface.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8744854460/&#34; title=&#34;gmailcheck by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7294/8744854460_31b2c29b19.jpg&#34; width=&#34;500&#34; height=&#34;301&#34; alt=&#34;gmailcheck&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Upon reaching this milestone, the next logical thought that occurred to me was, &amp;#8220;How do you properly evoke the spirit of emails on the Noisebridge mailing lists?&amp;#8221;&lt;/p&gt;
-
-&lt;p&gt;The answer is that you print them being said by a huge ASCII-art rendering of &lt;a href=&#34;https://twitter.com/flamsmark&#34;&gt;Tom&lt;/a&gt;, Noisebridge secretary and (before this happened) a friend of mine.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8746315257/&#34; title=&#34;gmailcheck trolling by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm8.staticflickr.com/7305/8746315257_4602acb8bf.jpg&#34; width=&#34;500&#34; height=&#34;498&#34; alt=&#34;gmailcheck trolling&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.flickr.com/photos/71094651@N06/8746315225/&#34; title=&#34;cowsay -f tom by diracdeltas, on Flickr&#34;&gt;&lt;img src=&#34;https://farm9.staticflickr.com/8552/8746315225_338f20b7be.jpg&#34; width=&#34;500&#34; height=&#34;492&#34; alt=&#34;cowsay -f tom&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I guess I still don&amp;#8217;t care about usability.&lt;/p&gt;
-</description>
+      <guid>https://blog.azuki.vip/gmailcheck/</guid>
+      <description>I’m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.
+Thus far in my computer-using life, I’ve never owned a monitor.</description>
     </item>
     
   </channel>

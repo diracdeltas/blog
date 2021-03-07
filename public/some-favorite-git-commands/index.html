@@ -1,126 +1,89 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> Some favorite git commands </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/some-favorite-git-commands/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      Some favorite git commands &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Some favorite git commands</h1>
+  <span class="post-date">Sep 2, 2013</span>
+  <p>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I’d list a few lesser-known commands that I like:</p>
+<ul>
+<li><em>git log</em> _<em>-pretty=oneline -n<number> –abbrev-commit</em> -G<regex>_: This shows the <number> latest commits in oneline format with shortened commit hashes that added or removed lines matching <regex>. The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</li>
+<li><em>git checkout <branch> &lt;path/to/file&gt;; git reset; git add -p; git commit</em>: This is almost always less preferable to <em>git cherry-pick</em>, but it is useful when you want only certain hunks of commits to certain files in <branch>. <em>git checkout</em> copies the file from the other branch into the current branch and stages the changes for commit. <em>git reset</em> unstages them so we can select the parts we want to add to our branch on a hunk-by-hunk basis using <em>git add -p</em>. Unfortunately this doesn’t preserve authorship of the changes from <branch>.</li>
+<li>git update hooks: We decided that it would be great if the HTTPS Everywhere git server could automatically reject commits that broke the build. It turns out that this is possible using a server-side git update hook, which runs just before updating the refs on the git server. The strategy is to create a temporary copy of the remote with the newly pushed changes, do a test build, and reject the changes if the build fails. See <a href="https://github.com/diracdeltas/https-everywhere/blob/master/hooks/update">here</a> for an example of this in HTTPS Everywhere adapted from a Stack Overflow answer.</li>
+</ul>
+<p>More to come!</p>
+</div>
+
       </div>
     </div>
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-    <div class="container content">
-      <h1 class="post-title">Some favorite git commands</h1>
-        <section id="main">
-          <h5 id="date"> Mon Sep 2, 2013 </h5>
-          <p>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I&#8217;d list a few lesser-known commands that I like:</p>
-
-<ul>
-<li><em>git log</em> _<em>-pretty=oneline -n<number> &#8211;abbrev-commit</em> -G<regex>_: This shows the <number> latest commits in oneline format with shortened commit hashes that added or removed lines matching <regex>. The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</li>
-<li><em>git checkout <branch> <path/to/file>; git reset; git add -p; git commit</em>: This is almost always less preferable to <em>git cherry-pick</em>, but it is useful when you want only certain hunks of commits to certain files in <branch>. <em>git checkout</em> copies the file from the other branch into the current branch and stages the changes for commit. <em>git reset</em> unstages them so we can select the parts we want to add to our branch on a hunk-by-hunk basis using <em>git add -p</em>. Unfortunately this doesn&#8217;t preserve authorship of the changes from <branch>.</li>
-<li>git update hooks: We decided that it would be great if the HTTPS Everywhere git server could automatically reject commits that broke the build. It turns out that this is possible using a server-side git update hook, which runs just before updating the refs on the git server. The strategy is to create a temporary copy of the remote with the newly pushed changes, do a test build, and reject the changes if the build fails. See <a href="https://github.com/diracdeltas/https-everywhere/blob/master/hooks/update">here</a> for an example of this in HTTPS Everywhere adapted from a Stack Overflow answer.</li>
-</ul>
-
-<p>More to come!</p>
-
-        </section>
-    </div>
-  </div>
-
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/">Some thoughts on the NSA and elliptic curve cryptography</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/https-everywhere-3-3-is-out/"> &nbsp; HTTPS Everywhere 3.3 is out!</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/code">code</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 

@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on discrete blogarithm</title>
+    <link>https://blog.azuki.vip/post/</link>
+    <description>Recent content in Posts on discrete blogarithm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>lazy quarantine bagels</title>
+      <link>https://blog.azuki.vip/quarantine-bagels/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/quarantine-bagels/</guid>
+      <description>prologue: on laziness lately i have been doing some lazy baking whilst in quarantine, where lazy is defined as:
+ no need for fancy equipment like stand mixers with dough hooks NO STARTERS (like the kind you need for making sourdough) less than one hour of work total can be made by a beginner with almost no cooking experience can skip/improvise/fuckup at least 2 steps and still have a decent result  for a prime example of lazy baking, check out my twitter recipe thread about japanese-style croissants (AKA salted butter rolls), which have been made by dozens of people (including children) to near-universal acclaim.</description>
+    </item>
+    
+    <item>
+      <title>Writing Custom Control Surfaces for Ableton</title>
+      <link>https://blog.azuki.vip/ableton-midi/</link>
+      <pubDate>Thu, 07 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/ableton-midi/</guid>
+      <description>Recently I&amp;rsquo;ve been really interested in what goes on in Ableton Live under the hood, since it&amp;rsquo;s a widely-used piece of proprietary software for making bangers. It turns out you can get pretty far knowing just a small amount of Python scripting!
+For instance, I found that .als files (and .adv&amp;rsquo;s, and .adg&amp;rsquo;s, and probably more) are just gzipped XML and so therefore you can do some fun processing on them using any XML library, such as Python&amp;rsquo;s.</description>
+    </item>
+    
+    <item>
+      <title>the information apocalypse</title>
+      <link>https://blog.azuki.vip/information-apocalypse/</link>
+      <pubDate>Mon, 19 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/information-apocalypse/</guid>
+      <description>My friend Aviv was recently the subject of a popular Buzzfeed article about the possibility of an impending &amp;ldquo;information apocalypse&amp;rdquo;. tl;dr: Aviv extrapolates from the fake news crisis that started in 2016 to a world in which anyone can create AI-assisted misinformation campaigns indistinguishable from reality to the average observer. From there, a series of possible dystopian scenarios arise, including:
+ “Diplomacy manipulation,” in which someone uses deepfakes-style video manipulation tools to produce a realistic video of a political leader declaring war, in order to provoke their enemy into retaliation.</description>
+    </item>
+    
+    <item>
+      <title>a post-truth thought experiment</title>
+      <link>https://blog.azuki.vip/post-truth/</link>
+      <pubDate>Mon, 23 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/post-truth/</guid>
+      <description>1. A perfect game-theoretic analysis machine Imagine that you had a magic machine. You tell the machine what your goals are. The machine tells you, in any situation, the optimal statement to say in order to achieve your goals, and who to say it to. The statement may or may not be true.
+Under which circumstances, if any, would you follow the machine&amp;rsquo;s instructions?
+Example 1: Bob tells the machine that his goal is to become as rich as possible.</description>
+    </item>
+    
+    <item>
+      <title>surveillance, whistleblowing, and security engineering</title>
+      <link>https://blog.azuki.vip/surveillance/</link>
+      <pubDate>Wed, 05 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/surveillance/</guid>
+      <description>[Update (12/14/16): Reuters has specified that the rootkit was implemented as a Linux kernel module. Wow.]
+Yesterday morning, Reuters dropped a news story revealing that Yahoo installed a backdoor on their own infrastructure in 2015 in compliance with a secret order from either the FBI or the NSA. While we all know that the US government routinely asks tech companies for surveillance help, a couple aspects of the Yahoo story stand out:</description>
+    </item>
+    
+    <item>
+      <title>bus diaries</title>
+      <link>https://blog.azuki.vip/bus-diaries/</link>
+      <pubDate>Mon, 27 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/bus-diaries/</guid>
+      <description>While migrating my blog from WordPress to Hugo + GitHub Pages, I found two old diary entries from last autumn, a period of life when I rode buses a lot. They are copied below.
+oct 28, 2015 they told me not to, so i&amp;rsquo;m taking the bus from downtown LA to LAX. on my right, a man is asking everyone except me for 50 cents. everyone except me is a black guy.</description>
+    </item>
+    
+    <item>
+      <title>xychelsea part 2</title>
+      <link>https://blog.azuki.vip/xychelsea-part-2/</link>
+      <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/xychelsea-part-2/</guid>
+      <description>The second and last time that I visit Chelsea Manning, we speak and move with a sense of urgency, as if a natural disaster is imminent. By now, the Ft Leavenworth prison visit procedure feels strangely familiar, like a movie you once watched in a dream. I check in with the uniformed officer at the Disciplinary Barracks&amp;#8217; front desk, wait uselessly while he misgenders Chelsea and figures out if I’m allowed to visit her, rent a locker to stow my jacket which is prohibited in the visit room (due to the having of zippers), don an unsuspicious smile when the guard tries to deny something i’m bringing (this time, it’s blank drawing paper and pencils &amp;#8211; both of which are eventually let through), pass through the metal detector and double-doored atrium, wait for the guard to let Chelsea through the opposite doors, hug briefly, sit down at her favorite table against the wall, buy her snacks from the vending machines twice (first course: Dr.</description>
+    </item>
+    
+    <item>
+      <title>xychelsea</title>
+      <link>https://blog.azuki.vip/xychelsea/</link>
+      <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/xychelsea/</guid>
+      <description>On the day that I am scheduled to see my friend Chelsea for the first time in six years, I wake up at 4:51pm to a shrieking fire alarm in my hotel room. Semi-conscious and disoriented, I leap out of bed and spin around wildly grabbing at all the things I care about &amp;#8211; my phone and passport, the precious slip of paper that will allow me entrance to Fort Leavenworth prison, the bag of quarters that Chelsea asked me to bring &amp;#8211; ready for an FBI raid disguised as a fire drill.</description>
+    </item>
+    
+    <item>
+      <title>25</title>
+      <link>https://blog.azuki.vip/0x19/</link>
+      <pubDate>Wed, 04 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/0x19/</guid>
+      <description>i turn 25 in an hour. this seems strange and unbelievable. surely 25 years of existence is enough to become acquainted with the monotonicity of time. but instead the seconds pass and disbelief stares back, unmoving. a quarter-century is a long time. with sadness, i realize how much of it i have forgotten already. imagine that we could live forever. would we still talk about wasting time if time were an unlimited resource?</description>
+    </item>
+    
+    <item>
+      <title>happy birthday</title>
+      <link>https://blog.azuki.vip/happy-birthday/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/happy-birthday/</guid>
+      <description>Dear Chelsea,
+You probably don’t remember me, but we met in September 2009. This was before everyone knew your name and before many people knew mine.
+I was at home, helping my friend cut her hair. Out of the corner of my eye, I saw you walk into the living room. You were taking photos of our mural-covered walls, seemingly happy to be in such a bizarre and interesting house of MIT students.</description>
+    </item>
+    
+    <item>
+      <title>sniffly</title>
+      <link>https://blog.azuki.vip/sniffly/</link>
+      <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/sniffly/</guid>
+      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I’m dizzy and lost and can’t remember whose couch I’m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
+    </item>
+    
+    <item>
+      <title>tbd</title>
+      <link>https://blog.azuki.vip/tbd/</link>
+      <pubDate>Mon, 26 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/tbd/</guid>
+      <description>you know things are getting better when you walk away from the hotel where you just gave two presentations wearing your best pretense of holding-it-togetherness while inside you felt shakey, hungover, and insane. remember how long you stood there, smiling and rationing weak handshakes while pretending you believed that you had a future? promise yourself you’re never doing that again. you walk away from the volatile company of people who made you feel shitty about yourself without trying to and into the car of someone who looks like they could be your new friend.</description>
+    </item>
+    
+    <item>
+      <title>backdooring your javascript using minifier bugs</title>
+      <link>https://blog.azuki.vip/backdooring-js/</link>
+      <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/backdooring-js/</guid>
+      <description>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of POC||GTFO 0x08 from Travis Goodspeed. The coolest article I’ve read so far in it is “Deniable Backdoors Using Compiler Bugs,” in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</description>
+    </item>
+    
+    <item>
+      <title>this blog uses Content Security Policy</title>
+      <link>https://blog.azuki.vip/this-blog-uses-content-security-policy/</link>
+      <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/this-blog-uses-content-security-policy/</guid>
+      <description>FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.
+Having recently given some talks about Content Security Policy (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.
+This lil’ blog is hosted by the MIT Student Information Processing Board and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .</description>
+    </item>
+    
+    <item>
+      <title>lessons from the ad blocker trenches</title>
+      <link>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</link>
+      <pubDate>Fri, 17 Jul 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</guid>
+      <description>Greetings from the beautiful museum district of Berlin, where I’ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we’ve produced two documents this week that I think are pretty good:
+ no encryption backdoors no non-consensual web tracking  I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
+    </item>
+    
+    <item>
+      <title>pseudorandom podcast series, episode 1</title>
+      <link>https://blog.azuki.vip/pseudorandom-podcast-series-episode-1/</link>
+      <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/pseudorandom-podcast-series-episode-1/</guid>
+      <description>The combination of my roommate starting a Rust podcast and a long, animated conversation with a (drunk) storyteller last night caused me to become suddenly enamored with the idea of starting my own lil’ podcast. Lately I keep thinking about how many spontaneous, insightful conversations are never remembered, much less entombed in a publicly-accessible server for posterity. So a podcast seemed like an excellent way to share these moments without spending a lot of time writing (I’m a regrettably slow writer).</description>
+    </item>
+    
+    <item>
+      <title>life update</title>
+      <link>https://blog.azuki.vip/life-update/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/life-update/</guid>
+      <description>i’ve finally recovered enough from a multi-week bout of sickness to say some things and put up some photos. lately i’ve felt exhausted and lethargic and unproductive to be honest. being sick probably had something to do with it; i sure hope next week gets better.
+yesterday, someone told me they had a theory that everyone who sleeps at night (with rare exceptions) can only manage ~3 significant life events at a time.</description>
+    </item>
+    
+    <item>
+      <title>rate-limiting anonymous accounts</title>
+      <link>https://blog.azuki.vip/rate-limiting-anonymous-accounts/</link>
+      <pubDate>Thu, 05 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/rate-limiting-anonymous-accounts/</guid>
+      <description>Yesterday TechCrunch reported that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes actual people use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they’re using Tor in the first place.</description>
+    </item>
+    
+    <item>
+      <title>canvas #1</title>
+      <link>https://blog.azuki.vip/canvas/</link>
+      <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/canvas/</guid>
+      <description>that could have been us, 2015
+Oil pastels, lipstick, eyeliner, cold medicine, and ballpoint pen on canvas.
+i painted this while standing in my bathroom on valentine’s day’s night, unable to sleep and grotesquely feeling the weight of the oncoming dawn. it was my first time drawing on canvas.
+as i worked, i kept thinking about all these people passing to and from doomed relationships, that feeling of being stupidly and everlastingly perched on the brink between hope and mutilation.</description>
+    </item>
+    
+    <item>
+      <title>solving boolean satisfiability on human circuits</title>
+      <link>https://blog.azuki.vip/2sat/</link>
+      <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/2sat/</guid>
+      <description>I remember quite clearly sitting in Scott Aaronson’s computability and complexity theory course at MIT in 2011. I was a 19 year-old physics major back then, so Scott’s class was mostly new and fascinating.
+One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length.</description>
+    </item>
+    
+    <item>
+      <title>tls everything</title>
+      <link>https://blog.azuki.vip/tls-everything/</link>
+      <pubDate>Wed, 10 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/tls-everything/</guid>
+      <description>Yesterday the W3C Technical Architecture Group published a new finding titled, “The Web and Encryption.” In it, they conclude:
+ “. . . the Web platform should be designed to actively prefer secure origins — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the end-to-end nature of TLS encryption must not be compromised on the Web, in order to preserve this trust.”
+ To many HTTPS Everywhere users like myself, this seemed a decade or so beyond self-evident.</description>
+    </item>
+    
+    <item>
+      <title>certificate transparency for PGP?</title>
+      <link>https://blog.azuki.vip/certificate-transparency-for-pgp/</link>
+      <pubDate>Thu, 14 Aug 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/certificate-transparency-for-pgp/</guid>
+      <description>Yesterday, Prof. Matthew Green wrote a nice blog post about why PGP must die. Ignoring the UX design problem for now, his four main points were: (1) the keys themselves are too unwieldy, (2) key management is hard, (3) the protocol lacks forward secrecy, and (4) the crypto is archaic/non-sane by default.
+Happily, (1) and (4) can be solved straightforwardly using more modern crypto primitives like Curve25519 and throwing away superfluous PGP key metadata that comes from options that are ignored 99.</description>
+    </item>
+    
+    <item>
+      <title>HOPEX</title>
+      <link>https://blog.azuki.vip/hopex/</link>
+      <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/hopex/</guid>
+      <description>4 years ago, I went to HOPE for the first time on a last-minute press pass from my college newspaper. Some relevant facts about the trip:
+ I was 19 and had never been to a hacker con before. I didn’t identify as a hacker (or an activist). I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</description>
+    </item>
+    
+    <item>
+      <title>Software Transparency: Part 1</title>
+      <link>https://blog.azuki.vip/software-transparency/</link>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/software-transparency/</guid>
+      <description>Say that you want to “securely” acquire an app called EncryptedYo for “securely” communicating with your friends. You go to the developer’s web site, which is HTTPS-only, and download a binary executable. Done!
+Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure that there’s a valid trust path to it from your own key, verify the detached signature that they’ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you’ve downloaded before installing it.</description>
+    </item>
+    
+    <item>
+      <title>stuff i use</title>
+      <link>https://blog.azuki.vip/stuff-i-use/</link>
+      <pubDate>Wed, 25 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/stuff-i-use/</guid>
+      <description>This was my favorite part of my interview with The Setup:
+ What would be your dream setup? Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
+    </item>
+    
+    <item>
+      <title>life exercises</title>
+      <link>https://blog.azuki.vip/life-exercises/</link>
+      <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/life-exercises/</guid>
+      <description>Every week, answer “yes” to one question that you would instinctively say no to.
+Don’t spend money or sleep in a real bed for as long as possible.
+Buy a pound of the ugliest paint that you can find.
+Keep a journal of thoughts you avoid.
+Block port 80 for a day.
+Be kind at random.</description>
+    </item>
+    
+    <item>
+      <title>a boring xss dissection</title>
+      <link>https://blog.azuki.vip/a-boring-xss-dissection/</link>
+      <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/a-boring-xss-dissection/</guid>
+      <description>Hi there. Have a funny picture:
+
+Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally broken, compared to 2-3 hours for an XSS bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.</description>
+    </item>
+    
+    <item>
+      <title>the other blog post i was going to write</title>
+      <link>https://blog.azuki.vip/the-other-blog-post-i-was-going-to-write/</link>
+      <pubDate>Thu, 12 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/the-other-blog-post-i-was-going-to-write/</guid>
+      <description>It’s always unnerving to realize that your happiness is highly correlated with some particular event, object, person, substance, or thought pattern. Various components of pop culture have led us to believe that happiness is {a warm gun | two kinds of ice cream | high serotonin levels | coca-cola} and so forth, but nobody ever says that happiness is a volatile multidimensional product of quickly-fluctuating vectors along a dozen axes.</description>
+    </item>
+    
+    <item>
+      <title>don’t forget to secure cookies ppl</title>
+      <link>https://blog.azuki.vip/wordpress-fail/</link>
+      <pubDate>Fri, 23 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/wordpress-fail/</guid>
+      <description>Update (5/28/14): Regrettably, most of the stories covering this blog post have been all “OMG EVERYTHING IS BROKEN” rather than “Here’s how to make things better til WordPress rolls out a fix” (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it’s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:</description>
+    </item>
+    
+    <item>
+      <title>How to make a less-leaky Heartbleed bandage</title>
+      <link>https://blog.azuki.vip/some-heartbleed-tips/</link>
+      <pubDate>Thu, 10 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/some-heartbleed-tips/</guid>
+      <description>Mashable just put out a nice-looking chart showing “Passwords You Need to Change Right Now” change in light of the recent Heartbleed carnage. However, it has some serious caveats that I wanted to mention:
+ It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then.</description>
+    </item>
+    
+    <item>
+      <title>Zero-bit vulnerabilities?</title>
+      <link>https://blog.azuki.vip/zero-bit-vulnerabilities/</link>
+      <pubDate>Sun, 16 Mar 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/zero-bit-vulnerabilities/</guid>
+      <description>The other day, I overheard Seth Schoen ask the question, “What is the smallest change you can make to a piece of software to create a serious vulnerability?” We agreed that one bit is generally sufficient; for instance, in x86 assembly, the operations JL and JLE (corresponding to “jump if less than” and “jump if less than or equal to”) differ by one bit, and the difference between the two could very easily cause serious problems via memory corruption or otherwise.</description>
+    </item>
+    
+    <item>
+      <title>a short story idea</title>
+      <link>https://blog.azuki.vip/a-short-story-idea/</link>
+      <pubDate>Sun, 26 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/a-short-story-idea/</guid>
+      <description>In the year 2014, a startup in San Francisco builds an iPhone app that successfully cures people of heartbreak, but it requires access to every permission allowed on the operating system, including some that no app has ever requested before. It only costs $2.99 though.
+The app becomes hugely popular. The heartbroken protagonist of our story logs into the Apple iStore to download it, but because the Apple iStore doesn’t support HTTP Strict Transport Security yet, an NSA FOXACID server intercepts the HTTP request and injects targeted iPhone malware into the download before Apple’s servers have a chance to respond.</description>
+    </item>
+    
+    <item>
+      <title>decentralized trustworthiness measures and certificate pinning</title>
+      <link>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</link>
+      <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
+      <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it’s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
+ Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
+    </item>
+    
+    <item>
+      <title>Aaron</title>
+      <link>https://blog.azuki.vip/aaron/</link>
+      <pubDate>Sun, 12 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/aaron/</guid>
+      <description>My co-worker Peter and I were riding the Caltrain from Mozilla to San Francisco a few days ago. A stranger sat down next to us and started talking. When I mentioned that we worked at EFF, his eyes lit up and he said, “Oh! But you guys have won, right?”
+Confused, I asked what he meant by that.
+He said, “You defeated SOPA and PIPA a couple years ago. So you’ve won.</description>
+    </item>
+    
+    <item>
+      <title>On Suicide</title>
+      <link>https://blog.azuki.vip/on-suicide/</link>
+      <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/on-suicide/</guid>
+      <description>I lost four friends and relatives of friends to suicide this past year. I’d prefer it if 2014 were different, and I’ve been trying to think about how to make that happen.
+The least I could do is offer myself to anyone who feels alone otherwise: so, if you’re at that point where you’re thinking about hurting yourself, please please please call or write to me. I’d really like that, even if you don’t feel like it would help in any way, even if we’ve never met.</description>
+    </item>
+    
+    <item>
+      <title>The most subtle joke I’ve made all year</title>
+      <link>https://blog.azuki.vip/the-most-subtle-joke-ive-made-all-year/</link>
+      <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/the-most-subtle-joke-ive-made-all-year/</guid>
+      <description>Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
+    </item>
+    
+    <item>
+      <title>First day of work</title>
+      <link>https://blog.azuki.vip/first-day-of-work/</link>
+      <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/first-day-of-work/</guid>
+      <description>Was great. Lots of tea and monitors.
+
+
+Then I went home and cooked a surprisingly-phenomenal dinner with my housemates, the first time I’ve cooked in this house. Rhodey made potatoes with oranges, Mark contributed some wild rice, and I spun up yellow lentil daal with kale.
+
+We sang some Neutral Milk Hotel songs afterward, and the future looked bright.</description>
+    </item>
+    
+    <item>
+      <title>One year later</title>
+      <link>https://blog.azuki.vip/one-year-later/</link>
+      <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/one-year-later/</guid>
+      <description>One year ago, I started writing again out of panic. Humans are very adept at forgetting the feeling of panic, so the act of crystallizing it in sentences can be cathartic if you write slowly enough.
+Last November was a weird and difficult time for me. I remember spending the night of the twenty-third in a friend’s childhood bedroom overlooking the idyllic frost-laced meadows of suburban Pennsylvania, wrapped in the mansion of an unfamiliar family that had adopted me for Thanksgiving.</description>
+    </item>
+    
+    <item>
+      <title>Debunking Google’s HSTS claims</title>
+      <link>https://blog.azuki.vip/debunking-googles-hsts-claims/</link>
+      <pubDate>Fri, 22 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/debunking-googles-hsts-claims/</guid>
+      <description>**Disclaimer**: This post was published before I started working at EFF, hence some stylistic mistakes (calling it “the EFF” rather than just “EFF”) are excusable and left uncorrected. 🙂
+Two days ago, the EFF published a report tiled, “Encrypt the Web Report: Who’s Doing What.” The report included a chart that rated several large web companies on how well they were protecting user privacy via recommended encryption practices for data in transit.</description>
+    </item>
+    
+    <item>
+      <title>Passwords, user models, and Adobe’s mistake</title>
+      <link>https://blog.azuki.vip/passwords-user-models-and-adobes-mistake/</link>
+      <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/passwords-user-models-and-adobes-mistake/</guid>
+      <description>The following is a phenomenal story for illustrating how real-life cybersecurity disasters come from a combination of technical and social failures. In this case, both were necessary for making things as catastrophic as they were.
+A couple days ago, it was announced that 130 million Adobe account credentials were compromised by a cyberattack. (If you are an Adobe customer, please make sure you’ve changed your password on any account that shared the same password.</description>
+    </item>
+    
+    <item>
+      <title>Thoughts on Cypherpunks 2.0</title>
+      <link>https://blog.azuki.vip/thoughts-on-cypherpunks-2-0/</link>
+      <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/thoughts-on-cypherpunks-2-0/</guid>
+      <description>This is a post about fear. It’s easy to write about things that everyone says they are afraid of, but less so about nightmares that you suspect might just be your own. The latter is much more distressing and also easier to push out of the way. I’ll try to elaborate on something that has been in the back of my mind.
+Last night, I went to a talk by my friend Andy titled, “Cypherpunks 2.</description>
+    </item>
+    
+    <item>
+      <title>Memphis Haiku Collection</title>
+      <link>https://blog.azuki.vip/memphis-haiku-collection/</link>
+      <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/memphis-haiku-collection/</guid>
+      <description>Tonight I found a collection of stupendously precocious (lolol) poems I wrote on a trip to Memphis at age 13. Here they are, untouched, in all their prematurely cynical glory:
+ I’m going to Hell
+  I mean Memphis, in two hours
+  Do not raid my house.
+If I don’t return
+  Do not mope like Charlie Brown
+  You’re not in my will.
+I gave my pet bird</description>
+    </item>
+    
+    <item>
+      <title>Tabstash: OneTab for Firefox</title>
+      <link>https://blog.azuki.vip/tabstash-onetab-for-firefox/</link>
+      <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/tabstash-onetab-for-firefox/</guid>
+      <description>I wrote a Firefox addon one afternoon in France called TabStash. It’s quite simple: you click a button to close all your tabs except the current one. You click it again to open all of them. (Chrome has a popular extension called OneTab that does this, but at the time there wasn’t a Firefox version.)
+A couple nights ago, I finally got around to sending it to the Mozilla addon store.</description>
+    </item>
+    
+    <item>
+      <title>On artificially-bounded futures</title>
+      <link>https://blog.azuki.vip/on-artificially-bounded-futures/</link>
+      <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/on-artificially-bounded-futures/</guid>
+      <description>I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.
+The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students.</description>
+    </item>
+    
+    <item>
+      <title>Some thoughts on the NSA and elliptic curve cryptography</title>
+      <link>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
+      <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
+      <description>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:
+========
+I’ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
+There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</description>
+    </item>
+    
+    <item>
+      <title>Some favorite git commands</title>
+      <link>https://blog.azuki.vip/some-favorite-git-commands/</link>
+      <pubDate>Mon, 02 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/some-favorite-git-commands/</guid>
+      <description>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I’d list a few lesser-known commands that I like:
+ git log _-pretty=oneline -n –abbrev-commit -G_: This shows the  latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
+    </item>
+    
+    <item>
+      <title>HTTPS Everywhere 3.3 is out!</title>
+      <link>https://blog.azuki.vip/https-everywhere-3-3-is-out/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/https-everywhere-3-3-is-out/</guid>
+      <description>Quick update to mention that a new version of the browser extension I’ve been helping with this summer has just been released!
+This release was spurred by the impending arrival of Firefox 23, which notably has Mixed Active Content Blocking enabled by default. In summary, this means that scripts loaded via HTTP on an otherwise-HTTPS site will be blocked automatically for security reasons. Although this is good news in general, it would have suddenly caused HTTPS Everywhere to become way less usable.</description>
+    </item>
+    
+    <item>
+      <title>Qu’est-ce que le Fuck?</title>
+      <link>https://blog.azuki.vip/quest-ce-que-le-fuck/</link>
+      <pubDate>Sat, 20 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/quest-ce-que-le-fuck/</guid>
+      <description>This morning, I found myself running down the middle of an empty highway in rural France at 5 AM. A litany of WTF’s rang through my head.
+The sun rose, gently, turning attention to row upon row of freshly-cut crops stretching exorbitantly toward the horizon. Beyond softly rolling hills in the distance, there was the faint quilted pattern of a tiny village, cows and baguettes and all. Except for the thin ribbon of a two-lane highway, it was vague what century this place haunted.</description>
+    </item>
+    
+    <item>
+      <title>Summertime, and the HTTP traffic sniffing is easy</title>
+      <link>https://blog.azuki.vip/summertime-and-the-http-traffic-sniffing-is-easy/</link>
+      <pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/summertime-and-the-http-traffic-sniffing-is-easy/</guid>
+      <description>So it happens that every time you access a URL that starts with “http://”, anyone on your local network can see what you’re doing with almost no effort worth writing about. This includes the page itself as well as any information that you’re transferring, like credit card numbers and passwords (which are hopefully encrypted). It’s worth reiterating that this isn’t difficult at all, even if your network is WPA2-protected, as most supposedly-secure WiFi networks are nowadays.</description>
+    </item>
+    
+    <item>
+      <title>Some thoughts on Facebook implementing forward secrecy</title>
+      <link>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</link>
+      <pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
+      <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
+ Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+    </item>
+    
+    <item>
+      <title>Marfa, TX</title>
+      <link>https://blog.azuki.vip/marfa-tx/</link>
+      <pubDate>Mon, 10 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/marfa-tx/</guid>
+      <description>Large American cities breed complacency. We grow up in the suburbs, we move to the cities after college, we get jobs and buy apartments and curate routines. We find comfort in the monoculture of coffeeshops, the ubiquity of free wifi and indie periodicals. College students flip through biology textbooks, their thumbs skimming over blue-framed iPhone screens.
+The small town of Marfa, Texas subverts urban complacency. The streets are hot, desolate, effortlessly dusty.</description>
+    </item>
+    
+    <item>
+      <title>Goodbye, Cambridge!</title>
+      <link>https://blog.azuki.vip/goodbye-cambridge/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/goodbye-cambridge/</guid>
+      <description>Tonight, if I’m lucky, I’ll sleep on this soft green velvet couch where I spent 80% of my junior year of undergrad proving the existence of dark matter, determining the electron charge, reading papers on adiabatic quantum computation, and overfitting most things that I encountered. If I’m unlucky, I’ll stay up the whole night and hack away at some Python scripts testing a hypothesis I have about bitsquatting, or maybe I’ll jailbreak my new Kindle, but probably I’ll find myself brewing a kettle of tea and nostalgically gazing at the rain falling on the porch where I used to sit and read books in summer.</description>
+    </item>
+    
+    <item>
+      <title>I &lt;3 Austin!</title>
+      <link>https://blog.azuki.vip/i/</link>
+      <pubDate>Thu, 30 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/i/</guid>
+      <description>Vegan food everywhere! Taco bars with speedy wifi! Fresca margaritas! This is the American Dream INCARNATE.
+Tomorrow I shall go explore the city and die of heat stroke.</description>
+    </item>
+    
+    <item>
+      <title>gmailcheck</title>
+      <link>https://blog.azuki.vip/gmailcheck/</link>
+      <pubDate>Fri, 24 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/gmailcheck/</guid>
+      <description>I’m just not that big a fan of usability, at least not for myself. To be clear, I do care about things being usable, but only enough to delay the eventual onslaught of social alienation. I drink water out of bowls, but only when the apartment is out of cups; I use xmonad as my window manager, but not at potlucks.
+Thus far in my computer-using life, I’ve never owned a monitor.</description>
+    </item>
+    
+    <item>
+      <title>Two maps of SF crime data</title>
+      <link>https://blog.azuki.vip/two-maps-of-sf-crime-data/</link>
+      <pubDate>Wed, 24 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/two-maps-of-sf-crime-data/</guid>
+      <description>In Jan. 2013, someone cut the brakes on my bike while it was locked up oustide Noisebridge and stole the handlebars. This was a major nuisance, since my ankle was sprained at the time and bicycling was my sole means of getting around the city.
+It was also a hard time for other reasons. Two people that I cared about had passed away the previous week in unrelated incidents that caused a great deal of shock for those who knew them.</description>
+    </item>
+    
+    <item>
+      <title>why I left grad school</title>
+      <link>https://blog.azuki.vip/why-i-left-grad-school/</link>
+      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/why-i-left-grad-school/</guid>
+      <description>[originally posted to https://yan.jottit.com/ on 1/20/13]
+Grad school was alright. I liked the people, I liked my research, and I liked the security of knowing exactly what I was going to be doing for the next 5-6 years.
+Grad school in experimental physics was the easy choice for me. I had a hella fly academic track record, liked doing research, and reportedly got one of the two highest scores in experimental physics my year.</description>
+    </item>
+    
+    <item>
+      <title>40 minutes in NYC</title>
+      <link>https://blog.azuki.vip/40-minutes-in-nyc/</link>
+      <pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/40-minutes-in-nyc/</guid>
+      <description>40 minutes in Tribeca on the way from Newtown to Boston
+is all we have
+before the parking meter runs out
+so I transcribe the light of the setting sun in shorthand
+(a cricket clutter of shutter clicks)
+while you look for a bathroom.
+the sun is running out
+like a roll of toilet paper
+waning into weary ribbons
+as it soars toward heaven,
+forgetful of the symmetries of the parabola,</description>
+    </item>
+    
+    <item>
+      <title>r*</title>
+      <link>https://blog.azuki.vip/untitled-3/</link>
+      <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/untitled-3/</guid>
+      <description>do you suffer from depression
+i want to ask but meanwhile
+electronic trance pours a silky tea into our ears
+steeped in the red that pervades this room
+here we are in San Francisco on a bright night
+two people alone with our insomnia
+blooming like violent wildflowers and loose lightning
+our mouths draw the shapes of dim perceptions washed from a broken flow of melatonin
+you spread over the sheets, skinny as daylight in winter,</description>
+    </item>
+    
+    <item>
+      <title>composed in SFO airport while waiting for the redeye back to Boston</title>
+      <link>https://blog.azuki.vip/hello-world/</link>
+      <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/hello-world/</guid>
+      <description>so I don’t know whether to turn around at your doorway
+so hesitation drips the milk from sore eyes
+so I scratch the walls
+so I peel flakes of plaster
+tumble like dead moths
+erode my fingernails
+which have grown long and desperate like homeless shadows
+before the sun rises
+we dimple red sheets under hard white ceilings
+limbs curled into smiles
+and then we are chasing each other
+canyons underfoot</description>
+    </item>
+    
+  </channel>
+</rss>

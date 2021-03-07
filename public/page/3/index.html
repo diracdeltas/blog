@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+	<meta name="generator" content="Hugo 0.81.0" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      discrete blogarithm &middot; 
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>
+      yan&rsquo;s blog
+    </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item  active " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+
+
+
+<div class="posts">
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/tls-everything/">tls everything</a></h1>
+        <span class="post-date">Dec 10, 2014</span>
+        <p>Yesterday the W3C <a href="http://www.w3.org/2001/tag/">Technical Architecture Group</a> published a new finding titled, “<a href="https://w3ctag.github.io/web-https/">The Web and Encryption</a>.” In it, they conclude:</p>
+<blockquote>
+<p>“. . . the Web platform should be designed to <strong>actively prefer secure origins</strong> — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the <strong>end-to-end nature of TLS encryption must not be compromised</strong> on the Web, in order to preserve this trust.”</p>
+</blockquote>
+<p>To many <a href="https://eff.org/https-everywhere">HTTPS Everywhere</a> users like myself, this seemed a decade or so beyond self-evident. So I was surprised to see a <a href="http://lists.w3.org/Archives/Public/www-tag/2014Dec/0018.html">flurry</a> of <a href="http://lists.w3.org/Archives/Public/www-tag/2014Dec/0051.html">objections</a> appear on the public mailing list thread discussing the TAG findings.</p>
+<p>It seems bizarre to me that security-minded web developers are spending so much effort hardening the web platform by designing and implementing standards like CSP Level 2, WebCrypto, HTTP Public Key Pinning, and Subresource Integrity, while others are still debating whether requiring the bare minimum security guarantee on the web is a good thing. While <a href="https://blog.matatall.com/">some</a> sites are preventing any javascript from running on their page unless it’s been whitelisted, <a href="http://www.nytimes.com/">other</a> sites can’t even promise that any user will ever visit a page that hasn’t been tampered with.</p>
+<div id="attachment_502" style="width: 430px" class="wp-caption alignnone">
+  <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png"><img class="size-full wp-image-502" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png" alt="wtf" width="420" height="604" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png 420w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf-208x300.png 208w" sizes="(max-width: 420px) 100vw, 420px" /></a>
+  <p class="wp-caption-text">
+    small consolation: the second one has more downloads
+  </p>
+</div>
+<p>Obviously we shouldn’t ignore arguments for a plaintext-permissive web; they’re statistically useful as indicators of misconceptions about HTTPS and sometimes also as indicators of real friction that website operators face. What can we learn?</p>
+<p>Here’s some of my observations and responses to common anti-HTTPS points (as someone who lurks on standards mailing lists and often pokes website operators to deploy HTTPS, both professionally and recreationally):</p>
+<ol>
+<li> <em>“HTTPS is expensive and hard to set up.”</em> This is objectively getting better. Cloudflare offers automatic <a href="https://blog.cloudflare.com/introducing-universal-ssl/">free SSL</a> to their CDN customers, and <a href="https://sslmate.com/">SSLMate</a> lets you get a cert for $10 using the command line. In the near future, the <a href="https://letsencrypt.org/">LetsEncrypt</a> cert authority will offer free certificates, deployed and managed using a nifty new <a href="https://github.com/letsencrypt/acme-spec">protocol</a> called ACME that makes the entire process take &lt;30 seconds.</li>
+<li><em>“There is no value in using HTTPS for data that is, by nature, public (such as news articles).”</em> This misses the point that aggregated browsing patterns, even for only public sites, can reveal a lot of private information about a person. If it weren’t, advertisers wouldn’t use third-party tracking beacons. QED.</li>
+<li><em>“TLS is slow.”</em> Chris Palmer thought you would ask this and gave an excellent <a href="https://www.youtube.com/watch?v=ayD0LiZkWLQ">presentation</a> explaining why not. tl;dr: TLS is usually not noticeably slower, but if it is, chances are that you can <a href="https://istlsfastyet.com/">optimize away the difference</a> (warning: the previous link is highly well-written and may cause you to become convinced that TLS is not slow).</li>
+<li><em>“HTTPS breaks feature X.”</em> This is something I’m intimately familar with, since most bug reports in HTTPS Everywhere (which I used to maintain) were caused by the extension switching a site to HTTPS and suddenly breaking some feature. <a href="https://support.mozilla.org/en-US/kb/how-does-content-isnt-secure-affect-my-safety">Mixed content blocking</a> was the biggest culprit, but there were also cases where CORS stopped working because the header whitelisted the HTTP site but not the HTTPS one. (I also expected some “features” to break because HTTPS sites don’t leak referer to HTTP ones, but surprisingly this never happened.) Luckily if you’re using HTTPS Everywhere in Chrome, there is a panel in the developer console that helps you detect and fix mixed content on websites (shown below). Setting the CSP report-only header to report non-HTTPS subresources is similarly useful but doesn’t tell you which resources can be rewritten.<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png"><img class="alignnone size-full wp-image-501" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png" alt="https-switch" width="1293" height="843" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png 1293w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-300x195.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-1024x667.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-624x406.png 624w" sizes="(max-width: 1293px) 100vw, 1293px" /></a></li>
+<li><em>“HTTPS gives users a false sense of security.”</em> This comes up surprisingly often from various angles. Some people frame this as, <em>“The CA system isn’t trustworthy and is breakable by every government,”</em> while others say, <em>“Even with HTTPS, you leak DNS lookups and valuable metadata,”</em> and others say, <em>“But many site certificates are managed by the CDN, not the site the user thinks they’re visiting securely.”</em> The baseline counterargument to all of these is that encryption, even encryption that is theoretically breakable by some people, is better than no encryption, which doesn’t need to be broken by anyone. CA trustworthiness in particular is getting better with the implementation of certificate transparency and key pinning in browsers; let’s hope that we solve DNSSEC someday too. Also, regardless of whether HTTPS gives people a false sense of security, HTTP almost certainly gives the average person a false sense of security; otherwise, why would anyone submit their Quora password in plaintext?<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png"><img class="wp-image-504 " src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png" alt="quora" width="603" height="462" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png 1038w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-1024x784.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-624x477.png 624w" sizes="(max-width: 603px) 100vw, 603px" /></a></li>
+</ol>
+<p>In summary, it’s very encouraging to see the TAG expressing support for a ubiquitous transit encryption on the web (someday), but from the resulting discussion, it’s clear that developers still need to be convinced that HTTPS is efficient, reliable, affordable, and worthwhile. I think the TAG has a clear path forward here: separate the overgrown anti-HTTPS mythology from the actual measurable obstacles to HTTPS deployment, and encourage standards that fix real problems that developers and implementers have when transitioning to HTTPS. <a href="https://github.com/letsencrypt/acme-spec/blob/master/draft-barnes-acme.txt">ACME</a>, <a href="https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21">HPKP</a>, <a href="https://tools.ietf.org/html/rfc6962">Certificate Transparency</a>, and especially <a href="https://w3c.github.io/webappsec/specs/powerfulfeatures/">requiring minimum security standards</a> for powerful new web platform features are good examples of work that motivates website operators to turn on HTTPS by lowering the cost and/or raising the benefits.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/certificate-transparency-for-pgp/">certificate transparency for PGP?</a></h1>
+        <span class="post-date">Aug 14, 2014</span>
+        <p>Yesterday, Prof. Matthew Green wrote a nice <a href="http://blog.cryptographyengineering.com/2014/08/whats-matter-with-pgp.html">blog post</a> about why PGP must die. Ignoring the UX design problem for now, his four main points were: (1) the keys themselves are too unwieldy, (2) key management is hard, (3) the protocol lacks forward secrecy, and (4) the crypto is archaic/non-sane by default.</p>
+<p>Happily, (1) and (4) can be solved straightforwardly using more modern crypto primitives like Curve25519 and throwing away superfluous PGP key metadata that comes from options that are ignored 99.999999% of the time. Of course, we would then break backwards compatibility with PGP, so we might as well invent a protocol that has forward/future secrecy built-in via something like Trevor Perrin’s <a href="https://github.com/trevp/axolotl/wiki">axolotl ratchet</a>. Yay.</p>
+<p>That still leaves (2) – the problem of how to determine which public key should be associated with an endpoint (email address, IM account, phone number, etc.). Some ways that people have tried to solve this in existing encrypted messaging schemes include:</p>
+<ol>
+<li>A central authority tells Alice, “This is Bob’s public key”, and Alice just goes ahead and starts using that key. iMessage does this, with Apple acting as the authority AFAICT. Key continuity may be enforced via pinning.</li>
+<li>Alice and Bob verify each others’ key fingerprints via an out-of-band “secure” channel – scanning QR codes when they meet in person, reading fingerprints to each other on the phone, romantically comparing short authentication strings, and so forth. This is used optionally in OTR and ZRTP to establish authenticated conversations.</li>
+<li>Alice tries to use a web of trust to obtain a certification chain to Bob’s key. Either she’s verified Bob’s key directly via #2 or there is some other trust path from her key to Bob’s, perhaps because they’ve both attended some “parties” where people don’t have fun at all. This is what people are supposed to do with PGP.</li>
+<li>Alice finds Bob’s key fingerprint on some public record that she trusts to be directly controlled by Bob, such as his Twitter profile, DNS entry for a domain that he owns, or a gist on his Github account. This is what Keybase.io does. (I only added this one after <strong>@gertvdijk</strong> pointed it out on Twitter, so thanks Gert.)</li>
+</ol>
+<p>IMO, if we’re trying to improve email security for as many people as possible, the best solution minimizes the extent to which the authenticity of a conversation depends on user actions. Key management should be invisible to the average user, but it should still be auditable by paranoid folks. (Not just Paranoid! folks, haha.)</p>
+<p>Out of the 3 options above, the only one in which users have to do zero work in order to have an authenticated conversation is #1. The downside is that Apple could do a targeted MITM attack on Alice’s conversation with Bob by handing her a key that Apple/NSA/etc. controls, and Alice would never know. (Then again, even if Alice verified Bob’s key out-of-band, Apple could still accomplish the same thing by pushing a malicious software update to Alice.)</p>
+<p>Clearly, if we’re using a central authority to certify people’s keys, we need a way for anyone to check that the authority is not misbehaving and issuing fake keys for people. Luckily there is a scheme that is designed to do exactly this but for TLS certificates – <a href="http://www.certificate-transparency.org/">Certificate Transparency</a>.</p>
+<p>How does Certificate Transparency work? The end result is that a client that enforces Certificate Transparency (CT) recognizes a certificate as valid** **if (1) the certificate has been signed by a recognized authority (which already happens in TLS) and (2) the certificate has been verifiably published in a public log. The latter can be accomplished through efficient mathematical proofs because the log is structured as a Merkle tree.</p>
+<p>How would CT work for email? Say that I run a small mail service, yanmail.com, whose users would like to send encrypted emails to each other. In order to provide an environment for crypto operations that is more sandboxed and auditable than a regular webpage, I provide a YanMail browser extension. This extension includes (1) a PGP or post-PGP-asymmetric-encryption library, (2) a hardcoded signing key that belongs to me, and (3) a library that implements a Certificate Transparency auditor.</p>
+<p>Now say that <a href="mailto:alice@yanmail.com">alice@yanmail.com</a> wants to email <a href="mailto:bob@yanmail.com">bob@yanmail.com</a>. Bob has already registered his public key with yanmail.com, perhaps by submitting it when he first made his account. Alice types in Bob’s address, and the YanMail server sends her (1) a public key that supposedly belongs to Bob, signed by the YanMail signing key, and (2) a CT log proof that Bob’s key is in the public CT log. Alice’s CT client verifies the log proof; if it passes, then Alice trusts Bob’s key to be authentic. (Real CT is more complicated than this, but I think I got the essential parts here.)</p>
+<p>Now, if YanMail tries to deliver an NSA-controlled encryption key for Bob, Bob can at least theoretically check the CT log and know that he’s being attacked. Otherwise, if the fake key isn’t in the log, no other YanMail user would trust it. This is an incremental improvement over the iMessage key management situation: key certification trust is still centralized, but at least it’s auditable.</p>
+<p>What if Alice and Bob want to send encrypted email to non-YanMail users? Perhaps the browser extension also hard-codes the signing keys for these mail providers, which are used to certify their users’ encryption keys. Or perhaps the mail providers’ signing keys are inserted into DNS with DANE+DNSSEC. Or perhaps the client just trusts any valid CA-certified signing key for the mail provider.</p>
+<p>For now, with the release of Google <a href="https://code.google.com/p/end-to-end/">End-to-End</a> and Yahoo’s <a href="http://arstechnica.com/security/2014/08/yahoo-to-begin-offering-pgp-encryption-support-in-yahoo-mail-service/">announcement</a> to start supporting PGP as a first-class feature in Yahoo mail, CT for (post)-PGP seems promising as a way for users of these two large webmail services to send authenticated messages without having to deal with the pains of web-of-trust key management. Building better monitoring/auditing systems can be done incrementally once we get people to actually *use* end-to-end encryption.</p>
+<p>Large caveat: CT doesn’t provide a solution for key revocation as I understand it – instead, in the TLS case, it still relies on CRL/OCSP. So if Bob’s PGP/post-PGP key is stolen by an attacker who colludes with the YanMail server, they can get Alice to send MITM-able messages to Bob encrypted with his stolen key unless there is some reliable revocation mechanism. Ex: Bob communicates out-of-band to Alice that his old key is revoked, and she adds the revoked key to a list of keys that her client never accepts.</p>
+<p><em>Written on 8/14/14 from a hotel room in Manila, Philippines</em></p>
+<p>_==============</p>
+<p>_</p>
+<p><strong>Update (8/15/14)</strong>:</p>
+<p>Thanks for the responses so far via Twitter and otherwise. Unsurprisingly, I’m not the first to come up with this idea. Here are some reading materials related to CT for e2e communication:</p>
+<ul>
+<li><a href="https://moderncrypto.org/mail-archive/messaging/2014/000226.html">Discussion thread on the Modern Crypto messaging mailing list</a></li>
+<li><a href="https://github.com/andres-erbsen/dename">Dename</a> (semi-decentralized scheme for associating usernames with profiles, also uses Merkle trees)</li>
+<li><a href="https://eprint.iacr.org/2013/595.pdf">Paper on Enhanced Certificate Transparency for e2e mail (pdf)</a></li>
+<li><a href="http://sump2.links.org/files/RevocationTransparency.pdf">Ben Laurie’s paper on Revocation Transparency (pdf)</a></li>
+</ul>
+<p><strong>Update (8/29/14):</strong></p>
+<p>Since I posted this, folks from Google presented a similar but more detailed <a href="https://code.google.com/p/end-to-end/wiki/KeyDistribution">proposal for E2E</a>. There has been a nice <a href="https://moderncrypto.org/mail-archive/messaging/2014/000708.html">discussion</a> about it on the Modern Crypto list, in addition to the one in the comments section of the proposal.</p>
+<p>** Update (7/18/15):**</p>
+<p>I know it’s pretty silly to be updating this after a year, but it’d be a travesty to not mention <a href="http://coniks.org">CONIKS</a> here.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/hopex/">HOPEX</a></h1>
+        <span class="post-date">Jul 21, 2014</span>
+        <p>4 years ago, I went to <a href="http://www.hope.net">HOPE</a> for the first time on a last-minute press pass from my <a href="http://tech.mit.edu/">college newspaper</a>. Some relevant facts about the trip:</p>
+<ul>
+<li>I was 19 and had never been to a hacker con before.</li>
+<li>I didn’t identify as a hacker (or an activist).</li>
+<li>I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</li>
+<li>HOPE that year was the pinnacle of paranoia in probably the most paranoid period of my life. This was 2010, a few months after Chelsea Manning was arrested for leaking a trove of documents to WikiLeaks. Coincidentally, Chelsea Manning had visited my house in the autumn of 2009; this was cause enough for suspicion from certain groups and frequent questions from reporters once the WikiLeaks story broke. Julian Assange was scheduled to give the keynote at HOPE, so you can imagine the atmosphere that year.</li>
+<li>Overall it was a fun experience regardless.</li>
+</ul>
+<p>This year I finally made it back to HOPE. Things were a little different than last time:</p>
+<ul>
+<li>I flew in from Europe instead of driving from Boston.</li>
+<li>I was representing EFF and Freedom of the Press Foundation, two organizations that were almost-universally loved by the attendees.</li>
+<li>I co-presented two talks in front of overflowing rooms of people and got lots of audience feedback.</li>
+<li>I didn’t have time to talk to all the people that I wanted to, much less all the people who were trying to ask me questions.</li>
+<li>Whereas last time I made it to several talks per day, this year I was working from 4 AM in the morning until whenever-I-had-to-give-a-presentation for the first 2/3rds of the conference, then running off to meetings or working shifts at the EFF/FPF booths. As a result, I made it to a total of 3 or 4 talks that weren’t mine. 🙁</li>
+<li>It was eerie to have contributed to a <a href="https://pressfreedomfoundation.org/securedrop">project</a> that kept getting name-dropped during the conference by the likes of Daniel Ellsberg and Barton Gellman. Literally dozens of people approached me to say that they wanted to help out with SecureDrop or set up an instance. Wow!</li>
+</ul>
+<p>Predictably, it was strange to be a very-minor celebrity at a conference where I’d previously felt like an outsider and deliberately tried to make myself invisible. 4 years ago, my experience in the last 4 days would have seemed impossible for a plethora of reasons: I wasn’t a good public speaker*, I had a lot of self-doubt that I could contribute anything to the event,  I felt weird for not having the same interests and background as the vast majority of people at HOPE, I didn’t know much about computers, I didn’t think that I was working on anything interesting, etc.</p>
+<p>*Public speaking workshops are immensely helpful here; so does taking an introductory voice acting class.</p>
+<p>Despite the slowly-fading jetlag and piling exhaustion after a month of international travel, it felt nice to contribute back to a conference that had been an eye-opening experience to me the first time.</p>
+<p><em>Many thanks to the following people for working on presentations with me, giving last-minute feedback, and/or letting me sleep in their room: Parker Higgins, Bill Budington, Garrett Robinson, Trevor Timm, Runa Sandvik, James Dolan, Kevin Gallagher, Noah Swartz. Also thanks for Oliver Day for appointing me CSO of his company even though I haven’t fixed the SSL cert for his website yet.</em></p>
+<div style="width: 610px" class="wp-caption alignnone">
+  <img src="https://pbs.twimg.com/media/Bs8Q1jgCYAANSFB.jpg" alt="" width="600" height="398" />
+  <p class="wp-caption-text">
+    Photo by Scott J. O&#8217;Brien (@scottjobrien)
+  </p>
+</div>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/software-transparency/">Software Transparency: Part 1</a></h1>
+        <span class="post-date">Jul 11, 2014</span>
+        <p>Say that you want to “securely” acquire an app called EncryptedYo for “securely” communicating with your friends. You go to the developer’s web site, which is HTTPS-only, and download a binary executable. Done!</p>
+<p>Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure that there’s a valid trust path to it from your own key, verify the detached signature that they’ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you’ve downloaded before installing it.</p>
+<p>This is good enough as long as the only things you’re worried about are MITM attacks on your network connection and compromise of the server hosting the software. It’s not good enough if you’re worried about any of the following:</p>
+<ul>
+<li>The developer getting a secret NSA order to insert a backdoor into the software.</li>
+<li>The developer intentionally making false claims about the security of the software.</li>
+<li>The developer’s build machine getting compromised with malware that injects backdoors during the packaging process (pre-signing) or even a malicious compiler.</li>
+</ul>
+<p>All of the above are *Very Real Worries* (TM) that users should have when installing software. As a maintainer of a <a href="https://www.eff.org/https-everywhere">security-enhancing browser extension</a> used by millions of people, I used to worry about the third one before HTTPS Everywhere had a deterministic build process (more on that below). If my personal laptop was compromised by a malicious version of zip that rewrote the static update-fetching URL in the HTTPS Everywhere source code before compressing and packaging it, literally millions of Firefox installations would be pwned within a few days if I didn’t somehow detect the attack before signing the package (which is basically impossible to do in general).</p>
+<p>You might instinctively think that the scenarios above are at least *detectable* if the software is open source and has been well-audited, but that’s not really true. Ex:</p>
+<ol>
+<li>How do I know that some binary executable that I downloaded from <a href="https://coolbinaryexecutables.com">https://coolbinaryexecutables.com</a> actually corresponds to the well-audited, peer-reviewed source code posted at <a href="https://github.com/coolstuff/EncryptedYo.git?">https://github.com/coolstuff/EncryptedYo.git?</a></li>
+<li>How do I know that the binary executable that I downloaded is the same as the one that everyone else downloaded? In other words, how can I be sure that it’s not my copy and *only* my copy that has a secret NSA backdoor?</li>
+</ol>
+<p>So it looks like there’s a problem because we usually install software from opaque binaries or compressed archives that have no guarantee of actually corresponding to the published, version-controlled source code. You might try to solve this by cloning the EncryptedYo repo and building it yourself. You can even fetch it over Tor and/or compare your local git HEAD to someone else’s copy’s if you want a stronger guarantee against a targeted backdoor.</p>
+<p>Unfortunately that’s too much to ask the average person to do *every single time* they need to update the software, especially if EncryptedYo’s target audience includes non-technical people (ex: Glenn Greenwald).</p>
+<p>This is why post-Snowden software developers need to start working on new code packaging and installation mechanisms that preserve “software transparency,” a phrase perhaps first used in this context by Seth Schoen. Software transparency, unlike open source by itself, is a guarantee that the packages you’re installing or updating were created by building the published source code.</p>
+<p>(Side note: Software transparency has open source code as a prerequisite, but a similar concept that I’ve been calling “binary transparency” can be applied to closed-source software as well. Binary transparency is a guarantee that the binary you’re downloading is the same as the one that everyone else is downloading, but not that the binary is non-compromised. One way to get this is to compare the checksum of your downloaded binary gainst an out-of-band append-only cryptographically-verifiable log (phew) of binary checksums, similar to what Ben Laurie proposed in <a href="http://www.links.org/?p=1262">this blog post</a>.)</p>
+<p>In the last year, software transparency has finally started to become a front-and-center goal of some projects. Organizations like Mozilla and EFF are <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=885777">beginning</a> to <a href="https://github.com/EFForg/https-everywhere/commit/e06a13a3283d93c96323970e1e43a897e4bfc944">work</a> on fully-reproducible build processes so that other people can independently build their software packages from source and make sure that their checksums are the same as the ones posted on mozilla.org or eff.org. Mike Perry of the Tor Project has <a href="https://blog.torproject.org/blog/deterministic-builds-part-one-cyberwar-and-global-compromise">written</a> about the <a href="https://blog.torproject.org/blog/deterministic-builds-part-two-technical-details">painstaking, years-long process</a> that it took to compile the Tor Browser Bundle deterministically inside a VM, but for many other software projects, the path to a reproducible build is as simple as <a href="https://github.com/devrandom/gitian-builder/blob/master/bin/canon-zip">normalizing timestamps</a> in zip.</p>
+<p>Of course, a reproducible build proccess doesn’t by itself impact the average user, who is unlikely to try to replicate the build process for Firefox for Android before installing it on their phone. But at least it means that if Mozilla started posting backdoored binaries because their build machine was compromised, some members of their open source development community could in theory detect the attack after-the-fact and raise suspicions. That’s more than we could do before.</p>
+<p>IMO, every reasonably-paranoid software developer should be trying to adopt an independently reproducible build process. <a href="https://gitian.org">Gitian</a> is a good place to start.</p>
+<p>(Part 2 of this series, which I haven’t written yet, is probably going to be about implementing software transparency in a way that protects end users before they get pwned, which nobody is doing much of yet AFAIK. In particular, it would be nice to start discussing ways to enforce software transparency for resources loaded in a browser, in hopes that this will bring either some clarity or more shouting to the debate about whether in-browser crypto apps are a good idea.)</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/stuff-i-use/">stuff i use</a></h1>
+        <span class="post-date">Jun 25, 2014</span>
+        <p>This was my favorite part of <a href="http://yan.zhu.usesthis.com/">my interview</a> with The Setup:</p>
+<blockquote>
+<h4 id="what-would-be-your-dream-setup">What would be your dream setup?</h4>
+<p>Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for <a href="https://developers.google.com/android/?csw=1" title="A mobile phone platform.">Android</a>/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements. (I’ll work on the latter if someone else does the first two.)</p>
+<p>Slightly more ambitious: every device should come with root access for the user if they want it. Going down the stack, it would be nice if all computing devices by default ran a <a href="https://www.fsf.org/campaigns/free-bios.html" title="An article about the benefits of a free BIOS.">free BIOS</a> and other free firmware on top of easily-modifiable, open hardware.</p>
+<p>Respecting the autonomy of users by allowing them to understand and modify their devices is crucial for creating widespread technical literacy and, subsequently, a world in which ordinary people can detect when their rights are being threatened by technology providers and governments. I have a crazy dream that, someday, ordinary families will sit down at their kitchen tables to install software updates together and read the change logs aloud over breakfast.</p>
+<p>Shooting for the stars now: let’s design computers so that software engineering doesn’t force us to occupy constrained, mostly-immobile positions in florescent-lit rooms for 8+ hours every day. I’d like to code and go backpacking at the same time.</p>
+</blockquote>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/life-exercises/">life exercises</a></h1>
+        <span class="post-date">Jun 16, 2014</span>
+        <p>Every week, answer “yes” to one question that you would instinctively say no to.</p>
+<p>Don’t spend money or sleep in a real bed for as long as possible.</p>
+<p>Buy a pound of the ugliest paint that you can find.</p>
+<p>Keep a journal of thoughts you avoid.</p>
+<p>Block port 80 for a day.</p>
+<p>Be kind at random.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/a-boring-xss-dissection/">a boring xss dissection</a></h1>
+        <span class="post-date">Jun 12, 2014</span>
+        <p>Hi there. Have a funny picture:</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji.png"><img class="alignnone  wp-image-401" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji.png" alt="td_emoji" width="710" height="527" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji.png 1110w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji-300x222.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji-1024x760.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/td_emoji-624x463.png 624w" sizes="(max-width: 710px) 100vw, 710px" /></a></p>
+<p>Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally <a href="http://heartbleed.com/">broken</a>, compared to 2-3 hours for an <a href="http://abcnews.go.com/Technology/tweetdeck-hacked-site-affected-security-issue/story?id=24092189">XSS</a> bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.)</p>
+<p>I don’t use TweetDeck, but I managed to download the much-XSSed Chrome extension today shortly before it was fixed. I unminified the content script (the one that modifies page content on the client side, therefore probably causing whatever XSS was there) and took a diff with the patched version (3.7.2) after it came out. <a href="http://pastebin.com/R57Y8rVy">Pastebin here</a>.</p>
+<p>A couple things stood out:</p>
+<ol>
+<li>Some people on Twitter (or maybe the people who XSSed their accounts, haha) implied that the XSS was due to Twitter not escaping user input. This seems false, because I can see safely-escaped HTML in HTTP responses from Twitter in my browser. This is sort of interesting, because it implies that the TweetDeck client is somehow unescaping escaped HTML.</li>
+<li>The bulk of the not-very-well-obfuscated-but-still-hard-to-read diff between 3.7.1 and 3.7.2 was ripping out emoji “parsing” code. “parsing” is in quotes because TweetDeck processes tweets and tries to replace all Emoji characters with HTML image tags before showing them to you.</li>
+</ol>
+<p>3.7.2, quite happily, replaced the “emojify” function with the identity function (pictured above).</p>
+<p>After staring at the diff some more, I sort-of figured out what was going on. TweetDeck runs a utility function on the DOM that extracts every text node, t, that contains an emoji character. Then for each text node t, it does the equivalent of:</p>
+<pre>someDiv.innerHTML = this.emoji.parse(t.nodeValue);
+var i = document.createDocumentFragment();
+while (someDiv.hasChildNodes()) {
+  i.appendChild(someDiv.firstChild);
+}
+t.parentNode.replaceChild(i, t);</pre>
+<p>where emoji.parse is the function that replaces emoji with HTML img tags.</p>
+<p>“innerHTML is evil!!” one might say. This is true, but not the sole problem in this case because Chrome and Firefox will not automatically execute js inside <script> tags created by setting innerHTML. While it’s true that you can get scripts to execute anyway through <img onError=&#8221;&#8230;&#8221;> or whatever, there were consistent reports today of people who got XSSed through <script> tags in tweets.</p>
+<p>So given that it’s not 120% obvious where the bug is in the TweetDeck code, here’s what happens when you try out the code snippet above on a tweet containing both XSS payload and emoji, like this one:</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1.png"><img class="alignnone size-full wp-image-403" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1.png" alt="xss1" width="1142" height="834" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1-300x219.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1-1024x747.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss1-624x455.png 624w" sizes="(max-width: 1142px) 100vw, 1142px" /></a></p>
+<p>For convenience, I ID’ed the element containing the tweet text with “xss-test”. Looks like the innerHTML is properly escaped to start with!</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0.png"><img class="alignnone size-full wp-image-405" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0.png" alt="xss0" width="1142" height="739" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0-300x194.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0-1024x662.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss0-624x403.png 624w" sizes="(max-width: 1142px) 100vw, 1142px" /></a></p>
+<p>Now let’s grab the text node corresponding to the tweet, create a new div, and set the innerHTML of the div to be the nodeValue of our text node (TweetDeck would have converted emoji into images at this point, but this was already done to start with). Note that the new innerHTML doesn’t seem to have safe HTML entity-encoded characters (&lt;, &gt;) anymore!</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3.png"><img class="alignnone size-full wp-image-406" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3.png" alt="xss3" width="1142" height="835" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3-300x219.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3-1024x748.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss3-624x456.png 624w" sizes="(max-width: 1142px) 100vw, 1142px" /></a></p>
+<p>Moving on, we create a documentFragment and append *both* children of the new div to it. Note that the second child is a script element, which wasn’t originally part of the DOM! Finally, we do some DOM surgery to replace the original text node with our newly-created fragment.</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5.png"><img class="alignnone size-full wp-image-407" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5.png" alt="xss5" width="1142" height="835" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5.png 1142w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5-300x219.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5-1024x748.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/06/xss5-624x456.png 624w" sizes="(max-width: 1142px) 100vw, 1142px" /></a></p>
+<p>And voila, the <script>…</script> text in the tweet disappears, because now the browser sees it as a script element instead of as text.</p>
+<p>It’s not hard to imagine ways this bug could have been created. UX designer says, “We need to add better emoji rendering before the release next week.” Another developer decides that emoji need to be converted into images and copies-and-modifies some code from the same script that renders “@” mentions in text as HTML links but forgets to re-sanitize the non-emoji text. The code looks pretty okay, with no obvious problems, so it gets pushed out.</p>
+<p>This is the sort of thing that I suspect is *all over* every semi-clever agilely-developed app, waiting to be uncovered as soon as a mischievious Austrian teenager accidentally hits the wrong key. Most applications simply don’t have enough users for these bugs to surface yet, and many will die out before they ever do, which is a blessing in itself. Sometimes the bugs are found and fixed before they explode all over Ars Technica, either by a scrutinous engineer or by an honest user or perhaps by someone looking to claim a bug bounty.</p>
+<p>But these generally aren’t bugs that can be trivially prevented, unless the developer who’s working on improving emoji rendering for your project also happens to have enough of a security background to know that changing some safe innerHTML to the nodeValue of the safe innerHTML will suddenly create dangerous innerHTML. Or perhaps if you had a dedicated person reviewing each commit for security holes as it comes in, or at least a pre-release hook for automated fuzz testing to check for unwanted script execution, but last I checked, nobody was telling web application devs to do this.</p>
+<p>My favorite solution is actually for everyone to just deal with being XSSed semi-frequently in the future. This means that developers should stop exposing sensitive tokens to javascript (or quickly expire tokens that are), use safe CSP directives whenever possible, and make it easy for users to review and undo actions. On the other side of the bargain, users should either start using NoScript-like browser settings to whitelist Javascript or at least blacklist known Rickroll links.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/the-other-blog-post-i-was-going-to-write/">the other blog post i was going to write</a></h1>
+        <span class="post-date">Jun 12, 2014</span>
+        <p>It’s always unnerving to realize that your happiness is highly correlated with some particular event, object, person, substance, or thought pattern. Various components of pop culture have led us to believe that happiness is {a warm gun | two kinds of ice cream | high serotonin levels | coca-cola} and so forth, but nobody ever says that happiness is a volatile multidimensional product of quickly-fluctuating vectors along a dozen axes.</p>
+<p>For a while I thought that happiness was jumping on a plane with the wrong power adapter and a boarding pass that you aren’t sure how you managed to pay for. I did this last week, and it felt good (long walks, surrealistic jetlag, mint tea, sharing beds with old friends, riesling, cold arms, trampling through abandoned grass) until I got a 103 degree (F) fever on the plane ride home and was decapacitated for two days.</p>
+<p>One loveable thing about a non-permanent, non-excruciating-but-still-debilitating sickness is that it pares down expectations until they’re almost manageable. Happiness becomes a two-step process: (1) regain appetite until soup sounds like it would be okay, and (2) obtain soup.</p>
+<p>As I got better, I started to realize that happiness, for me, is usually predicated on feeling engaged with the world and thereby interested in outcomes. This may not actually be true, but sometimes plausibility and convenience in the right proportions is better than truth.</p>
+<p>Academic systems, at least in the limit of platonic idealism, are all about being engaged with the world, insofar as exploring it makes you feel like you’re more a part of it. Travel is similar. So are urban exploration and reading books and the process of growing up.</p>
+<p>This year, for the first time, it all seems incredibly hard. Increasingly often in the past few weeks, I find myself having to make an effort to feel like I’m adding something to the world and vice versa. A stronger and scarier form of this feeling is stagnation.</p>
+<p>So, yesterday, I decided to start consciously keeping track of things that make me feel engaged with the world, even if they only work for a moment or two. Hitting the submit button on a blog post is one of them; another is thoughtfully-placed punctuation that ever-so-slightly tilts the tone of a sentence. Yet another: grasping another small morsel of German conjugation.</p>
+<p>Re: the sibling topic of optimizing for long-term fulfillment: It seems increasingly debatable to me whether this is all folklore and guesswork outside of well-established health practices (ex: not smoking cigarettes).</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/wordpress-fail/">don’t forget to secure cookies ppl</a></h1>
+        <span class="post-date">May 23, 2014</span>
+        <p>Update (5/28/14): Regrettably, most of the stories covering this blog post have been all “OMG EVERYTHING IS BROKEN” rather than “Here’s how to make things better til WordPress rolls out a fix” (which I humbly believe will take a while to *fully* fix, given that their SSL support is so patchy). So, given that most people reading this are probably coming from one of those articles, I think it’s important to start with the actionable items that people can do to mitigate cookie-hijacking attacks on WordPress:</p>
+<ol>
+<li>If you’re a developer running your own WordPress install, make sure you set up SSL on all relevant servers and configure WordPress to auth flag cookies as “secure.”</li>
+<li>If you’re a WordPress user, don’t be logged into WordPress on an untrusted network, or use a VPN. If you are and you visit a wordpress.com site (which confusingly may not actually have a wordpress.com domain name), your auth cookies are exposed.</li>
+<li>[Experimental, probably not recommended] You can manually set the “secure” flag on the WP auth cookies in your browser. There’s no guarantee that this works consistently, since the server can always send a set-cookie that reverts it into an insecure cookie. It may cause some WP functionality to break.</li>
+<li>If you suspect that your WP cookie may have been stolen in the past, you can invalidate it by (1) waiting 3 years for it to expire on the server or (2) resetting your wordpress.com password. Note that logging out of WordPress does *not* invalidate the cookie on the server, so someone who stole it can use it even after you’ve logged out. I verified that resetting your WP password does invalidate the old cookie; there may be other ways, but I haven’t found any.</li>
+</ol>
+<p>Original post below.</p>
+<p> </p>
+<p>While hunting down a bug report for <a href="https://github.com/EFForg/privacybadgerfirefox">Privacy Badger</a>, I noticed the “wordpress_logged_in” cookie being sent over clear HTTP to a WordPress authentication endpoint (<a href="http://r-login.wordpress.com/remote-login.php">http://r-login.wordpress.com/remote-login.php</a>) on someone’s blog.</p>
+<div id="attachment_377" style="width: 904px" class="wp-caption alignnone">
+  <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png"><img class="size-full wp-image-377" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png" alt="uh-oh" width="894" height="864" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies.png 894w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies-300x289.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_cookies-624x603.png 624w" sizes="(max-width: 894px) 100vw, 894px" /></a>
+  <p class="wp-caption-text">
+    uh-oh
+  </p>
+</div>
+<p>Sounds like bad news! As mom always said, you should set the “secure” flag on sensitive cookies so that they’re never sent in plaintext.</p>
+<p>To check whether this cookie did anything interesting, I logged out of my wordpress account, copied the wordpress_logged_in cookie into a fresh browser profile, and visited <a href="http://wordpress.com">http://wordpress.com</a> in the new browser profile. Yep, I was logged in!</p>
+<p>This wouldn’t be so bad if the wordpress_logged_in cookie were invalidated when the original user logged out or logged back in, but it definitely still worked. Does it expire? In 3 years. (Not sure when it gets invalidated on the server side, haven’t waited long enough to know.)</p>
+<p>Is this as bad as sending username/password in plaintext? I tried to see if I could reset the original user’s password.</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png"><img class="alignnone size-full wp-image-378" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png" alt="wordpresspassword1" width="992" height="428" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825.png 992w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825-300x129.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpresspassword1-e1400805127825-624x269.png 624w" sizes="(max-width: 992px) 100vw, 992px" /></a></p>
+<p>That didn’t work, so I’m assuming WordPress uses the actually-secure cookie (wordpress_sec) for super important operations like password change. Nice job, but . . .</p>
+<p>It turns out I could post to the original user’s blog (and create new blog sites on their behalf):</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png"><img class="alignnone size-full wp-image-379" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png" alt="wordpress_postblog" width="928" height="581" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246.png 928w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246-300x187.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postblog-e1400805350246-624x390.png 624w" sizes="(max-width: 928px) 100vw, 928px" /></a></p>
+<p>I could see private posts:</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png"><img class="alignnone size-full wp-image-380" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png" alt="wordpress_postsecretblog" width="950" height="523" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834.png 950w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834-300x165.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postsecretblog-e1400805413834-624x343.png 624w" sizes="(max-width: 950px) 100vw, 950px" /></a></p>
+<p>I could post comments on other blogs as them:</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png"><img class="alignnone size-full wp-image-381" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png" alt="wordpress_postcomment" width="1007" height="534" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342.png 1007w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342-300x159.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_postcomment-e1400805499342-624x330.png 624w" sizes="(max-width: 1007px) 100vw, 1007px" /></a></p>
+<p>I could see their blog stats:</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png"><img class="alignnone size-full wp-image-382" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png" alt="wordpress_stats" width="1042" height="695" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221.png 1042w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-300x200.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-1024x682.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/05/wordpress_stats-e1400805571221-624x416.png 624w" sizes="(max-width: 1042px) 100vw, 1042px" /></a></p>
+<p>And so forth. I couldn’t do some blog administrator tasks that required logging in again with the username/password, but still, not bad for a single cookie.</p>
+<p>Moral of the story: don’t visit a WordPress site while logged into your account on an untrusted local network.</p>
+<p>Update: Thanks to Andrew Nacin of WordPress for informing me that auth cookies will be invalidated after a session ends in the next WordPress release and that SSL support on WordPress will be improving!</p>
+<p>Update (5/26/14): I subsequently found that the insecure cookie could be used to set someone’s 2fac auth device if they hadn’t set it, thereby locking them out of their account. If someone has set up 2fac already, the attacker can still bypass login auth by cookie stealing – the 2fac auth cookie is also sent over plaintext.</p>
+<p>Update (5/26/14): A couple people have asked about whether the disclosure timeline below is reasonable, and my response is <a href="https://zyan.scripts.mit.edu/blog/wordpress-fail/#comment-70">here</a>.</p>
+<p>Disclosure timeline:</p>
+<p>Wed, 21 May 2014 16:12:17 PST: Reported issue to <a href="mailto:security@automattic.com">security@automattic.com</a>, per the instructions at <a href="http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#where-do-i-report-security-issues;">http://make.wordpress.org/core/handbook/reporting-security-vulnerabilities/#where-do-i-report-security-issues;</a> at this point, the report was mostly out of courtesy, since I figured it had to be obvious to them and many WP users already that the login cookie wasn’t secured (it’s just a simple config setting in WordPress to turn on the secure cookie flag, as I understand it). Received no indication that the email was received.</p>
+<p>22 May 2014 16:43: Mentioned the lack of cookie securing publicly. <a href="https://twitter.com/bcrypt/status/469624500850802688">https://twitter.com/bcrypt/status/469624500850802688</a></p>
+<p>22 May 2014 17:39: Received response from Andrew Nacin (not regarding lack of cookie securing but rather that the auth cookie lifetime will soon be that of a regular session cookie). <a href="https://twitter.com/nacin/status/469638591614693376">https://twitter.com/nacin/status/469638591614693376</a></p>
+<p>23 May 2014 ~13:00: Discovered two-factor auth issue on accident, reported to both <a href="mailto:security@automattic.com">security@automattic.com</a> and <a href="mailto:security@wordpress.org">security@wordpress.org</a> in reply to original email. I also mentioned it to Dan Goodin since I found the bug while trying to answer a question he had about cookies, but I did not disclose publicly.</p>
+<p>25 May 2014 15:20: Received email response from <a href="mailto:security@automattic.com">security@automattic.com</a> saying that they were looking into it internally (no mention of timeline). Wrote back to say thanks.</p>
+<p>26 May 2014, ~10:00: Ars Technica article about this gets published, which mentioned the 2-fac auth issue. I updated this blog post to reflect that.</p>
+<p>26-27 May 2014: Some commenters on the Ars Technica article discover an arguably worse bug than the one that the original article was about: WordPress sends the login form over HTTP. (Even though the form POST is over HTTPS, the local network attacker can modify the target on the HTTP page however he/she wants and then it’s game over.) This wouldn’t be so bad if everyone used a password manager and changed passwords semi-regularly, since most people are likely to login to WordPress through their blog’s admin portal (which is always HTTPS as far as I can tell), except that password reuse is rampant. Robert Graham subsequently published <a href="http://blog.erratasec.com/2014/05/wordpress-unsafe-at-any-speed.html">this blog post</a>.</p>
+<p>29 May 2014, 5:52: Received reply from WordPress saying they would email me again when fixed.</p>
+<p>30 May 2014, 14:51: Andrew Nacin says all issues are supposedly fixed.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/some-heartbleed-tips/">How to make a less-leaky Heartbleed bandage</a></h1>
+        <span class="post-date">Apr 10, 2014</span>
+        <p>Mashable just put out a nice-looking chart showing “<a href="http://mashable.com/2014/04/09/heartbleed-bug-websites-affected/" target="_blank">Passwords You Need to Change Right Now</a>” change in light of the recent <a href="http://heartbleed.com" target="_blank">Heartbleed</a> carnage. However, it has some serious caveats that I wanted to mention:</p>
+<ol>
+<li>It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then. I am also skeptical that every single company on the list successfully made sure that nothing that they’ve used or given sensitive user data to had a vulnerable version of OpenSSL in the last 2 years.</li>
+<li>The article neglects to mention that password reuse means you might have to change passwords on several services for every one that was leaked. The same goes for the fact that one can trigger password resets on multiple services by authenticating a single email account.</li>
+<li>You should also clear all stored cookies just in case the server hasn’t invalidated them as they should; many sites use persistent CSRF tokens so logging out doesn’t automatically invalidate them. (Heartbleed trivially exposed user cookies.)</li>
+<li>Don’t forget to also change API keys if a service hasn’t force-rotated those already.</li>
+<li>It remains highly unclear whether any SSL certificates were compromised because of Heartbleed. If so, changing your password isn’t going to help against a MITM who has the SSL private key unless the website has revoked its SSL certificate and you’ve somehow gotten the revocation statement (LOL). This is complicated. Probably best not to worry about it right now because there’s not much you can do, but we all might have to worry about it a whole lot more depending on which way the pendulum swings in the next few days.</li>
+<li>Related-to-#5-but-much-easier: clear <a href="https://www.imperialviolet.org/2013/06/27/botchingpfs.html" target="_blank">TLS session resumption</a> data. I think this usually happens automatically when you restart the browser.</li>
+</ol>
+<p>Nonetheless, Mashable made a pretty good chart for keeping track of what information companies have made public regarding the Heartbleed fallout.</p>
+
+    </div>
+  
+</div>
+
+<div class="pagination">
+  
+  <a class="pagination-item older" href="https://blog.azuki.vip/page/4/">Older</a>
+  
+
+  
+  <a class="pagination-item newer" href="https://blog.azuki.vip/page/2/">Newer</a>
+  
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+  </body>
+</html>
+

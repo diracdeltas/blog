@@ -1,7 +1,7 @@
 ---
 title: lazy quarantine bagels
 author: yan
-date: 2019-11-07
+date: 2020-05-10
 url: /quarantine-bagels/
 
 ---

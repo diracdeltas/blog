@@ -1,39 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Grad School on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/tags/grad-school/</link>
-    <description>Recent content in Grad School on discrete blogarithm</description>
+    <title>grad school on discrete blogarithm</title>
+    <link>https://blog.azuki.vip/tags/grad-school/</link>
+    <description>Recent content in grad school on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 Jan 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://diracdeltas.github.io/blog/tags/grad-school/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 20 Jan 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/tags/grad-school/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>why I left grad school</title>
-      <link>https://diracdeltas.github.io/blog/why-i-left-grad-school/</link>
+      <link>https://blog.azuki.vip/why-i-left-grad-school/</link>
       <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/why-i-left-grad-school/</guid>
-      <description>&lt;p&gt;&lt;em&gt;[originally posted to &lt;a href=&#34;https://yan.jottit.com&#34;&gt;https://yan.jottit.com/&lt;/a&gt; on 1/20/13]&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Grad school was alright. I liked the people, I liked my research, and I liked the security of knowing exactly what I was going to be doing for the next 5-6 years.&lt;/p&gt;
-
-&lt;p&gt;Grad school in experimental physics was the easy choice for me. I had a hella fly academic track record, liked doing research, and reportedly got one of the two highest scores in experimental physics my year. I got into all the grad schools I applied to and lots of fellowship offers as well.&lt;/p&gt;
-
-&lt;p&gt;But what bothered me was that it was a convenient choice but not a fully deliberate one. It paid the bills, gave me health insurance, and allowed me to live near San Francisco while having a decent amount of free time. However, I was pretty sure I had zero interest in going into academia as a profession. So grad school was mostly a way to stall while figuring out what exactly I wanted to do with my life.&lt;/p&gt;
-
-&lt;p&gt;Then I got tired of stalling and not doing anything that felt productive in the meantime.&lt;/p&gt;
-
-&lt;p&gt;It got to the point where I finally decided to walk away from the NSF fellowship, the sunny apartment in suburban paradise, the guaranteed 6-year stipend, the free enrollment in Stanford classes, the health care, the gym access, and the prestige of getting a Physics PhD from Stanford in favor of being homeless, unemployed, and perpetually uncertain of tomorrow.&lt;/p&gt;
-
-&lt;p&gt;The last month or so has been full of stress, disappointment, and self-doubt, the pains of a transition to life without externally-imposed structure. There&amp;#8217;s also been unexpected validation. It feels really, really good, almost glorious, to read a paper or teach yourself a new skill knowing that you aren&amp;#8217;t doing it for any reason other than because it really deeply matters to you. I realized that too much time in my life thus far has been spent on tasks that I did in order to pass tests, get jobs, and prove myself to others.&lt;/p&gt;
-
-&lt;p&gt;As soon as I decided to leave Stanford, I had about 393849394 projects that I wanted to work on day and night. I wanted to brush up on a couple programming languages and learn several new ones, build a start-up, read up on anarchist theory, fix all the problems in the way scientists do science, take an online class in computer networks, facilitate open access to journals, help develop cryptographically secure tools for activists, promote social justice, start a warehouse living space, contribute to open source code repos, read papers on neural networks, blog about data science, and make tasty vegan food for friends. But I never could focus entirely on doing any of these things becaused I was too scared of not having a job for too long.&lt;/p&gt;
-
-&lt;p&gt;These days I alternate between feeling excited about doing these projects and feeling distracted/worried that I&amp;#8217;ll never make a living at the same time.&lt;/p&gt;
-
-&lt;p&gt;This issue is unresolved as of this writing. Intellectually, I&amp;#8217;ve convinced myself not to worry about getting a job for now (I can live reasonably for almost a year on savings, anyway) and focus instead on projects that&amp;#8217;ll have a positive impact on the world. It bothers me that this isn&amp;#8217;t a sustainable way of living, though, and I&amp;#8217;d rather fix that sooner than later.&lt;/p&gt;
-</description>
+      <guid>https://blog.azuki.vip/why-i-left-grad-school/</guid>
+      <description>[originally posted to https://yan.jottit.com/ on 1/20/13]
+Grad school was alright. I liked the people, I liked my research, and I liked the security of knowing exactly what I was going to be doing for the next 5-6 years.
+Grad school in experimental physics was the easy choice for me. I had a hella fly academic track record, liked doing research, and reportedly got one of the two highest scores in experimental physics my year.</description>
     </item>
     
   </channel>

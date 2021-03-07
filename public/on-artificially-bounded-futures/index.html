@@ -1,158 +1,106 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> On artificially-bounded futures </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/on-artificially-bounded-futures/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      On artificially-bounded futures &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
-      </div>
-    </div>
-
     
-    <div class="container content">
-      <h1 class="post-title">On artificially-bounded futures</h1>
-        <section id="main">
-          <h5 id="date"> Tue Oct 1, 2013 </h5>
-          <p>I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.</p>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
 
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">On artificially-bounded futures</h1>
+  <span class="post-date">Oct 1, 2013</span>
+  <p>I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.</p>
 <p>The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students. Bad user interfaces are astonishingly powerful, and nothing cripples the human spirit like a poorly-written manpage.</p>
-
-<p>I also gave a short talk to about ~30 undergrads titled, &#8220;Things you should be afraid of that you probably didn&#8217;t know about.&#8221; The alternate title was, &#8220;Useful self-preservation tactics in surveillance states.&#8221; The alternate alternate title was, &#8220;On the possibility of preserving student culture at MIT.&#8221; I admit I was trying to get more people to show up on a Friday night.</p>
-
+<p>I also gave a short talk to about ~30 undergrads titled, “Things you should be afraid of that you probably didn’t know about.” The alternate title was, “Useful self-preservation tactics in surveillance states.” The alternate alternate title was, “On the possibility of preserving student culture at MIT.” I admit I was trying to get more people to show up on a Friday night.</p>
 <p>The problem was that, after an unexpected adventure in NYC the day before followed by an untimely laptop battery failure, I had barely twenty minutes to prep for the talk. So I went for a short run around the Charles River and formulated some thoughts. They went something like:</p>
-
 <ol>
 <li>Surveillance is bad. Do MIT undergrads care? Or are they still trying to implement metacircular evaluators in Scheme?</li>
 <li>DO NOT LET PEOPLE GIVE INTO CRYPTO-NIHILISM. Show them that we can only fight what we know.</li>
 <li>Privacy, if it actually exists, must belong to a community. Privacy that belongs to individuals is necessary but not sufficient.</li>
-<li>Ethical choices are painful and often ambiguous. Say you&#8217;re the CEO of a company that makes a groundbreaking app that reduces vehicle emissions by 90% in the US. In order to do so, you need to collect data on where everyone&#8217;s cars are located at all times. Then one day the government puts you in a <a href="https://en.wikipedia.org/wiki/Qwest">position</a> where your choices are to either (secretly) give them years and years of private user data or let the company shut down (and lose all your money). What do you do?</li>
+<li>Ethical choices are painful and often ambiguous. Say you’re the CEO of a company that makes a groundbreaking app that reduces vehicle emissions by 90% in the US. In order to do so, you need to collect data on where everyone’s cars are located at all times. Then one day the government puts you in a <a href="https://en.wikipedia.org/wiki/Qwest">position</a> where your choices are to either (secretly) give them years and years of private user data or let the company shut down (and lose all your money). What do you do?</li>
 <li>Imagine if the MIT administration wiretapped all student communications on the Internet and forced every mailing list to contain an administrator. Imagine the student response. Now imagine the same situation at the national scale. This is a useful exercise to brainstorm realistic ways of fighting problems that seem too large and abstract for us to think about at first (ex: mass unchecked government surveillance).</li>
 </ol>
-
 <p>To my surprise, the talk went over rather well. People asked lots of excellent questions, like what kind of tinfoil hat to buy. Phew.</p>
-
-<p>Another thing that has come up a lot on this trip is the idea of having a career. As much as I feel uncomfortable about it sometimes, I can&#8217;t help but admit that the topic of What To Do In Life has been on my mind lately. The annual MIT Career Fair was a week ago, a bizarre anti-celebratory festival during the first week of classes where hundreds of companies try to recruit students by giving them free Rubix cubes. This year, one courageous sophomore wrote an <a href="http://tech.mit.edu/V133/N39/ogrady.html">opinion article</a> in the school newspaper about how  <span class="userContent">the Career Fair is useless for inspiring faith in the student population&#8217;s ability to give a fuck about problems other than making cool-but-also-profitable<span class="text_exposed_show"> technology and making hella cash.</span></span></p>
-
-<p>Obviously this is a thorny issue wrapped in questions of whether the author has properly normalized for her own privilege (she probably has) and if large tech companies like FB/Apple/Google are already doing the maximal amount of good for humanity that they can while remaining profitable (they probably aren&#8217;t), BUT it was still surprising that most critical comments essentially said: &#8220;Stop looking down on other people / some of us need to make a living / not all corporations are completely evil.&#8221; Multiple commenters accused the author of &#8220;entitlement&#8221;, which seems like a ridiculous term to cast as an insult (aren&#8217;t we all entitled to pursuit of happiness?).</p>
-
-<p>Disliking the percentage of commenters who were unfairly bashing on the author, I wrote an uncharacteristically optimistic comment for someone who doesn&#8217;t have a consistent job:</p>
-
+<p>Another thing that has come up a lot on this trip is the idea of having a career. As much as I feel uncomfortable about it sometimes, I can’t help but admit that the topic of What To Do In Life has been on my mind lately. The annual MIT Career Fair was a week ago, a bizarre anti-celebratory festival during the first week of classes where hundreds of companies try to recruit students by giving them free Rubix cubes. This year, one courageous sophomore wrote an <a href="http://tech.mit.edu/V133/N39/ogrady.html">opinion article</a> in the school newspaper about how  <span class="userContent">the Career Fair is useless for inspiring faith in the student population’s ability to give a fuck about problems other than making cool-but-also-profitable<span class="text_exposed_show"> technology and making hella cash.</span></span></p>
+<p>Obviously this is a thorny issue wrapped in questions of whether the author has properly normalized for her own privilege (she probably has) and if large tech companies like FB/Apple/Google are already doing the maximal amount of good for humanity that they can while remaining profitable (they probably aren’t), BUT it was still surprising that most critical comments essentially said: “Stop looking down on other people / some of us need to make a living / not all corporations are completely evil.” Multiple commenters accused the author of “entitlement”, which seems like a ridiculous term to cast as an insult (aren’t we all entitled to pursuit of happiness?).</p>
+<p>Disliking the percentage of commenters who were unfairly bashing on the author, I wrote an uncharacteristically optimistic comment for someone who doesn’t have a consistent job:</p>
 <blockquote>
-<p>This post was entirely justified and necessary. (Minus the fact that Quizlet probably doesn&#8217;t deserve to be on that list, as RJ pointed out.)</p>
-
+<p>This post was entirely justified and necessary. (Minus the fact that Quizlet probably doesn’t deserve to be on that list, as RJ pointed out.)</p>
 <p>A number of the criticizing comments here have argued that companies like Apple and Facebook, on their way to making massive profits, ultimately spawn technologies that do good for the world; furthermore, even MIT students need to support themselves day-to-day regardless of their greater goals. But I think a salient counter-argument is that MIT grads can and absolutely must hold themselves to a higher standard than what these companies represent.</p>
-
 <p>What I am implicitly saying is that (1) there are greater problems that humanity faces than how to get people to trigger certain javascript callbacks that generate ad revenue, and (2) people with the intellect and stamina to lead technological revolutions have a near-moral responsibility to solve these greater problems. The fact is that most MIT graduates can find a job and figure out a way to support themselves in most circumstances, which means they have a rare privilege among young people: the ability to take on great risks and be okay if they fail.</p>
-
-<p>In practice, a dismayingly small percentage of MIT graduates use this privilege for tackling the hardest and most valuable problems of our generation. Climate change is a fine example, given that the lower limit of the time it&#8217;ll take for atmospheric methane to collapse the global economy is on the order of <a href="http://www.theguardian.com/environment/2013/jul/24/arctic-thawing-permafrost-climate-change">decades</a>.</p>
-
-<p>Even those of us who work as software engineers and tech CEO&#8217;s usually fail to address the question of whether we are making technology for a world where knowledge is free and accessible to everyone, or a world where governments and corporations can freely intrude on the private communications of every single person. Too often, we generate technology that is groundbreaking and astonishing without conscientiously addressing their potential to destroy civil liberties and strip away basic human rights. We can and must exert more pull over the ethical consequences of our innovation.</p>
-
+<p>In practice, a dismayingly small percentage of MIT graduates use this privilege for tackling the hardest and most valuable problems of our generation. Climate change is a fine example, given that the lower limit of the time it’ll take for atmospheric methane to collapse the global economy is on the order of <a href="http://www.theguardian.com/environment/2013/jul/24/arctic-thawing-permafrost-climate-change">decades</a>.</p>
+<p>Even those of us who work as software engineers and tech CEO’s usually fail to address the question of whether we are making technology for a world where knowledge is free and accessible to everyone, or a world where governments and corporations can freely intrude on the private communications of every single person. Too often, we generate technology that is groundbreaking and astonishing without conscientiously addressing their potential to destroy civil liberties and strip away basic human rights. We can and must exert more pull over the ethical consequences of our innovation.</p>
 <p>It is absolutely our moral responsibility to try to make the world we want to live in.</p>
 </blockquote>
+<p>I really hope I didn’t make all of that up.</p>
+</div>
 
-<p>I really hope I didn&#8217;t make all of that up.</p>
-
-        </section>
+      </div>
     </div>
-  </div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/tabstash-onetab-for-firefox/">Tabstash: OneTab for Firefox</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/"> &nbsp; Some thoughts on the NSA and elliptic curve cryptography</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-      <li><a href="https://diracdeltas.github.io/blog/categories/hacktivism">hacktivism</a> </li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/travel">travel</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 
