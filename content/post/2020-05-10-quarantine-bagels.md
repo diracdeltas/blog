@@ -12,10 +12,11 @@ lately i have been doing some lazy baking whilst in quarantine, where lazy is
 defined as:
 
 * no need for fancy equipment like stand mixers with dough hooks
+* no need for hard-to-find ingredients like lye
 * NO STARTERS (like the kind you need for making sourdough)
 * less than one hour of work total
-* can be made by a beginner with almost no cooking experience
-* can skip/improvise/fuckup at least 2 steps and still have a decent result
+* can be made by someone with minimal baking experience
+* can skip/improvise/fuckup 1-2 steps and still have a decent result
 
 for a prime example of lazy baking, check out my [twitter recipe
 thread](https://twitter.com/bcrypt/status/1248342621790949376) about
@@ -41,8 +42,7 @@ src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 when lazy croissants became overly undemanding of my copious leisure time
 (jk), i decided to move on to bagels with some
 encouragement from baking master and sourdough-starter-haver
-[garrett](https://twitter.com/garrettr_/status/1257401082235490306). garrett's
-homemade bagels were delicious and extremely professional-looking, but required having a sourdough starter and
+[garrett](https://twitter.com/garrettr_/status/1257401082235490306). these bagels were incredible, but required having a sourdough starter and
 clearing an empty fridge shelf to put the bagels in overnight, hence
 disqualifying them from my laziness requirement.
 
@@ -63,14 +63,13 @@ instead](https://www.baked-theblog.com/new-york-style-sourdough-bagels-with-roas
 
 ## lazy bagels
 
-my goal was to make a lazy bagel that was 80% as good as a true New York
-bagel. it had to be soft and pillowy, yet able to withstand a cream-cheese loaded butter knife without getting crushed, with a chewy exterior and a nice yeasty flavor that would make keto people hate me.
+my goal was to make a lazy bagel that was 90% as good as the average nyc bagel. it had to be soft and pillowy, yet able to withstand a cream-cheese loaded butter knife without getting crushed, with a chewy exterior and a nice yeasty flavor that would make keto people hate me.
 
 i think i achieved this - or at least what is probably the best bagel i've had
 outside of the east coast - by making a few modifications to
 a tried-and-true recipe from [Sally's Baking
 Addiction](https://sallysbakingaddiction.com/homemade-bagels/). so far i've
-made two batches of my favorite bagel flavor, parmesan-onion-garlic (POG), one
+made two batches of my favorite bagel flavor, parmesan-onion-garlic, one
 with parmesan inside the dough and one without. both have turned out
 sufficiently spectacular that i am taking the time to write this down for
 posterity even though my blog auto-deploy scripts are broken.
@@ -202,8 +201,8 @@ the next day, they were still really soft with a nice density and bite:
 2](https://user-images.githubusercontent.com/549654/81510472-bf5dd900-92c6-11ea-9843-d79fd898c092.jpg
 "day after bagels 2")
 
-for comparison, here's a picture from my 2nd batch which used bread flour instead of AP and had parmesan mixed into the dough. the
-dough was a lot stickier / harder to work with (hence some of the uglier photos
+for comparison, here's a fresh-from-the-oven picture from my 2nd batch which used bread flour instead of AP and had parmesan mixed into the dough. the
+dough was a lot stickier / harder to work with due to the cheese (hence some of the uglier photos
 above), and the end
 result might be considered not-a-proper-bagel by bagel snobs. however
 i guarantee it is still tastier than almost any bagel you can find on the west
