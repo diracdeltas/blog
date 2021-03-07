@@ -2,102 +2,98 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Uncategorized on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/uncategorized/</link>
+    <link>https://blog.azuki.vip/categories/uncategorized/</link>
     <description>Recent content in Uncategorized on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 May 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://diracdeltas.github.io/blog/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 26 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xychelsea part 2</title>
-      <link>https://diracdeltas.github.io/blog/xychelsea-part-2/</link>
+      <link>https://blog.azuki.vip/xychelsea-part-2/</link>
       <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/xychelsea-part-2/</guid>
+      <guid>https://blog.azuki.vip/xychelsea-part-2/</guid>
       <description>The second and last time that I visit Chelsea Manning, we speak and move with a sense of urgency, as if a natural disaster is imminent. By now, the Ft Leavenworth prison visit procedure feels strangely familiar, like a movie you once watched in a dream. I check in with the uniformed officer at the Disciplinary Barracks&amp;#8217; front desk, wait uselessly while he misgenders Chelsea and figures out if I’m allowed to visit her, rent a locker to stow my jacket which is prohibited in the visit room (due to the having of zippers), don an unsuspicious smile when the guard tries to deny something i’m bringing (this time, it’s blank drawing paper and pencils &amp;#8211; both of which are eventually let through), pass through the metal detector and double-doored atrium, wait for the guard to let Chelsea through the opposite doors, hug briefly, sit down at her favorite table against the wall, buy her snacks from the vending machines twice (first course: Dr.</description>
     </item>
     
     <item>
       <title>25</title>
-      <link>https://diracdeltas.github.io/blog/0x19/</link>
+      <link>https://blog.azuki.vip/0x19/</link>
       <pubDate>Wed, 04 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/0x19/</guid>
+      <guid>https://blog.azuki.vip/0x19/</guid>
       <description>i turn 25 in an hour. this seems strange and unbelievable. surely 25 years of existence is enough to become acquainted with the monotonicity of time. but instead the seconds pass and disbelief stares back, unmoving. a quarter-century is a long time. with sadness, i realize how much of it i have forgotten already. imagine that we could live forever. would we still talk about wasting time if time were an unlimited resource?</description>
     </item>
     
     <item>
       <title>happy birthday</title>
-      <link>https://diracdeltas.github.io/blog/happy-birthday/</link>
+      <link>https://blog.azuki.vip/happy-birthday/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/happy-birthday/</guid>
+      <guid>https://blog.azuki.vip/happy-birthday/</guid>
       <description>Dear Chelsea,
-You probably don&amp;#8217;t remember me, but we met in September 2009. This was before everyone knew your name and before many people knew mine.
+You probably don’t remember me, but we met in September 2009. This was before everyone knew your name and before many people knew mine.
 I was at home, helping my friend cut her hair. Out of the corner of my eye, I saw you walk into the living room. You were taking photos of our mural-covered walls, seemingly happy to be in such a bizarre and interesting house of MIT students.</description>
     </item>
     
     <item>
       <title>tbd</title>
-      <link>https://diracdeltas.github.io/blog/tbd/</link>
+      <link>https://blog.azuki.vip/tbd/</link>
       <pubDate>Mon, 26 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/tbd/</guid>
-      <description>you know things are getting better when you walk away from the hotel where you just gave two presentations wearing your best pretense of holding-it-togetherness while inside you felt shakey, hungover, and insane. remember how long you stood there, smiling and rationing weak handshakes while pretending you believed that you had a future? promise yourself you&amp;#8217;re never doing that again. you walk away from the volatile company of people who made you feel shitty about yourself without trying to and into the car of someone who looks like they could be your new friend.</description>
+      <guid>https://blog.azuki.vip/tbd/</guid>
+      <description>you know things are getting better when you walk away from the hotel where you just gave two presentations wearing your best pretense of holding-it-togetherness while inside you felt shakey, hungover, and insane. remember how long you stood there, smiling and rationing weak handshakes while pretending you believed that you had a future? promise yourself you’re never doing that again. you walk away from the volatile company of people who made you feel shitty about yourself without trying to and into the car of someone who looks like they could be your new friend.</description>
     </item>
     
     <item>
       <title>this blog uses Content Security Policy</title>
-      <link>https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/</link>
+      <link>https://blog.azuki.vip/this-blog-uses-content-security-policy/</link>
       <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/</guid>
+      <guid>https://blog.azuki.vip/this-blog-uses-content-security-policy/</guid>
       <description>FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.
 Having recently given some talks about Content Security Policy (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.
-This lil&amp;#8217; blog is hosted by the MIT Student Information Processing Board and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .</description>
+This lil’ blog is hosted by the MIT Student Information Processing Board and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .</description>
     </item>
     
     <item>
       <title>life update</title>
-      <link>https://diracdeltas.github.io/blog/life-update/</link>
+      <link>https://blog.azuki.vip/life-update/</link>
       <pubDate>Mon, 27 Apr 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/life-update/</guid>
-      <description>i&amp;#8217;ve finally recovered enough from a multi-week bout of sickness to say some things and put up some photos. lately i&amp;#8217;ve felt exhausted and lethargic and unproductive to be honest. being sick probably had something to do with it; i sure hope next week gets better.
+      <guid>https://blog.azuki.vip/life-update/</guid>
+      <description>i’ve finally recovered enough from a multi-week bout of sickness to say some things and put up some photos. lately i’ve felt exhausted and lethargic and unproductive to be honest. being sick probably had something to do with it; i sure hope next week gets better.
 yesterday, someone told me they had a theory that everyone who sleeps at night (with rare exceptions) can only manage ~3 significant life events at a time.</description>
     </item>
     
     <item>
       <title>rate-limiting anonymous accounts</title>
-      <link>https://diracdeltas.github.io/blog/rate-limiting-anonymous-accounts/</link>
+      <link>https://blog.azuki.vip/rate-limiting-anonymous-accounts/</link>
       <pubDate>Thu, 05 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/rate-limiting-anonymous-accounts/</guid>
-      <description>Yesterday TechCrunch reported that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes actual people use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they&amp;#8217;re using Tor in the first place.</description>
+      <guid>https://blog.azuki.vip/rate-limiting-anonymous-accounts/</guid>
+      <description>Yesterday TechCrunch reported that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes actual people use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they’re using Tor in the first place.</description>
     </item>
     
     <item>
       <title>canvas #1</title>
-      <link>https://diracdeltas.github.io/blog/canvas/</link>
+      <link>https://blog.azuki.vip/canvas/</link>
       <pubDate>Mon, 16 Feb 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/canvas/</guid>
+      <guid>https://blog.azuki.vip/canvas/</guid>
       <description>that could have been us, 2015
 Oil pastels, lipstick, eyeliner, cold medicine, and ballpoint pen on canvas.
-i painted this while standing in my bathroom on valentine&amp;#8217;s day&amp;#8217;s night, unable to sleep and grotesquely feeling the weight of the oncoming dawn. it was my first time drawing on canvas.
+i painted this while standing in my bathroom on valentine’s day’s night, unable to sleep and grotesquely feeling the weight of the oncoming dawn. it was my first time drawing on canvas.
 as i worked, i kept thinking about all these people passing to and from doomed relationships, that feeling of being stupidly and everlastingly perched on the brink between hope and mutilation.</description>
     </item>
     
     <item>
       <title>life exercises</title>
-      <link>https://diracdeltas.github.io/blog/life-exercises/</link>
+      <link>https://blog.azuki.vip/life-exercises/</link>
       <pubDate>Mon, 16 Jun 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/life-exercises/</guid>
-      <description>Every week, answer &amp;#8220;yes&amp;#8221; to one question that you would instinctively say no to.
-Don&amp;#8217;t spend money or sleep in a real bed for as long as possible.
+      <guid>https://blog.azuki.vip/life-exercises/</guid>
+      <description>Every week, answer “yes” to one question that you would instinctively say no to.
+Don’t spend money or sleep in a real bed for as long as possible.
 Buy a pound of the ugliest paint that you can find.
 Keep a journal of thoughts you avoid.
 Block port 80 for a day.
@@ -106,44 +102,43 @@ Be kind at random.</description>
     
     <item>
       <title>First day of work</title>
-      <link>https://diracdeltas.github.io/blog/first-day-of-work/</link>
+      <link>https://blog.azuki.vip/first-day-of-work/</link>
       <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/first-day-of-work/</guid>
+      <guid>https://blog.azuki.vip/first-day-of-work/</guid>
       <description>Was great. Lots of tea and monitors.
 
 
-Then I went home and cooked a surprisingly-phenomenal dinner with my housemates, the first time I&amp;#8217;ve cooked in this house. Rhodey made potatoes with oranges, Mark contributed some wild rice, and I spun up yellow lentil daal with kale.
+Then I went home and cooked a surprisingly-phenomenal dinner with my housemates, the first time I’ve cooked in this house. Rhodey made potatoes with oranges, Mark contributed some wild rice, and I spun up yellow lentil daal with kale.
 
 We sang some Neutral Milk Hotel songs afterward, and the future looked bright.</description>
     </item>
     
     <item>
       <title>Memphis Haiku Collection</title>
-      <link>https://diracdeltas.github.io/blog/memphis-haiku-collection/</link>
+      <link>https://blog.azuki.vip/memphis-haiku-collection/</link>
       <pubDate>Sat, 12 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/memphis-haiku-collection/</guid>
+      <guid>https://blog.azuki.vip/memphis-haiku-collection/</guid>
       <description>Tonight I found a collection of stupendously precocious (lolol) poems I wrote on a trip to Memphis at age 13. Here they are, untouched, in all their prematurely cynical glory:
- I&amp;#8217;m going to Hell
-I mean Memphis, in two hours
-Do not raid my house.
-If I don&amp;#8217;t return
-Do not mope like Charlie Brown
-You&amp;#8217;re not in my will.
-I gave my pet bird
-To some short college student</description>
+ I’m going to Hell
+  I mean Memphis, in two hours
+  Do not raid my house.
+If I don’t return
+  Do not mope like Charlie Brown
+  You’re not in my will.
+I gave my pet bird</description>
     </item>
     
     <item>
       <title>Some thoughts on the NSA and elliptic curve cryptography</title>
-      <link>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
+      <link>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
+      <guid>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
       <description>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:
 ========
-I&amp;#8217;ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
+I’ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
 There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</description>
     </item>
     

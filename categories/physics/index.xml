@@ -2,30 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>physics on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/physics/</link>
+    <link>https://blog.azuki.vip/categories/physics/</link>
     <description>Recent content in physics on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 31 Dec 2014 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://diracdeltas.github.io/blog/categories/physics/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 31 Dec 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/categories/physics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>solving boolean satisfiability on human circuits</title>
-      <link>https://diracdeltas.github.io/blog/2sat/</link>
+      <link>https://blog.azuki.vip/2sat/</link>
       <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/2sat/</guid>
-      <description>I remember quite clearly sitting in Scott Aaronson&amp;#8217;s computability and complexity theory course at MIT in 2011. I was a 19 year-old physics major back then, so Scott&amp;#8217;s class was mostly new and fascinating.
+      <guid>https://blog.azuki.vip/2sat/</guid>
+      <description>I remember quite clearly sitting in Scott Aaronson’s computability and complexity theory course at MIT in 2011. I was a 19 year-old physics major back then, so Scott’s class was mostly new and fascinating.
 One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length.</description>
     </item>
     
     <item>
       <title>why I left grad school</title>
-      <link>https://diracdeltas.github.io/blog/why-i-left-grad-school/</link>
+      <link>https://blog.azuki.vip/why-i-left-grad-school/</link>
       <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/why-i-left-grad-school/</guid>
+      <guid>https://blog.azuki.vip/why-i-left-grad-school/</guid>
       <description>[originally posted to https://yan.jottit.com/ on 1/20/13]
 Grad school was alright. I liked the people, I liked my research, and I liked the security of knowing exactly what I was going to be doing for the next 5-6 years.
 Grad school in experimental physics was the easy choice for me. I had a hella fly academic track record, liked doing research, and reportedly got one of the two highest scores in experimental physics my year.</description>

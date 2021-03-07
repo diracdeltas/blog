@@ -1,146 +1,99 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> rate-limiting anonymous accounts </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/rate-limiting-anonymous-accounts/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      rate-limiting anonymous accounts &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
-      </div>
-    </div>
-
     
-    <div class="container content">
-      <h1 class="post-title">rate-limiting anonymous accounts</h1>
-        <section id="main">
-          <h5 id="date"> Thu Mar 5, 2015 </h5>
-          <p>Yesterday TechCrunch <a href="http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/">reported</a> that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/">actual people</a> use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they&#8217;re using Tor in the first place.</p>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
 
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">rate-limiting anonymous accounts</h1>
+  <span class="post-date">Mar 5, 2015</span>
+  <p>Yesterday TechCrunch <a href="http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/">reported</a> that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/">actual people</a> use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they’re using Tor in the first place.</p>
 <p>What are services like Twitter to do, then? I thought of one simple solution that borrows a popular idea from anonymous e-cash systems.</p>
-
-<p>In a 1983 paper, cryptographer David Chaum introduced the concept of blind signatures <a href="http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/">1</a>. A blind signature is a cryptographic signature in which the signer can&#8217;t see the content of the message that she&#8217;s signing. So if Bob wants Alice to sign the message &#8220;Bob is great&#8221; without her knowing, he first &#8220;blinds&#8221; the message using a random factor that is unknown to her and gives Alice the blinded message to sign. When he unblinds her signed message by removing the blinding factor, the original message &#8220;Bob is great&#8221; <em>also</em> has a valid signature from Alice!</p>
-
-<p>This may seem weird and magical, but blinded signatures are actually possible using the familiar RSA signature scheme. The proof is straightforward and on Wikipedia so I&#8217;ll skip it here <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/">2</a>. Basically, since RSA signatures are just modulo&#8217;d exponentiation of some message <em>M</em> to a secret exponent <em>d</em>, when you create a signature over a blinded message <em>M&#8217; = M*r^e</em> (where <em>r</em> is the blinding factor and <em>e</em> is the public exponent), you also create a valid signature over <em>M</em> thanks to the distributive property of exponentiation over multiplication.</p>
-
+<p>In a <a href="http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF">1983 paper</a>, cryptographer David Chaum introduced the concept of blind signatures. A blind signature is a cryptographic signature in which the signer can’t see the content of the message that she’s signing. So if Bob wants Alice to sign the message “Bob is great” without her knowing, he first “blinds” the message using a random factor that is unknown to her and gives Alice the blinded message to sign. When he unblinds her signed message by removing the blinding factor, the original message “Bob is great” <em>also</em> has a valid signature from Alice!</p>
+<p>This may seem weird and magical, but blinded signatures are actually possible using the familiar RSA signature scheme. The proof is straightforward and <a href="https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235">on Wikipedia</a>. Basically, since RSA signatures are just modulo’d exponentiation of some message <em>M</em> to a secret exponent <em>d</em>, when you create a signature over a blinded message <em>M’ = M*r^e</em> (where <em>r</em> is the blinding factor and <em>e</em> is the public exponent), you also create a valid signature over <em>M</em> thanks to the distributive property of exponentiation over multiplication.</p>
 <p>Given the existence of blind signature schemes, Twitter can do something like the following to rate-limit Tor accounts without deanonymizing them:</p>
-
 <ol>
-<li>Say that @bob is an existing Twitter user who would like to make an anonymous account over Tor, which we&#8217;ll call @notbob. He computes <em>T = H(notbob) * r^e mod N</em>, where <em>H</em> is a hash function, <em>r</em> is a random number that Bob chooses, and <em>{e,N}</em> is the public part of an Identity Provider&#8217;s RSA keypair (defined in step 2).</li>
-<li>Bob sends <em>T</em> to an identity provider. This could be Twitter itself, or any service like Google, Identica, Facebook, LinkedIn, Keybase, etc. as long as it can check that Bob is probably a real person via SMS verification or a reputation-based algorithm. If Bob seems real enough, the Identity Provider sends him S<em>ig(T) = T^d mod N = H(notbob)^d * r mod N</em>, where <em>d</em> is the private part of the Identity Provider&#8217;s RSA keypair.</li>
-<li>Bob divides <em>Sig(T)</em> by <em>r</em> to get <em>Sig(H(notbob))</em>, AKA his Identity Provider&#8217;s signature over the hash of his desired anonymous username.</li>
-<li>Bob opens up Tor browser and goes to register @notbob. In the registration form, he sends <em>Sig(H(notbob))</em>. Twitter can then verify the Identity Provider&#8217;s signature over &#8216;notbob&#8217; and <strong>only</strong> accept @notbob&#8217;s account registration if verification is successful!</li>
+<li>Say that @bob is an existing Twitter user who would like to make an anonymous account over Tor, which we’ll call @notbob. He computes <em>T = H(notbob) * r^e mod N</em>, where <em>H</em> is a hash function, <em>r</em> is a random number that Bob chooses, and <em>{e,N}</em> is the public part of an Identity Provider’s RSA keypair (defined in step 2).</li>
+<li>Bob sends <em>T</em> to an identity provider. This could be Twitter itself, or any service like Google, Identica, Facebook, LinkedIn, Keybase, etc. as long as it can check that Bob is probably a real person via SMS verification or a reputation-based algorithm. If Bob seems real enough, the Identity Provider sends him S_ig(T) = T^d mod N = H(notbob)^d * r mod N_, where _d_ is the private part of the Identity Provider’s RSA keypair.</li>
+<li>Bob divides <em>Sig(T)</em> by <em>r</em> to get <em>Sig(H(notbob))</em>, AKA his Identity Provider’s signature over the hash of his desired anonymous username.</li>
+<li>Bob opens up Tor browser and goes to register @notbob. In the registration form, he sends <em>Sig(H(notbob))</em>. Twitter can then verify the Identity Provider’s signature over ‘notbob’ and <strong>only</strong> accept @notbob’s account registration if verification is successful!</li>
 </ol>
-
 <p>It seems to me that this achieves some nice properties.</p>
-
 <ul>
 <li>Every anonymous account is transitively validated via SMS or reputation.</li>
 <li>Ignoring traffic analysis (admittedly a big thing to ignore), anonymous accounts and the actual identities or phone numbers used to validate them are unlinkable.</li>
 </ul>
+<p>Thoughts? I’d bet that someone has thought of this use case before but I couldn’t find any references on the Internet.</p>
+</div>
 
-<p>Thoughts? I&#8217;d bet that someone has thought of this use case before but I couldn&#8217;t find any references on the Internet.</p>
-
-<p><a href="http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/">1</a> <a href="http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF">http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF</a></p>
-
-<p><a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/">2</a> <a href="https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235">https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235</a></p>
-
-        </section>
+      </div>
     </div>
-  </div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/life-update/">life update</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/canvas/"> &nbsp; canvas #1</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-      <li><a href="https://diracdeltas.github.io/blog/categories/uncategorized">Uncategorized</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 

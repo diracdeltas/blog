@@ -1,360 +1,292 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://diracdeltas.github.io/blog/</loc>
+    <loc>https://blog.azuki.vip/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/quarantine-bagels/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/post/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/ableton-midi/</loc>
     <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/posts/</loc>
-    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/ableton-midi/</loc>
-    <lastmod>2019-11-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/information-apocalypse/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/information-apocalypse/</loc>
     <lastmod>2018-02-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/post-truth/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/post-truth/</loc>
     <lastmod>2017-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/surveillance/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/surveillance/</loc>
     <lastmod>2016-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/bus-diaries/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/bus-diaries/</loc>
     <lastmod>2016-06-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/</loc>
     <lastmod>2016-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/uncategorized/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/uncategorized/</loc>
     <lastmod>2016-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/xychelsea-part-2/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/xychelsea-part-2/</loc>
     <lastmod>2016-05-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/hacktivism/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/hacktivism/</loc>
     <lastmod>2016-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/xychelsea/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/xychelsea/</loc>
     <lastmod>2016-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/0x19/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/0x19/</loc>
     <lastmod>2016-05-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/happy-birthday/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/happy-birthday/</loc>
     <lastmod>2015-12-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/code/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/code/</loc>
     <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/sniffly/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/sniffly/</loc>
     <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/travel/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/travel/</loc>
     <lastmod>2015-10-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/tbd/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tbd/</loc>
     <lastmod>2015-10-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/backdooring-js/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/backdooring-js/</loc>
     <lastmod>2015-08-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/this-blog-uses-content-security-policy/</loc>
     <lastmod>2015-07-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/lessons-from-the-ad-blocker-trenches/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</loc>
     <lastmod>2015-07-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/encrypt-the-web/</loc>
     <lastmod>2015-06-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/pseudorandom-podcast-series-episode-1/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/pseudorandom-podcast-series-episode-1/</loc>
     <lastmod>2015-06-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/life-update/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/life-update/</loc>
     <lastmod>2015-04-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/rate-limiting-anonymous-accounts/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/rate-limiting-anonymous-accounts/</loc>
     <lastmod>2015-03-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/canvas/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/canvas/</loc>
     <lastmod>2015-02-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/academia/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/academia/</loc>
     <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/physics/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/physics/</loc>
     <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/2sat/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/2sat/</loc>
     <lastmod>2014-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/tls-everything/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tls-everything/</loc>
     <lastmod>2014-12-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/certificate-transparency-for-pgp/</loc>
     <lastmod>2014-08-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/hopex/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/hopex/</loc>
     <lastmod>2014-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/software-transparency/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/software-transparency/</loc>
     <lastmod>2014-07-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/stuff-i-use/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/stuff-i-use/</loc>
     <lastmod>2014-06-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/life-exercises/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/life-exercises/</loc>
     <lastmod>2014-06-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/a-boring-xss-dissection/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/a-boring-xss-dissection/</loc>
     <lastmod>2014-06-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/the-other-blog-post-i-was-going-to-write/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/positivity-hacks/</loc>
     <lastmod>2014-06-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/wordpress-fail/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/</loc>
+    <lastmod>2014-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/the-other-blog-post-i-was-going-to-write/</loc>
+    <lastmod>2014-06-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/wordpress-fail/</loc>
     <lastmod>2014-05-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/some-heartbleed-tips/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/some-heartbleed-tips/</loc>
     <lastmod>2014-04-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/zero-bit-vulnerabilities/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/zero-bit-vulnerabilities/</loc>
     <lastmod>2014-03-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/a-short-story-idea/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/a-short-story-idea/</loc>
     <lastmod>2014-01-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</loc>
     <lastmod>2014-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/aaron/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/aaron/</loc>
     <lastmod>2014-01-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/on-suicide/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/on-suicide/</loc>
     <lastmod>2014-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/the-most-subtle-joke-ive-made-all-year/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/ssl/</loc>
     <lastmod>2013-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/first-day-of-work/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/the-most-subtle-joke-ive-made-all-year/</loc>
+    <lastmod>2013-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/first-day-of-work/</loc>
     <lastmod>2013-12-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/one-year-later/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/one-year-later/</loc>
     <lastmod>2013-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/debunking-googles-hsts-claims/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/debunking-googles-hsts-claims/</loc>
     <lastmod>2013-11-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/passwords-user-models-and-adobes-mistake/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/passwords-user-models-and-adobes-mistake/</loc>
     <lastmod>2013-11-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/thoughts-on-cypherpunks-2-0/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/thoughts-on-cypherpunks-2-0/</loc>
     <lastmod>2013-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/memphis-haiku-collection/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/memphis-haiku-collection/</loc>
     <lastmod>2013-10-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/tabstash-onetab-for-firefox/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tabstash-onetab-for-firefox/</loc>
     <lastmod>2013-10-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/on-artificially-bounded-futures/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/boston/</loc>
     <lastmod>2013-10-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/career/</loc>
+    <lastmod>2013-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/gnu/</loc>
+    <lastmod>2013-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/mit/</loc>
+    <lastmod>2013-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/on-artificially-bounded-futures/</loc>
+    <lastmod>2013-10-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/cryptography/</loc>
     <lastmod>2013-09-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/some-favorite-git-commands/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/elliptic-curves/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/nsa/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/some-favorite-git-commands/</loc>
     <lastmod>2013-09-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/https-everywhere-3-3-is-out/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/https-everywhere-3-3-is-out/</loc>
     <lastmod>2013-07-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/quest-ce-que-le-fuck/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/france/</loc>
     <lastmod>2013-07-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/summertime-and-the-http-traffic-sniffing-is-easy/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/quest-ce-que-le-fuck/</loc>
+    <lastmod>2013-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/hacks/</loc>
     <lastmod>2013-07-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/some-thoughts-on-facebook-implementing-forward-secrecy/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/https/</loc>
+    <lastmod>2013-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/summertime-and-the-http-traffic-sniffing-is-easy/</loc>
+    <lastmod>2013-07-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/security/</loc>
     <lastmod>2013-07-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/marfa-tx/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</loc>
+    <lastmod>2013-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/surveillance/</loc>
+    <lastmod>2013-07-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/art/</loc>
     <lastmod>2013-06-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/goodbye-cambridge/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/marfa/</loc>
+    <lastmod>2013-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/marfa-tx/</loc>
+    <lastmod>2013-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/road-trip/</loc>
+    <lastmod>2013-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/goodbye-cambridge/</loc>
     <lastmod>2013-05-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/i/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/i/</loc>
     <lastmod>2013-05-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/gmailcheck/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/gmail/</loc>
     <lastmod>2013-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/two-maps-of-sf-crime-data/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/gmailcheck/</loc>
+    <lastmod>2013-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/python/</loc>
+    <lastmod>2013-05-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/two-maps-of-sf-crime-data/</loc>
     <lastmod>2013-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/why-i-left-grad-school/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/grad-school/</loc>
     <lastmod>2013-01-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/40-minutes-in-nyc/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/physics/</loc>
+    <lastmod>2013-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/stanford/</loc>
+    <lastmod>2013-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/why-i-left-grad-school/</loc>
+    <lastmod>2013-01-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/40-minutes-in-nyc/</loc>
     <lastmod>2012-11-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/categories/poetry/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/new-york/</loc>
     <lastmod>2012-11-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/untitled-3/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/categories/poetry/</loc>
+    <lastmod>2012-11-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/untitled-3/</loc>
     <lastmod>2012-11-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/hello-world/</loc>
+  </url><url>
+    <loc>https://blog.azuki.vip/tags/california/</loc>
     <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/hello-world/</loc>
+    <lastmod>2012-04-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.azuki.vip/about/</loc>
   </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/talks/</loc>
-    <lastmod>2011-08-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://diracdeltas.github.io/blog/about/</loc>
-    <lastmod>2011-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
 </urlset>

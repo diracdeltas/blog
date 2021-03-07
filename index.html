@@ -1,62 +1,835 @@
-
-
 <!DOCTYPE html>
-<html>
-<head>
-	<meta name="generator" content="Hugo 0.59.1" />
-    
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title>discrete blogarithm</title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/">
-    <link href="https://diracdeltas.github.io/blog/index.xml" rel="alternate" type="application/rss+xml" title="discrete blogarithm" />
-	<link rel="shortcut icon" href="https://diracdeltas.github.io/blog/favicon.ico" type="image/x-icon"/>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
-    
-
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
-
-</head>
-  <body class="theme-base-08" lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.81.0" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      discrete blogarithm &middot; 
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
+</head>
 
 
+  <body>
+
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item  active " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
+    
     <div class="wrap">
       <div class="masthead">
         <div class="container">
           <h3 class="masthead-title">
-            <a href="https://diracdeltas.github.io/blog/posts/" title="All posts">All posts</a>
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
           </h3>
         </div>
       </div>
 
-      
       <div class="container content">
-        <h1>Discrete Blogarithm</h1>
 
-        <p class="lead"> welcome to yan's infrequently-updated blog </p>
+
+
+
+
+<div class="posts">
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/quarantine-bagels/">lazy quarantine bagels</a></h1>
+        <span class="post-date">May 10, 2020</span>
+        <h2 id="prologue-on-laziness">prologue: on laziness</h2>
+<p>lately i have been doing some lazy baking whilst in quarantine, where lazy is
+defined as:</p>
+<ul>
+<li>no need for fancy equipment like stand mixers with dough hooks</li>
+<li>NO STARTERS (like the kind you need for making sourdough)</li>
+<li>less than one hour of work total</li>
+<li>can be made by a beginner with almost no cooking experience</li>
+<li>can skip/improvise/fuckup at least 2 steps and still have a decent result</li>
+</ul>
+<p>for a prime example of lazy baking, check out my <a href="https://twitter.com/bcrypt/status/1248342621790949376">twitter recipe
+thread</a> about
+japanese-style croissants (AKA salted butter rolls), which have been made by
+dozens of people (including children) to <a href="https://www.instagram.com/p/CAA9Q_GpZBH/">near-universal
+acclaim</a>.</p>
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">why is it not common
+knowledge that u can make perfect japanese-style croissants from scratch with
+like 20min of effort?? thx <a
+href="https://twitter.com/MimeeXu?ref_src=twsrc%5Etfw">@MimeeXu</a> for
+enlightening me<br><br>(recipe in thread👇) <a
+href="https://t.co/XD9hWqFXs9">pic.twitter.com/XD9hWqFXs9</a></p>&mdash; yan
+(@bcrypt) <a
+href="https://twitter.com/bcrypt/status/1248341610150019072?ref_src=twsrc%5Etfw">April
+9, 2020</a></blockquote> <script async
+src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<h2 id="non-lazy-bagels">non-lazy bagels</h2>
+<p>when lazy croissants became overly undemanding of my copious leisure time
+(jk), i decided to move on to bagels with some
+encouragement from baking master and sourdough-starter-haver
+<a href="https://twitter.com/garrettr_/status/1257401082235490306">garrett</a>. garrett&rsquo;s
+homemade bagels were delicious and extremely professional-looking, but required having a sourdough starter and
+clearing an empty fridge shelf to put the bagels in overnight, hence
+disqualifying them from my laziness requirement.</p>
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">.<a
+href="https://twitter.com/garrettr_?ref_src=twsrc%5Etfw">@garrettr_</a> AND
+I MADE SOURDOUGH BAGELS FROM NOTHINGNESS <a
+href="https://t.co/3gLCsMtESo">pic.twitter.com/3gLCsMtESo</a></p>&mdash; yan
+(@bcrypt) <a
+href="https://twitter.com/bcrypt/status/1257397078973648898?ref_src=twsrc%5Etfw">May
+4, 2020</a></blockquote> <script async
+src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<p>having said that, if you have access to a sourdough starter, you should
+probably just stop reading here and <a href="https://www.baked-theblog.com/new-york-style-sourdough-bagels-with-roasted-garlic-labneh/">go make this sourdough bagel recipe
+instead</a>.</p>
+<h2 id="lazy-bagels">lazy bagels</h2>
+<p>my goal was to make a lazy bagel that was 80% as good as a true New York
+bagel. it had to be soft and pillowy, yet able to withstand a cream-cheese loaded butter knife without getting crushed, with a chewy exterior and a nice yeasty flavor that would make keto people hate me.</p>
+<p>i think i achieved this - or at least what is probably the best bagel i&rsquo;ve had
+outside of the east coast - by making a few modifications to
+a tried-and-true recipe from <a href="https://sallysbakingaddiction.com/homemade-bagels/">Sally&rsquo;s Baking
+Addiction</a>. so far i&rsquo;ve
+made two batches of my favorite bagel flavor, parmesan-onion-garlic (POG), one
+with parmesan inside the dough and one without. both have turned out
+sufficiently spectacular that i am taking the time to write this down for
+posterity even though my blog auto-deploy scripts are broken.</p>
+<h3 id="equipment">equipment</h3>
+<ul>
+<li>enough baking sheets to fit 8 large bagels without crowding them</li>
+<li>parchment paper or silicone baking mats</li>
+<li>a pot that holds at least 2qts</li>
+<li>[optional] pastry brush</li>
+<li>thermometer</li>
+</ul>
+<h3 id="ingredients">ingredients</h3>
+<ul>
+<li>500g (4c) all-purpose or bread flour</li>
+<li>8g (2.75tsp) yeast</li>
+<li>butter or oil spray for coating</li>
+<li>12g (2tsp) salt</li>
+<li>1/4c + 1tbsp maple syrup, brown sugar, or honey</li>
+<li>at least 1/4c of baking powder</li>
+<li>[optional] egg</li>
+<li>[optional] 1/2c of shredded parmesan for mixing into the dough</li>
+<li>whatever toppings you want on your bagels. (i used shredded parmesan, a small
+diced onion, coarse salt, and 2 cloves of minced garlic)</li>
+</ul>
+<h3 id="day-1-instructions">day 1 instructions</h3>
+<p>do these the night before you want to eat bagels</p>
+<h4 id="making-alkalized-baking-soda">making alkalized baking soda</h4>
+<p>the purpose of this step is to <a href="https://www.thekitchn.com/expert-bagel-maker-confirms-you-dont-need-lye-to-make-a-good-bagel-maker-tour-203288">increase the
+potency</a> of commercial baking soda
+so that you can use it in place of lye to boil bagels.</p>
+<ol>
+<li>preheat an oven to 275F</li>
+<li>line a baking sheet with aluminum foil</li>
+<li>pour a bunch of baking soda (at least 1/4c, do more if you want to save some
+for next time) onto the foil in a layer</li>
+<li>bake the baking soda for an hour; then store it in a sealed jar or ziplock
+bag</li>
+</ol>
+<p>be careful when handling the baking soda after baking as it is strong enough to
+cause skin irritation.</p>
+<h4 id="making-the-dough">making the dough</h4>
+<ol>
+<li>pour 1.5 cups of water into a small bowl &amp;  microwave for ~40s until it reaches 100-110F (38-43C)</li>
+<li>sprinkle 8g yeast into the water and whisk it around until it dissolves.
+add 1 tbsp maple syrup (or brown sugar, or honey) into the yeast water and stir
+to combine.</li>
+<li>measure 500g flour and 12g salt into a very large bowl. if you want a cheesy
+dough, add 1/2 cup of shredded parmesan. mix it all up.</li>
+<li>pour the wet mixture into the flour mixture and mix it up evenly with your
+hands.</li>
+<li>dust some flour onto a work surface (like a counter or chopping board), then
+pour your dough onto the surface</li>
+<li>knead the dough for about 10min, sprinkling more flour onto the dough if it
+is sticking to your hands or the surface. i like to fold the dough onto itself,
+press down hard to flatten it, fold, press, repeat. at the end of this
+process, you should have a stiff ball of dough that barely sticks:
+<img src="https://user-images.githubusercontent.com/549654/81510470-bd941580-92c6-11ea-943a-d0770d91e20c.jpg" alt="doughball" title="dough ball"></li>
+<li>grease or oil spray the bowl that your dough was in. put your dough ball
+back into the bowl and flip it around to coat in oil/butter. cover it (i
+like to use plastic wrap with a towel on top) and
+let it sit out for 60-90min. at the end it should look puffier like this:
+<img src="https://user-images.githubusercontent.com/549654/81510464-b40aad80-92c6-11ea-938f-7134501d83db.jpg" alt="dough" title="dough"></li>
+<li>put your bowl of covered dough in the fridge to rest overnight</li>
+</ol>
+<h3 id="day-2-instructions">day 2 instructions</h3>
+<p>your dough should have risen a bunch in the fridge and may now look ugly like
+this:
+<img src="https://user-images.githubusercontent.com/549654/81510458-aa814580-92c6-11ea-8352-5db7d7f0df1f.jpg" alt="dough nextday" title="dough next day"></p>
+<ol>
+<li>split your dough into 8 roughly-equal balls</li>
+<li>taking one ball of dough at a time, flatten the ball into a disk, then roll
+it up into a long log shape. put 3 fingers on top of the log, then wrap the
+dough around your fingers so about 2 inches overlap. then roll the dough
+seam so that it looks like a continuous ring of dough as shown below.
+<img src="https://www.baked-theblog.com/wp-content/uploads/2018/12/My-Post-1024x683.jpg" alt="doughshaping" title="dough shaping"></li>
+<li>place the shaped dough onto baking sheets lined with silicone mats or
+parchment paper. cover again and let rise at room temperature for up to an
+hour.</li>
+<li>in the meantime, preheat the oven to 425F. prep your bagel toppings and
+egg wash. to make egg wash (optional but recommended), whisk together 1 egg
+yolk and a splash of milk/cream/water.</li>
+<li>in a large pot, bring 2 quarts of water to a boil. add 2 tbsp of the
+alkalized baking powder and 1/4 cup of maple syrup (or honey, or brown sugar).
+<img src="https://user-images.githubusercontent.com/549654/81510450-9b01fc80-92c6-11ea-8d50-6a0e4b18e3de.jpg" alt="doughbath" title="dough bath"></li>
+<li>carefully drop in 2-4 bagels at a time. they should float to the top of the water. let
+them boil for 30s to 1m on one side until a fried-looking layer forms, then
+flip them over and repeat for the other side.
+<img src="https://user-images.githubusercontent.com/549654/81510448-98070c00-92c6-11ea-9ba2-68bc62c3ff89.jpg" alt="boiling" title="boiling"></li>
+<li>when you have boiled the bagels on both sides, carefully remove them from
+the water with a slotted spoon and place on a plate. brush them with egg
+wash if using.
+<img src="https://user-images.githubusercontent.com/549654/81510442-90dffe00-92c6-11ea-992d-0f9f584c766c.jpg" alt="eggwash" title="egg wash"></li>
+<li>top generously with toppings
+<img src="https://user-images.githubusercontent.com/549654/81510509-04820b00-92c7-11ea-86b0-bb7efbfa0068.jpg" alt="toppings" title="toppings"></li>
+<li>place the bagels back on the lined baking sheets and bake for 20min or until
+they turn golden brown.</li>
+</ol>
+<p>here&rsquo;s my first batch without parmesan in the dough, on the slightly
+less-cooked end at ~19min (how i prefer bagels):
+<img src="https://user-images.githubusercontent.com/549654/81510479-c8e74100-92c6-11ea-9895-ed169d7dc127.jpg" alt="less donebagels" title="less done bagels"></p>
+<p>and here&rsquo;s bagels at ~21min, which is how most people seem to prefer bagels:
+<img src="https://user-images.githubusercontent.com/549654/81510499-e9170000-92c6-11ea-996c-ee2dfbb281cf.jpg" alt="more donebagels" title="more done bagels"></p>
+<p>the next day, they were still really soft with a nice density and bite:
+<img src="https://user-images.githubusercontent.com/549654/81510474-c08f0600-92c6-11ea-9b41-b129e20fdd14.jpg" alt="day after bagels1" title="day after bagels 1">
+<img src="https://user-images.githubusercontent.com/549654/81510472-bf5dd900-92c6-11ea-9843-d79fd898c092.jpg" alt="day after bagels2" title="day after bagels 2"></p>
+<p>for comparison, here&rsquo;s a picture from my 2nd batch which used bread flour instead of AP and had parmesan mixed into the dough. the
+dough was a lot stickier / harder to work with (hence some of the uglier photos
+above), and the end
+result might be considered not-a-proper-bagel by bagel snobs. however
+i guarantee it is still tastier than almost any bagel you can find on the west
+coast.
+<img src="https://user-images.githubusercontent.com/549654/81510438-87569600-92c6-11ea-822f-d887ce503968.jpg" alt="cheesybagel" title="cheesy bagel"></p>
+<p>happy experimenting!</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/ableton-midi/">Writing Custom Control Surfaces for Ableton</a></h1>
+        <span class="post-date">Nov 7, 2019</span>
+        <p>Recently I&rsquo;ve been really interested in what goes on in Ableton Live under the hood,
+since it&rsquo;s a widely-used piece of proprietary software for making bangers.
+It turns out you can get pretty far knowing just a small amount of Python
+scripting!</p>
+<p>For instance, I found that .als files (and .adv&rsquo;s, and .adg&rsquo;s, and probably
+more) are just gzipped XML and so therefore you can do some fun processing on
+them using any XML library, such as Python&rsquo;s. So, remembering the week that it
+took me to convert all my Ableton DJ sets into Rekordbox, I wrote a script to
+automatically <a href="https://github.com/diracdeltas/rekordbox-scripts/blob/master/ableton-to-cues.py">convert Ableton cues to Rekordbox and
+vice-versa</a>. This could have definitely saved me about 10 hours of boring work time that could have been spent making bangers instead!</p>
+<p>This week, I started looking into Ableton&rsquo;s Python interface for control
+surfaces and you&rsquo;ll never guess what happened next (a bunch of boring stuff).</p>
+<h2 id="whats-a-control-surface">What&rsquo;s a control surface?</h2>
+<p><a href="https://help.ableton.com/hc/en-us/articles/209774285-Using-Control-Surfaces">According to Ableton</a>, &ldquo;Control Surfaces are specially written scripts which allow controllers to interface with Live&rdquo;.</p>
+<p>Most people who use Ableton interact with it through a tactile controller, such as
+a MIDI keyboard or an Ableton Push or the APC40 controller. Control surfaces
+are scripts which act as a bridge between Ableton and the controller, telling
+Ableton what each button/knob/fader/etc. on the controller should do.</p>
+<p>It turns out that these control surfaces are simply Python scripts.</p>
+<h2 id="where-does-ableton-store-its-control-surface-scripts">Where does Ableton store its control surface scripts?</h2>
+<p>Ableton comes with a bunch of control surface scripts pre-installed for common
+controllers such as the Launchkey, Push, and APCs. For these controllers, you can just plug
+in the controller, open Ableton Preferences, and select the control surface for
+it via a drop-down list in the Link/MIDI tab.</p>
+<p>These scripts are stored in <code>/Applications/Ableton Live $VERSION.app/Contents/App Resources/MIDI Remote Scripts/</code> on Mac (where
+<code>$VERSION</code> is <code>10 Suite</code> for instance if you have Live 10 Suite installed) and
+<code>\ProgramData\Ableton\Live x.x\Resources\MIDI Remote Scripts\</code> on Windows.</p>
+<p>For the rest of this post we will refer to this as the MIDI Remote Scripts
+directory.</p>
+<h2 id="loading-a-custom-control-surface-script">Loading a custom control surface script</h2>
+<p>If you want to load your own custom control surface script for an existing
+MIDI controller, the steps are fairly straightforward:</p>
+<ol>
+<li>Find the existing control surface for the MIDI controller in the MIDI Remote
+Scripts directory. For instance, for the APC40, this would be in <code>APC40/</code> as
+a bunch of .pyc files. You can either decompile the .pyc yourself or find
+the decompiled version in
+<a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts">https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts</a>.</li>
+<li>Copy these decompiled Python files to a new directory in the MIDI Remote
+Scripts directory.</li>
+<li>Customize them (more on this in the next section).</li>
+<li>Now open Ableton and go to the Link/MIDI tab of Preferences. Ableton should
+automatically compile the .py files to .pyc. If everything loaded without
+errors, you will see your new MIDI Remote Scripts directory show up as
+an option in the Control Surface dropdown.</li>
+</ol>
+<h2 id="customizing-control-surfaces">Customizing control surfaces</h2>
+<p>In the MIDI Remote Scripts directory, there&rsquo;s various directories that start
+with <code>_</code>. These are libraries which other control surfaces can make use of. One
+particularly useful one is <code>_Framework</code>, which includes definitions for useful
+classes like <code>ButtonElement</code>, which represents a button on the controller.</p>
+<p>The best intro I&rsquo;ve found to <code>_Framework</code> is this one by Hanz Petrov:
+<a href="https://livecontrol.q3f.org/ableton-liveapi/articles/introduction-to-the-framework-classes/">https://livecontrol.q3f.org/ableton-liveapi/articles/introduction-to-the-framework-classes/</a>.</p>
+<p>Let&rsquo;s say we want to take the Metronome button on an APC40MKII and instead map
+that to turn on looping for the currently active clip. Assume we&rsquo;ve already
+created a <code>ControlSurface</code> subclass as a starting point.</p>
+<ol>
+<li>As a shortcut to calling <code>ButtonElement</code> directly, note that there is an
+<code>_APC</code> library already which provides a <code>make_button</code> utility method for APC
+controllers. <a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/_APC/ControlElementUtils.py#L16">Github link
+here.</a></li>
+<li><code>make_button</code> takes an identifier as input. To figure out what we
+need to pass here for the metronome button, we can look at the APC control
+protocol
+<a href="https://6be54c364949b623a3c0-4409a68c214f3a9eeca8d0265e9266c0.ssl.cf2.rackcdn.com/989/documents/APC40Mk2_Communications_Protocol_v1.2.pdf">documentation</a> which conveniently lists identifiers for all the buttons on the APC40MKII. We see that 0x5a, or 90, is the identifier for the metronome button.</li>
+<li>Now we have to add a listener to the button using the <code>add_value_listener</code> method of <code>ButtonElement</code> that
+triggers when the button is pressed. Let&rsquo;s call this handler <code>start_loop</code>.</li>
+<li>In <code>start_loop</code>, we can call the <code>song()</code>
+<a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/_Framework/ControlSurface.py#L126">method</a> of the ControlSurface
+superclass in order to get a reference to the Live.Song.Song object that we are
+currently controlling. For documentation on this and other Live
+objects that are available in Python, see <a href="https://julienbayle.studio/PythonLiveAPI_documentation/Live10.1.xml">here</a>.</li>
+<li><code>song().view.highlighted_clip_slot.clip</code> now gives us the active clip. This
+is a Live.Clip.Clip object according to the docs above. So we can simply set
+<code>clip.looping</code> to a truthy value like 1 to make the clip loop!</li>
+</ol>
+<p>In reality, I&rsquo;ve found the best way to figure these things out is to simply
+copy/paste code from other control surface scripts as needed. In particular,
+Will Marshall&rsquo;s <a href="https://github.com/willrjmarshall/AbletonDJTemplateUnsupported">unsupported Ableton 8 control surface
+scripts</a> are
+really helpful. Also the unofficial <a href="https://julienbayle.studio/PythonLiveAPI_documentation/Live10.1.xml">Live Python API
+documentation</a> is crucial.</p>
+<h2 id="debugging-tips">Debugging tips</h2>
+<ol>
+<li>You can log to Ableton&rsquo;s main log file using the ControlSurface
+<code>log_message</code> method defined
+<a href="https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/_Framework/ControlSurface.py#L250">here</a>.
+On Mac, the log file is at
+<code>/Users/[username]/Library/Preferences/Ableton/Live x.x.x/Log.txt</code> and on
+Windows it&rsquo;s <code>\Users\[username]\AppData\Roaming\Ableton\Live x.x.x\Preferences\Log.txt</code>. This file also contains errors emitted by
+Python.</li>
+<li>You can also reload the MIDI control surface without restarting Ableton: simply re-open the currently open session from <code>File &gt; Open Recent Set</code>.</li>
+<li>If you find that Ableton doesn&rsquo;t auto-compile Python, you can compile using
+<code>python -m compileall .</code></li>
+<li>As mentioned previously, if a script throws an error immediately, it won&rsquo;t
+show up in Ableton&rsquo;s list of available control surfaces.</li>
+</ol>
+<h2 id="example">Example</h2>
+<p>As an example, see this <a href="https://www.youtube.com/watch?v=YILKOWhN2ag">Youtube
+video</a> and <a href="https://github.com/diracdeltas/apc40mk2">Github
+repo</a> for adding CDJ-style looping
+buttons to the APC40MK2. The work for this was done originally for Ableton 8 by
+Will Marshall and I only made some minor edits to make it more CDJ-like and
+loadable in Live 10.</p>
+<p>Note that you can accomplish much of this already without control surface
+scripts simply by
+using Ableton&rsquo;s MIDI mapping mode. One exception is the ability to halve and
+double loop lengths.</p>
+<p>I hope this helps to show that control surface scripts are a quite powerful and
+flexible way to get your Ableton controller to behave exactly the way you want.
+Happy hacking!</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/information-apocalypse/">the information apocalypse</a></h1>
+        <span class="post-date">Feb 19, 2018</span>
+        <p>My friend <a href="http://aviv.me/">Aviv</a> was recently the subject of a popular <a href="https://www.buzzfeed.com/charliewarzel/the-terrifying-future-of-fake-news">Buzzfeed
+article</a> about the possibility of an impending &ldquo;information apocalypse&rdquo;. tl;dr: Aviv extrapolates from the fake news crisis that started in 2016 to a world in which anyone can create AI-assisted misinformation campaigns indistinguishable from reality to the average observer. From there, a series of possible dystopian scenarios arise, including:</p>
+<ol>
+<li>“Diplomacy manipulation,” in which someone uses deepfakes-style video
+manipulation tools to produce a realistic video of a political leader
+declaring war, in order to provoke their enemy into retaliation.</li>
+<li>“Polity simulation,” where Congresspeople&rsquo;s inboxes are spammed with
+messages from bots pretending to be their constituents.</li>
+<li>&ldquo;Laser phishing,&rdquo; which improves the sophistication of phishing attacks by
+training phishing email generators on messages from your real friends, so
+you&rsquo;re more likely to read them and fall for them.</li>
+</ol>
+<p>With regards to how this would affect our everyday lives, Aviv postulates that exposure to a constant barrage of misinformation may lead to &ldquo;reality apathy&rdquo;; that is, people will start to assume that any information presented to them is untrustworthy and give up on finding the truth. In such a world, Aviv says, &ldquo;People stop paying attention to news and that fundamental level of informedness required for functional democracy becomes unstable.&rdquo;</p>
+<p>The rest of this post consists of my half-formed thoughts on the possibility of reality apathy as it relates to existing technology, largely informed by my perspective working in the computer security industry.</p>
+<p>Let&rsquo;s start with the Internet of the late 90s and early 2000s. Back then, long before the 2016 fake news crisis, it was already possible to
+bombard everyone on the Internet with well-crafted, believable misinformation. All you had to do was create a legitimate-looking website with a legitimate-looking domain name and then spread the link via chain emails. Case in
+point: the first website that ever traumatized me as a kid was
+something called <a href="https://en.wikipedia.org/wiki/Bonsai_Kitten">Bonsai
+Kitten</a>. Complete with
+realistic-looking photos of cute kittens contorted into various jars and vases, this
+website completely fooled the 5th-grade me into believing that some unimaginably cruel person was raising and selling mutilated kittens. Apparently I wasn&rsquo;t the only one - the site drew hundreds of complaints a day from concerned animal-lovers and was the subject of an FBI investigation according to Wikipedia. Eventually Bonsai Kitten was debunked, and I&rsquo;m now friends with the creator of the site that once haunted my nightmares.</p>
+<p>Another example of misinformation that people online have been exposed to since the dawn of the Internet is email-based phishing and spam. However, nowadays it is relatively difficult to create a successful bulk phishing/spam campaign, largely thanks to Google&rsquo;s improvements in spam filtering and Gmail&rsquo;s ever-increasing <a href="https://mako.cc/copyrighteous/google-has-most-of-my-email-because-it-has-all-of-yours">centralization</a> of email. As Mike Hearn describes in
+great detail on the
+<a href="https://moderncrypto.org/mail-archive/messaging/2014/000780.html">messaging@moderncrypto.org mailing list</a>, Google eventually &ldquo;won&rdquo; the spam
+war by building a reputation system in which sender reputations could be
+calculated faster than the attacker could game the system. Notably, this solution relied on both Gmail&rsquo;s ability to scan an incredibly large volume of plaintext email and their ability to broadly distinguish between legitimate Gmail users and bots trying to do Sybil attacks on the reputation scoring system.</p>
+<p>How does this change in a world where phishing emails are generated by really
+smart AIs? We might imagine that the content of these emails would do a much better job at fooling both humans clicking the spam/not-spam labels and Gmail&rsquo;s filter
+algorithms into thinking that they aren&rsquo;t spam. However, the spammer would
+still have to figure out a way of obtaining non-blacklisted sender IP
+addresses, which can be done by signing up for a bunch of accounts with
+a webmail service like Gmail (which Gmail tries to prevent, as Mike Hearn notes) or by taking over someone else&rsquo;s account and spamming their contacts.</p>
+<p>The latter case may seem intractable. If a bot hacks my Gmail account,
+uses my sent mail to train itself to generate emails that sound exactly like
+me, and emails my friends asking them to send money to the hacker&rsquo;s Bitcoin
+address, Gmail&rsquo;s spam filters are going to have a hard time figuring out that
+those were not legitimate emails from me. On the other hand, I could have
+prevented this from happening had I done a better job of securing my email
+account. For these reasons, I consider email-based misinformation to be mostly a solved problem as long as Gmail&rsquo;s anti-spam team keeps doing their job, Google still controls the vast majority of email (ugh), and users can keep their accounts secured.</p>
+<p>What about phishing websites, then? There are some incomplete defenses against those:</p>
+<ol>
+<li>Google SafeBrowsing is a service integrated into Chrome and other browsers
+that contains a dynamic blacklist of &ldquo;bad&rdquo; domains, such as phishing sites
+and sites distributing known malware. Browsers that enable SafeBrowsing will
+show a warning before allowing a user to view a site on the SafeBrowsing
+blacklist.</li>
+<li>High-profile legitimate websites such as banks will often buy Extended
+Validation TLS certificates, which require their organization to be
+validated by the issuing certificate authority. In exchange, browsers show
+a green bar in the URL bar next to the lock icon, usually containing the
+name of the organization and the country code. However, it&rsquo;s relatively easy
+to <a href="https://stripe.ian.sh/">game the validation process</a>, and it&rsquo;s unclear
+how well this actually protects average users from
+<a href="https://twitter.com/collinjackson/status/910537192702861312">real-life</a>
+phishing attacks.</li>
+</ol>
+<p>On the other hand, the problem of determining whether a website is presenting
+a distorted version of reality has some important differences from the problem of determining
+whether a website is phishing/malware. For one, many people who have no
+problems accepting Google&rsquo;s decision on whether a website is distributing
+ransomware binaries would
+<strong>not</strong> be happy if Google were the sole arbiter of whether news
+stories were true or not. The occasionally-made argument that SafeBrowsing is a form of
+censorship would apply much more cleanly if SafeBrowsing (or a similar megacorp-controlled service) also blacklisted sites that were ruled to be &ldquo;fake news&rdquo;.</p>
+<p>So how do we protect people from believing fake news in a world where anyone can generate realistic-looking videos, images, and stories?</p>
+<p>One idea I had brought up with Aviv was that web browsers or content
+platforms like Facebook and YouTube could show a special UI indicator for media
+and stories from reputable news sites, similar to how browsers show a green bar
+for EV certificates and how Twitter/Facebook show a check mark next to
+verified account names. For instance, videos that are approved as legitimate by the
+Associated Press could be signed by a cryptographic key controlled by AP that
+is preloaded into browsers. Then when the video is playing in someone&rsquo;s
+Facebook news feed, the browser&rsquo;s trusted UI (for instance somewhere in
+the URL bar) would display a popup informing the user that the video has been
+approved by AP. This would however not prevent attacks where a Facebook user
+makes up a fake caption (&ldquo;Trump declares war on Hawaii&rdquo;) for
+a real image (an old photo of Trump speaking).</p>
+<p>(Browsers and news reader apps could even add an optional &ldquo;trusted news mode&rdquo; where they only display media files that have been cryptographically signed by a reputable journalist organization. Unfortunately this would also block content from &ldquo;citizen journalists&rdquo; such as people livetweeting photos from a protest.)</p>
+<p>To end on a more pessimistic note, I fear that we ultimately can&rsquo;t stop misinformation
+campaigns from becoming rampant and normalized, not because of purely technological
+reasons but because of psychological ones. During and in the wake of the 2016 Presidential
+Election, a lot of the shares, likes, and retweets that I saw boiled down to people on both sides trying as hard as they could to reinforce
+their existing beliefs. Social media, it turns out, is an excellent tool for
+propagating &ldquo;evidence&rdquo; of what you believe, regardless of whether the evidence
+is <a href="http://nymag.com/selectall/2018/02/hard-conservatives-share-the-most-fake-news-stories.html">real or
+not</a>.</p>
+<p>Fake news that is unpalatable (ex: Bonsai Kitten) stops spreading once it&rsquo;s
+been debunked, but fake news that is <strong>crafted to be consistent with your desired
+reality</strong> can keep getting views, shares, and clicks. Instead of reality apathy, we end up with pick-your-own-reality filter bubbles, in which people gather and amplify fake evidence for the reality that best suppports their underlying narrative. Instead of &ldquo;giving up&rdquo; on consuming information, people cherry-pick their information consumption based on feelings instead of fact, turning more and more online spaces into breeding grounds for extremism.</p>
+<p>And so, maybe the majority of people wouldn&rsquo;t even want
+SafeBrowsing-style blacklists of fake news sites or verification badges on
+legitimate journalist-vetted news articles, because they&rsquo;re not reading
+the news to learn the truth - they&rsquo;re reading the news to validate and spread their
+existing worldviews.</p>
+<p>Effectively this means that any technological solution to the information
+apocalypse depends on a social/behavioral solution: people need to welcome
+cognitive dissonance into their online spaces instead of shunning it.
+But it sounds almost ridiculous to suggest that shares/likes/retweets should be based on factual accuracy, not emotions. That&rsquo;s not how social media works.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/post-truth/">a post-truth thought experiment</a></h1>
+        <span class="post-date">Jan 23, 2017</span>
+        <h2 id="1-a-perfect-game-theoretic-analysis-machine">1. A perfect game-theoretic analysis machine</h2>
+<p>Imagine that you had a magic machine. You tell the machine what your goals are. The machine tells you, in any situation, the optimal statement to say in order to achieve your goals, and who to say it to. The statement may or may not be true.</p>
+<p>Under which circumstances, if any, would you follow the machine&rsquo;s instructions?</p>
+<p>Example 1: Bob tells the machine that his goal is to become as rich as possible. The machine instructs Bob to publish a &ldquo;fake news&rdquo; article about how climate change is an illuminati conspiracy theory.</p>
+<p>Example 2: Alice tells the machine that her goal is to cure cancer. The machine instructs her to tell the local florist that her favorite color is red when in reality it is blue.</p>
+<p>Instinctively, most truth-loving people would consider Bob to be immoral for following his instructions; however, we would probably not say the same of Alice. Many of us would even admit that in Alice&rsquo;s situation we would follow the machine&rsquo;s instructions. This suggests that, for many people, there exists a class of situations in which cost/benefit analysis favors lying.</p>
+<h2 id="2-anecdata">2. Anecdata</h2>
+<p>Because the plural of &ldquo;anecdote&rdquo; is &ldquo;anecdata,&rdquo; I asked an abbreviated form of this question on <a href="https://twitter.com/bcrypt/status/823272031273652224">Twitter</a>. Most people said they would not lie because of one of the following reasons:</p>
+<ol>
+<li>
+<p>Lying causes them to have negative feelings, like guilt and stress.</p>
+</li>
+<li>
+<p>The reputational risk caused by lying is too great. (Although you could solve this by telling the machine that your goal is to achieve X while never getting caught lying.)</p>
+</li>
+<li>
+<p>The truth is more aesthetically pleasing.</p>
+</li>
+<li>
+<p>Inertia; telling the truth is their default behavior, and they see no compelling incentive to change.</p>
+</li>
+<li>
+<p>Honesty is a way of showing respect and consideration for oneself and others. As an example, if one believes that information asymmetry leads to power imbalance, then the more powerful person in a relationship can help the less powerful by disclosing truthful information. (Added on 1/23/17 thanks to input from Noah and Nadim.)</p>
+</li>
+</ol>
+<h2 id="3-what-is-truth">3. What is truth?</h2>
+<p>Before criticizing <a href="https://www.nytimes.com/2017/01/22/us/politics/president-trump-inauguration-crowd-white-house.html">&ldquo;alternative facts&rdquo;</a> and <a href="https://www.washingtonpost.com/news/the-fix/wp/2016/11/16/post-truth-named-2016-word-of-the-year-by-oxford-dictionaries/">post-truth</a> politics, we should examine what truth means to us and why we love it so much in the first place.</p>
+<p>In my mind, a conservative definition of &ldquo;telling the truth&rdquo; is &ldquo;saying things that are consistent with our observations.&rdquo; For instance, if a helicopter pilot sees around 400,000 people at the inauguration, it would be truthful for them to say there were 300,000-500,000 people at the inauguration, but it would be a lie to claim there was only 1 person.</p>
+<p>A less-conservative definition might be, &ldquo;saying things that are consistent with what we believe.&rdquo; For instance, I may not have directly observed the moon landing, but I could honestly tell someone that humans have landed on the moon because I believe it happened based on the numerous credible (to me) scientists and history books that say so. In fact, the scientific community has established standards for what counts as &ldquo;credible,&rdquo; based on peer review and the reproducibility of results.</p>
+<p>The problem is, other communities' standards for credibility are far less stringent and well-defined. For instance, you might judge Donald Trump&rsquo;s press secretary&rsquo;s media briefings to be a credible source of facts. By the less-conservative definition, you are then &ldquo;telling the truth&rdquo; when you claim to your friends that more people attended his inauguration than any other in history.</p>
+<p>Since the conservative definition is too limited for useful discussion, I will henceforth define truth as the set of statements that are believable according to some standard of credibility. To lie is to assert that a statement that is outside this set is in this set, either intentionally or non-intentionally. Note that if two communities have differing standards of credibility, a statement that is a truth to one community may be a falsehood to the other.</p>
+<h2 id="4-are-we-biased-toward-a-particular-kind-of-truth">4. Are we biased toward a particular kind of truth?</h2>
+<p>Yes; I think a lot of us, especially scientists and engineers, are biased towards telling the truth as determined by scientific standards of credibility. I use the word &ldquo;bias&rdquo; because we do not usually justify why telling the truth is preferable to lying, or why our standards of credibility are the right ones. We may allude to vague notions such as &ldquo;lies hurt people,&rdquo; which we&rsquo;ve heard over and over since childhood, or we may assert that science is good, but we fall short of an argument meeting the rigor that we typically demand from people with opposing viewpoints. It seems ironic for scientists and rationalists to critique others' conceptions of (post-)truth while quietly treating the correctness of our own as a foregone conclusion.</p>
+<p>Anyway, here are a few reasons to justify my conception of truth and why I don&rsquo;t usually lie:</p>
+<ol>
+<li>
+<p>I don&rsquo;t personally care about the pursuit and propagation of (my definition of) truth as a goal in itself; however, it has historically been an effective means of accomplishing goals that I do care about, such as improving the average quality of life for all humans. Thanks to centuries of people defining truth as &lsquo;that which can be tested using the scientific method&rsquo;, we have stuff like penicillin and airplanes.</p>
+</li>
+<li>
+<p>The discovery of a lie is likely to cause suffering, in part due to current societal norms and assumptions about lying (ex: the belief that if someone loves you, they wouldn&rsquo;t lie to you). As someone whose goal is to minimize suffering, I therefore try not to knowingly lie or make statements that could turn out to not be true. Of course, it&rsquo;s possible that telling the truth will ultimately cause more suffering in some indirect way, but I usually do not have enough information to determine when this is the case.</p>
+</li>
+<li>
+<p>In certain circumstances, behavioral economics research has shown that <a href="https://en.wikipedia.org/wiki/The_Market_for_Lemons">telling the truth</a> leads to a better state for people overall than when some or all parties are lying.</p>
+</li>
+</ol>
+<p>Admittedly, the first reason is the most compelling for me. Extrapolating from this utilitarian standpoint implies that if I had a machine that told me which lies to tell (or which standards of credibility to use) so that I could start a movement that ultimately improved billions of lives, I would tell those lies.</p>
+<p>This is an uncomfortable thought because my love for scientific truth is as deep as it is irrational. After all, if you take a birds' eye view at the history of human civilization, science is just a meme that has gone viral in the last several centuries or so. Maybe a new meme will appear soon.</p>
+<h2 id="5-dealing-with-the-post-truth-world">5. Dealing with the post-truth world</h2>
+<p>The machine in Part 1 is not a purely hypothetical construct. Increasingly, over the last election cycle and the first few days of the Trump presidency, it has become apparent to me that some people believe that they have version 0.0000001 of this machine, and they are willing to follow its instructions without regard for scientific truth. In horror, we (the pre-post-truth people) stifle screams at the crumbling foundations of rational discourse, and then we scroll down to the next tweet. Thanks to infinite scroll, the horror is literally unending.</p>
+<p>Few people seem to be asking, is it right to fabricate falsehoods for one&rsquo;s own causes if the other side has been doing the same? The mainstream answer is no, either because lying is seen as inherently immoral or because of the long-term reputation cost. The latter can be addressed by spreading the lies from <a href="https://www.nytimes.com/2017/01/18/us/fake-news-hillary-clinton-cameron-harris.html">sources that already have ~zero reputation</a>; moreover, it is no longer a problem once people agree that lying is chill and/or lying becomes so commonplace that it&rsquo;s expected of news sites and social media posts.</p>
+<p>How effective is honesty at achieving your goals, and at what point do you decide that lying is a more effective means to an end? I want to say &ldquo;never&rdquo; for the second question, but I can clearly imagine a world in which it is the wrong answer.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/surveillance/">surveillance, whistleblowing, and security engineering</a></h1>
+        <span class="post-date">Oct 5, 2016</span>
+        <p>[Update (12/14/16): <a href="http://www.reuters.com/article/us-yahoo-nsa-order-idUSKCN12800D">Reuters</a> has specified that the rootkit was implemented as a Linux kernel module. Wow.]</p>
+<p>Yesterday morning, Reuters dropped a news story revealing that Yahoo <a href="http://www.reuters.com/article/us-yahoo-nsa-exclusive-idUSKCN1241YT">installed a backdoor</a> on their own infrastructure in 2015 in compliance with a secret order from either the FBI or the NSA. While we all know that the US government routinely asks tech companies for surveillance help, a couple aspects of the Yahoo story stand out:</p>
+<ol>
+<li>
+<p>The backdoor was installed in such a way that it was intercepting and querying all Yahoo Mail users' emails, not just emails of investigation targets.</p>
+</li>
+<li>
+<p>The program was implemented so carelessly that it could have allowed hackers to read all incoming Yahoo mail. Of course this also means FBI/NSA could have been reading all incoming Yahoo mail.</p>
+</li>
+<li>
+<p>Yahoo execs deliberately bypassed review from the security team when installing the backdoor. In fact, when members of the security team found it within weeks of its installation, they immediately assumed it had been installed by malicious hackers, rather than Yahoo&rsquo;s own mail team. (This says something about what the backdoor code may have looked like.)</p>
+</li>
+<li>
+<p>Yahoo apparently made no effort to challenge this overly-broad surveillance order which needlessly put hundreds of millions of users at risk.</p>
+</li>
+</ol>
+<p>At the time this was happening, I was on the Yahoo Security team leading development on the <a href="https://github.com/yahoo/end-to-end">End-to-End</a> project. According to the Reuters report, the mail backdoor was installed at almost the exact same time that Alex Stamos and I <a href="https://yahoo.tumblr.com/post/113708033335/user-focused-security-end-to-end-encryption">announced</a> the open-source launch of a Chrome extension for easy-to-use end-to-end encryption in Yahoo Mail at SXSW 2015. Ironically, if only we had been able to <a href="http://www.nytimes.com/2016/09/29/technology/yahoo-data-breach-hacking.html">actually ship E2E</a>, we would have given users a way to protect themselves from the exact backdoor scenario that they ended up in!</p>
+<p>Imagine for a moment that you are a security engineer who discovers a backdoor that your company execs have been trying to hide from your team. Would you quit on ethical grounds or stay so that you can prevent this from happening again? I don&rsquo;t think there is one right answer. Personally I am grateful both for those who left and blew the whistle, and for those who stayed to protect Yahoo&rsquo;s 800 million users.</p>
+<p>Part of the job function of security engineers and pen testers is being ready for the moment you encounter something that you think should be disclosed but your company wants to keep secret. Think about what you would be willing to lose. Be prepared to escalate internally. Know the terms of your NDA and your exit agreement; try your best to honor them. Most of all, keep pushing for end-to-end encryption.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/bus-diaries/">bus diaries</a></h1>
+        <span class="post-date">Jun 27, 2016</span>
+        <p>While migrating my blog from WordPress to Hugo + GitHub Pages, I found two old diary entries from last autumn, a period of life when I rode buses a lot. They are copied below.</p>
+<h2 id="oct-28-2015">oct 28, 2015</h2>
+<p>they told me not to, so i&rsquo;m taking the bus from downtown LA to LAX. on my right, a man is asking everyone except me for 50 cents. everyone except me is a black guy.</p>
+<p>the bus stops for the zillionth time and a high schooler in a white t-shirt with some arm tattoos gets on. he sits down to my left and asks me what my arm tattoo is of. i start explaining particle physics. he asks what the hell i&rsquo;m doing on the bus in LA. &ldquo;hanging out,&rdquo; i shrug. he thinks i am 19 years old and smart and beautiful and cool so he asks me out. i say sorry i live in san francisco, i am on my way to the airport, and just for the record, i am 24 years old. the guy next to him hears this and high-fives me because he used to live in oakland. the kid asks me if i could please change my flight so we can chill. i say no. then he says, &ldquo;you are the dopest girl i&rsquo;ve ever met. imma get off the bus and call my friend and tell him &lsquo;bout you.&rdquo; i say thanks. he remembers i&rsquo;m not from south LA so he tells me it&rsquo;s a real bad neighborhood and i should not talk to anyone if i get off the bus here. i say thank you, that information may be relevant to my immediate perambulations. the kid is obviously a bit sad we can&rsquo;t hang out, so we say our goodbyes as he is getting off the bus to go to his friend&rsquo;s house. i tell him he is young and i&rsquo;m sure he will meet lots more people on the bus in the future.</p>
+<p>the guy from Oakland starts to play rap music at full volume on his phone. the man on my right leans over to him and whispers, &ldquo;50 Cent?&rdquo; i tell him, no sir, i believe this track is by Biggie. &ldquo;that&rsquo;s right,&rdquo; he nods, as the guy from Oakland hands him 50 cents.</p>
+<h2 id="nov-11-2015">nov 11, 2015</h2>
+<p>assuming you don&rsquo;t have actual sleeping pills, the trick is to drink way too much alcohol the night before and then eat enough pasta in the morning before getting on the bus that you pass out as soon as you hit the highway. pasta is basically a date rape food, in case you somehow haven&rsquo;t noticed. when you get on the bus, it&rsquo;ll probably be half full of lonely-looking people with deep lines of weariness creased in their drooping faces. they shuffle onto the bus, reluctantly set their things in the adjacent seats, plug in their earbuds, and let their eyelids float down slowly like gentle sea creatures. the bus takes you from boston to new york city for just $14 and it only explodes catastrophically sometimes.</p>
+<p>before i pass out, i stare out the window at chunks of highway blurring by. it&rsquo;s so fucking ugly here, you have no idea. the sky is the color of dirty dishwater. the sky pisses cold rain indiscriminately onto decrepit warehouses and rusty gas stations and weather-chipped rest stop signs creaking out their last desperate cries of dreary pretend-hospitality. it&rsquo;s 3 in the afternoon and getting dark, which is such bullshit. really, nothing quite compares to the desolate feeling of sitting on a $14 bus surrounded by sad sleepy strangers while the feeble daylight dissolves into lonely darkness on a rainy afternoon in the middle-of-nowhere, connecticut (?). everyone obviously knows that the grip of winter is clenching tighter around their battered shoulders with every passing day now but nobody wants to talk about it. nobody wants to talk at all.</p>
+<p>i hate it here. i miss it too. california turns everyone into sun-drenched polyester-clad ingrates, drunk on their own invincibility against the gentlest of elements. self-sufficiency is cheap in kind climates; rarely do you crave friendly company to pass the endless hours of icy drizzly darkness, nor do you exchange parsimoniously-heartfelt smiles of shared hardship with your neighbor while numbly stabbing your shovels into the frozen sidewalk. but when you wake up in the middle of the night to reach for a warm comforting hand that isn&rsquo;t there, at least you&rsquo;re not shivering.</p>
+<p>i probably should have had more pasta.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/xychelsea-part-2/">xychelsea part 2</a></h1>
+        <span class="post-date">May 26, 2016</span>
+        <p class="p1">
+  The second and last time that I visit Chelsea Manning, we speak and move with a sense of urgency, as if a natural disaster is imminent. By now, the Ft Leavenworth prison visit procedure feels strangely familiar, like a movie you once watched in a dream. I check in with the uniformed officer at the Disciplinary Barracks&#8217; front desk, wait uselessly while he misgenders Chelsea and figures out if I’m allowed to visit her, rent a locker to stow my jacket which is prohibited in the visit room (due to the having of zippers), don an unsuspicious smile when the guard tries to deny something i’m bringing (this time, it’s blank drawing paper and pencils &#8211; both of which are eventually let through), pass through the metal detector and double-doored atrium, wait for the guard to let Chelsea through the opposite doors, hug briefly, sit down at her favorite table against the wall, buy her snacks from the vending machines twice (first course: Dr. Pepper and Sour Cream and Onion chips; second course: Pepsi and Doritos), watch the other inmates playing cards with their families, make jokes, laugh, cry, talk about computers and pretend we’re just normal friends doing friend-things, except we are forced to return to two separate worlds when the clock strikes 21:30.
+</p>
+<p class="p1">
+  She tells me straight up that she was misty-eyed last night after my first visit and knows she’ll be bummed out for the next couple days after I leave. Trying to dispel the palpable gloom, I assure her that I’ll visit again, though I can’t promise when. It doesn&#8217;t really work. The sadness is still there, swirling in the small grey room, so thick I can almost choke on it. Fortunately, we are both highly adept at changing the subject and pretending that everything is fine.
+</p>
+<p class="p1">
+  I hand her a near-illegible list of questions for her from strangers on Twitter, which I had hurriedly compiled during the drive in. She brightens and grins, scrawling answers in the empty spaces as if it were a high school math exam.
+</p>
+<p class="p1">
+  <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168.jpg"><img class="alignnone wp-image-783" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168-1024x1024.jpg" alt="questions for chelsea" width="518" height="518" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168-768x768.jpg 768w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2168-624x624.jpg 624w" sizes="(max-width: 518px) 100vw, 518px" /></a>
+</p>
+<blockquote>
+<p class="p1">
+  Q: Who do you support for president?
+</p>
+<p class="p1">
+  A: [after pausing for a minute, explaining that she isn’t allowed to comment on this question.] I don’t like partisanship. [we chat about pitfalls of the two-party system.]
+</p>
+<p class="p1">
+  Q: Read any Kafka?
+</p>
+<p class="p1">
+  A: yes!
+</p>
+<p class="p1">
+  Q: Okies say hi!
+</p>
+<p class="p1">
+  A: hi!
+</p>
+<p class="p1">
+  Q: What do you hope people are doing [in response to your actions]?
+</p>
+<p class="p1">
+  A: think for yourselves
+</p>
+<p class="p1">
+  Q: Are you comforted by [the knowledge of your] patriotism?
+</p>
+<p class="p1">
+  A: <flag-emoji> USA!
+</p>
+<p class="p1">
+  Q: What [do you do] to keep faith?
+</p>
+<p class="p1">
+  A: pi
+</p>
+<p class="p1">
+  Q: What is the most interesting/exciting thing you’ve learned [in prison]?
+</p>
+<p class="p1">
+  A: how to live collectively
+</p>
+</blockquote>
+<p class="p1">
+  Then she picks up another sheet of paper and mischievously says, “I should write some questions for Twitter in return.”
+</p>
+<p class="p1">
+  <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169.jpg"><img class="alignnone wp-image-784" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169-1024x1024.jpg" alt="questions from chelsea" width="524" height="524" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169-768x768.jpg 768w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2016/05/IMG_2169-624x624.jpg 624w" sizes="(max-width: 524px) 100vw, 524px" /></a>
+</p>
+<p class="p1">
+  We spend a while chatting about small lighthearted things, like lip gloss quality (a subject on which her opinion is far more sophisticated than mine) and whether the red-orange powder on Doritos actually has any flavor (we agree the answer is no). Then abruptly we start to talk about hope, about her 35-year sentence, about the act of hanging on for as long as you can. Her eyes start to fill with tears.
+</p>
+<p class="p1">
+  I tell her about all the people on the internet who care about her, all these people who she can’t see or talk to.
+</p>
+<p class="p1">
+  Then I start to cry too.
+</p>
+<p class="p1">
+  How many visitors do you have? I ask.
+</p>
+<p class="p1">
+  Five, she says.
+</p>
+<p class="p1">
+  We count them. There’s only four, including me. One of them has never actually visited. She doesn&#8217;t know when her next visitor will be.
+</p>
+<p class="p1">
+  Only friends and family who knew her pre-confinement are allowed. But that must be dozens if not hundreds of people, I think angrily to myself. Flights to Kansas City aren’t always cheap, but surely we could start a donation fund. My mind starts spinning, madly grasping for schemes to increase her visitor count. Sure, Leavenworth is a quiet boring little town, but rent is cheap and there’s nice hiking trails nearby. We could rent a vacation home and start a commune here with a bunch of her old friends. We’d take turns living here, we’d bring other people to keep us company, we would work and make art and host lectures during the day, we would visit her every night.
+</p>
+<p class="p1">
+  I can tell that this would make her life so much more bearable. She jokes that maybe she would become too occupied with visits, that she wouldn&#8217;t have time to do her classwork or write columns. A visit once a month would be nice, she says with a smile, but she thinks all her friends who knew her before are too afraid to see her, unwilling to bear the risk of being added to government watch lists. I reassure her that this will get better over time, that paranoia will fade faster than the last photographs the public has seen of her. My words sound empty to me.
+</p>
+<p class="p1">
+  And then it&#8217;s time to say our goodbyes. We hug as I tell her it’s not really goodbye (I’ll be back, I promise). The guard interrupts, yells at everyone that our time is really up. I try to look at her face, but it hurts to watch the tears come up again. I can tell that the next couple days will be tough.
+</p>
+<p class="p1">
+  I pull her back for one last hug.
+</p>
+<p class="p1">
+  Chelsea is a former soldier, a celebrated whistleblower, a role model for millions of people around the world, a pioneer for transgender rights, and a hero who will be remembered forever in American history, but right now she is just a small figure in my arms, scared like the rest of us and wanting nothing more than to go home.
+</p>
+<p class="p1">
+  I walk out of the visitation room and she goes in the opposite direction back to her cell. For a single crystallizing moment, I play her movements in reverse and imagine her walking with me out of the prison. The guard is weary-eyed after three hours on his shift; he doesn’t notice a thing. Together, we pass quietly through the metal detector, walk down the stairs through the cold glass doors and onto the rain-soaked lawn where the night sky greets us with a starless nod. Barely a mile away, a cute Kansas town of smoke-filled bars, barbecue diners, and kitschy antique shops awaits us. Inside our chests floats a smiling thought of morning.
+</p>
+<p class="p1">
+  Then she’s gone. My dream collapses into a hard knot of rage. Chelsea could walk twenty steps, through two doors, past a lone prison guard, and into a life of freedom. In reality, she can’t, because a vast and terrifying justice system stands in the way. Instead, she will spend up to 35 years in a remote prison cell, wishing she had more visitors. Some days she will wake up feeling motivated to conquer a new day. Other days she will wake up feeling like she wants to give up. The world will change around her, but life in the Ft Leavenworth Disciplinary Barracks will mostly stay the same, year after year.
+</p>
+<p class="p1">
+  But for now she is doing her best, and her story is <a href="https://medium.com/@xychelsea/far-from-over-b8c0f3246739#.mjggn8dqa">far from over</a>.
+</p>
+<p class="p1">
+  [Update (5/27/16): Today marks the 6th anniversary of Chelsea&#8217;s arrest. She&#8217;s <a href="https://medium.com/@xychelsea/six-years-so-far-4dee0ee26fc8#.plys95uts">written a letter</a> to the world, and The Guardian has published a nice <a href="http://www.theguardian.com/us-news/2016/may/27/chelsea-manning-six-years-prison-whistleblowing">article</a> about it.]
+</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/xychelsea/">xychelsea</a></h1>
+        <span class="post-date">May 25, 2016</span>
+        <p class="p1">
+  On the day that I am scheduled to see my friend Chelsea for the first time in six years, I wake up at 4:51pm to a shrieking fire alarm in my hotel room. Semi-conscious and disoriented, I leap out of bed and spin around wildly grabbing at all the things I care about &#8211; my phone and passport, the precious slip of paper that will allow me entrance to Fort Leavenworth prison, the bag of quarters that Chelsea asked me to bring &#8211; ready for an FBI raid disguised as a fire drill. Before I finish putting on shoes, the alarm stops. Slowly the wave of paranoia in my stomach grinds to a halt.
+</p>
+<p class="p1">
+  I make myself be still and breathe for a moment, reabsorbing my surroundings. I’m standing on the fourth floor of a modest hotel on the edge of Fort Leavenworth, Kansas. Outside the window looms a blue-grey sky, a vast horizon dense and textured like charcoal mixed with cream. The land is flat, green, fertile, midwestern. A hot humid river is all that separates us from Missouri. To people like Chelsea and me, who grew up in Oklahoma and Missouri before running away to sharp-edged cities by the sea, this place feels simultaneously homelike and suffocating.
+</p>
+<p class="p1">
+  As boring as Kansas is, you have to award it points for charm. Ex: a steakhouse across from the old Ft Leavenworth prison proudly proclaims itself “The Little Steak House Across from the Big House,” betraying no awareness of dark irony. The prison staff are all exceedingly polite and helpful, even when they are reprimanding me for not having a driver’s license, even when the receptionist mistakenly refers to Chelsea as “he” over a dozen times in a 5 minute phone call. “Now you go and have yourself a good day, honey,” they say in a warm-hued drawl as I navigate another step in the military bureaucracy, inching closer to actually being able to see Chelsea.
+</p>
+<p class="p1">
+  For the curious, here is approximately the process I went through to gain visitation access to the Ft Leavenworth Disciplinary Barracks:
+</p>
+<li class="p1">
+  <strong>December 2015</strong>: Chelsea adds me to her list of telephone contacts and starts the application process for my visitation, which requires evidence that we were acquainted prior to her confinement.
+</li>
+<li class="p1">
+  <strong>March/April 2016</strong>: I receive a letter notifying me that my visitation was approved but a background check is required prior to the visit. Over the course of a week or two, I called at least five different offices at Fort Leavenworth to inquire about how to do the background check before flying to Kansas. Nobody really knew, so I gave up and just booked a flight.
+</li>
+<li class="p1">
+  <strong>May 2016</strong>: After confirming via phone that I was on the Fort Leavenworth visit schedule, I fly to Kansas City. My trip companions and I check in at the Visitor Control Center to register our vehicle and get access passes to the fort. One of us is denied for having a non-US passport. The other two of us are given passes promptly and without background checks. After that, the two of us are free to drive on and off the army base.
+</li>
+<p class="p1">
+  If all goes well, I will be Chelsea’s first visitor since her sister in November.
+</p>
+<p class="p1">
+  At 6:20pm on May 24, we drive into Fort Leavenworth for the first time. I am surprised to discover that it is full of grassy fields, lush tree-lined sidewalks, and pastel suburban houses, not at all like a place where you would put a military prison. I wave at some joggers.
+</p>
+<p class="p1">
+  At 6:50pm, we finally find the United States Discipline Barracks, home of Chelsea’s prison cell. I walk inside and follow the signs to the visitation area. There are rules for visitation printed on the wall, which I’ve read a half-dozen times (no low-cut clothing, no short pants or skirts, 5 sheets of paper allowed, pencils and pens allowed, quarters and cash allowed in a transparent ziplock bag, no WiFi-enabled devices, no jackets, no cameras). The guard is friendly and makes light conversation with me, like all the Fort Leavenworth staff members I’ve interacted with so far. How bizarre to think that these friendly people, dripping with syrup-thick midwestern hospitality, are the same people keeping Chelsea forcibly isolated from the outside world for the next three decades.
+</p>
+<p class="p1">
+  I force out a weak smile, explain my visitation purpose in my a faintly-artificial Missouri accent. The guard sees me on the visit schedule but is concerned that my shirt doesn’t have sleeves. Apparently sleeveless shirts are not allowed, even though this isn’t printed anywhere in the rules. Fuck. He goes to consult another officer. I nervously fidget.
+</p>
+<p class="p1">
+  Thankfully, it is decided that I am allowed to enter (though I must wear a sleeved shirt next time). They let me through the metal detector after inspecting my 5 sheets of paper and ziplock bag containing 6 pencils, 1 pen, and $10 in quarters. I am flooded with relief, which quickly washes away into nervousness as I enter the visit room where Chelsea, my friend who I haven’t seen in six years, who I thought I would never see again after her arrest, is supposedly waiting.
+</p>
+<p class="p1">
+  She’s not there. Instead there’s just some grey tables and chairs, depressingly few of which are occupied by inmates and their sad-looking visitors.
+</p>
+<p class="p1">
+  And then the door opens and she walks in.
+</p>
+<p class="p1">
+  We run towards each other.
+</p>
+<p class="p1">
+  We hug, and my eyes fill with tears.
+</p>
+<p class="p1">
+  When something that you’ve convinced yourself will never happen is finally happening, there’s a moment when your brain starts to panic and desperately record every detail, fearing that this is all an illusion that will soon dissolve without a trace. So I looked at her as if I would never see her again, my heart sinking with the realization that there will probably never exist a photo of Chelsea Manning, age 28, for the world to see. It made me sad, because she looks nothing like any of the photos of her on the Internet. She looked like a hero, brighter and stronger than in all my memories, radiant with a light that makes no sense.
+</p>
+<p class="p1">
+  She was wearing a brown prison uniform that was too big for her small frame and smiling ear-to-ear. Her hair was neatly combed in a short pixieish cut, no longer than the 2-inch maximum allowed by the prison. Despite everything, she looked even younger than I remembered, with glowing skin and large blue eyes framed by elegant cheekbones. We beamingly smiled at each other for several seconds, suspended in disbelief and joy.
+</p>
+<p class="p1">
+  “So do you wanna sit down?” I say. We find a table, and smile some more, and then I ask if she wants anything from the vending machines. “Sure, I’ll get something I’m not usually able to get,” she says, picking a Mountain Dew. I pay for it using 6 quarters from my ziplock bag. I also try to buy her some sour cream-flavored chips, but the snacks machine is broken, which makes me unusually angry. I make a mental reminder to ask the prison staff to fix it.
+</p>
+<p class="p1">
+  We sit back down and talk for most of two hours without pausing. We talk about life in prison, where she spends 40 hours a week working in a wood shop and somehow finds time to take college correspondence courses, read journals, write a column for The Guardian, and work with lawyers on her appeal. We talk about her growing interest in post-quantum cryptography and the collection of books building up in her cell. We talk about the last time we met and what our mutual friends are up to nowadays. We talk about our complex relationships with family. We talk about my shoes (which she likes a lot) and the kind of music that she used to DJ. We talk about where she would live if she weren’t in prison. We talk about how she find motivation to keep going every day, even though some days her life feels unfair and hopeless. Many times, I am speechlessly awed by her curiosity and perseverance in the face of extremely messed-up, depressing circumstances.
+</p>
+<p class="p1">
+  I bring up her recent appeal to reduce her sentence from 35 years to 10 years, and she seems worried that it didn’t receive enough coverage in the press. She hopes that the world hasn’t forgotten about her.
+</p>
+<p class="p1">
+  I’m not sure what to say. Like others, I feel guilty for not doing more to raise public awareness for her case. Maybe if I’d spoken up more about how her sentence was grossly unjust, or written about the importance of her trial as a precedent for all whistleblowers, she’d be in a better place now. Instead all I could do was sit and chat with her, drinking soda in a sterile grey room while someone’s toddler screamed and cried at the table next to us.
+</p>
+<p class="p1">
+  Before I realize it, it&#8217;s 9:25pm and the guard is yelling at us that our time is up. Chelsea, a self-identified extrovert, seems sad that I’m leaving, even though I’ll be back in 22 hours for my second and last day of visitation. We say our goodbyes and hug each other, holding the embrace longer this time.
+</p>
+<p class="p1">
+  Back outside, I stand and watch the inmates’ families pile into their cars and drive home. Some of them live near the prison so they can visit their imprisoned loved one every day. I think about how strange it is that Chelsea is a hero to thousands if not millions of people, but there is nobody who does this for her. If she&#8217;s lucky, she&#8217;ll receive one more visit from a friend this year.
+</p>
+<p class="p1">
+  I don’t want us to forget her at least.
+</p>
+<p class="p1">
+  Update (5/26/16): Obligatory reminder that you can support Chelsea by donating to her <a href="https://freedom.press/chelsea">defense fund</a>, <a href="https://www.chelseamanning.org/learn-more/write-to-chelsea-manning">writing her a letter</a> (she reads every single one she receives), and following her accounts on <a href="https://twitter.com/xychelsea">Twitter</a> and <a href="https://medium.com/@xychelsea">Medium</a>. In addition, <a href="https://www.chelseamanning.org/resources/organizing-kit">this page</a> has a nice toolkit for organizers to support her cause.
+</p>
+<p class="p1">
+  Update (6/02/16): <a href="https://diracdeltas.github.io/blog/xychelsea-part-2">Part 2</a> of this story is up for those who want to keep reading.
+</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/0x19/">25</a></h1>
+        <span class="post-date">May 4, 2016</span>
+        <p class="p1">
+  i turn 25 in an hour. this seems strange and unbelievable. surely 25 years of existence is enough to become acquainted with the monotonicity of time. but instead the seconds pass and disbelief stares back, unmoving.
+</p>
+<p class="p1">
+  a quarter-century is a long time. with sadness, i realize how much of it i have forgotten already.
+</p>
+<p class="p1">
+  imagine that we could live forever. would we still talk about wasting time if time were an unlimited resource? would we still apologize for being late?
+</p>
+<p class="p1">
+  it seems that we should panic less about wasting time as our lifespan grows. paradoxically, every moment in time is unique and unrepeating, so we should be losing our shit over each precious second that passes.
+</p>
+<p class="p1">
+  i used to imagine the movement of time as like a river, flowing by with the blended grace and strength of water and gravity. now it feels like a tired jogger limping by on a rhythmless gait, wrecked with joint pain and gasping for air. most steps are slogged with exhaustion, but every once in a while a wave of endorphins crashes in and makes the world spin with brightness.
+</p>
+<p class="p1">
+  how unfortunate it is to be alive during the brief window of history when computers are getting faster just as your body is getting slower. i hope i’m lucky enough to become more of a computer soon.
+</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/happy-birthday/">happy birthday</a></h1>
+        <span class="post-date">Dec 17, 2015</span>
+        <p>Dear Chelsea,</p>
+<p>You probably don’t remember me, but we met in September 2009. This was before everyone knew your name and before many people knew mine.</p>
+<p>I was at home, helping my friend cut her hair. Out of the corner of my eye, I saw you walk into the living room. You were taking photos of our mural-covered walls, seemingly happy to be in such a bizarre and interesting house of MIT students. Someone introduced you to me.</p>
+<p>That evening, or perhaps the evening after, I learned that you were a soldier training for Iraq. You wanted to leave the military someday and get a degree in Computer Science. You weren’t much older than me, but you sounded more anxious and weary than anyone I’d ever met before. We chatted for a while, and then I had to go finish my homework.</p>
+<p>You left Boston soon after that, and you friended me on Facebook. I accepted your friend request, and that was the last time we interacted with each other.</p>
+<p>When you were arrested in 2010, I was proud of what you’d done and angry at what happened to you after (I still am, every day). At the same time, the media <a href="http://tech.mit.edu/V130/N30/wikileaks.html" target="_blank">started suspecting</a> (baselessly) that friends of mine had assisted you in whistleblowing. For the first time in my life, I felt like I might be under more surveillance than the average 18 year-old.</p>
+<p>It was then that I realized that although I hadn’t done anything wrong, I had reason to be distrustful of the government that I lived under. I had nothing to hide, but nonetheless I was now part of a community under suspicion of a serious crime.</p>
+<p>I started learning about security and privacy. Soon after, I installed PGP and started using it. Years later, I still think of you every time I help others encrypt their communications.</p>
+<p>So thanks for teaching me how to be paranoid. Thanks for showing me why everyone should care about surveillance, even if they aren’t a whistleblower. Meeting you was an accident that could have happened to anyone. I’m glad it happened to me.</p>
+<p>Happy 28th Birthday.</p>
+<p>-Yan</p>
+<p>[PS for readers: You can help support Chelsea by donating to her legal defense team. <a href="https://www.chelseamanning.org/press/chelsea-manning-defense-fund">Info here.</a>]</p>
+
+    </div>
+  
+</div>
+
+<div class="pagination">
+  
+  <a class="pagination-item older" href="https://blog.azuki.vip/page/2/">Older</a>
+  
+
+  
+  <span class="pagination-item newer">Newer</span>
+  
+</div>
+
+      </div>
+    </div>
 
     <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+  </body>
+</html>
+

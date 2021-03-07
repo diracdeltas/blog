@@ -1,156 +1,100 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> Some thoughts on the NSA and elliptic curve cryptography </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      Some thoughts on the NSA and elliptic curve cryptography &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Some thoughts on the NSA and elliptic curve cryptography</h1>
+  <span class="post-date">Sep 13, 2013</span>
+  <p>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:</p>
+<p>========</p>
+<p><span class="userContent">I’ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.</span></p>
+<p>There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially <span class="text_exposed_show">in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</span></p>
+<p>In 2006, NIST published an algorithm for elliptic-curve based random number generation that was shown to be easily breakable but ONLY by whoever chose the elliptic curve parameters. Luckily this algorithm was crazy slow so nobody used it, even though it was the (only?) NIST-recommended way of generating random bits with elliptic curves.</p>
+<p>But it turns out there are some <a href="https://eprint.iacr.org/2003/058.pdf">relatively-obscure papers</a> that suggest that you can gain a decent cryptographic advantage by picking the elliptic curve parameters! [Edit: It was later <a href="http://www.scottaaronson.com/blog/?p=1517#comment-87087">pointed out</a> to me that this particular attack is not close to anything <span class="userContent"><span class="text_exposed_show">the NSA could be doing right now, for various reasons. It is of course unclear whether they have knowledge of other elliptic curve parameter-based attacks that are not in the academic literature.]</span></span></p>
+<p>This is terrifying, because the elliptic curve parameters chosen for relatively-mysterious reasons by NIST (probably via NSA) are used by Google, OpenSSL, and any RFC-compliant implementation of elliptic curves in OpenPGP (gnupg-ecc, for instance).</p>
+<p><span class="userContent"><span class="text_exposed_show">==========</span></span></p>
+<p><span class="userContent">Some people might be wondering if they can trust companies who issue statements that their closed-source software products don’t contain NSA backdoors (Microsoft, Google, Apple, etc.). Here is an example of why not.</span></p>
+<p>It has been known since <span class="text_exposed_show">2006 that Dual EC DRBG (a NIST-standardized random bit generation algorithm) has a major vulnerability that makes no sense except as an NSA backdoor. Essentially, the algorithm contains some constant parameters that are left unexplained; some researchers then showed that whoever determined these parameters could easily predict the output of the algorithm if they had access to a special set of secret numbers (analogous to an RSA private key). This is a beautiful design for a crytographic backdoor, because the secret numbers are difficult to find except by the person who set the constant parameters in the algorithm.</span></p>
+<p>Despite being slower than other random bit generators, Dual EC DRBG is implemented in a bunch of software products by major companies like RSA Security, Microsoft, Cisco, BlackBerry, McAfee, Certicom, and Samsung. For a full list, see: <a href="http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html" target="_blank" rel="nofollow nofollow"><a href="http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html">http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html</a></a></p>
+<p>Most of these products are closed-source, so you can’t check whether your encryption keys are being generated with Dual EC DRBG.</p>
+<p>This is a pretty strong argument that secure software is necessarily open source software.</p>
+<p><span class="userContent"><span class="text_exposed_show">========<br /> </span></span></p>
+<p><span class="userContent"><span class="text_exposed_show">Additional citations:</span></span></p>
+<p><span data-ft="{&quot;tn&quot;:&quot;K&quot;}" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2]"><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0]"><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[3]">Bruce Schneier on the 2006 backdoor discovery in Dual_EC_DRBG: </span><a href="https://www.schneier.com/blog/archives/2007/11/the_strange_sto.html" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[4]"><a href="https://www.schneier.com/&amp;#8230;/2007/11/the_strange_sto.html">https://www.schneier.com/&amp;#8230;/2007/11/the_strange_sto.html</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[6]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[7]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[8]">Google’s blog post announcing SSL w/ forward secrecy, specifically mentioning that they use the P-256 curve: </span><a href="https://www.imperialviolet.org/2011/11/22/forwardsecret.html" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[9]"><a href="https://www.imperialviolet.org/2011/11/22/forwardsecret.html">https://www.imperialviolet.org/2011/11/22/forwardsecret.html</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[10]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[11]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[12]">Wiki section on NIST-recommended curves: </span><a href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography#NIST-recommended_elliptic_curves" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[13]"><a href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography&amp;#8230;">https://en.wikipedia.org/wiki/Elliptic_curve_cryptography&amp;#8230;</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[14]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[15]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[16]">RFC section stating that P-256 is REQUIRED for ecc in openpgp: </span><a href="http://tools.ietf.org/html/rfc6637#section-12.1" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[17]"><a href="http://tools.ietf.org/html/rfc6637#section-12.1">http://tools.ietf.org/html/rfc6637#section-12.1</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[18]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[19]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[20]">Description of elliptic curve usage in OpenSSL: </span><a href="http://wiki.openssl.org/index.php/Elliptic_Curve_Cryptography" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[21]"><a href="http://wiki.openssl.org/&amp;#8230;/Elliptic_Curve_Cryptography">http://wiki.openssl.org/&amp;#8230;/Elliptic_Curve_Cryptography</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[22]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[23]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[24]">Presentation on security dangers of NIST curves: </span><a href="http://cr.yp.to/talks/2013.05.31/slides-dan+tanja-20130531-4x3.pdf" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[25]"><a href="http://cr.yp.to/&amp;#8230;/slides-dan+tanja-20130531-4&amp;#215;3.pdf">http://cr.yp.to/&amp;#8230;/slides-dan+tanja-20130531-4&amp;#215;3.pdf</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[26]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[27]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[28]">NSA page recommending you use elliptic curves lol: </span><a href="http://www.nsa.gov/business/programs/elliptic_curve.shtml" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[29]"><a href="http://www.nsa.gov/business/programs/elliptic_curve.shtml">http://www.nsa.gov/business/programs/elliptic_curve.shtml</a></a></span></span></p>
+<p><span data-ft="{&quot;tn&quot;:&quot;K&quot;}" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2]"><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0]"><a href="http://www.nsa.gov/business/programs/elliptic_curve.shtml" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[29]"> </a></span></span><span class="userContent"><span class="text_exposed_show">========</span></span></p>
+<p><span class="userContent"><span class="text_exposed_show">UPDATE (9/23/13): RSA security has issued an advisory to stop using some of their products where DUAL_EC_DRBG is the default random number generator (<a href="http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/)">http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/)</a>. Matthew Green also made an excellent blog post about this topic over at <a href="http://blog.cryptographyengineering.com/2013/09/the-many-flaws-of-dualecdrbg.html">http://blog.cryptographyengineering.com/2013/09/the-many-flaws-of-dualecdrbg.html</a>.<br /> </span></span></p>
+</div>
+
       </div>
     </div>
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-    <div class="container content">
-      <h1 class="post-title">Some thoughts on the NSA and elliptic curve cryptography</h1>
-        <section id="main">
-          <h5 id="date"> Fri Sep 13, 2013 </h5>
-          <p>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:</p>
-
-<p>========</p>
-
-<p><span class="userContent">I&#8217;ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.</span></p>
-
-<p>There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially <span class="text_exposed_show">in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</span></p>
-
-<p>In 2006, NIST published an algorithm for elliptic-curve based random number generation that was shown to be easily breakable but ONLY by whoever chose the elliptic curve parameters. Luckily this algorithm was crazy slow so nobody used it, even though it was the (only?) NIST-recommended way of generating random bits with elliptic curves.</p>
-
-<p>But it turns out there are some <a href="https://eprint.iacr.org/2003/058.pdf">relatively-obscure papers</a> that suggest that you can gain a decent cryptographic advantage by picking the elliptic curve parameters! [Edit: It was later <a href="http://www.scottaaronson.com/blog/?p=1517#comment-87087">pointed out</a> to me that this particular attack is not close to anything <span class="userContent"><span class="text_exposed_show">the NSA could be doing right now, for various reasons. It is of course unclear whether they have knowledge of other elliptic curve parameter-based attacks that are not in the academic literature.]</span></span></p>
-
-<p>This is terrifying, because the elliptic curve parameters chosen for relatively-mysterious reasons by NIST (probably via NSA) are used by Google, OpenSSL, and any RFC-compliant implementation of elliptic curves in OpenPGP (gnupg-ecc, for instance).</p>
-
-<p><span class="userContent"><span class="text_exposed_show">==========</span></span></p>
-
-<p><span class="userContent">Some people might be wondering if they can trust companies who issue statements that their closed-source software products don&#8217;t contain NSA backdoors (Microsoft, Google, Apple, etc.). Here is an example of why not.</span></p>
-
-<p>It has been known since <span class="text_exposed_show">2006 that Dual EC DRBG (a NIST-standardized random bit generation algorithm) has a major vulnerability that makes no sense except as an NSA backdoor. Essentially, the algorithm contains some constant parameters that are left unexplained; some researchers then showed that whoever determined these parameters could easily predict the output of the algorithm if they had access to a special set of secret numbers (analogous to an RSA private key). This is a beautiful design for a crytographic backdoor, because the secret numbers are difficult to find except by the person who set the constant parameters in the algorithm.</span></p>
-
-<p>Despite being slower than other random bit generators, Dual EC DRBG is implemented in a bunch of software products by major companies like RSA Security, Microsoft, Cisco, BlackBerry, McAfee, Certicom, and Samsung. For a full list, see: <a href="http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html" target="_blank" rel="nofollow nofollow"><a href="http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html">http://csrc.nist.gov/groups/STM/cavp/documents/drbg/drbgval.html</a></a></p>
-
-<p>Most of these products are closed-source, so you can&#8217;t check whether your encryption keys are being generated with Dual EC DRBG.</p>
-
-<p>This is a pretty strong argument that secure software is necessarily open source software.</p>
-
-<p><span class="userContent"><span class="text_exposed_show">========<br /> </span></span></p>
-
-<p><span class="userContent"><span class="text_exposed_show">Additional citations:</span></span></p>
-
-<p><span data-ft="{&quot;tn&quot;:&quot;K&quot;}" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2]"><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0]"><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[3]">Bruce Schneier on the 2006 backdoor discovery in Dual_EC_DRBG: </span><a href="https://www.schneier.com/blog/archives/2007/11/the_strange_sto.html" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[4]"><a href="https://www.schneier.com/&amp;#8230;/2007/11/the_strange_sto.html">https://www.schneier.com/&amp;#8230;/2007/11/the_strange_sto.html</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[6]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[7]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[8]">Google&#8217;s blog post announcing SSL w/ forward secrecy, specifically mentioning that they use the P-256 curve: </span><a href="https://www.imperialviolet.org/2011/11/22/forwardsecret.html" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[9]"><a href="https://www.imperialviolet.org/2011/11/22/forwardsecret.html">https://www.imperialviolet.org/2011/11/22/forwardsecret.html</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[10]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[11]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[12]">Wiki section on NIST-recommended curves: </span><a href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography#NIST-recommended_elliptic_curves" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[13]"><a href="https://en.wikipedia.org/wiki/Elliptic_curve_cryptography&amp;#8230">https://en.wikipedia.org/wiki/Elliptic_curve_cryptography&amp;#8230</a>;</a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[14]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[15]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[16]">RFC section stating that P-256 is REQUIRED for ecc in openpgp: </span><a href="http://tools.ietf.org/html/rfc6637#section-12.1" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[17]"><a href="http://tools.ietf.org/html/rfc6637#section-12.1">http://tools.ietf.org/html/rfc6637#section-12.1</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[18]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[19]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[20]">Description of elliptic curve usage in OpenSSL: </span><a href="http://wiki.openssl.org/index.php/Elliptic_Curve_Cryptography" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[21]"><a href="http://wiki.openssl.org/&amp;#8230;/Elliptic_Curve_Cryptography">http://wiki.openssl.org/&amp;#8230;/Elliptic_Curve_Cryptography</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[22]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[23]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[24]">Presentation on security dangers of NIST curves: </span><a href="http://cr.yp.to/talks/2013.05.31/slides-dan+tanja-20130531-4x3.pdf" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[25]"><a href="http://cr.yp.to/&amp;#8230;/slides-dan+tanja-20130531-4&amp;#215;3.pdf">http://cr.yp.to/&amp;#8230;/slides-dan+tanja-20130531-4&amp;#215;3.pdf</a></a><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[26]" /><br data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[27]" /><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[28]">NSA page recommending you use elliptic curves lol: </span><a href="http://www.nsa.gov/business/programs/elliptic_curve.shtml" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[29]"><a href="http://www.nsa.gov/business/programs/elliptic_curve.shtml">http://www.nsa.gov/business/programs/elliptic_curve.shtml</a></a></span></span></p>
-
-<p><span data-ft="{&quot;tn&quot;:&quot;K&quot;}" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2]"><span data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0]"><a href="http://www.nsa.gov/business/programs/elliptic_curve.shtml" target="_blank" rel="nofollow" data-reactid=".r[3ztcq].[1][4][1]{comment10200823098442317_5008296}.[0].{right}.[0].{left}.[0].[0].[0][2].[0].[29]"> </a></span></span><span class="userContent"><span class="text_exposed_show">========</span></span></p>
-
-<p><span class="userContent"><span class="text_exposed_show">UPDATE (9/23/13): RSA security has issued an advisory to stop using some of their products where DUAL_EC_DRBG is the default random number generator (<a href="http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/">http://arstechnica.com/security/2013/09/stop-using-nsa-influence-code-in-our-product-rsa-tells-customers/</a>). Matthew Green also made an excellent blog post about this topic over at <a href="http://blog.cryptographyengineering.com/2013/09/the-many-flaws-of-dualecdrbg.html">http://blog.cryptographyengineering.com/2013/09/the-many-flaws-of-dualecdrbg.html</a>.<br /> </span></span></p>
-
-        </section>
-    </div>
-  </div>
-
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/on-artificially-bounded-futures/">On artificially-bounded futures</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/some-favorite-git-commands/"> &nbsp; Some favorite git commands</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/code">code</a> </li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/hacktivism">hacktivism</a> </li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/uncategorized">Uncategorized</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 

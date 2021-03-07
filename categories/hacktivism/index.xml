@@ -2,170 +2,166 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hacktivism on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/hacktivism/</link>
+    <link>https://blog.azuki.vip/categories/hacktivism/</link>
     <description>Recent content in hacktivism on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 25 May 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://diracdeltas.github.io/blog/categories/hacktivism/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 25 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/categories/hacktivism/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>xychelsea</title>
-      <link>https://diracdeltas.github.io/blog/xychelsea/</link>
+      <link>https://blog.azuki.vip/xychelsea/</link>
       <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/xychelsea/</guid>
+      <guid>https://blog.azuki.vip/xychelsea/</guid>
       <description>On the day that I am scheduled to see my friend Chelsea for the first time in six years, I wake up at 4:51pm to a shrieking fire alarm in my hotel room. Semi-conscious and disoriented, I leap out of bed and spin around wildly grabbing at all the things I care about &amp;#8211; my phone and passport, the precious slip of paper that will allow me entrance to Fort Leavenworth prison, the bag of quarters that Chelsea asked me to bring &amp;#8211; ready for an FBI raid disguised as a fire drill.</description>
     </item>
     
     <item>
       <title>sniffly</title>
-      <link>https://diracdeltas.github.io/blog/sniffly/</link>
+      <link>https://blog.azuki.vip/sniffly/</link>
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/sniffly/</guid>
-      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I&amp;#8217;m dizzy and lost and can&amp;#8217;t remember whose couch I&amp;#8217;m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
+      <guid>https://blog.azuki.vip/sniffly/</guid>
+      <description>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I’m dizzy and lost and can’t remember whose couch I’m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</description>
     </item>
     
     <item>
       <title>backdooring your javascript using minifier bugs</title>
-      <link>https://diracdeltas.github.io/blog/backdooring-js/</link>
+      <link>https://blog.azuki.vip/backdooring-js/</link>
       <pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/backdooring-js/</guid>
-      <description>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of POC||GTFO 0x08 from Travis Goodspeed. The coolest article I&amp;#8217;ve read so far in it is &amp;#8220;Deniable Backdoors Using Compiler Bugs,&amp;#8221; in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</description>
+      <guid>https://blog.azuki.vip/backdooring-js/</guid>
+      <description>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of POC||GTFO 0x08 from Travis Goodspeed. The coolest article I’ve read so far in it is “Deniable Backdoors Using Compiler Bugs,” in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</description>
     </item>
     
     <item>
       <title>pseudorandom podcast series, episode 1</title>
-      <link>https://diracdeltas.github.io/blog/pseudorandom-podcast-series-episode-1/</link>
+      <link>https://blog.azuki.vip/pseudorandom-podcast-series-episode-1/</link>
       <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/pseudorandom-podcast-series-episode-1/</guid>
-      <description>The combination of my roommate starting a Rust podcast and a long, animated conversation with a (drunk) storyteller last night caused me to become suddenly enamored with the idea of starting my own lil&amp;#8217; podcast. Lately I keep thinking about how many spontaneous, insightful conversations are never remembered, much less entombed in a publicly-accessible server for posterity. So a podcast seemed like an excellent way to share these moments without spending a lot of time writing (I&amp;#8217;m a regrettably slow writer).</description>
+      <guid>https://blog.azuki.vip/pseudorandom-podcast-series-episode-1/</guid>
+      <description>The combination of my roommate starting a Rust podcast and a long, animated conversation with a (drunk) storyteller last night caused me to become suddenly enamored with the idea of starting my own lil’ podcast. Lately I keep thinking about how many spontaneous, insightful conversations are never remembered, much less entombed in a publicly-accessible server for posterity. So a podcast seemed like an excellent way to share these moments without spending a lot of time writing (I’m a regrettably slow writer).</description>
     </item>
     
     <item>
       <title>solving boolean satisfiability on human circuits</title>
-      <link>https://diracdeltas.github.io/blog/2sat/</link>
+      <link>https://blog.azuki.vip/2sat/</link>
       <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/2sat/</guid>
-      <description>I remember quite clearly sitting in Scott Aaronson&amp;#8217;s computability and complexity theory course at MIT in 2011. I was a 19 year-old physics major back then, so Scott&amp;#8217;s class was mostly new and fascinating.
+      <guid>https://blog.azuki.vip/2sat/</guid>
+      <description>I remember quite clearly sitting in Scott Aaronson’s computability and complexity theory course at MIT in 2011. I was a 19 year-old physics major back then, so Scott’s class was mostly new and fascinating.
 One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length.</description>
     </item>
     
     <item>
       <title>HOPEX</title>
-      <link>https://diracdeltas.github.io/blog/hopex/</link>
+      <link>https://blog.azuki.vip/hopex/</link>
       <pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/hopex/</guid>
+      <guid>https://blog.azuki.vip/hopex/</guid>
       <description>4 years ago, I went to HOPE for the first time on a last-minute press pass from my college newspaper. Some relevant facts about the trip:
- I was 19 and had never been to a hacker con before. I didn&amp;#8217;t identify as a hacker (or an activist). I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</description>
+ I was 19 and had never been to a hacker con before. I didn’t identify as a hacker (or an activist). I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</description>
     </item>
     
     <item>
       <title>Software Transparency: Part 1</title>
-      <link>https://diracdeltas.github.io/blog/software-transparency/</link>
+      <link>https://blog.azuki.vip/software-transparency/</link>
       <pubDate>Fri, 11 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/software-transparency/</guid>
-      <description>Say that you want to &amp;#8220;securely&amp;#8221; acquire an app called EncryptedYo for &amp;#8220;securely&amp;#8221; communicating with your friends. You go to the developer&amp;#8217;s web site, which is HTTPS-only, and download a binary executable. Done!
-Perhaps if you&amp;#8217;re paranoid, you fetch the developer&amp;#8217;s GPG key, make sure that there&amp;#8217;s a valid trust path to it from your own key, verify the detached signature that they&amp;#8217;ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you&amp;#8217;ve downloaded before installing it.</description>
+      <guid>https://blog.azuki.vip/software-transparency/</guid>
+      <description>Say that you want to “securely” acquire an app called EncryptedYo for “securely” communicating with your friends. You go to the developer’s web site, which is HTTPS-only, and download a binary executable. Done!
+Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure that there’s a valid trust path to it from your own key, verify the detached signature that they’ve posted for the binary, and check that the checksum in the signature is the same as that of the binary that you’ve downloaded before installing it.</description>
     </item>
     
     <item>
       <title>a short story idea</title>
-      <link>https://diracdeltas.github.io/blog/a-short-story-idea/</link>
+      <link>https://blog.azuki.vip/a-short-story-idea/</link>
       <pubDate>Sun, 26 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/a-short-story-idea/</guid>
+      <guid>https://blog.azuki.vip/a-short-story-idea/</guid>
       <description>In the year 2014, a startup in San Francisco builds an iPhone app that successfully cures people of heartbreak, but it requires access to every permission allowed on the operating system, including some that no app has ever requested before. It only costs $2.99 though.
-The app becomes hugely popular. The heartbroken protagonist of our story logs into the Apple iStore to download it, but because the Apple iStore doesn&amp;#8217;t support HTTP Strict Transport Security yet, an NSA FOXACID server intercepts the HTTP request and injects targeted iPhone malware into the download before Apple&amp;#8217;s servers have a chance to respond.</description>
+The app becomes hugely popular. The heartbroken protagonist of our story logs into the Apple iStore to download it, but because the Apple iStore doesn’t support HTTP Strict Transport Security yet, an NSA FOXACID server intercepts the HTTP request and injects targeted iPhone malware into the download before Apple’s servers have a chance to respond.</description>
     </item>
     
     <item>
       <title>decentralized trustworthiness measures and certificate pinning</title>
-      <link>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</link>
+      <link>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</link>
       <pubDate>Tue, 21 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
-      <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it&amp;#8217;s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
+      <guid>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
+      <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it’s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
  Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
     </item>
     
     <item>
       <title>Aaron</title>
-      <link>https://diracdeltas.github.io/blog/aaron/</link>
+      <link>https://blog.azuki.vip/aaron/</link>
       <pubDate>Sun, 12 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/aaron/</guid>
-      <description>My co-worker Peter and I were riding the Caltrain from Mozilla to San Francisco a few days ago. A stranger sat down next to us and started talking. When I mentioned that we worked at EFF, his eyes lit up and he said, &amp;#8220;Oh! But you guys have won, right?&amp;#8221;
+      <guid>https://blog.azuki.vip/aaron/</guid>
+      <description>My co-worker Peter and I were riding the Caltrain from Mozilla to San Francisco a few days ago. A stranger sat down next to us and started talking. When I mentioned that we worked at EFF, his eyes lit up and he said, “Oh! But you guys have won, right?”
 Confused, I asked what he meant by that.
-He said, &amp;#8220;You defeated SOPA and PIPA a couple years ago. So you&amp;#8217;ve won.</description>
+He said, “You defeated SOPA and PIPA a couple years ago. So you’ve won.</description>
     </item>
     
     <item>
       <title>On Suicide</title>
-      <link>https://diracdeltas.github.io/blog/on-suicide/</link>
+      <link>https://blog.azuki.vip/on-suicide/</link>
       <pubDate>Thu, 02 Jan 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/on-suicide/</guid>
-      <description>I lost four friends and relatives of friends to suicide this past year. I&amp;#8217;d prefer it if 2014 were different, and I&amp;#8217;ve been trying to think about how to make that happen.
-The least I could do is offer myself to anyone who feels alone otherwise: so, if you&amp;#8217;re at that point where you&amp;#8217;re thinking about hurting yourself, please please please call or write to me. I&amp;#8217;d really like that, even if you don&amp;#8217;t feel like it would help in any way, even if we&amp;#8217;ve never met.</description>
+      <guid>https://blog.azuki.vip/on-suicide/</guid>
+      <description>I lost four friends and relatives of friends to suicide this past year. I’d prefer it if 2014 were different, and I’ve been trying to think about how to make that happen.
+The least I could do is offer myself to anyone who feels alone otherwise: so, if you’re at that point where you’re thinking about hurting yourself, please please please call or write to me. I’d really like that, even if you don’t feel like it would help in any way, even if we’ve never met.</description>
     </item>
     
     <item>
       <title>One year later</title>
-      <link>https://diracdeltas.github.io/blog/one-year-later/</link>
+      <link>https://blog.azuki.vip/one-year-later/</link>
       <pubDate>Thu, 28 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/one-year-later/</guid>
+      <guid>https://blog.azuki.vip/one-year-later/</guid>
       <description>One year ago, I started writing again out of panic. Humans are very adept at forgetting the feeling of panic, so the act of crystallizing it in sentences can be cathartic if you write slowly enough.
-Last November was a weird and difficult time for me. I remember spending the night of the twenty-third in a friend&amp;#8217;s childhood bedroom overlooking the idyllic frost-laced meadows of suburban Pennsylvania, wrapped in the mansion of an unfamiliar family that had adopted me for Thanksgiving.</description>
+Last November was a weird and difficult time for me. I remember spending the night of the twenty-third in a friend’s childhood bedroom overlooking the idyllic frost-laced meadows of suburban Pennsylvania, wrapped in the mansion of an unfamiliar family that had adopted me for Thanksgiving.</description>
     </item>
     
     <item>
       <title>Passwords, user models, and Adobe’s mistake</title>
-      <link>https://diracdeltas.github.io/blog/passwords-user-models-and-adobes-mistake/</link>
+      <link>https://blog.azuki.vip/passwords-user-models-and-adobes-mistake/</link>
       <pubDate>Mon, 04 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/passwords-user-models-and-adobes-mistake/</guid>
+      <guid>https://blog.azuki.vip/passwords-user-models-and-adobes-mistake/</guid>
       <description>The following is a phenomenal story for illustrating how real-life cybersecurity disasters come from a combination of technical and social failures. In this case, both were necessary for making things as catastrophic as they were.
-A couple days ago, it was announced that 130 million Adobe account credentials were compromised by a cyberattack. (If you are an Adobe customer, please make sure you&amp;#8217;ve changed your password on any account that shared the same password.</description>
+A couple days ago, it was announced that 130 million Adobe account credentials were compromised by a cyberattack. (If you are an Adobe customer, please make sure you’ve changed your password on any account that shared the same password.</description>
     </item>
     
     <item>
       <title>Thoughts on Cypherpunks 2.0</title>
-      <link>https://diracdeltas.github.io/blog/thoughts-on-cypherpunks-2-0/</link>
+      <link>https://blog.azuki.vip/thoughts-on-cypherpunks-2-0/</link>
       <pubDate>Sun, 13 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/thoughts-on-cypherpunks-2-0/</guid>
-      <description>This is a post about fear. It&amp;#8217;s easy to write about things that everyone says they are afraid of, but less so about nightmares that you suspect might just be your own. The latter is much more distressing and also easier to push out of the way. I&amp;#8217;ll try to elaborate on something that has been in the back of my mind.
-Last night, I went to a talk by my friend Andy titled, &amp;#8220;Cypherpunks 2.</description>
+      <guid>https://blog.azuki.vip/thoughts-on-cypherpunks-2-0/</guid>
+      <description>This is a post about fear. It’s easy to write about things that everyone says they are afraid of, but less so about nightmares that you suspect might just be your own. The latter is much more distressing and also easier to push out of the way. I’ll try to elaborate on something that has been in the back of my mind.
+Last night, I went to a talk by my friend Andy titled, “Cypherpunks 2.</description>
     </item>
     
     <item>
       <title>On artificially-bounded futures</title>
-      <link>https://diracdeltas.github.io/blog/on-artificially-bounded-futures/</link>
+      <link>https://blog.azuki.vip/on-artificially-bounded-futures/</link>
       <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/on-artificially-bounded-futures/</guid>
+      <guid>https://blog.azuki.vip/on-artificially-bounded-futures/</guid>
       <description>I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.
 The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students.</description>
     </item>
     
     <item>
       <title>Some thoughts on the NSA and elliptic curve cryptography</title>
-      <link>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
+      <link>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</link>
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
+      <guid>https://blog.azuki.vip/some-thoughts-on-the-nsa-and-elliptic-curve-cryptography/</guid>
       <description>Below is an amalgamation of some posts that I made recently on a popular microblogging platform:
 ========
-I&amp;#8217;ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
+I’ve been reading a lot today about what I believe is a super-likely NSA backdoor into modern cryptosystems.
 There are these things called elliptic curves that are getting used more and more for key generation in cryptography, especially in forward-secrecy-enabled SSL (which is the EFF-recommended way to secure web traffic). The problem is that the choice of parameters for the elliptic curves most used in practice are set by NIST, and we know for sure that the NSA has some influence on NIST standards.</description>
     </item>
     

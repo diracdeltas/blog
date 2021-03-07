@@ -1,139 +1,96 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> this blog uses Content Security Policy </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      this blog uses Content Security Policy &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">this blog uses Content Security Policy</h1>
+  <span class="post-date">Jul 26, 2015</span>
+  <p><em>FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.</em></p>
+<p>Having recently given some <a href="https://zyan.scripts.mit.edu/presentations/txjs2015.pdf">talks</a> about <a href="http://www.w3.org/TR/CSP/">Content Security Policy</a> (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.</p>
+<p>This lil’ blog is hosted by the <a href="https://scripts.mit.edu/">MIT Student Information Processing Board</a> and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML <meta> tags instead so that these instructions would work for people who don’t have shell access to their WordPress host. Unfortunately, CSP using <meta> hasn’t landed in Firefox yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663570">tracking bug</a>) so I should probably do the .htaccess thing anyway.</p>
+<p>It’s pretty easy to turn on CSP in WordPress from the dashboard:</p>
+<ol>
+<li>Go to &lt;your_blog_path&gt;/wp-admin/theme-editor.php. Note that this isn’t available for WordPress-hosted blogs (*.wordpress.com).</li>
+<li>Click on Header (header.php) in the sidebar to edit the header HTML.</li>
+<li>At the start of the HTML <code>&lt;head&gt;</code> element, add a CSP meta tag with your CSP policy. This blog uses <code>&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;script-src 'self'&quot;&gt;</code> which disallows all scripts except from its own origin (including inline scripts). As far as I can tell, this blocks a few inline scripts but doesn’t impede any functionality on a vanilla WordPress instance. You might want a more permissive policy if you use fancy widgets and plugins.</li>
+<li>[Bonus points] You can also show a friendly message to users who disable javascript by adding a <code>&lt;noscript&gt;</code> element to your header.<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png"><img class="alignnone wp-image-599 size-full" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png" alt="noscript" width="1128" height="381" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png 1128w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-300x101.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-1024x346.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-624x211.png 624w" sizes="(max-width: 1128px) 100vw, 1128px" /></a></li>
+</ol>
+<p>A fun fact I discovered during this process is that embedding a SoundCloud iframe will include tracking scripts from Google Analytics and scorecardresearch.com. Unfortunately CSP on the embedding page (my blog) doesn’t extend to embedded contexts (soundcloud.com iframe), so those scripts will still run unless you’ve disabled JS.</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png"><img class="alignnone size-full wp-image-600" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png" alt="scorecard" width="806" height="594" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png 806w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM-300x221.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM-624x460.png 624w" sizes="(max-width: 806px) 100vw, 806px" /></a></p>
+<p>That’s all. I might do more posts on WordPress hardening later or even write a WP plugin (*shudders at the thought of writing PHP*). More tips are welcome too.</p>
+<p>UPDATE (8/24/15): CSP is temporarily disabled on this blog because Google Analytics uses an inline script. I’ll nonce-whitelist it later and turn CSP back on.</p>
+</div>
+
       </div>
     </div>
 
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-    <div class="container content">
-      <h1 class="post-title">this blog uses Content Security Policy</h1>
-        <section id="main">
-          <h5 id="date"> Sun Jul 26, 2015 </h5>
-          <p><em>FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.</em></p>
-
-<p>Having recently given some <a href="https://zyan.scripts.mit.edu/presentations/txjs2015.pdf">talks</a> about <a href="http://www.w3.org/TR/CSP/">Content Security Policy</a> (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.</p>
-
-<p>This lil&#8217; blog is hosted by the <a href="https://scripts.mit.edu/">MIT Student Information Processing Board</a> and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML <meta> tags instead so that these instructions would work for people who don&#8217;t have shell access to their WordPress host. Unfortunately, CSP using <meta> hasn&#8217;t landed in Firefox yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663570">tracking bug</a>) so I should probably do the .htaccess thing anyway.</p>
-
-<p>It&#8217;s pretty easy to turn on CSP in WordPress from the dashboard:</p>
-
-<ol>
-<li>Go to <your\_blog\_path>/wp-admin/theme-editor.php. Note that this isn&#8217;t available for WordPress-hosted blogs (*.wordpress.com).</li>
-<li>Click on Header (header.php) in the sidebar to edit the header HTML.</li>
-<li>At the start of the HTML <code>&lt;head&gt;</code> element, add a CSP meta tag with your CSP policy. This blog uses <code>&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;script-src 'self'&quot;&gt;</code> which disallows all scripts except from its own origin (including inline scripts). As far as I can tell, this blocks a few inline scripts but doesn&#8217;t impede any functionality on a vanilla WordPress instance. You might want a more permissive policy if you use fancy widgets and plugins.</li>
-<li>[Bonus points] You can also show a friendly message to users who disable javascript by adding a <code>&lt;noscript&gt;</code> element to your header.<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png"><img class="alignnone wp-image-599 size-full" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png" alt="noscript" width="1128" height="381" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png 1128w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-300x101.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-1024x346.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-624x211.png 624w" sizes="(max-width: 1128px) 100vw, 1128px" /></a></li>
-</ol>
-
-<p>A fun fact I discovered during this process is that embedding a SoundCloud iframe will include tracking scripts from Google Analytics and scorecardresearch.com. Unfortunately CSP on the embedding page (my blog) doesn&#8217;t extend to embedded contexts (soundcloud.com iframe), so those scripts will still run unless you&#8217;ve disabled JS.</p>
-
-<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png"><img class="alignnone size-full wp-image-600" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png" alt="scorecard" width="806" height="594" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png 806w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM-300x221.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM-624x460.png 624w" sizes="(max-width: 806px) 100vw, 806px" /></a></p>
-
-<p>That&#8217;s all. I might do more posts on WordPress hardening later or even write a WP plugin (*shudders at the thought of writing PHP*). More tips are welcome too.</p>
-
-<p>UPDATE (8/24/15): CSP is temporarily disabled on this blog because Google Analytics uses an inline script. I&#8217;ll nonce-whitelist it later and turn CSP back on.</p>
-
-        </section>
-    </div>
-  </div>
-
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/backdooring-js/">backdooring your javascript using minifier bugs</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/lessons-from-the-ad-blocker-trenches/"> &nbsp; lessons from the ad blocker trenches</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/uncategorized">Uncategorized</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 

@@ -2,20 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>poetry on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/poetry/</link>
+    <link>https://blog.azuki.vip/categories/poetry/</link>
     <description>Recent content in poetry on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 24 Nov 2012 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://diracdeltas.github.io/blog/categories/poetry/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 24 Nov 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/categories/poetry/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>40 minutes in NYC</title>
-      <link>https://diracdeltas.github.io/blog/40-minutes-in-nyc/</link>
+      <link>https://blog.azuki.vip/40-minutes-in-nyc/</link>
       <pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/40-minutes-in-nyc/</guid>
+      <guid>https://blog.azuki.vip/40-minutes-in-nyc/</guid>
       <description>40 minutes in Tribeca on the way from Newtown to Boston
 is all we have
 before the parking meter runs out
@@ -31,10 +27,10 @@ forgetful of the symmetries of the parabola,</description>
     
     <item>
       <title>r*</title>
-      <link>https://diracdeltas.github.io/blog/untitled-3/</link>
+      <link>https://blog.azuki.vip/untitled-3/</link>
       <pubDate>Thu, 15 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/untitled-3/</guid>
+      <guid>https://blog.azuki.vip/untitled-3/</guid>
       <description>do you suffer from depression
 i want to ask but meanwhile
 electronic trance pours a silky tea into our ears
@@ -48,11 +44,11 @@ you spread over the sheets, skinny as daylight in winter,</description>
     
     <item>
       <title>composed in SFO airport while waiting for the redeye back to Boston</title>
-      <link>https://diracdeltas.github.io/blog/hello-world/</link>
+      <link>https://blog.azuki.vip/hello-world/</link>
       <pubDate>Mon, 09 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/hello-world/</guid>
-      <description>so I don&amp;#8217;t know whether to turn around at your doorway
+      <guid>https://blog.azuki.vip/hello-world/</guid>
+      <description>so I don’t know whether to turn around at your doorway
 so hesitation drips the milk from sore eyes
 so I scratch the walls
 so I peel flakes of plaster
