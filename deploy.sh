@@ -17,8 +17,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin gh-staging
-#git subtree push --prefix=public git@github.com:diracdeltas/blog.git gh-pages
-
-# copy new files from public into gh-pages branch root directory
-# then update posts/index.html to include the new entry
-# commit and push to gh-pages
+git subtree push --prefix=public git@github.com:diracdeltas/blog.git gh-pages
