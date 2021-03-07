@@ -5,7 +5,16 @@
     <link>https://blog.azuki.vip/post/</link>
     <description>Recent content in Posts on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>building an e-bike</title>
+      <link>https://blog.azuki.vip/ebike/</link>
+      <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/ebike/</guid>
+      <description>about a year ago, i moved to a hillier neighborhood in San Francisco. my beat-up vintage road bike, a beloved and steadfast companion on thousands of commutes across SoMA, suddenly became way less practical and more importantly, way less fun. as months of quarantine dragged on, i started either taking Lyft rental e-bikes out of sheer laziness or just staying in flat regions (a technique i call elevation evasion). eventually i became so disappointed in my self-imposed lack of transportation autonomy that i decided to take action.</description>
+    </item>
+    
     <item>
       <title>lazy quarantine bagels</title>
       <link>https://blog.azuki.vip/quarantine-bagels/</link>
