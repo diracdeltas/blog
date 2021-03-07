@@ -4,9 +4,85 @@
     <link>https://blog.azuki.vip/</link>
     <language>en-us</language>
     <author></author>
-    <rights>(C) 2020</rights>
-    <updated>2020-05-10 00:00:00 &#43;0000 UTC</updated>
+    <rights>(C) 2021</rights>
+    <updated>2021-03-07 00:00:00 &#43;0000 UTC</updated>
 
+    
+      <item>
+        <title>building an e-bike</title>
+        <link>https://blog.azuki.vip/ebike/</link>
+        <pubDate>Sun, 07 Mar 2021 00:00:00 UTC</pubDate>
+        <author></author>
+        <guid>https://blog.azuki.vip/ebike/</guid>
+        <description>&lt;p&gt;about a year ago, i moved to a hillier neighborhood in San Francisco. my
+beat-up vintage road bike, a beloved and steadfast companion on thousands of commutes
+across SoMA, suddenly became way less practical and more importantly, way less fun. as months of quarantine dragged on, i started either taking Lyft rental e-bikes out of sheer
+laziness or just staying in flat regions (a technique i call elevation evasion). eventually i became so disappointed in my self-imposed lack of transportation autonomy that i decided to take action.&lt;/p&gt;
+&lt;p&gt;become a more competent cyclist? no.&lt;/p&gt;
+&lt;p&gt;put an motor on my bicycle?? YES.&lt;/p&gt;
+&lt;h2 id=&#34;why&#34;&gt;why?&lt;/h2&gt;
+&lt;p&gt;i first looked into buying an entire e-bike online in case this was somehow cheaper than doing an e-bike conversion. unfortunately most &lt;a href=&#34;https://www.bicycling.com/bikes-gear/a25602653/cheap-electric-bikes/&#34;&gt;recommended affordable e-bikes&lt;/a&gt; were beyond my 3-figure budget, not to mention sold out due to their increased popularity during shelter-in-place.&lt;/p&gt;
+&lt;p&gt;e-bike conversion kits, on the other hand, cost &lt;a href=&#34;https://www.amazon.com/Voilamart-Electric-Conversion-Intelligent-Controller/dp/B07Q7FJ8ZY/ref=sr_1_3?dchild=1&#34;&gt;as little as
+$240&lt;/a&gt;. this seemed like a steal until i realized that they didn&amp;rsquo;t come with a battery. e-bike batteries often cost more than the rest of the conversion kit combined, putting the true cost of a conversion at closer to $500.&lt;/p&gt;
+&lt;p&gt;around this time, i saw a well-targeted search ad for
+&lt;a href=&#34;https://www.swytchbike.com/&#34;&gt;Swytch&lt;/a&gt;, &amp;ldquo;the world&amp;rsquo;s smallest and lightest eBike
+kit&amp;rdquo; according to their
+&lt;a href=&#34;https://www.indiegogo.com/projects/swytch-the-world-s-smallest-lightest-ebike-kit#/&#34;&gt;IndieGoGo&lt;/a&gt;. drawn in by their startuppy marketing materials and seemingly-perpetual 50% discount, i joined the waitlist for their next batch of kits. by the time pre-orders opened, i was convinced it was worth $499.&lt;/p&gt;
+&lt;p&gt;after months of waiting, not to mention $50 in shipping and $27 in import
+duties, my Swytch kit finally arrived in the mail a few weeks ago, far closer to the expected date than i had any right to expect from a crowdfunded project.&lt;/p&gt;
+&lt;h2 id=&#34;if-at-first-you-dont-succeed-move-the-goalposts&#34;&gt;if at first you don&amp;rsquo;t succeed, move the goalposts&lt;/h2&gt;
+&lt;p&gt;with great anticipation i unboxed the kit, consisting of a motorized replacement front
+wheel, a battery pack with charger, a handlebar mount for the battery, a pedal assist sensor, and an intimidating number of zipties. after skimming the manual (well-organized with lots of color pictures) and transferring my old tube and tire onto the new wheel, i started the first step of installing the Swytch wheel.&lt;/p&gt;
+&lt;p&gt;i ran into trouble immediately, since the axle turned out to be
+too wide for my fork.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.azuki.vip/img/ebike_fail.jpeg&#34; alt=&#34;fork fail&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Swytch support got back to me within hours and recommended filing off a bit of
+the axle using a metal file. as i was waiting for the file to arrive from
+Amazon,
+i started to worry that the weight of the Swytch wheel and battery would put
+too much strain on my weakened bike frame (the result of a bike
+theft attempt that left a bad dent in the down tube). on top of that, my bike
+was in need of new brake pads and a new chain.&lt;/p&gt;
+&lt;p&gt;i decided that given all these problems, i should just build
+a new bike starting from the salvageable parts of my existing bike. i have
+never built a bike from parts before and was excited to learn. however, after doing my Craigslist homework, i couldn&amp;rsquo;t find a complete set of decent bike
+parts that cost less than $200, so i gave up and bought a &lt;a href=&#34;https://retrospec.com/products/harper-ss&#34;&gt;$220 single-speed&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;putting-it-all-together&#34;&gt;putting it all together&lt;/h2&gt;
+&lt;p&gt;my brand-new Retrospec Harper arrived a few days later mostly assembled. i just had to attach the
+handlebars and seat, screw in the pedals, and adjust the brakes. and then to
+convert it into an e-bike:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;instead of the included front wheel, pop the Swytch wheel into the front fork and tighten both sides. it should fit perfectly, but you will need to adjust the height and angle of the brake pads.
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike1.jpeg&#34; alt=&#34;swytch front wheel&#34;&gt;&lt;/li&gt;
+&lt;li&gt;attach the pedal assist system, which consists of two pieces: a ring with an
+arm that attaches to the crank, and a small sensor which goes on the
+bottom tube. you need to adjust the angle and placement of these pieces until
+they&amp;rsquo;re almost touching at their closest point (magnetic fields ftw) but not rubbing against each
+other.
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike3.jpeg&#34; alt=&#34;pas 1&#34;&gt;
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike4.jpeg&#34; alt=&#34;pas 2&#34;&gt;&lt;/li&gt;
+&lt;li&gt;attach the battery holder to your handlebars&lt;/li&gt;
+&lt;li&gt;pop the battery into the battery holder, but make sure you activate it
+following the instructions in the manual and charge it first.
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike7.jpeg&#34; alt=&#34;battery_0&#34;&gt;
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike5.jpeg&#34; alt=&#34;battery_1&#34;&gt;&lt;/li&gt;
+&lt;li&gt;connect the wire from the pedal sensor to your battery. note that the battery will have some unused connectors if you bought the kit without upgrades, as shown below.
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike6.jpeg&#34; alt=&#34;battery_2&#34;&gt;&lt;/li&gt;
+&lt;li&gt;connect the wire from the wheel motor to your battery. use your remaining zipties for cable management.
+&lt;img src=&#34;https://blog.azuki.vip/img/ebike2.jpeg&#34; alt=&#34;cables&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;that&amp;rsquo;s it! the set up was surprisingly easy for a bike n00b like me, but even more
+surprising was how smooth and utterly fun the ride was. i was able to coast up
+an 11% grade street near my house without any difficulty, and biking through
+Golden Gate Park felt like surfing on butter. although it wasn&amp;rsquo;t cheap, the end
+product feels much more expensive than $750.&lt;/p&gt;
+&lt;p&gt;the one major downside is that i wouldn&amp;rsquo;t recommend locking this bike up
+for more than a minute in the city, given how easy it is to steal the
+pedal sensor. but all in all, it&amp;rsquo;s worth it for the ability to conquer the
+hills of SF without breaking a sweat.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.azuki.vip/img/ebike0.jpeg&#34; alt=&#34;ebike&#34;&gt;&lt;/p&gt;
+</description>
+      </item>
     
       <item>
         <title>lazy quarantine bagels</title>

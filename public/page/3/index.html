@@ -49,7 +49,7 @@
       </nav>
 
   <div class="sidebar-item">
-    <p>&copy; 2020. All rights reserved.</p>
+    <p>&copy; 2021. All rights reserved.</p>
   </div>
 </div>
 
@@ -72,6 +72,26 @@
 
 
 <div class="posts">
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/2sat/">solving boolean satisfiability on human circuits</a></h1>
+        <span class="post-date">Dec 31, 2014</span>
+        <p>I remember quite clearly sitting in Scott Aaronson’s computability and complexity theory <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/">course</a> at MIT in 2011. I was a 19 year-old physics major back then, so Scott’s class was mostly new and fascinating.</p>
+<p>One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length. For instance, you could prove that certain decision problems couldn’t be solved by a deterministic Turing machine in polynomial time. I raised my hand.</p>
+<p>“Yes?”</p>
+<p>“But time is reference-frame dependent! What if you ran the deterministic Turing machine on earth while you yourself were on a rocket going at relativistic speeds?”</p>
+<p>Scott’s eyes lit up. “Aha!” he said, without pause. “Suppose you traveled faster as the input length increased, so from your perspective, a problem in EXP is decidable in polynomial time. However you would be using more and more energy to propel your spaceship. So there is necessarily a tradeoff in the resources needed to solve the problem.”</p>
+<p>In retrospect, this was pretty characteristic of why I liked the class so much. Scott didn’t give the easy and useless answer, which would have been that *by our definition* all running times are measured in a fixed inertial reference frame. Instead he reminds us that we, as humans, ultimately care about the totality of resources needed to solve a problem. Time complexity analysis is just one step toward grasping at how hard, how expensive, how painful something really is; mired as we may be in mathematical formalism, the reality of our dying planet and unpaid bills stays within sight when Scott lectures.</p>
+<p>All this came to mind when I read Scott’s now-infamous <a href="http://www.scottaaronson.com/blog/?p=2091#comment-326664">blog comment</a> about growing up as a shy, self-proclaimed and self-hating male nerd; followed by the much-cited <a href="http://www.newstatesman.com/laurie-penny/on-nerd-entitlement-rebel-alliance-empire">response</a> from journalist Laurie Penny about growing up as a shy, self-proclaimed and self-hating female nerd; followed by Scott’s latest <a href="http://www.scottaaronson.com/blog/?p=2119">blog post</a> clarifying what he believes about feminism and the plight of shy nerdy people anguished by sexual frustration. What suprised me about the latter was that Scott went so far as to write:</p>
+<blockquote>
+<p>“How to help all the young male nerds I meet who suffer from this problem, in a way that passes feminist muster, and that triggers the world’s sympathy rather than outrage, is a problem that interests me as much as P vs. NP, and right now that seems about equally hard.”</p>
+</blockquote>
+<p>(“As much as P vs NP”?! Remember that Scott once bet his house on the invalidity of a paper claiming to prove P != NP, cf. <a href="http://www.scottaaronson.com/blog/?p=456">http://www.scottaaronson.com/blog/?p=456</a>.)</p>
+<p>Sometimes I think that the obvious step towards solving the problem Scott mentions is for the frustrated person to politely and non-expectantly inform the other person of his/her desires. In an ideal world, they would then discuss them until reaching an amicable resolution, at which point they can return to platonically multiplying tensors or whatever.</p>
+<p>But I suppose part of the definition of shy is the fear of exposing yourself to untrusted parties, for which they can reject you, humiliate you, and otherwise destroy that which you value or at least begrudgingly tolerate. Sadly, the shyness of analytical minds seems justified, because pretty much nobody has worked out how to communicate rejection without passing unfair judgement or otherwise patterning poisonous behavior. There is an art to divulging hidden feelings, an art to giving rejection, an art to handling sadness graciously, and an art to growing friendships from tenuous beginnings. None of these are taught to adolescent humans. Instead, we learn to hide ourselves and shame others.</p>
+<p>I feel unprepared to write anything resembling a guide on how to do this, having recoiled from human contact for most of my life thanks to shyness, but I think it’s well worth some human brain cycles. Here’s hoping to live in a culture of rejection-positivity.</p>
+
+    </div>
   
     <div class="post">
         <h1 class="post-title"><a href="https://blog.azuki.vip/tls-everything/">tls everything</a></h1>
@@ -328,22 +348,6 @@ t.parentNode.replaceChild(i, t);</pre>
 <p>26-27 May 2014: Some commenters on the Ars Technica article discover an arguably worse bug than the one that the original article was about: WordPress sends the login form over HTTP. (Even though the form POST is over HTTPS, the local network attacker can modify the target on the HTTP page however he/she wants and then it’s game over.) This wouldn’t be so bad if everyone used a password manager and changed passwords semi-regularly, since most people are likely to login to WordPress through their blog’s admin portal (which is always HTTPS as far as I can tell), except that password reuse is rampant. Robert Graham subsequently published <a href="http://blog.erratasec.com/2014/05/wordpress-unsafe-at-any-speed.html">this blog post</a>.</p>
 <p>29 May 2014, 5:52: Received reply from WordPress saying they would email me again when fixed.</p>
 <p>30 May 2014, 14:51: Andrew Nacin says all issues are supposedly fixed.</p>
-
-    </div>
-  
-    <div class="post">
-        <h1 class="post-title"><a href="https://blog.azuki.vip/some-heartbleed-tips/">How to make a less-leaky Heartbleed bandage</a></h1>
-        <span class="post-date">Apr 10, 2014</span>
-        <p>Mashable just put out a nice-looking chart showing “<a href="http://mashable.com/2014/04/09/heartbleed-bug-websites-affected/" target="_blank">Passwords You Need to Change Right Now</a>” change in light of the recent <a href="http://heartbleed.com" target="_blank">Heartbleed</a> carnage. However, it has some serious caveats that I wanted to mention:</p>
-<ol>
-<li>It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then. I am also skeptical that every single company on the list successfully made sure that nothing that they’ve used or given sensitive user data to had a vulnerable version of OpenSSL in the last 2 years.</li>
-<li>The article neglects to mention that password reuse means you might have to change passwords on several services for every one that was leaked. The same goes for the fact that one can trigger password resets on multiple services by authenticating a single email account.</li>
-<li>You should also clear all stored cookies just in case the server hasn’t invalidated them as they should; many sites use persistent CSRF tokens so logging out doesn’t automatically invalidate them. (Heartbleed trivially exposed user cookies.)</li>
-<li>Don’t forget to also change API keys if a service hasn’t force-rotated those already.</li>
-<li>It remains highly unclear whether any SSL certificates were compromised because of Heartbleed. If so, changing your password isn’t going to help against a MITM who has the SSL private key unless the website has revoked its SSL certificate and you’ve somehow gotten the revocation statement (LOL). This is complicated. Probably best not to worry about it right now because there’s not much you can do, but we all might have to worry about it a whole lot more depending on which way the pendulum swings in the next few days.</li>
-<li>Related-to-#5-but-much-easier: clear <a href="https://www.imperialviolet.org/2013/06/27/botchingpfs.html" target="_blank">TLS session resumption</a> data. I think this usually happens automatically when you restart the browser.</li>
-</ol>
-<p>Nonetheless, Mashable made a pretty good chart for keeping track of what information companies have made public regarding the Heartbleed fallout.</p>
 
     </div>
   
