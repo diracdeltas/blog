@@ -1,0 +1,3 @@
+[submodule "themes/Lanyon"]
+	path = themes/Lanyon
+	url = https://github.com/tummychow/lanyon-hugo.git

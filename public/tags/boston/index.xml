@@ -1,59 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Boston on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/tags/boston/</link>
-    <description>Recent content in Boston on discrete blogarithm</description>
+    <title>boston on discrete blogarithm</title>
+    <link>https://blog.azuki.vip/tags/boston/</link>
+    <description>Recent content in boston on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 01 Oct 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://diracdeltas.github.io/blog/tags/boston/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 01 Oct 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/tags/boston/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>On artificially-bounded futures</title>
-      <link>https://diracdeltas.github.io/blog/on-artificially-bounded-futures/</link>
+      <link>https://blog.azuki.vip/on-artificially-bounded-futures/</link>
       <pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/on-artificially-bounded-futures/</guid>
-      <description>&lt;p&gt;I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.&lt;/p&gt;
-
-&lt;p&gt;The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students. Bad user interfaces are astonishingly powerful, and nothing cripples the human spirit like a poorly-written manpage.&lt;/p&gt;
-
-&lt;p&gt;I also gave a short talk to about ~30 undergrads titled, &amp;#8220;Things you should be afraid of that you probably didn&amp;#8217;t know about.&amp;#8221; The alternate title was, &amp;#8220;Useful self-preservation tactics in surveillance states.&amp;#8221; The alternate alternate title was, &amp;#8220;On the possibility of preserving student culture at MIT.&amp;#8221; I admit I was trying to get more people to show up on a Friday night.&lt;/p&gt;
-
-&lt;p&gt;The problem was that, after an unexpected adventure in NYC the day before followed by an untimely laptop battery failure, I had barely twenty minutes to prep for the talk. So I went for a short run around the Charles River and formulated some thoughts. They went something like:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Surveillance is bad. Do MIT undergrads care? Or are they still trying to implement metacircular evaluators in Scheme?&lt;/li&gt;
-&lt;li&gt;DO NOT LET PEOPLE GIVE INTO CRYPTO-NIHILISM. Show them that we can only fight what we know.&lt;/li&gt;
-&lt;li&gt;Privacy, if it actually exists, must belong to a community. Privacy that belongs to individuals is necessary but not sufficient.&lt;/li&gt;
-&lt;li&gt;Ethical choices are painful and often ambiguous. Say you&amp;#8217;re the CEO of a company that makes a groundbreaking app that reduces vehicle emissions by 90% in the US. In order to do so, you need to collect data on where everyone&amp;#8217;s cars are located at all times. Then one day the government puts you in a &lt;a href=&#34;https://en.wikipedia.org/wiki/Qwest&#34;&gt;position&lt;/a&gt; where your choices are to either (secretly) give them years and years of private user data or let the company shut down (and lose all your money). What do you do?&lt;/li&gt;
-&lt;li&gt;Imagine if the MIT administration wiretapped all student communications on the Internet and forced every mailing list to contain an administrator. Imagine the student response. Now imagine the same situation at the national scale. This is a useful exercise to brainstorm realistic ways of fighting problems that seem too large and abstract for us to think about at first (ex: mass unchecked government surveillance).&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;To my surprise, the talk went over rather well. People asked lots of excellent questions, like what kind of tinfoil hat to buy. Phew.&lt;/p&gt;
-
-&lt;p&gt;Another thing that has come up a lot on this trip is the idea of having a career. As much as I feel uncomfortable about it sometimes, I can&amp;#8217;t help but admit that the topic of What To Do In Life has been on my mind lately. The annual MIT Career Fair was a week ago, a bizarre anti-celebratory festival during the first week of classes where hundreds of companies try to recruit students by giving them free Rubix cubes. This year, one courageous sophomore wrote an &lt;a href=&#34;http://tech.mit.edu/V133/N39/ogrady.html&#34;&gt;opinion article&lt;/a&gt; in the school newspaper about how  &lt;span class=&#34;userContent&#34;&gt;the Career Fair is useless for inspiring faith in the student population&amp;#8217;s ability to give a fuck about problems other than making cool-but-also-profitable&lt;span class=&#34;text_exposed_show&#34;&gt; technology and making hella cash.&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;Obviously this is a thorny issue wrapped in questions of whether the author has properly normalized for her own privilege (she probably has) and if large tech companies like FB/Apple/Google are already doing the maximal amount of good for humanity that they can while remaining profitable (they probably aren&amp;#8217;t), BUT it was still surprising that most critical comments essentially said: &amp;#8220;Stop looking down on other people / some of us need to make a living / not all corporations are completely evil.&amp;#8221; Multiple commenters accused the author of &amp;#8220;entitlement&amp;#8221;, which seems like a ridiculous term to cast as an insult (aren&amp;#8217;t we all entitled to pursuit of happiness?).&lt;/p&gt;
-
-&lt;p&gt;Disliking the percentage of commenters who were unfairly bashing on the author, I wrote an uncharacteristically optimistic comment for someone who doesn&amp;#8217;t have a consistent job:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;This post was entirely justified and necessary. (Minus the fact that Quizlet probably doesn&amp;#8217;t deserve to be on that list, as RJ pointed out.)&lt;/p&gt;
-
-&lt;p&gt;A number of the criticizing comments here have argued that companies like Apple and Facebook, on their way to making massive profits, ultimately spawn technologies that do good for the world; furthermore, even MIT students need to support themselves day-to-day regardless of their greater goals. But I think a salient counter-argument is that MIT grads can and absolutely must hold themselves to a higher standard than what these companies represent.&lt;/p&gt;
-
-&lt;p&gt;What I am implicitly saying is that (1) there are greater problems that humanity faces than how to get people to trigger certain javascript callbacks that generate ad revenue, and (2) people with the intellect and stamina to lead technological revolutions have a near-moral responsibility to solve these greater problems. The fact is that most MIT graduates can find a job and figure out a way to support themselves in most circumstances, which means they have a rare privilege among young people: the ability to take on great risks and be okay if they fail.&lt;/p&gt;
-
-&lt;p&gt;In practice, a dismayingly small percentage of MIT graduates use this privilege for tackling the hardest and most valuable problems of our generation. Climate change is a fine example, given that the lower limit of the time it&amp;#8217;ll take for atmospheric methane to collapse the global economy is on the order of &lt;a href=&#34;http://www.theguardian.com/environment/2013/jul/24/arctic-thawing-permafrost-climate-change&#34;&gt;decades&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Even those of us who work as software engineers and tech CEO&amp;#8217;s usually fail to address the question of whether we are making technology for a world where knowledge is free and accessible to everyone, or a world where governments and corporations can freely intrude on the private communications of every single person. Too often, we generate technology that is groundbreaking and astonishing without conscientiously addressing their potential to destroy civil liberties and strip away basic human rights. We can and must exert more pull over the ethical consequences of our innovation.&lt;/p&gt;
-
-&lt;p&gt;It is absolutely our moral responsibility to try to make the world we want to live in.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I really hope I didn&amp;#8217;t make all of that up.&lt;/p&gt;
-</description>
+      <guid>https://blog.azuki.vip/on-artificially-bounded-futures/</guid>
+      <description>I flew back to MIT recently for the GNU 30th Anniversary Celebration and Hackathon, thanks to a generous travel scholarship from the Free Software Foundation. All I had to do was never, ever run any proprietary javascript in my browser and something something something about firstborns. Seemed like a net win.
+The hackathon itself was fun. I spent most of it teaching people about privacy-enhancing tools like GnuPG and realizing that privacy-enhancing tools are intimidating, even to MIT computer science PhD students.</description>
     </item>
     
   </channel>

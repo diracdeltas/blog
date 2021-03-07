@@ -1,11 +1,19 @@
 ---
 contentdir: "content"
 layoutdir: "layouts"
-indexes:
-  category: "categories"
 publishdir: "public"
-baseurl: "https://diracdeltas.github.io/blog"
+baseurl: "https://blog.azuki.vip/"
 title: "discrete blogarithm"
-theme: "Lanyon"
+theme:
+  - Lanyon
+  - my-shortcodes
 canonifyurls: true
-...
+markup:
+    goldmark:
+          renderer:
+                  unsafe: true
+params:
+  title:
+    discrete blogarithm
+  description:
+    "yan's blog"

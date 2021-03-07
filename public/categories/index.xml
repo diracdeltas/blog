@@ -2,83 +2,79 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on discrete blogarithm</title>
-    <link>https://diracdeltas.github.io/blog/categories/</link>
+    <link>https://blog.azuki.vip/categories/</link>
     <description>Recent content in Categories on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 26 May 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://diracdeltas.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Thu, 26 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Uncategorized</title>
-      <link>https://diracdeltas.github.io/blog/categories/uncategorized/</link>
+      <link>https://blog.azuki.vip/categories/uncategorized/</link>
       <pubDate>Thu, 26 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/uncategorized/</guid>
+      <guid>https://blog.azuki.vip/categories/uncategorized/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hacktivism</title>
-      <link>https://diracdeltas.github.io/blog/categories/hacktivism/</link>
+      <link>https://blog.azuki.vip/categories/hacktivism/</link>
       <pubDate>Wed, 25 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/hacktivism/</guid>
+      <guid>https://blog.azuki.vip/categories/hacktivism/</guid>
       <description></description>
     </item>
     
     <item>
       <title>code</title>
-      <link>https://diracdeltas.github.io/blog/categories/code/</link>
+      <link>https://blog.azuki.vip/categories/code/</link>
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/code/</guid>
+      <guid>https://blog.azuki.vip/categories/code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>travel</title>
-      <link>https://diracdeltas.github.io/blog/categories/travel/</link>
+      <link>https://blog.azuki.vip/categories/travel/</link>
       <pubDate>Tue, 27 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/travel/</guid>
+      <guid>https://blog.azuki.vip/categories/travel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>encrypt the web</title>
-      <link>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</link>
+      <link>https://blog.azuki.vip/categories/encrypt-the-web/</link>
       <pubDate>Sun, 07 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/encrypt-the-web/</guid>
+      <guid>https://blog.azuki.vip/categories/encrypt-the-web/</guid>
       <description></description>
     </item>
     
     <item>
       <title>academia</title>
-      <link>https://diracdeltas.github.io/blog/categories/academia/</link>
+      <link>https://blog.azuki.vip/categories/academia/</link>
       <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/academia/</guid>
+      <guid>https://blog.azuki.vip/categories/academia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>physics</title>
-      <link>https://diracdeltas.github.io/blog/categories/physics/</link>
+      <link>https://blog.azuki.vip/categories/physics/</link>
       <pubDate>Wed, 31 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/physics/</guid>
+      <guid>https://blog.azuki.vip/categories/physics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>poetry</title>
-      <link>https://diracdeltas.github.io/blog/categories/poetry/</link>
+      <link>https://blog.azuki.vip/categories/poetry/</link>
       <pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate>
       
-      <guid>https://diracdeltas.github.io/blog/categories/poetry/</guid>
+      <guid>https://blog.azuki.vip/categories/poetry/</guid>
       <description></description>
     </item>
     

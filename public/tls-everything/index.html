@@ -1,148 +1,104 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> tls everything </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/tls-everything/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      tls everything &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
-      </div>
-    </div>
-
     
-    <div class="container content">
-      <h1 class="post-title">tls everything</h1>
-        <section id="main">
-          <h5 id="date"> Wed Dec 10, 2014 </h5>
-          <p>Yesterday the W3C <a href="http://www.w3.org/2001/tag/">Technical Architecture Group</a> published a new finding titled, &#8220;<a href="https://w3ctag.github.io/web-https/">The Web and Encryption</a>.&#8221; In it, they conclude:</p>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
 
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">tls everything</h1>
+  <span class="post-date">Dec 10, 2014</span>
+  <p>Yesterday the W3C <a href="http://www.w3.org/2001/tag/">Technical Architecture Group</a> published a new finding titled, “<a href="https://w3ctag.github.io/web-https/">The Web and Encryption</a>.” In it, they conclude:</p>
 <blockquote>
-<p>&#8220;&hellip; the Web platform should be designed to <strong>actively prefer secure origins</strong> — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the <strong>end-to-end nature of TLS encryption must not be compromised</strong> on the Web, in order to preserve this trust.&#8221;</p>
+<p>“. . . the Web platform should be designed to <strong>actively prefer secure origins</strong> — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the <strong>end-to-end nature of TLS encryption must not be compromised</strong> on the Web, in order to preserve this trust.”</p>
 </blockquote>
-
 <p>To many <a href="https://eff.org/https-everywhere">HTTPS Everywhere</a> users like myself, this seemed a decade or so beyond self-evident. So I was surprised to see a <a href="http://lists.w3.org/Archives/Public/www-tag/2014Dec/0018.html">flurry</a> of <a href="http://lists.w3.org/Archives/Public/www-tag/2014Dec/0051.html">objections</a> appear on the public mailing list thread discussing the TAG findings.</p>
-
-<p>It seems bizarre to me that security-minded web developers are spending so much effort hardening the web platform by designing and implementing standards like CSP Level 2, WebCrypto, HTTP Public Key Pinning, and Subresource Integrity, while others are still debating whether requiring the bare minimum security guarantee on the web is a good thing. While <a href="https://blog.matatall.com/">some</a> sites are preventing any javascript from running on their page unless it&#8217;s been whitelisted, <a href="http://www.nytimes.com/">other</a> sites can&#8217;t even promise that any user will ever visit a page that hasn&#8217;t been tampered with.</p>
-
+<p>It seems bizarre to me that security-minded web developers are spending so much effort hardening the web platform by designing and implementing standards like CSP Level 2, WebCrypto, HTTP Public Key Pinning, and Subresource Integrity, while others are still debating whether requiring the bare minimum security guarantee on the web is a good thing. While <a href="https://blog.matatall.com/">some</a> sites are preventing any javascript from running on their page unless it’s been whitelisted, <a href="http://www.nytimes.com/">other</a> sites can’t even promise that any user will ever visit a page that hasn’t been tampered with.</p>
 <div id="attachment_502" style="width: 430px" class="wp-caption alignnone">
   <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png"><img class="size-full wp-image-502" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png" alt="wtf" width="420" height="604" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf.png 420w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/wp-wtf-208x300.png 208w" sizes="(max-width: 420px) 100vw, 420px" /></a>
-  
   <p class="wp-caption-text">
     small consolation: the second one has more downloads
   </p>
 </div>
-
-<p>Obviously we shouldn&#8217;t ignore arguments for a plaintext-permissive web; they&#8217;re statistically useful as indicators of misconceptions about HTTPS and sometimes also as indicators of real friction that website operators face. What can we learn?</p>
-
-<p>Here&#8217;s some of my observations and responses to common anti-HTTPS points (as someone who lurks on standards mailing lists and often pokes website operators to deploy HTTPS, both professionally and recreationally):</p>
-
+<p>Obviously we shouldn’t ignore arguments for a plaintext-permissive web; they’re statistically useful as indicators of misconceptions about HTTPS and sometimes also as indicators of real friction that website operators face. What can we learn?</p>
+<p>Here’s some of my observations and responses to common anti-HTTPS points (as someone who lurks on standards mailing lists and often pokes website operators to deploy HTTPS, both professionally and recreationally):</p>
 <ol>
-<li> <em>&#8220;HTTPS is expensive and hard to set up.&#8221;</em> This is objectively getting better. Cloudflare offers automatic <a href="https://blog.cloudflare.com/introducing-universal-ssl/">free SSL</a> to their CDN customers, and <a href="https://sslmate.com/">SSLMate</a> lets you get a cert for $10 using the command line. In the near future, the <a href="https://letsencrypt.org/">LetsEncrypt</a> cert authority will offer free certificates, deployed and managed using a nifty new <a href="https://github.com/letsencrypt/acme-spec">protocol</a> called ACME that makes the entire process take &lt;30 seconds.</li>
-<li><em>&#8220;There is no value in using HTTPS for data that is, by nature, public (such as news articles).&#8221;</em> This misses the point that aggregated browsing patterns, even for only public sites, can reveal a lot of private information about a person. If it weren&#8217;t, advertisers wouldn&#8217;t use third-party tracking beacons. QED.</li>
-<li><em>&#8220;TLS is slow.&#8221;</em> Chris Palmer thought you would ask this and gave an excellent <a href="https://www.youtube.com/watch?v=ayD0LiZkWLQ">presentation</a> explaining why not. tl;dr: TLS is usually not noticeably slower, but if it is, chances are that you can <a href="https://istlsfastyet.com/">optimize away the difference</a> (warning: the previous link is highly well-written and may cause you to become convinced that TLS is not slow).</li>
-<li><em>&#8220;HTTPS breaks feature X.&#8221;</em> This is something I&#8217;m intimately familar with, since most bug reports in HTTPS Everywhere (which I used to maintain) were caused by the extension switching a site to HTTPS and suddenly breaking some feature. <a href="https://support.mozilla.org/en-US/kb/how-does-content-isnt-secure-affect-my-safety">Mixed content blocking</a> was the biggest culprit, but there were also cases where CORS stopped working because the header whitelisted the HTTP site but not the HTTPS one. (I also expected some &#8220;features&#8221; to break because HTTPS sites don&#8217;t leak referer to HTTP ones, but surprisingly this never happened.) Luckily if you&#8217;re using HTTPS Everywhere in Chrome, there is a panel in the developer console that helps you detect and fix mixed content on websites (shown below). Setting the CSP report-only header to report non-HTTPS subresources is similarly useful but doesn&#8217;t tell you which resources can be rewritten.<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png"><img class="alignnone size-full wp-image-501" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png" alt="https-switch" width="1293" height="843" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png 1293w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-300x195.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-1024x667.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-624x406.png 624w" sizes="(max-width: 1293px) 100vw, 1293px" /></a></li>
-<li><em>&#8220;HTTPS gives users a false sense of security.&#8221;</em> This comes up surprisingly often from various angles. Some people frame this as, <em>&#8220;The CA system isn&#8217;t trustworthy and is breakable by every government,&#8221;</em> while others say, <em>&#8220;Even with HTTPS, you leak DNS lookups and valuable metadata,&#8221;</em> and others say, <em>&#8220;But many site certificates are managed by the CDN, not the site the user thinks they&#8217;re visiting securely.&#8221;</em> The baseline counterargument to all of these is that encryption, even encryption that is theoretically breakable by some people, is better than no encryption, which doesn&#8217;t need to be broken by anyone. CA trustworthiness in particular is getting better with the implementation of certificate transparency and key pinning in browsers; let&#8217;s hope that we solve DNSSEC someday too. Also, regardless of whether HTTPS gives people a false sense of security, HTTP almost certainly gives the average person a false sense of security; otherwise, why would anyone submit their Quora password in plaintext?<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png"><img class="wp-image-504 " src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png" alt="quora" width="603" height="462" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png 1038w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-1024x784.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-624x477.png 624w" sizes="(max-width: 603px) 100vw, 603px" /></a></li>
+<li> <em>“HTTPS is expensive and hard to set up.”</em> This is objectively getting better. Cloudflare offers automatic <a href="https://blog.cloudflare.com/introducing-universal-ssl/">free SSL</a> to their CDN customers, and <a href="https://sslmate.com/">SSLMate</a> lets you get a cert for $10 using the command line. In the near future, the <a href="https://letsencrypt.org/">LetsEncrypt</a> cert authority will offer free certificates, deployed and managed using a nifty new <a href="https://github.com/letsencrypt/acme-spec">protocol</a> called ACME that makes the entire process take &lt;30 seconds.</li>
+<li><em>“There is no value in using HTTPS for data that is, by nature, public (such as news articles).”</em> This misses the point that aggregated browsing patterns, even for only public sites, can reveal a lot of private information about a person. If it weren’t, advertisers wouldn’t use third-party tracking beacons. QED.</li>
+<li><em>“TLS is slow.”</em> Chris Palmer thought you would ask this and gave an excellent <a href="https://www.youtube.com/watch?v=ayD0LiZkWLQ">presentation</a> explaining why not. tl;dr: TLS is usually not noticeably slower, but if it is, chances are that you can <a href="https://istlsfastyet.com/">optimize away the difference</a> (warning: the previous link is highly well-written and may cause you to become convinced that TLS is not slow).</li>
+<li><em>“HTTPS breaks feature X.”</em> This is something I’m intimately familar with, since most bug reports in HTTPS Everywhere (which I used to maintain) were caused by the extension switching a site to HTTPS and suddenly breaking some feature. <a href="https://support.mozilla.org/en-US/kb/how-does-content-isnt-secure-affect-my-safety">Mixed content blocking</a> was the biggest culprit, but there were also cases where CORS stopped working because the header whitelisted the HTTP site but not the HTTPS one. (I also expected some “features” to break because HTTPS sites don’t leak referer to HTTP ones, but surprisingly this never happened.) Luckily if you’re using HTTPS Everywhere in Chrome, there is a panel in the developer console that helps you detect and fix mixed content on websites (shown below). Setting the CSP report-only header to report non-HTTPS subresources is similarly useful but doesn’t tell you which resources can be rewritten.<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png"><img class="alignnone size-full wp-image-501" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png" alt="https-switch" width="1293" height="843" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch.png 1293w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-300x195.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-1024x667.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/https-switch-624x406.png 624w" sizes="(max-width: 1293px) 100vw, 1293px" /></a></li>
+<li><em>“HTTPS gives users a false sense of security.”</em> This comes up surprisingly often from various angles. Some people frame this as, <em>“The CA system isn’t trustworthy and is breakable by every government,”</em> while others say, <em>“Even with HTTPS, you leak DNS lookups and valuable metadata,”</em> and others say, <em>“But many site certificates are managed by the CDN, not the site the user thinks they’re visiting securely.”</em> The baseline counterargument to all of these is that encryption, even encryption that is theoretically breakable by some people, is better than no encryption, which doesn’t need to be broken by anyone. CA trustworthiness in particular is getting better with the implementation of certificate transparency and key pinning in browsers; let’s hope that we solve DNSSEC someday too. Also, regardless of whether HTTPS gives people a false sense of security, HTTP almost certainly gives the average person a false sense of security; otherwise, why would anyone submit their Quora password in plaintext?<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png"><img class="wp-image-504 " src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png" alt="quora" width="603" height="462" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1.png 1038w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-1024x784.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2014/12/quora1-624x477.png 624w" sizes="(max-width: 603px) 100vw, 603px" /></a></li>
 </ol>
+<p>In summary, it’s very encouraging to see the TAG expressing support for a ubiquitous transit encryption on the web (someday), but from the resulting discussion, it’s clear that developers still need to be convinced that HTTPS is efficient, reliable, affordable, and worthwhile. I think the TAG has a clear path forward here: separate the overgrown anti-HTTPS mythology from the actual measurable obstacles to HTTPS deployment, and encourage standards that fix real problems that developers and implementers have when transitioning to HTTPS. <a href="https://github.com/letsencrypt/acme-spec/blob/master/draft-barnes-acme.txt">ACME</a>, <a href="https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21">HPKP</a>, <a href="https://tools.ietf.org/html/rfc6962">Certificate Transparency</a>, and especially <a href="https://w3c.github.io/webappsec/specs/powerfulfeatures/">requiring minimum security standards</a> for powerful new web platform features are good examples of work that motivates website operators to turn on HTTPS by lowering the cost and/or raising the benefits.</p>
+</div>
 
-<p>In summary, it&#8217;s very encouraging to see the TAG expressing support for a ubiquitous transit encryption on the web (someday), but from the resulting discussion, it&#8217;s clear that developers still need to be convinced that HTTPS is efficient, reliable, affordable, and worthwhile. I think the TAG has a clear path forward here: separate the overgrown anti-HTTPS mythology from the actual measurable obstacles to HTTPS deployment, and encourage standards that fix real problems that developers and implementers have when transitioning to HTTPS. <a href="https://github.com/letsencrypt/acme-spec/blob/master/draft-barnes-acme.txt">ACME</a>, <a href="https://tools.ietf.org/html/draft-ietf-websec-key-pinning-21">HPKP</a>, <a href="https://tools.ietf.org/html/rfc6962">Certificate Transparency</a>, and especially <a href="https://w3c.github.io/webappsec/specs/powerfulfeatures/">requiring minimum security standards</a> for powerful new web platform features are good examples of work that motivates website operators to turn on HTTPS by lowering the cost and/or raising the benefits.</p>
-
-        </section>
+      </div>
     </div>
-  </div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/2sat/">solving boolean satisfiability on human circuits</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/certificate-transparency-for-pgp/"> &nbsp; certificate transparency for PGP?</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-      <li><a href="https://diracdeltas.github.io/blog/categories/encrypt-the-web">encrypt the web</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 

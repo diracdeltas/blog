@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+	<meta name="generator" content="Hugo 0.81.0" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      discrete blogarithm &middot; 
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
+</head>
+
+
+  <body>
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>
+      yan&rsquo;s blog
+    </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item  active " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+
+
+
+<div class="posts">
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/sniffly/">sniffly</a></h1>
+        <span class="post-date">Oct 27, 2015</span>
+        <p>Every so often, I get sick of basically everything. Walls become suffocating, routine is insufferable, and the city I live in wraps itself against the sky like a cage. So inevitably I duck away and find something to chase (warm faces, the light in autumn, half-formed schemes, etc.), run until I’m dizzy and lost and can’t remember whose couch I’m waking up on or why I crashed there. Weeks later, the sky bruises into swollen dusk, some familiar voice yells for me to come home so I run back into my bed once again, wondering if home is this place more than it is the feeling of staring at an unfamiliar timetable and noticing your heartbeat quicken.</p>
+<p>This kinda happened last month so I took a 4 week leave (2 paid, 2 unpaid) from my job to read books, work on open source projects, and couchsurf the East Coast. I spent a lot of rainy days curled up on a friend’s bed in Somerville, MA poking at my laptop, idle afternoons hiding in a corner of the MIT library poking at my laptop, and long electric evenings walking around New York City looking for a place to sit and poke at my laptop. A lot of laptop-poking happened while on “vacation” because I had promised some people that I would give two talks in October, one at <a href="http://secretcon.com/" target="_blank">SecretCon</a> and one at <a href="http://sandiego.toorcon.net/" target="_blank">ToorCon</a>.</p>
+<p>Predictably, I put off the ToorCon talk until 2 weeks ago. Also predictably, I started panicking and not sleeping anymore because I said I would show people a new browser fingerprinting technique which did not exist. Somehow, after a lot of head-banging-against-desk, I came up with one that sort-of worked about a week before the ToorCon and actually finished the code right before ToorCon. I named it <a href="https://github.com/diracdeltas/sniffly" target="_blank">Sniffly</a> because it sniffs browser history, and also because I was coming down with a cold.</p>
+<p>Here’s how Sniffly works:</p>
+<ol>
+<li>A user visits the Sniffly page.</li>
+<li>Their browser attempts to load images from various HSTS domains over HTTP. These domains were harvested from a scrape of HSTS domains in the Alexa Top 1M. It was really fun to write this scraper; I finally had a chance to use Python’s Twisted!</li>
+<li>Sniffly sets a CSP policy that restricts images to HTTP, so image sources are blocked before they are redirected to HTTPS. This is crucial, because If the browser completes a request to the HTTPS site, then it will receive the HSTS pin, and the attack will no longer work when the user visits Sniffly.</li>
+<li>When an image gets blocked by CSP, its <code>onerror</code> handler is called. In this case, the <code>onerror </code>handler does some fancy tricks to semi-reliably time how long it took for  the image to be redirected from HTTP to HTTPS. If this time is on the order of a millisecond, it was an HSTS redirect (no network request was made), which means the user has visited the image’s domain before. If it’s on the order of 100 milliseconds, then a network request probably occurred, meaning that the user hasn’t visited the image’s domain.</li>
+</ol>
+<p><a href="https://zyan.scripts.mit.edu/sniffly/" target="_blank">Here’s a quick demo</a>. It only works in recent Chrome/Firefox versions when HTTPS Everywhere is disabled. The results also turn up a lot of false positives if you are running an adblocker, since ad-blocked domains are indistinguishable from HSTS-blocked domains from a timing perspective. (However, since HTTPS Everywhere domains and ad-blocked domains are mostly the same for every user, they can simply be subtracted out to get more accurate results for users who run these browser extensions.) I didn’t collect analytics on the site, but random testing with several friends showed a ~80% accuracy rate in the demo once browser extensions were accounted for.</p>
+<p>For more info, check out the <a href="https://github.com/diracdeltas/sniffly" target="_blank">source code</a>, <a href="https://zyan.scripts.mit.edu/presentations/toorcon2015.pdf" target="_blank">ToorCon slides</a> (pdf), and <a href="https://www.youtube.com/watch?v=kk2GkZv6Wjs" target="_blank">talk recording</a>. Someone submitted the demo to <a href="https://news.ycombinator.com/item?id=10455735" target="_blank">Hacker News</a> and, to my horror, it was the #1 link for 6+ hours yesterday (!). I feel bewildered that this kind of attention is being granted (<a href="https://zyan.scripts.mit.edu/blog/backdooring-js/" target="_blank">again</a>) to random side projects that I do alone in my spare time, but I guess I should take whatever validation I can get right now. It would be sweet if people looked at my work and paid me to hack on interesting stuff for the public so i never had to work a real job again. Maybe someday it’ll happen; until then I’ll prolly hold down a day job and take more fake vacations.</p>
+<p><strong>Update: As of March 2016, Sniffly (CVE-2016-1617) has been fixed in the major browsers. Thank you Uncle Google for the bug bounty $$.</strong></p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/tbd/">tbd</a></h1>
+        <span class="post-date">Oct 26, 2015</span>
+        <p>you know things are getting better when you walk away from the hotel where you just gave two presentations wearing your best pretense of holding-it-togetherness while inside you felt shakey, hungover, and insane. remember how long you stood there, smiling and rationing weak handshakes while pretending you believed that you had a future? promise yourself you’re never doing that again. you walk away from the volatile company of people who made you feel shitty about yourself without trying to and into the car of someone who looks like they could be your new friend. you drive down the street and pack your bags, take off your stupid clothes and pull on a grey tshirt. now you’re driving down Highway 5 towards LA, the hills are honey-colored, the mountains crashing into sunset sky with symphonic grace, your insecurities start to crack like chipped gold paint. you pick at your wrecked fingernails and start to feel like you might have the vaguest idea of what to do with yourself tomorrow morning. then your new friend turns on the stereo and says, “do you want to hear a song i wrote? it’s about how my mom was a cunt.” you say, sure.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/backdooring-js/">backdooring your javascript using minifier bugs</a></h1>
+        <span class="post-date">Aug 24, 2015</span>
+        <p>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of <a href="https://www.alchemistowl.org/pocorgtfo/">POC||GTFO 0x08</a> from Travis Goodspeed. The coolest article I’ve read so far in it is “Deniable Backdoors Using Compiler Bugs,” in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</p>
+<p>That got me thinking about whether you could use the same backdoor technique on javascript. JS runs pretty much everywhere these days (browsers, servers, <a href="http://postscapes.com/javascript-and-the-internet-of-things">arduinos and robots</a>, maybe even cars someday) but it’s an interpreted language, not compiled. However, it’s quite common to minify and optimize JS to reduce file size and improve performance. Perhaps that gives us enough room to insert a backdoor by abusing a JS <em>minifier.</em></p>
+<h3 id="part-i-finding-a-good-minifier-bug">Part I: Finding a good minifier bug</h3>
+<p>Question: Do popular JS minifiers really have bugs that could lead to security problems?</p>
+<p>Answer: After about 10 minutes of searching, I found one in <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>, a popular minifier used by jQuery to build a script that runs on something like <a href="http://blog.jquery.com/2014/01/13/the-state-of-jquery-2014/">70% of the top websites</a> on the Internet. The <a href="https://github.com/mishoo/UglifyJS2/issues/751">bug itself</a>, fixed in the 2.4.24 release, is straightforward but not totally obvious, so let’s walk through it.</p>
+<p>UglifyJS does a bunch of things to try to reduce file size. One of the compression flags that is on-by-default will compress expressions such as:</p>
+<pre>!a && !b && !c && !d
+</pre>
+<p>That expression is 20 characters. Luckily, if we apply <a href="https://en.wikipedia.org/wiki/De_Morgan%27s_laws">De Morgan’s Law</a>, we can rewrite it as:</p>
+<pre>!(a || b || c || d)
+</pre>
+<p>which is only 19 characters. Sweet! Except that De Morgan’s Law doesn’t necessarily work if any of the subexpressions has a non-Boolean return value. For instance,</p>
+<pre>!false && 1
+</pre>
+<p>will return the number 1. On the other hand,</p>
+<pre>!(false || !1)
+</pre>
+<p>simply returns true.</p>
+<p>So if we can trick the minifier into erroneously applying De Morgan’s law, we can make the program behave differently before and after minification! Turns out it’s not too hard to trick UglifyJS 2.4.23 into doing this, since it will always use the rewritten expression if it is shorter than the original. (UglifyJS 2.4.24 patches this by making sure that subexpressions are boolean before attempting to rewrite.)</p>
+<h3 id="part-ii-building-a-backdoorin-some-hypothetical-auth-code">Part II: Building a backdoor in some hypothetical auth code</h3>
+<p>Cool, we’ve found the minifier bug of our dreams. Now let’s try to abuse it!</p>
+<p>Let’s say that you are working for some company, and you want to deliberately create vulnerabilities in their Node.js website. You are tasked with writing some server-side javascript that validates whether user auth tokens are expired. First you make sure that the Node package uses <a href="mailto:uglify-js@2.4.23">uglify-js@2.4.23</a>, which has the bug that we care about.</p>
+<p>Next you write the token validation function, inserting a bunch of plausible-looking config and user validation checks to force the minifier to compress the long (not-)boolean expression:</p>
+<pre>function isTokenValid(user) {
+    var timeLeft =
+        !!config && // config object exists
+        !!user.token && // user object has a token
+        !user.token.invalidated && // token is not explicitly invalidated
+        !config.uninitialized && // config is initialized
+        !config.ignoreTimestamps && // don't ignore timestamps
+        getTimeLeft(user.token.expiry); // &gt; 0 if expiration is in the future
+
+    // The token must not be expired
+    return timeLeft &gt; 0;
+}
+
+function getTimeLeft(expiry) {
+  return expiry - getSystemTime();
+}
+</pre>
+<p>Running <code>uglifyjs -c</code> on the snippet above produces the following:</p>
+<pre>function isTokenValid(user){var timeLeft=!(!config||!user.token||user.token.invalidated||config.uninitialized||config.ignoreTimestamps||!getTimeLeft(user.token.expiry));return timeLeft&gt;0}function getTimeLeft(expiry){return expiry-getSystemTime()}</pre>
+<p>In the original form, if the config and user checks pass, <code>timeLeft</code> is a negative integer if the token is expired. In the minified form, <code>timeLeft</code> must be a boolean (since “!” in JS does type-coercion to booleans). In fact, if the config and user checks pass, the value of <code>timeLeft</code> is always <code>true</code> unless <code>getTimeLeft</code> coincidentally happens to be 0.</p>
+<p>Voila! Since <code>true &gt; 0</code> in javascript (yay for type coercion!), auth tokens that are past their expiration time will still be valid forever.</p>
+<h3 id="part-iii-backdooring-jquery">Part III: Backdooring jQuery</h3>
+<p>Next let’s abuse our favorite minifier bug to write some patches to jQuery itself that could lead to backdoors. We’ll work with <a href="https://github.com/jquery/jquery/tree/1.11.3">jQuery 1.11.3</a>, which is the current jQuery 1 stable release as of this writing.</p>
+<p>jQuery 1.11.3 uses <a href="https://github.com/jquery/jquery/blob/1.11.3/package.json#L39">grunt-contrib-uglify 0.3.2</a> for minification, which in turn depends on <a href="https://github.com/gruntjs/grunt-contrib-uglify/blob/v0.3.2/package.json#L30">uglify-js ~2.4.0</a>. So <a href="mailto:uglify-js@2.4.23">uglify-js@2.4.23</a> satisfies the dependency, and we can manually edit package.json in grunt-contrib-uglify to force it to use this version.</p>
+<p>There are only a handful of places in jQuery where the DeMorgan’s Law rewrite optimization is triggered. None of these cause bugs, so we’ll have to add some ourselves.</p>
+<p><strong>Backdoor Patch #1:</strong></p>
+<p>First let’s add a potential backdoor in jQuery’s .html() method. The <a href="https://github.com/diracdeltas/jquery/commit/e50c8ce26736027386aa7a698baeca7740a54a0b">patch</a> looks weird and superfluous, but we can convince anyone that it shouldn’t actually change what the method does. Indeed, pre-minification, the unit tests pass.</p>
+<p>After minification with <a href="mailto:uglify-js@2.4.23">uglify-js@2.4.23</a>, jQuery’s .html() method will set the inner HTML to “true” instead of the provided value, so a bunch of tests fail.</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png"><img class="alignnone size-full wp-image-670" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png" alt="Screen Shot 2015-08-23 at 1.35.48 PM" width="844" height="785" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png 844w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM-300x279.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM-624x580.png 624w" sizes="(max-width: 844px) 100vw, 844px" /></a></p>
+<p>However, the jQuery maintainers are probably using the patched version of uglifyjs. Indeed, tests pass with uglify-js@2.4.24, so this patch might not seem too suspicious.</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png"><img class="alignnone size-full wp-image-671" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png" alt="Screen Shot 2015-08-23 at 1.39.47 PM" width="1057" height="281" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png 1057w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-300x80.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-1024x272.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-624x166.png 624w" sizes="(max-width: 1057px) 100vw, 1057px" /></a></p>
+<p>Cool. Now let’s run grunt to build jQuery with this patch and write some silly code that triggers the backdoor:</p>
+<pre>&lt;html&gt;
+    &lt;script src="../dist/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;button&gt;click me to see if this site is safe&lt;/button&gt;
+    &lt;script&gt;
+        $('button').click(function(e) {
+            $('#result').html('&lt;b&gt;false!!&lt;/b&gt;');
+        });
+    &lt;/script&gt;
+    &lt;div id='result'&gt;&lt;/div&gt;
+&lt;/html&gt;
+</pre>
+<p>Here’s the result of clicking that button when we run the pre-minified jQuery build:</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png"><img class="alignnone size-full wp-image-672" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png" alt="Screen Shot 2015-08-23 at 4.44.45 PM" width="511" height="449" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png 511w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM-300x264.png 300w" sizes="(max-width: 511px) 100vw, 511px" /></a></p>
+<p>As expected, the user is warned that the site is not safe. Which is ironic, because it doesn’t use our minifier-triggered backdoor.</p>
+<p>Here’s what happens when we instead use the minified jQuery build:</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png"><img class="alignnone size-full wp-image-673" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png" alt="Screen Shot 2015-08-23 at 4.45.10 PM" width="505" height="465" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png 505w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM-300x276.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
+<p>Now users will totally think that this site is safe even when the site authors are trying to warn them otherwise.</p>
+<p><strong>Backdoor Patch #2:</strong></p>
+<p>The first backdoor might be too easy to detect, since anyone using it will probably notice that a bunch of HTML is being set to the string “true” instead of the HTML that they want to set. So our <a href="https://github.com/diracdeltas/jquery/commit/a2092d8a85474c90e2e4d306a21a14af55365b58">second backdoor patch</a> is one that only gets triggered in unusual cases.</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png"><img class="alignnone size-full wp-image-675" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png" alt="Screen Shot 2015-08-23 at 7.48.14 PM" width="1020" height="313" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png 1020w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM-300x92.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM-624x191.png 624w" sizes="(max-width: 1020px) 100vw, 1020px" /></a></p>
+<p>Basically, we’ve modified jQuery.event.remove (used in the .off() method) so that the code path that calls <a href="https://learn.jquery.com/events/event-extensions/">special event removal hooks</a> never gets reached after minification. (Since <code>spliced</code> is always boolean, its length is always undefined, which is not &gt; 0.) This doesn’t necessarily change the behavior of a site unless the developer has defined such a hook.</p>
+<p>Say that the site we want to backdoor has the following HTML:</p>
+<pre>&lt;html&gt;
+    &lt;script src="../dist/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;button&gt;click me to see if special event handlers are called!&lt;/button&gt;
+    &lt;div&gt;FAIL&lt;/div&gt;
+    &lt;script&gt;
+        // Add a special event hook for onclick removal
+        jQuery.event.special.click.remove = function(handleObj) {
+            $('div').text('SUCCESS');
+        };
+        $('button').click(function myHandler(e) {
+            // Trigger the special event hook
+            $('button').off('click');
+        });
+    &lt;/script&gt;
+&lt;/html&gt;
+</pre>
+<p>If we run it with unminified jQuery, the removal hook gets called as expected:</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png"><img class="alignnone size-full wp-image-677" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png" alt="Screen Shot 2015-08-23 at 4.43.10 PM" width="705" height="545" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png 705w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM-300x232.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM-624x482.png 624w" sizes="(max-width: 705px) 100vw, 705px" /></a></p>
+<p>But the removal hook never gets called if we use the minified build:</p>
+<p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png"><img class="alignnone size-full wp-image-678" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png" alt="Screen Shot 2015-08-23 at 4.43.42 PM" width="714" height="544" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png 714w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM-624x475.png 624w" sizes="(max-width: 714px) 100vw, 714px" /></a></p>
+<p>Obviously this is bad news if the event removal hook does some security-critical function, like checking if an origin is whitelisted before passing a user’s auth token to it.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The backdoor examples that I’ve illustrated are pretty contrived, but the fact that they can exist at all should probably worry JS developers. Although JS minifiers are not nearly as complex or important as C++ compilers, they have power over a lot of the code that ends up running on the web.</p>
+<p>It’s good that UglifyJS has added test cases for <a href="https://github.com/mishoo/UglifyJS2/blob/master/test/compress/issue-751.js">known bugs</a>, but I would still advise anyone who uses a non-formally verified minifier to be wary. Don’t minify/compress server-side code unless you have to, and make sure you run browser tests/scans against code post-minification. [Addendum: Don’t forget that even if you aren’t using a minifier, your CDN might minify files in production for you. For instance, Cloudflare’s collapsify <a href="https://github.com/cloudflare/collapsify/commit/e59253193282f2047eea1c770be57cb10c3c4a3a">uses uglifyjs</a>.]</p>
+<p>Now, back to reading the rest of POC||GTFO.</p>
+<p><strong>PS</strong>: If you have thoughts or ideas for future PoC, please leave a comment or find me on Twitter (<a href="https://twitter.com/bcrypt">@bcrypt</a>). The code from this blog post is up on <a href="https://github.com/diracdeltas/jquery">github</a>.</p>
+<p>[Update 1: Thanks @joshssharp for posting this to Hacker News. I’m flattered to have been on the front page allllll night long (cue 70’s soul music). Bonus points – the thread taught me <a href="https://news.ycombinator.com/item?id=10108672">something surprising</a> about why it would make sense to minify server-side.]</p>
+<p>[Update 2: There is now a <a href="https://lists.debian.org/debian-devel/2015/08/msg00427.html">long thread</a> about minifiers on debian-devel which spawned <a href="https://wiki.debian.org/onlyjob/no-minification">this wiki page</a> and <a href="https://news.ycombinator.com/item?id=10146157">another HN thread</a>. It’s cool that JS developers are paying attention to this class of potential security vulnerabilities, but I hope that people complaining about minification also consider transpilers and other JS pseudo-compilers. I’ll talk more about that in a future blog post.]</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/this-blog-uses-content-security-policy/">this blog uses Content Security Policy</a></h1>
+        <span class="post-date">Jul 26, 2015</span>
+        <p><em>FYI: this post is an artifact of the Dark Ages when my blog was self-hosted WordPress. Let us not speak of that time.</em></p>
+<p>Having recently given some <a href="https://zyan.scripts.mit.edu/presentations/txjs2015.pdf">talks</a> about <a href="http://www.w3.org/TR/CSP/">Content Security Policy</a> (CSP), I decided just now to enable it on my own blog to prevent cross-site scripting.</p>
+<p>This lil’ blog is hosted by the <a href="https://scripts.mit.edu/">MIT Student Information Processing Board</a> and runs on a fairly-uncustomized WordPress 4.x installation. Although I could have enabled CSP by modifying my .htaccess file, I chose to use HTML <meta> tags instead so that these instructions would work for people who don’t have shell access to their WordPress host. Unfortunately, CSP using <meta> hasn’t landed in Firefox yet (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=663570">tracking bug</a>) so I should probably do the .htaccess thing anyway.</p>
+<p>It’s pretty easy to turn on CSP in WordPress from the dashboard:</p>
+<ol>
+<li>Go to &lt;your_blog_path&gt;/wp-admin/theme-editor.php. Note that this isn’t available for WordPress-hosted blogs (*.wordpress.com).</li>
+<li>Click on Header (header.php) in the sidebar to edit the header HTML.</li>
+<li>At the start of the HTML <code>&lt;head&gt;</code> element, add a CSP meta tag with your CSP policy. This blog uses <code>&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;script-src 'self'&quot;&gt;</code> which disallows all scripts except from its own origin (including inline scripts). As far as I can tell, this blocks a few inline scripts but doesn’t impede any functionality on a vanilla WordPress instance. You might want a more permissive policy if you use fancy widgets and plugins.</li>
+<li>[Bonus points] You can also show a friendly message to users who disable javascript by adding a <code>&lt;noscript&gt;</code> element to your header.<a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png"><img class="alignnone wp-image-599 size-full" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png" alt="noscript" width="1128" height="381" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM.png 1128w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-300x101.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-1024x346.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-2.07.14-PM-624x211.png 624w" sizes="(max-width: 1128px) 100vw, 1128px" /></a></li>
+</ol>
+<p>A fun fact I discovered during this process is that embedding a SoundCloud iframe will include tracking scripts from Google Analytics and scorecardresearch.com. Unfortunately CSP on the embedding page (my blog) doesn’t extend to embedded contexts (soundcloud.com iframe), so those scripts will still run unless you’ve disabled JS.</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png"><img class="alignnone size-full wp-image-600" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png" alt="scorecard" width="806" height="594" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM.png 806w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM-300x221.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-26-at-3.02.59-PM-624x460.png 624w" sizes="(max-width: 806px) 100vw, 806px" /></a></p>
+<p>That’s all. I might do more posts on WordPress hardening later or even write a WP plugin (*shudders at the thought of writing PHP*). More tips are welcome too.</p>
+<p>UPDATE (8/24/15): CSP is temporarily disabled on this blog because Google Analytics uses an inline script. I’ll nonce-whitelist it later and turn CSP back on.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/">lessons from the ad blocker trenches</a></h1>
+        <span class="post-date">Jul 17, 2015</span>
+        <p>Greetings from the beautiful museum district of Berlin, where I’ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we’ve produced two documents this week that I think are pretty good:</p>
+<ul>
+<li><a href="http://www.w3.org/2001/tag/doc/encryption-finding/">no encryption backdoors</a></li>
+<li><a href="http://www.w3.org/2001/tag/doc/unsanctioned-tracking/">no non-consensual web tracking</a></li>
+</ul>
+<p>I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (<a href="https://eff.org/privacybadger" target="_blank">Privacy Badger Firefox</a>).</p>
+<ol>
+<li>Beware of ad blockers that don’t actually block requests to tracking domains. For instance, an ad blocker that simply hides ads using CSS rules is not really useful for preventing tracking. Many users can’t tell the difference.</li>
+<li>Third-party cookies are not the only way to track users anymore, which means that browser features and extensions that only block/delete third-party cookies are not as useful as they once were. This 2012 survey paper [<a href="https://jonathanmayer.org/papers_data/trackingsurvey12.pdf" target="_blank">PDF</a>] by Jonathan Mayer et. al. has a table of non-cookie browser tracking methods, which is probably out of date by now: <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM.png"><img class="alignnone size-full wp-image-577" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM.png" alt="Screen Shot 2015-07-17 at 4.32.55 PM" width="421" height="684" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM.png 421w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/Screen-Shot-2015-07-17-at-4.32.55-PM-185x300.png 185w" sizes="(max-width: 421px) 100vw, 421px" /></a></li>
+<li>Detecting whether a domain is performing third-party tracking is not straightforward. Naively, you could do this by counting the number of first-party domains that a domain reads high-entropy cookies from in a third-party context. However, this doesn’t encompass reading non-cookie browser state that could be used to uniquely identify users in aggregate (see table above). A more general but probably impractical approach is to try to tag every piece of site-readable browser state with an entropy estimate so that you can score sites by the total entropy that is readable by them in a third-party context. (We assume that while a site is being accessed as a first-party, the user implicitly consents to letting it read information about them. This is a gross simplification, since first parties can read lots of information that users don’t consent to by invisible fingerprinting. Also, I am recklessly using the term “entropy” here in a way that would probably cause undergrad thermodynamics professors to have aneurysms.)</li>
+<li>The browser definition of “third-party” only roughly approximates the real-life definition. For instance, dropbox.com and dropboxusercontent.com are the same party from a business and privacy perspective but not from the cookie-scoping or DNS or same-origin-policy perspective.</li>
+<li>The hardest-to-block tracking domains are the ones who cause collateral damage when blocked. A good example of this is Disqus, commonly embedded as a third-party widget on blogs and forums; if we block requests to Disqus (which include cookies for logged-in users), we severely impede the functionality of many websites. So Disqus is too usability-expensive to block, even though they can track your behavior from site to site.</li>
+<li>The hardest-to-block tracking methods are the ones that cause collateral damage when disabled. For instance, <a href="http://www.radicalresearch.co.uk/lab/hstssupercookies">HSTS</a> and <a href="https://tools.ietf.org/html/rfc7469#section-5">HPKP</a> both store user-specific persistent data that can be abused to probe users’ browsing histories and/or mark users so that you can re-identify them after the first time they visit your site. However, clearing HSTS/HPKP state between browser sessions dilutes their security value, so browsers/extensions are reluctant to do so.</li>
+<li>Specifiers and implementers sometimes argue that Feature X, which adds some fingerprinting/tracking surface, is okay because it’s no worse than cookies. I am skeptical of this argument for the following reasons:<br clear="none" />a. Unless explicitly required, there is no guarantee that browsers will treat Feature X the same as cookies in privacy-paranoid edge cases. For instance, if Safari blocks 3rd party cookies by default, will it block 3rd party media stream captures (which will store a unique deviceid) by default too?<br clear="none" />b. Ad blockers and anti-tracking tools like Disconnect, Privacy Badger, and Torbutton were mostly written to block and detect tracking on the basis of cookies, not arbitrary persistent data. It’s arguable that they should be blocking these other things as soon as they are shipped in browsers, but that requires developer time.</li>
+</ol>
+<p>That’s all. And here’s some photos I took while walking around Berlin in a jetlagged haze for hours last night:</p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1.jpg"><img class="alignnone  wp-image-586" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1.jpg" alt="berlin1" width="391" height="391" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1.jpg 1080w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin1-624x624.jpg 624w" sizes="(max-width: 391px) 100vw, 391px" /></a></p>
+<p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2.jpg"><img class="alignnone  wp-image-587" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2.jpg" alt="berlin2" width="392" height="392" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2.jpg 1080w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-1024x1024.jpg 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/07/berlin2-624x624.jpg 624w" sizes="(max-width: 392px) 100vw, 392px" /></a></p>
+<p>Update (7/18/15): Artur Janc of Google pointed out this <a href="https://www.chromium.org/Home/chromium-security/client-identification-mechanisms" target="_blank">document by folks at Chromium</a> analyzing various client identification methods, including several I hadn’t thought about.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/pseudorandom-podcast-series-episode-1/">pseudorandom podcast series, episode 1</a></h1>
+        <span class="post-date">Jun 7, 2015</span>
+        <p>The combination of my roommate starting a Rust podcast and a long, animated conversation with a (drunk) storyteller last night caused me to become suddenly enamored with the idea of starting my own lil’ podcast. Lately I keep thinking about how many spontaneous, insightful conversations are never remembered, much less entombed in a publicly-accessible server for posterity. So a podcast seemed like an excellent way to share these moments without spending a lot of time writing (I’m a regrettably slow writer). I’d simply bring folks into my warehouse living room, give them a beverage of their choice, and spend a leisurely hour chatting about whatever miscellaneous topics came to mind.</p>
+<p>And so, wasting no time, today I asked my ex-ex-colleague Peter Eckersley if he would like to be my first podcast guest. Peter runs the technology projects team at the Electronic Frontier Foundation and, more importantly, lives 3 blocks away from me. Fortuitously, Peter agreed to have me over for a chat later this afternoon.</p>
+<p>When I arrived, it turned out that one of Peter’s housemates was having friends over for dinner, so finding a quiet spot became a challenge. We ended up in a tiny room at the back of his house where every flat surface was covered in sewing equipment and sundry household items. As Peter grabbed a hammer to reconstruct the only available chair in the room, I set up my laptop and fancy (borrowed) podcast microphone. We gathered around as close as we could and hit the record button.</p>
+<p>Except for one hiccup where Audacity decided to stop recording abruptly, the interview went smoothly and didn’t need much editing. Next time I’ll plan to put myself closer to the mic, do a longer intro, and maybe cut the length down to 15 minutes.</p>
+<p><a href="https://soundcloud.com/bcrypt/pseudorandom-podcast-episode-1" target="_blank">Here is the result</a>.</p>
+<p>Overall, I had a fun time recording this podcast and am unduly excited about future episodes. Turns out a podcast takes ~10% of the time to write a blog post with the same content. 🙂</p>
+<p>For this and future episodes in the Pseudorandom Podcast Series, here’s an <a href="http://feeds.soundcloud.com/users/soundcloud:users:156877463/sounds.rss" target="_blank">RSS feed</a>. I’m going to reach SoundCloud’s limit of 180 minutes real quick at this rate, so I will probably host these somewhere else in the future or start a microfunding campaign to pay $15/month.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/life-update/">life update</a></h1>
+        <span class="post-date">Apr 27, 2015</span>
+        <p>i’ve finally recovered enough from a multi-week bout of sickness to say some things and put up some photos. lately i’ve felt exhausted and lethargic and unproductive to be honest. being sick probably had something to do with it; i sure hope next week gets better.</p>
+<p>yesterday, someone told me they had a theory that everyone who sleeps at night (with rare exceptions) can only manage ~3 significant life events at a time. that sounds about right, but it feels like a lot has been going on. a partial, unordered list:</p>
+<ol>
+<li>talked yesterday at the Yahoo Trust Unconference about <a href="https://zyan.scripts.mit.edu/presentations/trust_unconference.html">the future of email security</a></li>
+</ol>
+<div id="attachment_558" style="width: 423px" class="wp-caption alignnone">
+  <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/yan_sec.jpg"><img class="wp-image-558" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/yan_sec.jpg" alt="yan" width="413" height="413" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/yan_sec.jpg 640w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/yan_sec-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/yan_sec-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/yan_sec-624x624.jpg 624w" sizes="(max-width: 413px) 100vw, 413px" /></a>
+  <p class="wp-caption-text">
+    photo credit Bill Childers
+  </p>
+</div>
+<ol start="2">
+<li>
+<p>working on graceful degradation of hopes and feelings</p>
+</li>
+<li>
+<p>writing software for Let’s Encrypt as an EFF Technology fellow</p>
+</li>
+<li>
+<p>trying to make sane w3c standards with these fine folks from the W3C Technical Architecture group</p>
+</li>
+</ol>
+<div id="attachment_557" style="width: 426px" class="wp-caption alignnone">
+  <a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/TAG.jpg"><img class="wp-image-557" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/TAG.jpg" alt="TAG" width="416" height="416" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/TAG.jpg 640w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/TAG-150x150.jpg 150w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/TAG-300x300.jpg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/04/TAG-624x624.jpg 624w" sizes="(max-width: 416px) 100vw, 416px" /></a>
+  <p class="wp-caption-text">
+    photo credit Tantek Celik
+  </p>
+</div>
+<ol start="5">
+<li>
+<p>packing bag(s) and moving to a new neighborhood (twice)</p>
+</li>
+<li>
+<p>finding balance on a skateboard and otherwise</p>
+</li>
+</ol>
+<p>“I think emotional and crypto intelligence are severely underrated” – spectator at the Yahoo Trust Unconference.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/rate-limiting-anonymous-accounts/">rate-limiting anonymous accounts</a></h1>
+        <span class="post-date">Mar 5, 2015</span>
+        <p>Yesterday TechCrunch <a href="http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/">reported</a> that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/">actual people</a> use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they’re using Tor in the first place.</p>
+<p>What are services like Twitter to do, then? I thought of one simple solution that borrows a popular idea from anonymous e-cash systems.</p>
+<p>In a <a href="http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF">1983 paper</a>, cryptographer David Chaum introduced the concept of blind signatures. A blind signature is a cryptographic signature in which the signer can’t see the content of the message that she’s signing. So if Bob wants Alice to sign the message “Bob is great” without her knowing, he first “blinds” the message using a random factor that is unknown to her and gives Alice the blinded message to sign. When he unblinds her signed message by removing the blinding factor, the original message “Bob is great” <em>also</em> has a valid signature from Alice!</p>
+<p>This may seem weird and magical, but blinded signatures are actually possible using the familiar RSA signature scheme. The proof is straightforward and <a href="https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235">on Wikipedia</a>. Basically, since RSA signatures are just modulo’d exponentiation of some message <em>M</em> to a secret exponent <em>d</em>, when you create a signature over a blinded message <em>M’ = M*r^e</em> (where <em>r</em> is the blinding factor and <em>e</em> is the public exponent), you also create a valid signature over <em>M</em> thanks to the distributive property of exponentiation over multiplication.</p>
+<p>Given the existence of blind signature schemes, Twitter can do something like the following to rate-limit Tor accounts without deanonymizing them:</p>
+<ol>
+<li>Say that @bob is an existing Twitter user who would like to make an anonymous account over Tor, which we’ll call @notbob. He computes <em>T = H(notbob) * r^e mod N</em>, where <em>H</em> is a hash function, <em>r</em> is a random number that Bob chooses, and <em>{e,N}</em> is the public part of an Identity Provider’s RSA keypair (defined in step 2).</li>
+<li>Bob sends <em>T</em> to an identity provider. This could be Twitter itself, or any service like Google, Identica, Facebook, LinkedIn, Keybase, etc. as long as it can check that Bob is probably a real person via SMS verification or a reputation-based algorithm. If Bob seems real enough, the Identity Provider sends him S_ig(T) = T^d mod N = H(notbob)^d * r mod N_, where _d_ is the private part of the Identity Provider’s RSA keypair.</li>
+<li>Bob divides <em>Sig(T)</em> by <em>r</em> to get <em>Sig(H(notbob))</em>, AKA his Identity Provider’s signature over the hash of his desired anonymous username.</li>
+<li>Bob opens up Tor browser and goes to register @notbob. In the registration form, he sends <em>Sig(H(notbob))</em>. Twitter can then verify the Identity Provider’s signature over ‘notbob’ and <strong>only</strong> accept @notbob’s account registration if verification is successful!</li>
+</ol>
+<p>It seems to me that this achieves some nice properties.</p>
+<ul>
+<li>Every anonymous account is transitively validated via SMS or reputation.</li>
+<li>Ignoring traffic analysis (admittedly a big thing to ignore), anonymous accounts and the actual identities or phone numbers used to validate them are unlinkable.</li>
+</ul>
+<p>Thoughts? I’d bet that someone has thought of this use case before but I couldn’t find any references on the Internet.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/canvas/">canvas #1</a></h1>
+        <span class="post-date">Feb 16, 2015</span>
+        <p><a href="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2.jpeg"><img class="alignnone size-full wp-image-538" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2.jpeg" alt="painting2" width="887" height="596" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2.jpeg 887w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2-300x202.jpeg 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/02/painting2-624x419.jpeg 624w" sizes="(max-width: 887px) 100vw, 887px" /></a></p>
+<p><em><strong>that could have been us</strong></em>, 2015</p>
+<p><em>Oil pastels, lipstick, eyeliner, cold medicine, and ballpoint pen on canvas.</em></p>
+<p>i painted this while standing in my bathroom on valentine’s day’s night, unable to sleep and grotesquely feeling the weight of the oncoming dawn. it was my first time drawing on canvas.</p>
+<p>as i worked, i kept thinking about all these people passing to and from doomed relationships, that feeling of being stupidly and everlastingly perched on the brink between hope and mutilation. that’s more or less what this is about.</p>
+
+    </div>
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/2sat/">solving boolean satisfiability on human circuits</a></h1>
+        <span class="post-date">Dec 31, 2014</span>
+        <p>I remember quite clearly sitting in Scott Aaronson’s computability and complexity theory <a href="http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-045j-automata-computability-and-complexity-spring-2011/">course</a> at MIT in 2011. I was a 19 year-old physics major back then, so Scott’s class was mostly new and fascinating.</p>
+<p>One spring day, Scott was at the chalkboard delightedly introducing the concept of time complexity classes to us, with the same delight he used when introducing most abstract constructs. He said that you could categorize algorithms into time complexity classes based on the amount of time they take to run as a function of the input length. For instance, you could prove that certain decision problems couldn’t be solved by a deterministic Turing machine in polynomial time. I raised my hand.</p>
+<p>“Yes?”</p>
+<p>“But time is reference-frame dependent! What if you ran the deterministic Turing machine on earth while you yourself were on a rocket going at relativistic speeds?”</p>
+<p>Scott’s eyes lit up. “Aha!” he said, without pause. “Suppose you traveled faster as the input length increased, so from your perspective, a problem in EXP is decidable in polynomial time. However you would be using more and more energy to propel your spaceship. So there is necessarily a tradeoff in the resources needed to solve the problem.”</p>
+<p>In retrospect, this was pretty characteristic of why I liked the class so much. Scott didn’t give the easy and useless answer, which would have been that *by our definition* all running times are measured in a fixed inertial reference frame. Instead he reminds us that we, as humans, ultimately care about the totality of resources needed to solve a problem. Time complexity analysis is just one step toward grasping at how hard, how expensive, how painful something really is; mired as we may be in mathematical formalism, the reality of our dying planet and unpaid bills stays within sight when Scott lectures.</p>
+<p>All this came to mind when I read Scott’s now-infamous <a href="http://www.scottaaronson.com/blog/?p=2091#comment-326664">blog comment</a> about growing up as a shy, self-proclaimed and self-hating male nerd; followed by the much-cited <a href="http://www.newstatesman.com/laurie-penny/on-nerd-entitlement-rebel-alliance-empire">response</a> from journalist Laurie Penny about growing up as a shy, self-proclaimed and self-hating female nerd; followed by Scott’s latest <a href="http://www.scottaaronson.com/blog/?p=2119">blog post</a> clarifying what he believes about feminism and the plight of shy nerdy people anguished by sexual frustration. What suprised me about the latter was that Scott went so far as to write:</p>
+<blockquote>
+<p>“How to help all the young male nerds I meet who suffer from this problem, in a way that passes feminist muster, and that triggers the world’s sympathy rather than outrage, is a problem that interests me as much as P vs. NP, and right now that seems about equally hard.”</p>
+</blockquote>
+<p>(“As much as P vs NP”?! Remember that Scott once bet his house on the invalidity of a paper claiming to prove P != NP, cf. <a href="http://www.scottaaronson.com/blog/?p=456">http://www.scottaaronson.com/blog/?p=456</a>.)</p>
+<p>Sometimes I think that the obvious step towards solving the problem Scott mentions is for the frustrated person to politely and non-expectantly inform the other person of his/her desires. In an ideal world, they would then discuss them until reaching an amicable resolution, at which point they can return to platonically multiplying tensors or whatever.</p>
+<p>But I suppose part of the definition of shy is the fear of exposing yourself to untrusted parties, for which they can reject you, humiliate you, and otherwise destroy that which you value or at least begrudgingly tolerate. Sadly, the shyness of analytical minds seems justified, because pretty much nobody has worked out how to communicate rejection without passing unfair judgement or otherwise patterning poisonous behavior. There is an art to divulging hidden feelings, an art to giving rejection, an art to handling sadness graciously, and an art to growing friendships from tenuous beginnings. None of these are taught to adolescent humans. Instead, we learn to hide ourselves and shame others.</p>
+<p>I feel unprepared to write anything resembling a guide on how to do this, having recoiled from human contact for most of my life thanks to shyness, but I think it’s well worth some human brain cycles. Here’s hoping to live in a culture of rejection-positivity.</p>
+
+    </div>
+  
+</div>
+
+<div class="pagination">
+  
+  <a class="pagination-item older" href="https://blog.azuki.vip/page/3/">Older</a>
+  
+
+  
+  <a class="pagination-item newer" href="https://blog.azuki.vip/">Newer</a>
+  
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+  </body>
+</html>
+

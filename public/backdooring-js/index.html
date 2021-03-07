@@ -1,105 +1,98 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <base href="https://diracdeltas.github.io/blog">
-    <title> backdooring your javascript using minifier bugs </title>
-    <link rel="canonical" href="https://diracdeltas.github.io/blog/backdooring-js/">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
     
+      backdooring your javascript using minifier bugs &middot; discrete blogarithm
+    
+  </title>
 
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/poole.css">
-<link rel="stylesheet" href="https://diracdeltas.github.io/blog/css/lanyon.css">
+  
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/poole.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/syntax.css">
+  <link rel="stylesheet" href="https://blog.azuki.vip/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://blog.azuki.vip/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://blog.azuki.vip/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://blog.azuki.vip/atom.xml">
 </head>
 
 
-<body class="theme-base-08">
-  
+  <body>
 
-
+    
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
 
 <div class="sidebar" id="sidebar">
-
-  <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/posts">all posts</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/about">about</a>
-    <a class="sidebar-nav-item" href="https://diracdeltas.github.io/blog/talks">IRL</a>
-    <a class="sidebar-nav-item" href="https://soundcloud.com/azuki">music</a>
-  </nav>
-
   <div class="sidebar-item">
     <p>
-      Powered by <a href="http://hugo.spf13.com">Hugo</a>. Design adapted from <a href="http://lanyon.getpoole.com">Lanyon</a>.
+      yan&rsquo;s blog
     </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/">Home</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/post">Posts</a>
+    <a class="sidebar-nav-item " href="https://blog.azuki.vip/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2020. All rights reserved.</p>
   </div>
 </div>
 
 
-  
-  <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="https://diracdeltas.github.io/blog/" title="Home">Home</a>
-        </h3>
-      </div>
-    </div>
-
     
-    <div class="container content">
-      <h1 class="post-title">backdooring your javascript using minifier bugs</h1>
-        <section id="main">
-          <h5 id="date"> Mon Aug 24, 2015 </h5>
-          
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="https://blog.azuki.vip/" title="Home">discrete blogarithm</a>
+            <small></small>
+          </h3>
+        </div>
+      </div>
 
-<p>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of <a href="https://www.alchemistowl.org/pocorgtfo/">POC||GTFO 0x08</a> from Travis Goodspeed. The coolest article I&#8217;ve read so far in it is &#8220;Deniable Backdoors Using Compiler Bugs,&#8221; in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</p>
+      <div class="container content">
 
-<p>That got me thinking about whether you could use the same backdoor technique on javascript. JS runs pretty much everywhere these days (browsers, servers, <a href="http://postscapes.com/javascript-and-the-internet-of-things">arduinos and robots</a>, maybe even cars someday) but it&#8217;s an interpreted language, not compiled. However, it&#8217;s quite common to minify and optimize JS to reduce file size and improve performance. Perhaps that gives us enough room to insert a backdoor by abusing a JS <em>minifier.</em></p>
 
+<div class="post">
+  <h1 class="post-title">backdooring your javascript using minifier bugs</h1>
+  <span class="post-date">Aug 24, 2015</span>
+  <p>In addition to unforgettable life experiences and personal growth, one thing I got out of DEF CON 23 was a copy of <a href="https://www.alchemistowl.org/pocorgtfo/">POC||GTFO 0x08</a> from Travis Goodspeed. The coolest article I’ve read so far in it is “Deniable Backdoors Using Compiler Bugs,” in which the authors abused a pre-existing bug in CLANG to create a backdoored version of sudo that allowed any user to gain root access. This is very sneaky, because nobody could prove that their patch to sudo was a backdoor by examining the source code; instead, the privilege escalation backdoor is inserted at compile-time by certain (buggy) versions of CLANG.</p>
+<p>That got me thinking about whether you could use the same backdoor technique on javascript. JS runs pretty much everywhere these days (browsers, servers, <a href="http://postscapes.com/javascript-and-the-internet-of-things">arduinos and robots</a>, maybe even cars someday) but it’s an interpreted language, not compiled. However, it’s quite common to minify and optimize JS to reduce file size and improve performance. Perhaps that gives us enough room to insert a backdoor by abusing a JS <em>minifier.</em></p>
 <h3 id="part-i-finding-a-good-minifier-bug">Part I: Finding a good minifier bug</h3>
-
 <p>Question: Do popular JS minifiers really have bugs that could lead to security problems?</p>
-
-<p>Answer: After about 10 minutes of searching, I found one in <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>, a popular minifier used by jQuery to build a script that runs on something like <a href="http://blog.jquery.com/2014/01/13/the-state-of-jquery-2014/">70% of the top websites</a> on the Internet. The <a href="https://github.com/mishoo/UglifyJS2/issues/751">bug itself</a>, fixed in the 2.4.24 release, is straightforward but not totally obvious, so let&#8217;s walk through it.</p>
-
+<p>Answer: After about 10 minutes of searching, I found one in <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>, a popular minifier used by jQuery to build a script that runs on something like <a href="http://blog.jquery.com/2014/01/13/the-state-of-jquery-2014/">70% of the top websites</a> on the Internet. The <a href="https://github.com/mishoo/UglifyJS2/issues/751">bug itself</a>, fixed in the 2.4.24 release, is straightforward but not totally obvious, so let’s walk through it.</p>
 <p>UglifyJS does a bunch of things to try to reduce file size. One of the compression flags that is on-by-default will compress expressions such as:</p>
-
 <pre>!a && !b && !c && !d
 </pre>
-
-<p>That expression is 20 characters. Luckily, if we apply <a href="https://en.wikipedia.org/wiki/De_Morgan%27s_laws">De Morgan&#8217;s Law</a>, we can rewrite it as:</p>
-
+<p>That expression is 20 characters. Luckily, if we apply <a href="https://en.wikipedia.org/wiki/De_Morgan%27s_laws">De Morgan’s Law</a>, we can rewrite it as:</p>
 <pre>!(a || b || c || d)
 </pre>
-
-<p>which is only 19 characters. Sweet! Except that De Morgan&#8217;s Law doesn&#8217;t necessarily work if any of the subexpressions has a non-Boolean return value. For instance,</p>
-
+<p>which is only 19 characters. Sweet! Except that De Morgan’s Law doesn’t necessarily work if any of the subexpressions has a non-Boolean return value. For instance,</p>
 <pre>!false && 1
 </pre>
-
 <p>will return the number 1. On the other hand,</p>
-
 <pre>!(false || !1)
 </pre>
-
 <p>simply returns true.</p>
-
-<p>So if we can trick the minifier into erroneously applying De Morgan&#8217;s law, we can make the program behave differently before and after minification! Turns out it&#8217;s not too hard to trick UglifyJS 2.4.23 into doing this, since it will always use the rewritten expression if it is shorter than the original. (UglifyJS 2.4.24 patches this by making sure that subexpressions are boolean before attempting to rewrite.)</p>
-
-<h3 id="part-ii-building-a-backdoor-in-some-hypothetical-auth-code">Part II: Building a backdoor in some hypothetical auth code</h3>
-
-<p>Cool, we&#8217;ve found the minifier bug of our dreams. Now let&#8217;s try to abuse it!</p>
-
-<p>Let&#8217;s say that you are working for some company, and you want to deliberately create vulnerabilities in their Node.js website. You are tasked with writing some server-side javascript that validates whether user auth tokens are expired. First you make sure that the Node package uses uglify-js@2.4.23, which has the bug that we care about.</p>
-
+<p>So if we can trick the minifier into erroneously applying De Morgan’s law, we can make the program behave differently before and after minification! Turns out it’s not too hard to trick UglifyJS 2.4.23 into doing this, since it will always use the rewritten expression if it is shorter than the original. (UglifyJS 2.4.24 patches this by making sure that subexpressions are boolean before attempting to rewrite.)</p>
+<h3 id="part-ii-building-a-backdoorin-some-hypothetical-auth-code">Part II: Building a backdoor in some hypothetical auth code</h3>
+<p>Cool, we’ve found the minifier bug of our dreams. Now let’s try to abuse it!</p>
+<p>Let’s say that you are working for some company, and you want to deliberately create vulnerabilities in their Node.js website. You are tasked with writing some server-side javascript that validates whether user auth tokens are expired. First you make sure that the Node package uses <a href="mailto:uglify-js@2.4.23">uglify-js@2.4.23</a>, which has the bug that we care about.</p>
 <p>Next you write the token validation function, inserting a bunch of plausible-looking config and user validation checks to force the minifier to compress the long (not-)boolean expression:</p>
-
 <pre>function isTokenValid(user) {
     var timeLeft =
         !!config && // config object exists
@@ -117,37 +110,21 @@ function getTimeLeft(expiry) {
   return expiry - getSystemTime();
 }
 </pre>
-
 <p>Running <code>uglifyjs -c</code> on the snippet above produces the following:</p>
-
 <pre>function isTokenValid(user){var timeLeft=!(!config||!user.token||user.token.invalidated||config.uninitialized||config.ignoreTimestamps||!getTimeLeft(user.token.expiry));return timeLeft&gt;0}function getTimeLeft(expiry){return expiry-getSystemTime()}</pre>
-
-<p>In the original form, if the config and user checks pass, <code>timeLeft</code> is a negative integer if the token is expired. In the minified form, <code>timeLeft</code> must be a boolean (since &#8220;!&#8221; in JS does type-coercion to booleans). In fact, if the config and user checks pass, the value of <code>timeLeft</code> is always <code>true</code> unless <code>getTimeLeft</code> coincidentally happens to be 0.</p>
-
+<p>In the original form, if the config and user checks pass, <code>timeLeft</code> is a negative integer if the token is expired. In the minified form, <code>timeLeft</code> must be a boolean (since “!” in JS does type-coercion to booleans). In fact, if the config and user checks pass, the value of <code>timeLeft</code> is always <code>true</code> unless <code>getTimeLeft</code> coincidentally happens to be 0.</p>
 <p>Voila! Since <code>true &gt; 0</code> in javascript (yay for type coercion!), auth tokens that are past their expiration time will still be valid forever.</p>
-
 <h3 id="part-iii-backdooring-jquery">Part III: Backdooring jQuery</h3>
-
-<p>Next let&#8217;s abuse our favorite minifier bug to write some patches to jQuery itself that could lead to backdoors. We&#8217;ll work with <a href="https://github.com/jquery/jquery/tree/1.11.3">jQuery 1.11.3</a>, which is the current jQuery 1 stable release as of this writing.</p>
-
-<p>jQuery 1.11.3 uses <a href="https://github.com/jquery/jquery/blob/1.11.3/package.json#L39">grunt-contrib-uglify 0.3.2</a> for minification, which in turn depends on <a href="https://github.com/gruntjs/grunt-contrib-uglify/blob/v0.3.2/package.json#L30">uglify-js ~2.4.0</a>. So uglify-js@2.4.23 satisfies the dependency, and we can manually edit package.json in grunt-contrib-uglify to force it to use this version.</p>
-
-<p>There are only a handful of places in jQuery where the DeMorgan&#8217;s Law rewrite optimization is triggered. None of these cause bugs, so we&#8217;ll have to add some ourselves.</p>
-
+<p>Next let’s abuse our favorite minifier bug to write some patches to jQuery itself that could lead to backdoors. We’ll work with <a href="https://github.com/jquery/jquery/tree/1.11.3">jQuery 1.11.3</a>, which is the current jQuery 1 stable release as of this writing.</p>
+<p>jQuery 1.11.3 uses <a href="https://github.com/jquery/jquery/blob/1.11.3/package.json#L39">grunt-contrib-uglify 0.3.2</a> for minification, which in turn depends on <a href="https://github.com/gruntjs/grunt-contrib-uglify/blob/v0.3.2/package.json#L30">uglify-js ~2.4.0</a>. So <a href="mailto:uglify-js@2.4.23">uglify-js@2.4.23</a> satisfies the dependency, and we can manually edit package.json in grunt-contrib-uglify to force it to use this version.</p>
+<p>There are only a handful of places in jQuery where the DeMorgan’s Law rewrite optimization is triggered. None of these cause bugs, so we’ll have to add some ourselves.</p>
 <p><strong>Backdoor Patch #1:</strong></p>
-
-<p>First let&#8217;s add a potential backdoor in jQuery&#8217;s .html() method. The <a href="https://github.com/diracdeltas/jquery/commit/e50c8ce26736027386aa7a698baeca7740a54a0b">patch</a> looks weird and superfluous, but we can convince anyone that it shouldn&#8217;t actually change what the method does. Indeed, pre-minification, the unit tests pass.</p>
-
-<p>After minification with uglify-js@2.4.23, jQuery&#8217;s .html() method will set the inner HTML to &#8220;true&#8221; instead of the provided value, so a bunch of tests fail.</p>
-
+<p>First let’s add a potential backdoor in jQuery’s .html() method. The <a href="https://github.com/diracdeltas/jquery/commit/e50c8ce26736027386aa7a698baeca7740a54a0b">patch</a> looks weird and superfluous, but we can convince anyone that it shouldn’t actually change what the method does. Indeed, pre-minification, the unit tests pass.</p>
+<p>After minification with <a href="mailto:uglify-js@2.4.23">uglify-js@2.4.23</a>, jQuery’s .html() method will set the inner HTML to “true” instead of the provided value, so a bunch of tests fail.</p>
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png"><img class="alignnone size-full wp-image-670" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png" alt="Screen Shot 2015-08-23 at 1.35.48 PM" width="844" height="785" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM.png 844w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM-300x279.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.35.48-PM-624x580.png 624w" sizes="(max-width: 844px) 100vw, 844px" /></a></p>
-
 <p>However, the jQuery maintainers are probably using the patched version of uglifyjs. Indeed, tests pass with uglify-js@2.4.24, so this patch might not seem too suspicious.</p>
-
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png"><img class="alignnone size-full wp-image-671" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png" alt="Screen Shot 2015-08-23 at 1.39.47 PM" width="1057" height="281" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM.png 1057w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-300x80.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-1024x272.png 1024w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-1.39.47-PM-624x166.png 624w" sizes="(max-width: 1057px) 100vw, 1057px" /></a></p>
-
-<p>Cool. Now let&#8217;s run grunt to build jQuery with this patch and write some silly code that triggers the backdoor:</p>
-
+<p>Cool. Now let’s run grunt to build jQuery with this patch and write some silly code that triggers the backdoor:</p>
 <pre>&lt;html&gt;
     &lt;script src="../dist/jquery.min.js"&gt;&lt;/script&gt;
     &lt;button&gt;click me to see if this site is safe&lt;/button&gt;
@@ -159,29 +136,17 @@ function getTimeLeft(expiry) {
     &lt;div id='result'&gt;&lt;/div&gt;
 &lt;/html&gt;
 </pre>
-
-<p>Here&#8217;s the result of clicking that button when we run the pre-minified jQuery build:</p>
-
+<p>Here’s the result of clicking that button when we run the pre-minified jQuery build:</p>
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png"><img class="alignnone size-full wp-image-672" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png" alt="Screen Shot 2015-08-23 at 4.44.45 PM" width="511" height="449" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM.png 511w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.44.45-PM-300x264.png 300w" sizes="(max-width: 511px) 100vw, 511px" /></a></p>
-
-<p>As expected, the user is warned that the site is not safe. Which is ironic, because it doesn&#8217;t use our minifier-triggered backdoor.</p>
-
-<p>Here&#8217;s what happens when we instead use the minified jQuery build:</p>
-
+<p>As expected, the user is warned that the site is not safe. Which is ironic, because it doesn’t use our minifier-triggered backdoor.</p>
+<p>Here’s what happens when we instead use the minified jQuery build:</p>
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png"><img class="alignnone size-full wp-image-673" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png" alt="Screen Shot 2015-08-23 at 4.45.10 PM" width="505" height="465" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM.png 505w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.45.10-PM-300x276.png 300w" sizes="(max-width: 505px) 100vw, 505px" /></a></p>
-
 <p>Now users will totally think that this site is safe even when the site authors are trying to warn them otherwise.</p>
-
 <p><strong>Backdoor Patch #2:</strong></p>
-
-<p>The first backdoor might be too easy to detect, since anyone using it will probably notice that a bunch of HTML is being set to the string &#8220;true&#8221; instead of the HTML that they want to set. So our <a href="https://github.com/diracdeltas/jquery/commit/a2092d8a85474c90e2e4d306a21a14af55365b58">second backdoor patch</a> is one that only gets triggered in unusual cases.</p>
-
+<p>The first backdoor might be too easy to detect, since anyone using it will probably notice that a bunch of HTML is being set to the string “true” instead of the HTML that they want to set. So our <a href="https://github.com/diracdeltas/jquery/commit/a2092d8a85474c90e2e4d306a21a14af55365b58">second backdoor patch</a> is one that only gets triggered in unusual cases.</p>
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png"><img class="alignnone size-full wp-image-675" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png" alt="Screen Shot 2015-08-23 at 7.48.14 PM" width="1020" height="313" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM.png 1020w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM-300x92.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-7.48.14-PM-624x191.png 624w" sizes="(max-width: 1020px) 100vw, 1020px" /></a></p>
-
-<p>Basically, we&#8217;ve modified jQuery.event.remove (used in the .off() method) so that the code path that calls <a href="https://learn.jquery.com/events/event-extensions/">special event removal hooks</a> never gets reached after minification. (Since <code>spliced</code> is always boolean, its length is always undefined, which is not &gt; 0.) This doesn&#8217;t necessarily change the behavior of a site unless the developer has defined such a hook.</p>
-
+<p>Basically, we’ve modified jQuery.event.remove (used in the .off() method) so that the code path that calls <a href="https://learn.jquery.com/events/event-extensions/">special event removal hooks</a> never gets reached after minification. (Since <code>spliced</code> is always boolean, its length is always undefined, which is not &gt; 0.) This doesn’t necessarily change the behavior of a site unless the developer has defined such a hook.</p>
 <p>Say that the site we want to backdoor has the following HTML:</p>
-
 <pre>&lt;html&gt;
     &lt;script src="../dist/jquery.min.js"&gt;&lt;/script&gt;
     &lt;button&gt;click me to see if special event handlers are called!&lt;/button&gt;
@@ -198,88 +163,25 @@ function getTimeLeft(expiry) {
     &lt;/script&gt;
 &lt;/html&gt;
 </pre>
-
 <p>If we run it with unminified jQuery, the removal hook gets called as expected:</p>
-
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png"><img class="alignnone size-full wp-image-677" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png" alt="Screen Shot 2015-08-23 at 4.43.10 PM" width="705" height="545" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM.png 705w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM-300x232.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.10-PM-624x482.png 624w" sizes="(max-width: 705px) 100vw, 705px" /></a></p>
-
 <p>But the removal hook never gets called if we use the minified build:</p>
-
 <p><a href="http://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png"><img class="alignnone size-full wp-image-678" src="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png" alt="Screen Shot 2015-08-23 at 4.43.42 PM" width="714" height="544" srcset="https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM.png 714w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM-300x229.png 300w, https://zyan.scripts.mit.edu/blog/wp-content/uploads/2015/08/Screen-Shot-2015-08-23-at-4.43.42-PM-624x475.png 624w" sizes="(max-width: 714px) 100vw, 714px" /></a></p>
-
-<p>Obviously this is bad news if the event removal hook does some security-critical function, like checking if an origin is whitelisted before passing a user&#8217;s auth token to it.</p>
-
+<p>Obviously this is bad news if the event removal hook does some security-critical function, like checking if an origin is whitelisted before passing a user’s auth token to it.</p>
 <h3 id="conclusion">Conclusion</h3>
-
-<p>The backdoor examples that I&#8217;ve illustrated are pretty contrived, but the fact that they can exist at all should probably worry JS developers. Although JS minifiers are not nearly as complex or important as C++ compilers, they have power over a lot of the code that ends up running on the web.</p>
-
-<p>It&#8217;s good that UglifyJS has added test cases for <a href="https://github.com/mishoo/UglifyJS2/blob/master/test/compress/issue-751.js">known bugs</a>, but I would still advise anyone who uses a non-formally verified minifier to be wary. Don&#8217;t minify/compress server-side code unless you have to, and make sure you run browser tests/scans against code post-minification. [Addendum: Don&#8217;t forget that even if you aren&#8217;t using a minifier, your CDN might minify files in production for you. For instance, Cloudflare&#8217;s collapsify <a href="https://github.com/cloudflare/collapsify/commit/e59253193282f2047eea1c770be57cb10c3c4a3a">uses uglifyjs</a>.]</p>
-
+<p>The backdoor examples that I’ve illustrated are pretty contrived, but the fact that they can exist at all should probably worry JS developers. Although JS minifiers are not nearly as complex or important as C++ compilers, they have power over a lot of the code that ends up running on the web.</p>
+<p>It’s good that UglifyJS has added test cases for <a href="https://github.com/mishoo/UglifyJS2/blob/master/test/compress/issue-751.js">known bugs</a>, but I would still advise anyone who uses a non-formally verified minifier to be wary. Don’t minify/compress server-side code unless you have to, and make sure you run browser tests/scans against code post-minification. [Addendum: Don’t forget that even if you aren’t using a minifier, your CDN might minify files in production for you. For instance, Cloudflare’s collapsify <a href="https://github.com/cloudflare/collapsify/commit/e59253193282f2047eea1c770be57cb10c3c4a3a">uses uglifyjs</a>.]</p>
 <p>Now, back to reading the rest of POC||GTFO.</p>
-
 <p><strong>PS</strong>: If you have thoughts or ideas for future PoC, please leave a comment or find me on Twitter (<a href="https://twitter.com/bcrypt">@bcrypt</a>). The code from this blog post is up on <a href="https://github.com/diracdeltas/jquery">github</a>.</p>
+<p>[Update 1: Thanks @joshssharp for posting this to Hacker News. I’m flattered to have been on the front page allllll night long (cue 70’s soul music). Bonus points – the thread taught me <a href="https://news.ycombinator.com/item?id=10108672">something surprising</a> about why it would make sense to minify server-side.]</p>
+<p>[Update 2: There is now a <a href="https://lists.debian.org/debian-devel/2015/08/msg00427.html">long thread</a> about minifiers on debian-devel which spawned <a href="https://wiki.debian.org/onlyjob/no-minification">this wiki page</a> and <a href="https://news.ycombinator.com/item?id=10146157">another HN thread</a>. It’s cool that JS developers are paying attention to this class of potential security vulnerabilities, but I hope that people complaining about minification also consider transpilers and other JS pseudo-compilers. I’ll talk more about that in a future blog post.]</p>
+</div>
 
-<p>[Update 1: Thanks @joshssharp for posting this to Hacker News. I&#8217;m flattered to have been on the front page allllll night long (cue 70&#8217;s soul music). Bonus points &#8211; the thread taught me <a href="https://news.ycombinator.com/item?id=10108672">something surprising</a> about why it would make sense to minify server-side.]</p>
-
-<p>[Update 2: There is now a <a href="https://lists.debian.org/debian-devel/2015/08/msg00427.html">long thread</a> about minifiers on debian-devel which spawned <a href="https://wiki.debian.org/onlyjob/no-minification">this wiki page</a> and <a href="https://news.ycombinator.com/item?id=10146157">another HN thread</a>. It&#8217;s cool that JS developers are paying attention to this class of potential security vulnerabilities, but I hope that people complaining about minification also consider transpilers and other JS pseudo-compilers. I&#8217;ll talk more about that in a future blog post.]</p>
-
-        </section>
+      </div>
     </div>
-  </div>
 
-  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
-  
-
-<div class="container">
-  <hr />
-  <hr />
-  
-    <span class="left">
-    &nbsp; <em>&laquo; Previous:</em> <a class="next" href="https://diracdeltas.github.io/blog/tbd/">tbd</a>
-    </span>
-  
-
-  
-    <span class="right">
-    <em>Next: </em><a class="next" href="https://diracdeltas.github.io/blog/this-blog-uses-content-security-policy/"> &nbsp; this blog uses Content Security Policy</a> &raquo;
-    </span>
-  
-</div>
-
-  <br />
-  
-<div class="container">
-  <ul class="catlist">
-    <li><em>Categories: </em></li>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
     
-      <li><a href="https://diracdeltas.github.io/blog/categories/code">code</a> </li>
-    
-      <li><a href="https://diracdeltas.github.io/blog/categories/hacktivism">hacktivism</a> </li>
-    
-  </ul>
-</div>
-
-
-
-  
-  
-
-<div class="container content">
-<footer>
-  <div>
-    <p class="right credit">
-    <a href="https://diracdeltas.github.io/blog/posts">All posts.</a>
-    </p>
-  </div>
-</footer>
-</div>
-
-
-
-</body>
+  </body>
 </html>
-
-
-
 
