@@ -14,7 +14,7 @@
         <pubDate>Mon, 02 Aug 2021 00:00:00 UTC</pubDate>
         <author></author>
         <guid>https://blog.azuki.vip/csrf/</guid>
-        <description>&lt;p&gt;This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or messaage a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.&lt;/p&gt;
+        <description>&lt;p&gt;This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or message a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.&lt;/p&gt;
 &lt;p&gt;Proof that it worked on a friend who agreed to help me with security testing and is definitely NOT a rabbit:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/156ROQFdMqW1BxcuBRo3AWDAzMMcp3SFt=w2772-h1604-iv2&#34; alt=&#34;Definitely not a rabbit&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;a-short-recap-of-csrf&#34;&gt;A short recap of CSRF&lt;/h2&gt;

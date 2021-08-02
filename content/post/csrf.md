@@ -6,7 +6,7 @@ url: /csrf/
 
 ---
 
-This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or messaage a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.
+This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or message a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.
 
 Proof that it worked on a friend who agreed to help me with security testing and is definitely NOT a rabbit:
 
