@@ -5,7 +5,17 @@
     <link>https://blog.azuki.vip/post/</link>
     <description>Recent content in Posts on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>how to be popular</title>
+      <link>https://blog.azuki.vip/csrf/</link>
+      <pubDate>Mon, 02 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/csrf/</guid>
+      <description>This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or messaage a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.
+Proof that it worked on a friend who agreed to help me with security testing and is definitely NOT a rabbit:</description>
+    </item>
+    
     <item>
       <title>building an e-bike</title>
       <link>https://blog.azuki.vip/ebike/</link>
