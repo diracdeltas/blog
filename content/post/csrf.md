@@ -10,7 +10,7 @@ This is a quick blog post about a security vulnerability (now fixed) that allowe
 
 Proof that it worked on a friend who agreed to help me with security testing and is definitely NOT a rabbit:
 
-![Definitely not a rabbit](https://lh3.googleusercontent.com/u/0/d/156ROQFdMqW1BxcuBRo3AWDAzMMcp3SFt=w2772-h1604-iv2)
+![Definitely not a rabbit](https://user-images.githubusercontent.com/549654/127944881-d9862841-fc49-459d-81fe-495e60e0e68b.png)
 
 ## A short recap of CSRF
 
@@ -55,7 +55,8 @@ So how do we create a webpage which sends a cross-origin POST request to the OkC
 
 I visited this on a localhost server and got a very helpful error message after the form was auto-submitted:
 
-![attempt 1](https://lh3.googleusercontent.com/u/0/d/1xlriwXYOkHpQFPVF2SnSi0C2lDKYIQOA=w2772-h1604-iv2)
+![attempt
+1](https://user-images.githubusercontent.com/549654/127945076-e050e29b-b620-414f-b470-367a08824e4a.png)
 
 Interesting - it's not complaining that the request is initiated by some random origin, but rather that the POST body (`foo=bar`) is invalid JSON! Maybe we can fix that with a weird trick:
 
@@ -75,7 +76,8 @@ Interesting - it's not complaining that the request is initiated by some random 
 
 My reasoning here was that the browser converts the `name` and `value` attributes on HTML `input` elements into `name=value` in the POST body that gets sent over the wire; so if `name` is `{"foo":"` and `value` is `bar"}`, this would become `{"foo":"=bar"}` which would be JSON-parsed into the bizarre-looking object `{foo: '=bar'}` without a problem. With a rush of hope unfelt since before the pandemic, I loaded this up in my browser and saw:
 
-![attempt 2](https://lh3.googleusercontent.com/u/0/d/1RQPrqD0tz1ew8uCa6XSj4Nqw7SYLen_h=w2178-h1604-iv2)
+![attempt
+2](https://user-images.githubusercontent.com/549654/127944894-831c314c-590c-47a8-93a5-b80aa03ce663.png)
 
 ... the exact same error. But this time it was because my beautiful POST body had been URL-encoded to become the ugly-but-safe string `%7B%22foo%22%3A%22%3Dbar%22%7D`. If only there were a way to tell the browser to not encode this form body!
 
@@ -97,7 +99,7 @@ Luckily the W3C deities gave us exactly such a gift in the form (pun intended) o
 
 With the help of `enctype="text/plain"`, the payload is finally sent in its true form (pun intended again) of `{"foo":"=bar"}`:
 
-![attempt 3](https://lh3.googleusercontent.com/u/0/d/1S3vsIlvQL1m8Sa_RzwG5w59ttrBZyuJI=w2178-h1604-iv2)
+![attempt 3](https://user-images.githubusercontent.com/549654/127944886-2a7199f1-425e-4bd0-87c4-3076c56061f1.png)
 
 Putting it all together, the following HTML will automatically send a message that says "I am a rabbit" to the fake userID 123. (Finding out someone's real userID is left as an exercise to the reader.)
 
@@ -119,13 +121,13 @@ Note that the POST body becomes `{"foo":"=", "receiverid":"123", "body":"i am a 
 
 I uploaded this HTML to my website, visited the link, and voila:
 
-![finally](https://lh3.googleusercontent.com/u/0/d/1iUiCZE2T-iCN9wWQZMsXEs8bq5CJCiXj=w2772-h1604-iv3)
+![finally](https://user-images.githubusercontent.com/549654/127944883-6232b92f-589f-41e3-b25f-a4bd1e3df794.png)
 
 It works! ... Or would work if I had finished my test profile so I could send messages to other users.
 
 Too lazy to do this myself, I sent my CSRF link with my own userID filled in to some friends. Lo and behold, my OkCupid test profile was seranaded by a series of messages that they didn't mean to send me.
 
-![beloved](https://lh3.googleusercontent.com/u/0/d/1bN7-RmZ15d4H0QhRHBz55XszCn8Zs1O9=w2772-h1604-iv1)
+![beloved](https://user-images.githubusercontent.com/549654/127944878-d4ad3456-8b26-4248-8a3a-2970aca6703a.png)
 
 I briefly felt very popular, which made it all worthwhile.
 
