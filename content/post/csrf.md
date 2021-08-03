@@ -141,6 +141,13 @@ The obvious fix is for OkCupid to require a CSRF token for these authenticated e
 
 Once I had a list of a few hundred endpoints, I sent each of them a POST with `content-type: text/plain` and body `{"foo":"bar"}`. 87 out of 215 of these endpoints didn't error, and many appeared to return JSON responses indicating success. Granted most of these are probably not authenticated endpoints and some of them may need to accept non-JSON text, but this suggests to me that developers should be careful accepting `text/plain` inputs on endpoints that parse JSON.
 
+**UPDATE:** Multiple folks have kindly pointed out that setting the
+`SameSite` [cookie
+attribute](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) in modern browsers to `Strict` effectively
+prevents this attack and most other CSRFs. The behavior with `SameSite=Lax` is somewhat
+confusing; because submitting an HTML form triggers navigation, initially I assumed
+cross-origin cookies would be sent in this case. However, with the help of [Simon Willison](https://twitter.com/simonw/status/1422356089023078419), I found that this is actually not the case if `Lax` is explicitly set. But here's the surprise: if a `SameSite` attribute is NOT explicitly set, then Chrome will send the cross-origin cookie in POST requests [that occur within 2 minutes](https://twitter.com/bcrypt/status/1422370774896177154) of when the cookie was set, even though `Lax` is now the default in Chrome!
+
 ### Disclosure timeline
 
 This was reported to OkCupid in April 2021. According to their team, it was fixed without delay which prevented exploitation of the bug. I would like to thank their security team for the bounty and permission to share this blog post.
