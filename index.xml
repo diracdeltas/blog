@@ -16,7 +16,7 @@
         <guid>https://blog.azuki.vip/csrf/</guid>
         <description>&lt;p&gt;This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or message a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.&lt;/p&gt;
 &lt;p&gt;Proof that it worked on a friend who agreed to help me with security testing and is definitely NOT a rabbit:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/156ROQFdMqW1BxcuBRo3AWDAzMMcp3SFt=w2772-h1604-iv2&#34; alt=&#34;Definitely not a rabbit&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/549654/127944881-d9862841-fc49-459d-81fe-495e60e0e68b.png&#34; alt=&#34;Definitely not a rabbit&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;a-short-recap-of-csrf&#34;&gt;A short recap of CSRF&lt;/h2&gt;
 &lt;p&gt;The story, like many, began with me opening devtools and checking if websites were sending CSRF tokens alongside requests that require authentication, like sending messages to another user from your account. &lt;a href=&#34;https://en.wikipedia.org/wiki/Cross-site_request_forgery&#34;&gt;CSRF&lt;/a&gt; is an attack whereby an attacker sends a link to a victim which, when visited in the victim&amp;rsquo;s browser, performs some action on behalf of the victim on a site that they are logged into. So for instance, if Bob is logged into Facebook, and Facebook doesn&amp;rsquo;t have CSRF mitigations on the endpoint that deletes a user&amp;rsquo;s account, then Alice can trick him into deleting his Facebook account by sending him a hidden link to &lt;code&gt;https://facebook.com/delete&lt;/code&gt; (which is not the actual URL that deletes your FB account).&lt;/p&gt;
 &lt;p&gt;In this case, I noticed that OkCupid messages are sent via POST requests to &lt;code&gt;https://www.okcupid.com/1/apitun/messages/send&lt;/code&gt; with a JSON-encoded body like so:&lt;/p&gt;
@@ -45,7 +45,7 @@
   &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I visited this on a localhost server and got a very helpful error message after the form was auto-submitted:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/1xlriwXYOkHpQFPVF2SnSi0C2lDKYIQOA=w2772-h1604-iv2&#34; alt=&#34;attempt 1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/549654/127945076-e050e29b-b620-414f-b470-367a08824e4a.png&#34; alt=&#34;attempt1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Interesting - it&amp;rsquo;s not complaining that the request is initiated by some random origin, but rather that the POST body (&lt;code&gt;foo=bar&lt;/code&gt;) is invalid JSON! Maybe we can fix that with a weird trick:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
   &amp;lt;body&amp;gt;
@@ -59,7 +59,7 @@
   &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My reasoning here was that the browser converts the &lt;code&gt;name&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt; attributes on HTML &lt;code&gt;input&lt;/code&gt; elements into &lt;code&gt;name=value&lt;/code&gt; in the POST body that gets sent over the wire; so if &lt;code&gt;name&lt;/code&gt; is &lt;code&gt;{&amp;quot;foo&amp;quot;:&amp;quot;&lt;/code&gt; and &lt;code&gt;value&lt;/code&gt; is &lt;code&gt;bar&amp;quot;}&lt;/code&gt;, this would become &lt;code&gt;{&amp;quot;foo&amp;quot;:&amp;quot;=bar&amp;quot;}&lt;/code&gt; which would be JSON-parsed into the bizarre-looking object &lt;code&gt;{foo: &#39;=bar&#39;}&lt;/code&gt; without a problem. With a rush of hope unfelt since before the pandemic, I loaded this up in my browser and saw:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/1RQPrqD0tz1ew8uCa6XSj4Nqw7SYLen_h=w2178-h1604-iv2&#34; alt=&#34;attempt 2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/549654/127944894-831c314c-590c-47a8-93a5-b80aa03ce663.png&#34; alt=&#34;attempt2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&amp;hellip; the exact same error. But this time it was because my beautiful POST body had been URL-encoded to become the ugly-but-safe string &lt;code&gt;%7B%22foo%22%3A%22%3Dbar%22%7D&lt;/code&gt;. If only there were a way to tell the browser to not encode this form body!&lt;/p&gt;
 &lt;p&gt;Luckily the W3C deities gave us exactly such a gift in the form (pun intended) of the &lt;code&gt;enctype&lt;/code&gt; &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype&#34;&gt;attribute&lt;/a&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
@@ -74,7 +74,7 @@
   &amp;lt;/body&amp;gt;
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;With the help of &lt;code&gt;enctype=&amp;quot;text/plain&amp;quot;&lt;/code&gt;, the payload is finally sent in its true form (pun intended again) of &lt;code&gt;{&amp;quot;foo&amp;quot;:&amp;quot;=bar&amp;quot;}&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/1S3vsIlvQL1m8Sa_RzwG5w59ttrBZyuJI=w2178-h1604-iv2&#34; alt=&#34;attempt 3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/549654/127944886-2a7199f1-425e-4bd0-87c4-3076c56061f1.png&#34; alt=&#34;attempt 3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Putting it all together, the following HTML will automatically send a message that says &amp;ldquo;I am a rabbit&amp;rdquo; to the fake userID 123. (Finding out someone&amp;rsquo;s real userID is left as an exercise to the reader.)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;html&amp;gt;
   &amp;lt;body&amp;gt;
@@ -89,10 +89,10 @@
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note that the POST body becomes &lt;code&gt;{&amp;quot;foo&amp;quot;:&amp;quot;=&amp;quot;, &amp;quot;receiverid&amp;quot;:&amp;quot;123&amp;quot;, &amp;quot;body&amp;quot;:&amp;quot;i am a rabbit&amp;quot;,&amp;quot;source&amp;quot;:&amp;quot;desktop_global&amp;quot;, &amp;quot;service&amp;quot;:&amp;quot;other&amp;quot;}&lt;/code&gt;. Because the browser inserts a &lt;code&gt;=&lt;/code&gt; between the name and value attributes, this gets set to the value of a dummy key, &lt;code&gt;foo&lt;/code&gt;, which okcupid fortunately ignores.&lt;/p&gt;
 &lt;p&gt;I uploaded this HTML to my website, visited the link, and voila:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/1iUiCZE2T-iCN9wWQZMsXEs8bq5CJCiXj=w2772-h1604-iv3&#34; alt=&#34;finally&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/549654/127944883-6232b92f-589f-41e3-b25f-a4bd1e3df794.png&#34; alt=&#34;finally&#34;&gt;&lt;/p&gt;
 &lt;p&gt;It works! &amp;hellip; Or would work if I had finished my test profile so I could send messages to other users.&lt;/p&gt;
 &lt;p&gt;Too lazy to do this myself, I sent my CSRF link with my own userID filled in to some friends. Lo and behold, my OkCupid test profile was seranaded by a series of messages that they didn&amp;rsquo;t mean to send me.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://lh3.googleusercontent.com/u/0/d/1bN7-RmZ15d4H0QhRHBz55XszCn8Zs1O9=w2772-h1604-iv1&#34; alt=&#34;beloved&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/549654/127944878-d4ad3456-8b26-4248-8a3a-2970aca6703a.png&#34; alt=&#34;beloved&#34;&gt;&lt;/p&gt;
 &lt;p&gt;I briefly felt very popular, which made it all worthwhile.&lt;/p&gt;
 &lt;h2 id=&#34;parting-thoughts&#34;&gt;Parting thoughts&lt;/h2&gt;
 &lt;p&gt;Besides making other users unknowingly message your OkCupid profile or someone else&amp;rsquo;s profile of your choosing, I found you could use essentially the same vulnerability to get other users to &amp;ldquo;like&amp;rdquo; your profile. Obviously you could abuse this in order to match with anyone you could trick into clicking a link, or you could spam the link to a bunch of people to increase your profile&amp;rsquo;s rankings in whatever mysterious algorithm OkCupid uses to suggest people.&lt;/p&gt;

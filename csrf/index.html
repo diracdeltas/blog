@@ -72,7 +72,7 @@
   <span class="post-date">Aug 2, 2021</span>
   <p>This is a quick blog post about a security vulnerability (now fixed) that allowed me to make anyone like or message a profile on okcupid.com simply by getting them to click a link on my website. In doing so, I used one of the most boring web application security issues (CSRF) combined with a somewhat interesting JSON type confusion.</p>
 <p>Proof that it worked on a friend who agreed to help me with security testing and is definitely NOT a rabbit:</p>
-<p><img src="https://lh3.googleusercontent.com/u/0/d/156ROQFdMqW1BxcuBRo3AWDAzMMcp3SFt=w2772-h1604-iv2" alt="Definitely not a rabbit"></p>
+<p><img src="https://user-images.githubusercontent.com/549654/127944881-d9862841-fc49-459d-81fe-495e60e0e68b.png" alt="Definitely not a rabbit"></p>
 <h2 id="a-short-recap-of-csrf">A short recap of CSRF</h2>
 <p>The story, like many, began with me opening devtools and checking if websites were sending CSRF tokens alongside requests that require authentication, like sending messages to another user from your account. <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF</a> is an attack whereby an attacker sends a link to a victim which, when visited in the victim&rsquo;s browser, performs some action on behalf of the victim on a site that they are logged into. So for instance, if Bob is logged into Facebook, and Facebook doesn&rsquo;t have CSRF mitigations on the endpoint that deletes a user&rsquo;s account, then Alice can trick him into deleting his Facebook account by sending him a hidden link to <code>https://facebook.com/delete</code> (which is not the actual URL that deletes your FB account).</p>
 <p>In this case, I noticed that OkCupid messages are sent via POST requests to <code>https://www.okcupid.com/1/apitun/messages/send</code> with a JSON-encoded body like so:</p>
@@ -101,7 +101,7 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><p>I visited this on a localhost server and got a very helpful error message after the form was auto-submitted:</p>
-<p><img src="https://lh3.googleusercontent.com/u/0/d/1xlriwXYOkHpQFPVF2SnSi0C2lDKYIQOA=w2772-h1604-iv2" alt="attempt 1"></p>
+<p><img src="https://user-images.githubusercontent.com/549654/127945076-e050e29b-b620-414f-b470-367a08824e4a.png" alt="attempt1"></p>
 <p>Interesting - it&rsquo;s not complaining that the request is initiated by some random origin, but rather that the POST body (<code>foo=bar</code>) is invalid JSON! Maybe we can fix that with a weird trick:</p>
 <pre><code>&lt;html&gt;
   &lt;body&gt;
@@ -115,7 +115,7 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><p>My reasoning here was that the browser converts the <code>name</code> and <code>value</code> attributes on HTML <code>input</code> elements into <code>name=value</code> in the POST body that gets sent over the wire; so if <code>name</code> is <code>{&quot;foo&quot;:&quot;</code> and <code>value</code> is <code>bar&quot;}</code>, this would become <code>{&quot;foo&quot;:&quot;=bar&quot;}</code> which would be JSON-parsed into the bizarre-looking object <code>{foo: '=bar'}</code> without a problem. With a rush of hope unfelt since before the pandemic, I loaded this up in my browser and saw:</p>
-<p><img src="https://lh3.googleusercontent.com/u/0/d/1RQPrqD0tz1ew8uCa6XSj4Nqw7SYLen_h=w2178-h1604-iv2" alt="attempt 2"></p>
+<p><img src="https://user-images.githubusercontent.com/549654/127944894-831c314c-590c-47a8-93a5-b80aa03ce663.png" alt="attempt2"></p>
 <p>&hellip; the exact same error. But this time it was because my beautiful POST body had been URL-encoded to become the ugly-but-safe string <code>%7B%22foo%22%3A%22%3Dbar%22%7D</code>. If only there were a way to tell the browser to not encode this form body!</p>
 <p>Luckily the W3C deities gave us exactly such a gift in the form (pun intended) of the <code>enctype</code> <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/enctype">attribute</a>.</p>
 <pre><code>&lt;html&gt;
@@ -130,7 +130,7 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre><p>With the help of <code>enctype=&quot;text/plain&quot;</code>, the payload is finally sent in its true form (pun intended again) of <code>{&quot;foo&quot;:&quot;=bar&quot;}</code>:</p>
-<p><img src="https://lh3.googleusercontent.com/u/0/d/1S3vsIlvQL1m8Sa_RzwG5w59ttrBZyuJI=w2178-h1604-iv2" alt="attempt 3"></p>
+<p><img src="https://user-images.githubusercontent.com/549654/127944886-2a7199f1-425e-4bd0-87c4-3076c56061f1.png" alt="attempt 3"></p>
 <p>Putting it all together, the following HTML will automatically send a message that says &ldquo;I am a rabbit&rdquo; to the fake userID 123. (Finding out someone&rsquo;s real userID is left as an exercise to the reader.)</p>
 <pre><code>&lt;html&gt;
   &lt;body&gt;
@@ -145,10 +145,10 @@
 &lt;/html&gt;
 </code></pre><p>Note that the POST body becomes <code>{&quot;foo&quot;:&quot;=&quot;, &quot;receiverid&quot;:&quot;123&quot;, &quot;body&quot;:&quot;i am a rabbit&quot;,&quot;source&quot;:&quot;desktop_global&quot;, &quot;service&quot;:&quot;other&quot;}</code>. Because the browser inserts a <code>=</code> between the name and value attributes, this gets set to the value of a dummy key, <code>foo</code>, which okcupid fortunately ignores.</p>
 <p>I uploaded this HTML to my website, visited the link, and voila:</p>
-<p><img src="https://lh3.googleusercontent.com/u/0/d/1iUiCZE2T-iCN9wWQZMsXEs8bq5CJCiXj=w2772-h1604-iv3" alt="finally"></p>
+<p><img src="https://user-images.githubusercontent.com/549654/127944883-6232b92f-589f-41e3-b25f-a4bd1e3df794.png" alt="finally"></p>
 <p>It works! &hellip; Or would work if I had finished my test profile so I could send messages to other users.</p>
 <p>Too lazy to do this myself, I sent my CSRF link with my own userID filled in to some friends. Lo and behold, my OkCupid test profile was seranaded by a series of messages that they didn&rsquo;t mean to send me.</p>
-<p><img src="https://lh3.googleusercontent.com/u/0/d/1bN7-RmZ15d4H0QhRHBz55XszCn8Zs1O9=w2772-h1604-iv1" alt="beloved"></p>
+<p><img src="https://user-images.githubusercontent.com/549654/127944878-d4ad3456-8b26-4248-8a3a-2970aca6703a.png" alt="beloved"></p>
 <p>I briefly felt very popular, which made it all worthwhile.</p>
 <h2 id="parting-thoughts">Parting thoughts</h2>
 <p>Besides making other users unknowingly message your OkCupid profile or someone else&rsquo;s profile of your choosing, I found you could use essentially the same vulnerability to get other users to &ldquo;like&rdquo; your profile. Obviously you could abuse this in order to match with anyone you could trick into clicking a link, or you could spam the link to a bunch of people to increase your profile&rsquo;s rankings in whatever mysterious algorithm OkCupid uses to suggest people.</p>
