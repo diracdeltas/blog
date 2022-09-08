@@ -48,7 +48,7 @@
       </nav>
 
   <div class="sidebar-item">
-    <p>&copy; 2021. All rights reserved.</p>
+    <p>&copy; 2022. All rights reserved.</p>
   </div>
 </div>
 
@@ -77,7 +77,7 @@
 <p>Given the existence of blind signature schemes, Twitter can do something like the following to rate-limit Tor accounts without deanonymizing them:</p>
 <ol>
 <li>Say that @bob is an existing Twitter user who would like to make an anonymous account over Tor, which we’ll call @notbob. He computes <em>T = H(notbob) * r^e mod N</em>, where <em>H</em> is a hash function, <em>r</em> is a random number that Bob chooses, and <em>{e,N}</em> is the public part of an Identity Provider’s RSA keypair (defined in step 2).</li>
-<li>Bob sends <em>T</em> to an identity provider. This could be Twitter itself, or any service like Google, Identica, Facebook, LinkedIn, Keybase, etc. as long as it can check that Bob is probably a real person via SMS verification or a reputation-based algorithm. If Bob seems real enough, the Identity Provider sends him S_ig(T) = T^d mod N = H(notbob)^d * r mod N_, where _d_ is the private part of the Identity Provider’s RSA keypair.</li>
+<li>Bob sends <em>T</em> to an identity provider. This could be Twitter itself, or any service like Google, Identica, Facebook, LinkedIn, Keybase, etc. as long as it can check that Bob is probably a real person via SMS verification or a reputation-based algorithm. If Bob seems real enough, the Identity Provider sends him S_ig(T) = T^d mod N = H(notbob)^d * r mod N_, where <em>d</em> is the private part of the Identity Provider’s RSA keypair.</li>
 <li>Bob divides <em>Sig(T)</em> by <em>r</em> to get <em>Sig(H(notbob))</em>, AKA his Identity Provider’s signature over the hash of his desired anonymous username.</li>
 <li>Bob opens up Tor browser and goes to register @notbob. In the registration form, he sends <em>Sig(H(notbob))</em>. Twitter can then verify the Identity Provider’s signature over ‘notbob’ and <strong>only</strong> accept @notbob’s account registration if verification is successful!</li>
 </ol>

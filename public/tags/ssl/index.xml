@@ -12,7 +12,7 @@
       <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://blog.azuki.vip/the-most-subtle-joke-ive-made-all-year/</guid>
-      <description>Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
+      <description> Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       
       <guid>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
       <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
- Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
     </item>
     
   </channel>

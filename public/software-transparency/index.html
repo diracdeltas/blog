@@ -48,7 +48,7 @@
       </nav>
 
   <div class="sidebar-item">
-    <p>&copy; 2021. All rights reserved.</p>
+    <p>&copy; 2022. All rights reserved.</p>
   </div>
 </div>
 
@@ -81,7 +81,7 @@
 <p>All of the above are *Very Real Worries* (TM) that users should have when installing software. As a maintainer of a <a href="https://www.eff.org/https-everywhere">security-enhancing browser extension</a> used by millions of people, I used to worry about the third one before HTTPS Everywhere had a deterministic build process (more on that below). If my personal laptop was compromised by a malicious version of zip that rewrote the static update-fetching URL in the HTTPS Everywhere source code before compressing and packaging it, literally millions of Firefox installations would be pwned within a few days if I didn’t somehow detect the attack before signing the package (which is basically impossible to do in general).</p>
 <p>You might instinctively think that the scenarios above are at least *detectable* if the software is open source and has been well-audited, but that’s not really true. Ex:</p>
 <ol>
-<li>How do I know that some binary executable that I downloaded from <a href="https://coolbinaryexecutables.com">https://coolbinaryexecutables.com</a> actually corresponds to the well-audited, peer-reviewed source code posted at <a href="https://github.com/coolstuff/EncryptedYo.git?">https://github.com/coolstuff/EncryptedYo.git?</a></li>
+<li>How do I know that some binary executable that I downloaded from <a href="https://coolbinaryexecutables.com">https://coolbinaryexecutables.com</a> actually corresponds to the well-audited, peer-reviewed source code posted at <a href="https://github.com/coolstuff/EncryptedYo.git">https://github.com/coolstuff/EncryptedYo.git</a>?</li>
 <li>How do I know that the binary executable that I downloaded is the same as the one that everyone else downloaded? In other words, how can I be sure that it’s not my copy and *only* my copy that has a secret NSA backdoor?</li>
 </ol>
 <p>So it looks like there’s a problem because we usually install software from opaque binaries or compressed archives that have no guarantee of actually corresponding to the published, version-controlled source code. You might try to solve this by cloning the EncryptedYo repo and building it yourself. You can even fetch it over Tor and/or compare your local git HEAD to someone else’s copy’s if you want a stronger guarantee against a targeted backdoor.</p>
