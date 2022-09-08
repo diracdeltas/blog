@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
   <head>
-	<meta name="generator" content="Hugo 0.86.0" />
+	<meta name="generator" content="Hugo 0.102.3" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
   
@@ -49,7 +49,7 @@
       </nav>
 
   <div class="sidebar-item">
-    <p>&copy; 2021. All rights reserved.</p>
+    <p>&copy; 2022. All rights reserved.</p>
   </div>
 </div>
 
@@ -72,6 +72,29 @@
 
 
 <div class="posts">
+  
+    <div class="post">
+        <h1 class="post-title"><a href="https://blog.azuki.vip/rate-limiting-anonymous-accounts/">rate-limiting anonymous accounts</a></h1>
+        <span class="post-date">Mar 5, 2015</span>
+        <p>Yesterday TechCrunch <a href="http://techcrunch.com/2015/03/02/twitter-tor-phone-verification/">reported</a> that Twitter now seems to be requiring SMS validation from new accounts registered over Tor. Though this might be effective for rate-limiting registration of abusive/spammy accounts, sometimes <a href="http://www.washingtonpost.com/blogs/the-switch/wp/2014/03/24/tor-usage-in-turkey-surges-during-twitter-ban/">actual people</a> use Twitter over Tor because anonymity is a prerequisite to free speech and circumventing information barriers imposed by oppressive governments. These users might not want to link their telco-sanctioned identity with their Twitter account, hence why they’re using Tor in the first place.</p>
+<p>What are services like Twitter to do, then? I thought of one simple solution that borrows a popular idea from anonymous e-cash systems.</p>
+<p>In a <a href="http://www.hit.bme.hu/~buttyan/courses/BMEVIHIM219/2009/Chaum.BlindSigForPayment.1982.PDF">1983 paper</a>, cryptographer David Chaum introduced the concept of blind signatures. A blind signature is a cryptographic signature in which the signer can’t see the content of the message that she’s signing. So if Bob wants Alice to sign the message “Bob is great” without her knowing, he first “blinds” the message using a random factor that is unknown to her and gives Alice the blinded message to sign. When he unblinds her signed message by removing the blinding factor, the original message “Bob is great” <em>also</em> has a valid signature from Alice!</p>
+<p>This may seem weird and magical, but blinded signatures are actually possible using the familiar RSA signature scheme. The proof is straightforward and <a href="https://en.wikipedia.org/wiki/Blind_signature#Blind_RSA_signatures.5B2.5D:235">on Wikipedia</a>. Basically, since RSA signatures are just modulo’d exponentiation of some message <em>M</em> to a secret exponent <em>d</em>, when you create a signature over a blinded message <em>M’ = M*r^e</em> (where <em>r</em> is the blinding factor and <em>e</em> is the public exponent), you also create a valid signature over <em>M</em> thanks to the distributive property of exponentiation over multiplication.</p>
+<p>Given the existence of blind signature schemes, Twitter can do something like the following to rate-limit Tor accounts without deanonymizing them:</p>
+<ol>
+<li>Say that @bob is an existing Twitter user who would like to make an anonymous account over Tor, which we’ll call @notbob. He computes <em>T = H(notbob) * r^e mod N</em>, where <em>H</em> is a hash function, <em>r</em> is a random number that Bob chooses, and <em>{e,N}</em> is the public part of an Identity Provider’s RSA keypair (defined in step 2).</li>
+<li>Bob sends <em>T</em> to an identity provider. This could be Twitter itself, or any service like Google, Identica, Facebook, LinkedIn, Keybase, etc. as long as it can check that Bob is probably a real person via SMS verification or a reputation-based algorithm. If Bob seems real enough, the Identity Provider sends him S_ig(T) = T^d mod N = H(notbob)^d * r mod N_, where <em>d</em> is the private part of the Identity Provider’s RSA keypair.</li>
+<li>Bob divides <em>Sig(T)</em> by <em>r</em> to get <em>Sig(H(notbob))</em>, AKA his Identity Provider’s signature over the hash of his desired anonymous username.</li>
+<li>Bob opens up Tor browser and goes to register @notbob. In the registration form, he sends <em>Sig(H(notbob))</em>. Twitter can then verify the Identity Provider’s signature over ‘notbob’ and <strong>only</strong> accept @notbob’s account registration if verification is successful!</li>
+</ol>
+<p>It seems to me that this achieves some nice properties.</p>
+<ul>
+<li>Every anonymous account is transitively validated via SMS or reputation.</li>
+<li>Ignoring traffic analysis (admittedly a big thing to ignore), anonymous accounts and the actual identities or phone numbers used to validate them are unlinkable.</li>
+</ul>
+<p>Thoughts? I’d bet that someone has thought of this use case before but I couldn’t find any references on the Internet.</p>
+
+    </div>
   
     <div class="post">
         <h1 class="post-title"><a href="https://blog.azuki.vip/canvas/">canvas #1</a></h1>
@@ -219,7 +242,7 @@
 <p>All of the above are *Very Real Worries* (TM) that users should have when installing software. As a maintainer of a <a href="https://www.eff.org/https-everywhere">security-enhancing browser extension</a> used by millions of people, I used to worry about the third one before HTTPS Everywhere had a deterministic build process (more on that below). If my personal laptop was compromised by a malicious version of zip that rewrote the static update-fetching URL in the HTTPS Everywhere source code before compressing and packaging it, literally millions of Firefox installations would be pwned within a few days if I didn’t somehow detect the attack before signing the package (which is basically impossible to do in general).</p>
 <p>You might instinctively think that the scenarios above are at least *detectable* if the software is open source and has been well-audited, but that’s not really true. Ex:</p>
 <ol>
-<li>How do I know that some binary executable that I downloaded from <a href="https://coolbinaryexecutables.com">https://coolbinaryexecutables.com</a> actually corresponds to the well-audited, peer-reviewed source code posted at <a href="https://github.com/coolstuff/EncryptedYo.git?">https://github.com/coolstuff/EncryptedYo.git?</a></li>
+<li>How do I know that some binary executable that I downloaded from <a href="https://coolbinaryexecutables.com">https://coolbinaryexecutables.com</a> actually corresponds to the well-audited, peer-reviewed source code posted at <a href="https://github.com/coolstuff/EncryptedYo.git">https://github.com/coolstuff/EncryptedYo.git</a>?</li>
 <li>How do I know that the binary executable that I downloaded is the same as the one that everyone else downloaded? In other words, how can I be sure that it’s not my copy and *only* my copy that has a secret NSA backdoor?</li>
 </ol>
 <p>So it looks like there’s a problem because we usually install software from opaque binaries or compressed archives that have no guarantee of actually corresponding to the published, version-controlled source code. You might try to solve this by cloning the EncryptedYo repo and building it yourself. You can even fetch it over Tor and/or compare your local git HEAD to someone else’s copy’s if you want a stronger guarantee against a targeted backdoor.</p>
@@ -294,20 +317,6 @@ t.parentNode.replaceChild(i, t);</pre>
 <p>This is the sort of thing that I suspect is *all over* every semi-clever agilely-developed app, waiting to be uncovered as soon as a mischievious Austrian teenager accidentally hits the wrong key. Most applications simply don’t have enough users for these bugs to surface yet, and many will die out before they ever do, which is a blessing in itself. Sometimes the bugs are found and fixed before they explode all over Ars Technica, either by a scrutinous engineer or by an honest user or perhaps by someone looking to claim a bug bounty.</p>
 <p>But these generally aren’t bugs that can be trivially prevented, unless the developer who’s working on improving emoji rendering for your project also happens to have enough of a security background to know that changing some safe innerHTML to the nodeValue of the safe innerHTML will suddenly create dangerous innerHTML. Or perhaps if you had a dedicated person reviewing each commit for security holes as it comes in, or at least a pre-release hook for automated fuzz testing to check for unwanted script execution, but last I checked, nobody was telling web application devs to do this.</p>
 <p>My favorite solution is actually for everyone to just deal with being XSSed semi-frequently in the future. This means that developers should stop exposing sensitive tokens to javascript (or quickly expire tokens that are), use safe CSP directives whenever possible, and make it easy for users to review and undo actions. On the other side of the bargain, users should either start using NoScript-like browser settings to whitelist Javascript or at least blacklist known Rickroll links.</p>
-
-    </div>
-  
-    <div class="post">
-        <h1 class="post-title"><a href="https://blog.azuki.vip/the-other-blog-post-i-was-going-to-write/">the other blog post i was going to write</a></h1>
-        <span class="post-date">Jun 12, 2014</span>
-        <p>It’s always unnerving to realize that your happiness is highly correlated with some particular event, object, person, substance, or thought pattern. Various components of pop culture have led us to believe that happiness is {a warm gun | two kinds of ice cream | high serotonin levels | coca-cola} and so forth, but nobody ever says that happiness is a volatile multidimensional product of quickly-fluctuating vectors along a dozen axes.</p>
-<p>For a while I thought that happiness was jumping on a plane with the wrong power adapter and a boarding pass that you aren’t sure how you managed to pay for. I did this last week, and it felt good (long walks, surrealistic jetlag, mint tea, sharing beds with old friends, riesling, cold arms, trampling through abandoned grass) until I got a 103 degree (F) fever on the plane ride home and was decapacitated for two days.</p>
-<p>One loveable thing about a non-permanent, non-excruciating-but-still-debilitating sickness is that it pares down expectations until they’re almost manageable. Happiness becomes a two-step process: (1) regain appetite until soup sounds like it would be okay, and (2) obtain soup.</p>
-<p>As I got better, I started to realize that happiness, for me, is usually predicated on feeling engaged with the world and thereby interested in outcomes. This may not actually be true, but sometimes plausibility and convenience in the right proportions is better than truth.</p>
-<p>Academic systems, at least in the limit of platonic idealism, are all about being engaged with the world, insofar as exploring it makes you feel like you’re more a part of it. Travel is similar. So are urban exploration and reading books and the process of growing up.</p>
-<p>This year, for the first time, it all seems incredibly hard. Increasingly often in the past few weeks, I find myself having to make an effort to feel like I’m adding something to the world and vice versa. A stronger and scarier form of this feeling is stagnation.</p>
-<p>So, yesterday, I decided to start consciously keeping track of things that make me feel engaged with the world, even if they only work for a moment or two. Hitting the submit button on a blog post is one of them; another is thoughtfully-placed punctuation that ever-so-slightly tilts the tone of a sentence. Yet another: grasping another small morsel of German conjugation.</p>
-<p>Re: the sibling topic of optimizing for long-term fulfillment: It seems increasingly debatable to me whether this is all folklore and guesswork outside of well-established health practices (ex: not smoking cigarettes).</p>
 
     </div>
   

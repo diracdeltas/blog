@@ -22,8 +22,8 @@
       
       <guid>https://blog.azuki.vip/tls-everything/</guid>
       <description>Yesterday the W3C Technical Architecture Group published a new finding titled, “The Web and Encryption.” In it, they conclude:
- “. . . the Web platform should be designed to actively prefer secure origins — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the end-to-end nature of TLS encryption must not be compromised on the Web, in order to preserve this trust.”
- To many HTTPS Everywhere users like myself, this seemed a decade or so beyond self-evident.</description>
+“. . . the Web platform should be designed to actively prefer secure origins — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the end-to-end nature of TLS encryption must not be compromised on the Web, in order to preserve this trust.”
+To many HTTPS Everywhere users like myself, this seemed a decade or so beyond self-evident.</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@ Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure tha
       
       <guid>https://blog.azuki.vip/some-heartbleed-tips/</guid>
       <description>Mashable just put out a nice-looking chart showing “Passwords You Need to Change Right Now” change in light of the recent Heartbleed carnage. However, it has some serious caveats that I wanted to mention:
- It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then.</description>
+It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then.</description>
     </item>
     
     <item>
@@ -72,7 +72,7 @@ Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure tha
       
       <guid>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
       <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it’s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
- Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
+Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
     </item>
     
     <item>
@@ -81,7 +81,7 @@ Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure tha
       <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://blog.azuki.vip/the-most-subtle-joke-ive-made-all-year/</guid>
-      <description>Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
+      <description> Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
     </item>
     
     <item>
@@ -120,7 +120,7 @@ Last night, I went to a talk by my friend Andy titled, “Cypherpunks 2.</descri
       
       <guid>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
       <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
- Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
     </item>
     
   </channel>

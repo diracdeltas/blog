@@ -5,7 +5,18 @@
     <link>https://blog.azuki.vip/post/</link>
     <description>Recent content in Posts on discrete blogarithm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 02 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.azuki.vip/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>letter to peter eckersley</title>
+      <link>https://blog.azuki.vip/pde/</link>
+      <pubDate>Thu, 08 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://blog.azuki.vip/pde/</guid>
+      <description>dear peter,
+welcome back!
+by the time you read this, i will probably be long gone. we thought you were too once upon a time, but our dear friends managed to get your brain cryogenically-preserved at the last possible hour. it is so amazing that the scientists of my future have figured out how to bring you back, and i wish i were there to hear all about it. was it like being asleep?</description>
+    </item>
+    
     <item>
       <title>how to be popular</title>
       <link>https://blog.azuki.vip/csrf/</link>
@@ -32,7 +43,7 @@ Proof that it worked on a friend who agreed to help me with security testing and
       
       <guid>https://blog.azuki.vip/quarantine-bagels/</guid>
       <description>prologue: on laziness lately i have been doing some lazy baking whilst in quarantine, where lazy is defined as:
- no need for fancy equipment like stand mixers with dough hooks no need for hard-to-find ingredients like lye NO STARTERS (like the kind you need for making sourdough) less than one hour of work total can be made by someone with minimal baking experience can skip/improvise/fuckup 1-2 steps and still have a decent result  for a prime example of lazy baking, check out my twitter recipe thread about japanese-style croissants (AKA salted butter rolls), which have been made by dozens of people (including children) to near-universal acclaim.</description>
+no need for fancy equipment like stand mixers with dough hooks no need for hard-to-find ingredients like lye NO STARTERS (like the kind you need for making sourdough) less than one hour of work total can be made by someone with minimal baking experience can skip/improvise/fuckup 1-2 steps and still have a decent result for a prime example of lazy baking, check out my twitter recipe thread about japanese-style croissants (AKA salted butter rolls), which have been made by dozens of people (including children) to near-universal acclaim.</description>
     </item>
     
     <item>
@@ -52,7 +63,7 @@ For instance, I found that .als files (and .adv&amp;rsquo;s, and .adg&amp;rsquo;
       
       <guid>https://blog.azuki.vip/information-apocalypse/</guid>
       <description>My friend Aviv was recently the subject of a popular Buzzfeed article about the possibility of an impending &amp;ldquo;information apocalypse&amp;rdquo;. tl;dr: Aviv extrapolates from the fake news crisis that started in 2016 to a world in which anyone can create AI-assisted misinformation campaigns indistinguishable from reality to the average observer. From there, a series of possible dystopian scenarios arise, including:
- “Diplomacy manipulation,” in which someone uses deepfakes-style video manipulation tools to produce a realistic video of a political leader declaring war, in order to provoke their enemy into retaliation.</description>
+“Diplomacy manipulation,” in which someone uses deepfakes-style video manipulation tools to produce a realistic video of a political leader declaring war, in order to provoke their enemy into retaliation.</description>
     </item>
     
     <item>
@@ -169,7 +180,7 @@ This lil’ blog is hosted by the MIT Student Information Processing Board and
       
       <guid>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</guid>
       <description>Greetings from the beautiful museum district of Berlin, where I’ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we’ve produced two documents this week that I think are pretty good:
- no encryption backdoors no non-consensual web tracking  I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
+no encryption backdoors no non-consensual web tracking I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
     </item>
     
     <item>
@@ -229,8 +240,8 @@ One spring day, Scott was at the chalkboard delightedly introducing the concept 
       
       <guid>https://blog.azuki.vip/tls-everything/</guid>
       <description>Yesterday the W3C Technical Architecture Group published a new finding titled, “The Web and Encryption.” In it, they conclude:
- “. . . the Web platform should be designed to actively prefer secure origins — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the end-to-end nature of TLS encryption must not be compromised on the Web, in order to preserve this trust.”
- To many HTTPS Everywhere users like myself, this seemed a decade or so beyond self-evident.</description>
+“. . . the Web platform should be designed to actively prefer secure origins — typically, by encouraging use of HTTPS URLs instead of HTTP ones. Furthermore, the end-to-end nature of TLS encryption must not be compromised on the Web, in order to preserve this trust.”
+To many HTTPS Everywhere users like myself, this seemed a decade or so beyond self-evident.</description>
     </item>
     
     <item>
@@ -250,7 +261,7 @@ Happily, (1) and (4) can be solved straightforwardly using more modern crypto pr
       
       <guid>https://blog.azuki.vip/hopex/</guid>
       <description>4 years ago, I went to HOPE for the first time on a last-minute press pass from my college newspaper. Some relevant facts about the trip:
- I was 19 and had never been to a hacker con before. I didn’t identify as a hacker (or an activist). I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</description>
+I was 19 and had never been to a hacker con before. I didn’t identify as a hacker (or an activist). I was too shy to talk to anyone the entire time. Combined with the fact that I knew only a few people there, I was mostly off by myself.</description>
     </item>
     
     <item>
@@ -270,7 +281,7 @@ Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure tha
       
       <guid>https://blog.azuki.vip/stuff-i-use/</guid>
       <description>This was my favorite part of my interview with The Setup:
- What would be your dream setup? Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
+What would be your dream setup? Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
     </item>
     
     <item>
@@ -294,7 +305,6 @@ Be kind at random.</description>
       
       <guid>https://blog.azuki.vip/a-boring-xss-dissection/</guid>
       <description>Hi there. Have a funny picture:
-
 Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally broken, compared to 2-3 hours for an XSS bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.</description>
     </item>
     
@@ -323,7 +333,7 @@ Today, I was briefly worried by the observation that mainstream media takes 24-3
       
       <guid>https://blog.azuki.vip/some-heartbleed-tips/</guid>
       <description>Mashable just put out a nice-looking chart showing “Passwords You Need to Change Right Now” change in light of the recent Heartbleed carnage. However, it has some serious caveats that I wanted to mention:
- It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then.</description>
+It’s probably better to be suspicious of companies whose statements are in present-tense (ex: “We have multiple protections” or even “We were not using OpenSSL”). The vulnerability existed since 2011, so even if a service was protected at the time of its disclosure 3 days ago, it could be have been affected at some point long before then.</description>
     </item>
     
     <item>
@@ -352,7 +362,7 @@ The app becomes hugely popular. The heartbroken protagonist of our story logs in
       
       <guid>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
       <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it’s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
- Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
+Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
     </item>
     
     <item>
@@ -382,7 +392,7 @@ The least I could do is offer myself to anyone who feels alone otherwise: so, if
       <pubDate>Tue, 31 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://blog.azuki.vip/the-most-subtle-joke-ive-made-all-year/</guid>
-      <description>Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
+      <description> Dan Auerbach: Any doctor can prescribe any medication to anyone. That is a broken system. Yan: Medication needs to be able to do doctor-pinning. </description>
     </item>
     
     <item>
@@ -392,10 +402,7 @@ The least I could do is offer myself to anyone who feels alone otherwise: so, if
       
       <guid>https://blog.azuki.vip/first-day-of-work/</guid>
       <description>Was great. Lots of tea and monitors.
-
-
 Then I went home and cooked a surprisingly-phenomenal dinner with my housemates, the first time I’ve cooked in this house. Rhodey made potatoes with oranges, Mark contributed some wild rice, and I spun up yellow lentil daal with kale.
-
 We sang some Neutral Milk Hotel songs afterward, and the future looked bright.</description>
     </item>
     
@@ -446,13 +453,14 @@ Last night, I went to a talk by my friend Andy titled, “Cypherpunks 2.</descri
       
       <guid>https://blog.azuki.vip/memphis-haiku-collection/</guid>
       <description>Tonight I found a collection of stupendously precocious (lolol) poems I wrote on a trip to Memphis at age 13. Here they are, untouched, in all their prematurely cynical glory:
- I’m going to Hell
-  I mean Memphis, in two hours
-  Do not raid my house.
+I’m going to Hell
+I mean Memphis, in two hours
+Do not raid my house.
 If I don’t return
-  Do not mope like Charlie Brown
-  You’re not in my will.
-I gave my pet bird</description>
+Do not mope like Charlie Brown
+You’re not in my will.
+I gave my pet bird
+To some short college student</description>
     </item>
     
     <item>
@@ -494,7 +502,7 @@ There are these things called elliptic curves that are getting used more and mor
       
       <guid>https://blog.azuki.vip/some-favorite-git-commands/</guid>
       <description>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I’d list a few lesser-known commands that I like:
- git log _-pretty=oneline -n –abbrev-commit -G_: This shows the  latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
+git log _-pretty=oneline -n –abbrev-commit -G_: This shows the latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
     </item>
     
     <item>
@@ -533,7 +541,7 @@ The sun rose, gently, turning attention to row upon row of freshly-cut crops str
       
       <guid>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
       <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
- Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
     </item>
     
     <item>

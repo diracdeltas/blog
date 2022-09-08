@@ -31,7 +31,7 @@
       
       <guid>https://blog.azuki.vip/lessons-from-the-ad-blocker-trenches/</guid>
       <description>Greetings from the beautiful museum district of Berlin, where I’ve been trapped in a small conference room all week for the quarterly meeting of the W3C Technical Architecture group. So far we’ve produced two documents this week that I think are pretty good:
- no encryption backdoors no non-consensual web tracking  I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
+no encryption backdoors no non-consensual web tracking I just realized I have a few more things to say about the latter, based on my experience building and maintaining a semi-popular ad blocker (Privacy Badger Firefox).</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure tha
       
       <guid>https://blog.azuki.vip/stuff-i-use/</guid>
       <description>This was my favorite part of my interview with The Setup:
- What would be your dream setup? Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
+What would be your dream setup? Let’s start with the easy ones. I would like (1) an e-book reader that has the portability and battery life of a Kindle, runs free software out-of-the-box, and doesn’t support DRM; (2) an open-source maps application for Android/CyanogenMod that can provide biking and public transit directions for any city that I happen to be in; and (3) a usable open-source password manager that syncs to mobile devices, integrates with browsers, and meets some set of minimum security requirements.</description>
     </item>
     
     <item>
@@ -71,7 +71,6 @@ Perhaps if you’re paranoid, you fetch the developer’s GPG key, make sure tha
       
       <guid>https://blog.azuki.vip/a-boring-xss-dissection/</guid>
       <description>Hi there. Have a funny picture:
-
 Today, I was briefly worried by the observation that mainstream media takes 24-36 hours to start freaking out about over half of web encryption being fundamentally broken, compared to 2-3 hours for an XSS bug in a Twitter client that causes self-retweeting tweets and unexpected rickrolls and such. Then I remembered that most Americans watch TV for like 4+ hours per day. (XSS is arguably the most telegenic class of software QA issues.</description>
     </item>
     
@@ -100,7 +99,7 @@ Today, I was briefly worried by the observation that mainstream media takes 24-3
       
       <guid>https://blog.azuki.vip/decentralized-trustworthiness-measures-and-certificate-pinning/</guid>
       <description>On the plane ride from Baltimore to SFO, I started thinking about a naming dilemma described by Zooko. Namely (pun intended): it’s difficult to architect name assignment systems that are simultaneously secure, decentralized, and human meaningful. Wikipedia defines these properties as:
- Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
+Secure: The quality that there is one, unique and specific entity to which the name maps. For instance, domain names are unique because there is just one party able to prove that they are the owner of each domain name.</description>
     </item>
     
     <item>
@@ -142,7 +141,7 @@ There are these things called elliptic curves that are getting used more and mor
       
       <guid>https://blog.azuki.vip/some-favorite-git-commands/</guid>
       <description>Working on HTTPS Everywhere, an open source project with dozens of contributors, has sharpened my git vocabulary immensely. I figured I’d list a few lesser-known commands that I like:
- git log _-pretty=oneline -n –abbrev-commit -G_: This shows the  latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
+git log _-pretty=oneline -n –abbrev-commit -G_: This shows the latest commits in oneline format with shortened commit hashes that added or removed lines matching . The git pickaxe options (-S, -G) are super useful for searching git commit contents instead of just the commit messages.</description>
     </item>
     
     <item>
@@ -171,7 +170,7 @@ This release was spurred by the impending arrival of Firefox 23, which notably h
       
       <guid>https://blog.azuki.vip/some-thoughts-on-facebook-implementing-forward-secrecy/</guid>
       <description>Last month, CNET announced that Facebook is working on implementing a property called forward secrecy in its encryption of user data. The article is pretty long, but the gist of it is:
- Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
+Forward secrecy is good news, at least theoretically. Right now, when you send data to Facebook’s servers, your data gets encrypted so that someone who intercepts your data can’t read it unless they have Facebook’s secret key. However, if an eavesdropper is recording your messages now and somehow gets the secret key in the future, they can go back and decrypt all your encrypted communications.</description>
     </item>
     
     <item>
